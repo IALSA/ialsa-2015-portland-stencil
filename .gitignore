@@ -1,9 +1,11 @@
+##############
 # R and RStudio files.
 .Rhistory
 .RData
 .Rproj.user
 .Rproj.user/
 
+##############
 # Protected Information; see cubuspl42's answer in http://stackoverflow.com/questions/2415873/exceptions-in-gitignore
 /unshared_material/*
 /data_unshared/*
@@ -19,3 +21,10 @@
 !data_unshared/contents.md
 !data_unshared/raw/README.md
 !data_unshared/derived/README.md
+
+##############
+# Windows
+# Cached small image files
+Thumbs.db
+# Folder config file
+Desktop.ini
