@@ -1,3 +1,4 @@
+
 [![logl](libs/images/ialsa_long.png)](http://www.ialsa.org/)
 Quick links: [news](#news)  -  [projects](#projects)  -  [tools](#tools)  -  [log](#log)  -  [participants](#participants)  -  [dashboard](http://shiny.ouhsc.edu/IALSA-2015-Portland/shiny/dashboard)  -  [GSA poster](https://github.com/IALSA/IALSA-2015-Portland/blob/master/projects/physical-cognitive/gsa_poster.md)
 #Concurrent decline of body and mind  
@@ -105,4 +106,3 @@ The agenda and outcomes of each teleconference following the Portland workshop
 Quick links: [news](#news)  -  [projects](#projects)  -  [tools](#tools)  -  [log](#log)  -  [participants](#participants)  -  [dashboard](http://shiny.ouhsc.edu/IALSA-2015-Portland/shiny/dashboard)
 
 [edit me](https://github.com/IALSA/IALSA-2015-Portland/edit/master/README.md)
-
