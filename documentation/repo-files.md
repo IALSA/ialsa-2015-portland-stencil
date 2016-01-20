@@ -48,6 +48,7 @@
     * Mplus_muniz.pdf                                          # guidelines on conference preparation
     * naming_convention.pptx                                   # naming convention for models
     * test.png                                                 # symbol representation of residuals by gender
+    * thumbs.db                                                # reorganizing folders
 * utility/                                                     # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                       # code for required packages for efficient repo operation
     * package-dependency-list.csv                              # elements necessary for packages fuctionality
