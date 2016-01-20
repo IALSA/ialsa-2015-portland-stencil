@@ -6,7 +6,7 @@
     * contents.md                                               # description of data-unshared (list of unshared files)
 * IALSA-2015-portland-mirror/                                   # Copied documents/files from IALSA-2015-Portland
 * libs/                                                         # global resources for reports and web
-    * css/                                                      # customized the appearance of HTML produced by RMarkdown
+    * css/                                                      # customize the appearance of HTML produced by RMarkdown
         * sidebar.css                                           # code of format for styling sheet document
     * images/                                                   # portable network graphic (png) images for the conference document reports
         * prototypes/                                           # contains first typical model for the images created for the project
