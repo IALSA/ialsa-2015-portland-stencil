@@ -1,18 +1,18 @@
 # Stencil Markdown
 
-*data-unshared/                                                 # data created but not shared or committed to the repo
-    * derived/                                                  # files produced from the code we right
-    * raw/                                                      # files that come from the researcher/client
-    * contents.md                                               # description of data-unshared (list of unshared files)
-* IALSA-2015-portland-mirror/                                   # Copied documents/files from IALSA-2015-Portland
-* libs/                                                         # global resources for reports and web
-    * css/                                                      # customize the appearance of HTML produced by RMarkdown
-        * sidebar.css                                           # code of format for styling sheet document
-    * images/                                                   # portable network graphic (png) images for the conference document reports
-        * prototypes/                                           # contains first typical model for the images created for the project
-        * prototype_table3.png                                  # first typical model of png images to used in the project
-        * fisher_z.png                                          # definition and description of fisher's transformation
-        * general_model_specification.png                       #
+*data-unshared/                                                # data created but not shared or committed to the repo
+    * derived/                                                 # files produced from the code we right
+    * raw/                                                     # files that come from the researcher/client
+    * contents.md                                              # description of data-unshared (list of unshared files)
+* IALSA-2015-portland-mirror/                                  # Copied documents/files from IALSA-2015-Portland
+* libs/                                                        # global resources for reports and web
+    * css/                                                     # customize the appearance of HTML produced by RMarkdown
+        * sidebar.css                                          # code of format for styling sheet document
+    * images/                                                  # portable network graphic (png) images for the conference document reports
+        * prototypes/                                          # contains first typical model for the images created for the project
+        * prototype_table3.png                                 # first typical model of png images to used in the project
+        * fisher_z.png                                         # definition and description of fisher's transformation
+        * general_model_specification.png                      #
         * general_model_specification_0.png
         * general_model_specification_1.png
         * general_model_specification_2.png
