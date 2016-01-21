@@ -1,5 +1,6 @@
 # Stencil Markdown
 
+```
 * data-unshared/                              # data created but not shared or committed
     * derived/                                # files stored locally but not shared or committed
     * raw/                                    # files that come from the researcher/client
@@ -54,4 +55,4 @@
 * ialsa-2015-portland-stencil.Rproj            # R plateform for stencil coding
 * LICENSE                                      # copyright to the software
 * repo-files.md                                # file structure directory
-    
+```
