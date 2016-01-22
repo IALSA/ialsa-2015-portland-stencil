@@ -25,6 +25,14 @@
 !data/unshared/derived/README.md
 
 ##############
+# Misc files
+
+# READMEs created by knitr.  The markdown file should be the only version for a given directory.
+README.html
+
+# Unnecessary files from knitr reports
+
+##############
 # Windows
 # Cached small image files
 Thumbs.db
