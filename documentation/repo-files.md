@@ -2,10 +2,9 @@
 * data/                                                   # documenting the data used in this project
     * shared/                                             # data shared and committed to the repo
     * unshared/                                           # sound very much like the data unshared 
-* data-unshared/                                          # data created but not shared or committed to the repo
-    * derived/                                            # files produced from the code we right
-    * raw/                                                # files that come from the researcher/client
-    * contents.md                                         # description of data-unshared (list of unshared files)
+        * derived/                                        # files produced from the code we right
+        * raw/                                            # files that come from the researcher/client
+        * contents.md                                     # description of data-unshared (list of unshared files)
 * IALSA-2015-portland-mirror/                             # Copied documents/files from IALSA-2015-Portland
 * libs/                                                   # global resources for reports and web
     * css/                                                # customize the appearance of HTML produced by RMarkdown
