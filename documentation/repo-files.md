@@ -96,7 +96,35 @@
         * counts.md                                       # stepwise guide to getting model counts for the bivariate relationships, with ellaboration on the nature their associations
         * counts.Rmd                                      # R version of a markdown for counts.md
         * essentials.md                                   # model essentials: correlations b/w random terms
-        * essentials.Rmd                                  # R Code for configuring specifics for Knitr report on correlation between random terms 
+        * essentials.Rmd                                  # R Code for configuring specifics for Knitr report on correlation between random terms
+* descriptives/                                           # 
+    * figure_raw/                                         # pdf and png format of graphs
+        * marginals-1.pdf                                 # pdf of a histogram of a frequency and a quarter mile in seconds
+        * marginals-1.png                                 # png of a histogram of a frequency and a quarter mile in seconds
+        * marginals-2.pdf                                 # pdf of displacement inches cubed
+        * marginals-2.png                                 # png of displacement inches cubed
+        * marginals-3.pdf                                 # pdf of carburator count by number of records
+        * marginals-3.png                                 # png of carburator count by number of records
+        * marginals-4.pdf                                 # pdf of forward gear count by number of records
+        * marginals-4.png                                 # png of forward gear count by number of records
+        * scatteroplot-1.pdf                              # pdf of forward gear count across horsepower and quarter mile in seconds
+        * scatteroplot-1.png                              # png of forward gear count across horsepower and quarter mile in seconds
+        * scatteroplot-2.pdf                              # pdf of carburator count across horsepower and quarter mile in seconds
+        * scatteroplot-2.png                              # png of carburator count across horsepower and quarter mile in seconds
+        * scatteroplot-3.pdf                              # pdf of cylinder count across horsepower and quarter mile in seconds
+        * scatteroplot-3.png                              # png of cylinder count across horsepower and quarter mile in seconds
+        * scatteroplot-4.pdf                              # pdf of factor(cylinder count) across gross horse power and quarter mile in seconds
+        * scatteroplot-4.png                              # png of factor(cylinder count) across gross horse power and quarter mile in seconds
+        * scatteroplot-5.pdf                              # pdf of forward gear count across miles per gallon and quarter mile in seconds
+        * scatteroplot-5.png                              # png of forward gear count across miles per gallon and quarter mile in seconds
+        * scatteroplot-6.pdf                              # pdf of carburator count across miles per gallon and quarter mile in seconds
+        * scatteroplot-6.png                              # png of carburator count across miles per gallon and quarter mile in seconds
+        * scatteroplot-7.pdf                              # pdf of factor cylinder count across miles per gallon and quarter mile in seconds
+        * scatteroplot-7.png                              # png of factor cylinder count across miles per gallon and quarter mile in seconds
+    * descriptives.md                                     # report settings for the analyses used in the ZZZ project (Marcus Mark, PI)
+    * descriptives.R                                      # basic R-code for obtaining graphs/plots on a knitr report
+    * descriptive.Rmd                                     # R markdown for outputting knitr report
+    * report.Rmd                                          # A sample of code of a Regression line and a scatter plot for the ZZZ project
 * utility/                                                # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                  # code for required packages for efficient repo operation
     * package-dependency-list.csv                         # elements necessary for packages fuctionality
