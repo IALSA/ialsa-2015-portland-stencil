@@ -97,9 +97,9 @@
         * counts.Rmd                                      # R version of a markdown for counts.md
         * essentials.md                                   # model essentials: correlations b/w random terms
         * essentials.Rmd                                  # R Code for configuring specifics for Knitr report on correlation between random terms
-* descriptives/                                           # 
-    * figure_raw/                                         # pdf and png format of graphs
-        * marginals-1.pdf                                 # pdf of a histogram of a frequency and a quarter mile in seconds
+    * descriptives/                                           # 
+        * figure_raw/                                         # pdf and png format of graphs
+            * marginals-1.pdf                                 # pdf of a histogram of a frequency and a quarter mile in seconds
         * marginals-1.png                                 # png of a histogram of a frequency and a quarter mile in seconds
         * marginals-2.pdf                                 # pdf of displacement inches cubed
         * marginals-2.png                                 # png of displacement inches cubed
@@ -125,6 +125,9 @@
     * descriptives.R                                      # basic R-code for obtaining graphs/plots on a knitr report
     * descriptive.Rmd                                     # R markdown for outputting knitr report
     * report.Rmd                                          # A sample of code of a Regression line and a scatter plot for the ZZZ project
+* scripts/                                                # description and github paths to the functions to be used and defined for data extraction and transformation
+    * dev/                                                #
+        * 1a_correct_model_names.R                        #
 * utility/                                                # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                  # code for required packages for efficient repo operation
     * package-dependency-list.csv                         # elements necessary for packages fuctionality
