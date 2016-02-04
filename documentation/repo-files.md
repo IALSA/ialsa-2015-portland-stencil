@@ -87,7 +87,7 @@
         * bisr_satsa.md                                   # Verbal interpretation of graph studying bisr for satsa study
 * table_1_descriptive/                                    # describe sample characteristics of each study
 * reports/                                                # documenting dynamic reports of the project
-    * basic/
+    * basic/                                              # basics on kitr format and structure for reporting counts, bivariate associations and correlations
         * css/                                            # css specifics for dynamic reporting section                                            
             * sidebar.css                                 # configuration specifics for the sidebar on reports
         * 2_basic_study_report.R                          # code for basic knitr report structure
@@ -95,6 +95,8 @@
         * counts.html                                     # html link to model counts for ialsa portland 2015
         * counts.md                                       # stepwise guide to getting model counts for the bivariate relationships, with ellaboration on the nature their associations
         * counts.Rmd                                      # R version of a markdown for counts.md
+        * essentials.md                                   # model essentials: correlations b/w random terms
+        * essentials.Rmd                                  # R Code for configuring specifics for Knitr report on correlation between random terms 
 * utility/                                                # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                  # code for required packages for efficient repo operation
     * package-dependency-list.csv                         # elements necessary for packages fuctionality
