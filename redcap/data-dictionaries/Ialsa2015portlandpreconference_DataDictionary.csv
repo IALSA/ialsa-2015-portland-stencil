@@ -1,0 +1,27 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+survey_id,investigation_and_investigator,,text,"Survey ID",,,,,,,,,,,,,
+study_name,investigation_and_investigator,"Please fill out the information below.",dropdown,"What is a common name for your investigation?","1, OCTO | 2, ELSA | 3, RADC | 4, HRS","Please select a name from the drop down box.",,,,,,y,,,,,
+institution_names,investigation_and_investigator,,text,"What Institutions are associated with your investigation? ",,"Please separate with semicolons.",,,,,,y,,,,,
+email,investigation_and_investigator,,text,"What email address(es) should be used to direct information about the Feb 2015 IALSA workshop in Portland?",,"Please separate ",email,,,y,,y,,,,,
+physical_constructs,investigation_and_investigator,,checkbox,"What physical constructs are collected?","1, Pulmonary function (eg, PEF, FEV) | 2, Muscle strength (eg, Grip strength, Leg extension) | 3, Walking speed time | 4, Chair rise time | 5, Flamingo stand time | 6, Summary measures of physical functioning","Please check all that apply.",,,,,,y,,,,,
+physical_variables_pulmonary,investigation_and_investigator,,checkbox,"What variables do you collect associated with the pulmonary construct?
+
+Key: 
+PEF: peak expiratory flow
+FEV: forced expiratory volume","1, pef | 2, fev","Please check all that apply.",,,,,"[physical_constructs(1)] = '1'",,,,,,
+variable_name_pef,investigation_and_investigator,,text,"What is the exact name in your dataset for your PEF variable?",,,,,,,"[physical_variables_pulmonary(1)] = '1'",,,,,,
+variable_name_fev,investigation_and_investigator,,text,"What is the exact name in your dataset for your FEV variable?",,,,,,,"[physical_variables_pulmonary(2)] = '1'",,,,,,
+physical_constructs_other,investigation_and_investigator,,text,"Are there other physical constructs that you collect?",,"Please separate with semicolons.",,,,,,,,,,,
+cognitive_constructs,investigation_and_investigator,,checkbox,"What cognitive constructs do your investigation collect?","1, Knowledge | 2, Reasoning | 3, Speed | 4, Visuospatial ability | 5, Executive functioning | 6, Mental status","Please check all that apply.",,,,,,y,,,,,
+cognitive_constructrs_other,investigation_and_investigator,,text,"Are there other cognitive constructs that you collect?",,"Please separate with semicolons.",,,,,,,,,,,
+predictors_baseline,investigation_and_investigator,,checkbox,"What baseline predictors are collected?","1, Age (at baseline) and age-squared | 2, Age at death | 3, Sex | 4, Education | 5, Socioeconomic status / socioeconomic position | 6, Marital status | 7, Height | 8, Weight | 9, BMI (calculated)","Please check all that apply.",,,,,,y,,,,,
+comfort_r,investigation_and_investigator,,slider,"How do you feel about R & RStudio?","Down with the proletariat | Huh? | I have a signed book by John Chambers",,number,,,,,,,,,,
+comfort_mplus,investigation_and_investigator,,slider,"How do you feel about Mplus?","I have a tattoo of Bengt | Huh? | Down with the proletariat",,number,,,,,,,,,,
+consent,investigation_and_investigator,,checkbox,"By checking this box, I certify that will behave myself in Portland, and not specifically ask the waitress for  closed-range, inorganic chicken at any restaurant (or harass the locals in any other way).","1, I consent","<a href=""https://www.youtube.com/watch?v=ErRHJlE4PGI"" target=""_blank"">Is the chicken local?</a>",,,,,,,,,,,
+complete_study,completion_data,"This form is to be filled out by study personnel.",yesno,"Has patient completed study?",,,,,,,,,,,,,
+withdraw_date,completion_data,,text,"Put a date if patient withdrew study",,,date_ymd,,,,,,,,,,
+withdraw_reason,completion_data,,dropdown,"Reason patient withdrew from study","0, Non-compliance | 1, Did not wish to continue in study | 2, Could not tolerate the supplement | 3, Hospitalization | 4, Other",,,,,,,,,,,,
+date_visit_4,completion_data,,text,"Date of last visit",,,date_ymd,,,,,,,,,,
+discharge_date_4,completion_data,,text,"Date of hospital discharge",,,date_ymd,,,,,,,,,,
+discharge_summary_4,completion_data,,dropdown,"Discharge summary in patients binder?","0, No | 1, Yes",,,,,,,,,,,,
+study_comments,completion_data,,notes,Comments,,,,,,,,,,,,,
