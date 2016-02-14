@@ -1,0 +1,118 @@
+,name,label,type
+1,id,NA,design
+2,study,NA,design
+3,scaled_to.x,NA,design
+4,agreeableness,NEO agreeableness-ROS,personality
+5,conscientiousness,Conscientiousness-ROS/MAP,personality
+6,extraversion,NEO extraversion-ROS/MAP,personality
+7,neo_altruism,NEO altruism scale-MAP,personality
+8,neo_conscientiousness,NEO conscientiousness-MAP,personality
+9,neo_trust,NEO trust-MAP,personality
+10,openness,NEO openess-ROS,personality
+11,anxiety_10items,Anxiety-10 item version - ROS and MAP,personality
+12,neuroticism_12,Neuroticism - 12 item version-RMM,personality
+13,neuroticism_6,Neuroticism - 6 item version - RMM,personality
+14,age_bl,Age at baseline,demographic
+15,age_death,Age at death,demographic
+16,died,Indicator of death,demographic
+17,educ,Years of education,demographic
+18,msex,Gender,demographic
+19,race,Participant's race,demographic
+20,spanish,Spanish/Hispanic origin,demographic
+21,apoe_genotype,ApoE genotype,clinical
+22,ldai_bl,Lifetime daily alcohol intake -baseline,substance
+23,q3smo_bl,Smoking quantity-baseline,substance
+24,q4smo_bl,Smoking duration-baseline,substance
+25,smoke_bl,Smoking at baseline,substance
+26,smoking,Smoking,substance
+27,fu_year,Follow-up year,design
+28,scaled_to.y,No label found in codebook,design
+29,cesdsum,CESD-Measure of depressive symptoms,psychological
+30,r_depres,Major depression dx-clinic rating,psychological
+31,intrusion,Negative social exchange-intrusion-MAP,psychological
+32,neglifeevents,Negative life events,psychological
+33,negsocexchange,Negative social exchange,psychological
+34,nohelp,Negative social exchange-help-MAP,psychological
+35,panas,Panas score,psychological
+36,perceivedstress,Perceived stress,psychological
+37,rejection,Negative social exchange - rejection-MAP,psychological
+38,unsympathetic,Negative social exchange-unsymapathetic-MAP,psychological
+39,dcfdx,Clinical dx summary,psychological
+40,dementia,Dementia diagnosis,cognitive
+41,r_stroke,Clinical stroke dx,clinical
+42,cogn_ep,Calculated domain score-episodic memory,cognitive
+43,cogn_global,Global cognitive score,cognitive
+44,cogn_po,Calculated domain score - perceptual orientation,cognitive
+45,cogn_ps,Calculated domain score - perceptual speed,cognitive
+46,cogn_se,Calculated domain score - semantic memory,cognitive
+47,cogn_wo,Calculated domain score - working memory,cognitive
+48,cts_bname,Boston naming - 2014,cognitive
+49,cts_catflu,Category fluency - 2014,cognitive
+50,cts_db,Digits backwards - 2014,cognitive
+51,cts_delay,Logical memory IIa - 2014,cognitive
+52,cts_df,Digits forwards - 2014,cognitive
+53,cts_doperf,Digit ordering - 2014,cognitive
+54,cts_ebdr,East Boston story - delayed recall - 2014,cognitive
+55,cts_ebmt,East Boston story - immediate - 2014,cognitive
+56,cts_idea,Complex ideas - 2014,cognitive
+57,cts_lopair,Line orientation - 2014,cognitive
+58,cts_mmse30,MMSE - 2014,cognitive
+59,cts_nccrtd,Number comparison - 2014,cognitive
+60,cts_pmat,Progressive Matrices - 2014,cognitive
+61,cts_read_nart,Reading test-NART-2014,cognitive
+62,cts_read_wrat,Reading test - WRAT - 2014,cognitive
+63,cts_sdmt,Symbol digit modalitities - 2014,cognitive
+64,cts_story,Logical memory Ia - immediate - 2014,cognitive
+65,cts_wli,Word list I- immediate- 2014,cognitive
+66,cts_wlii,Word list II - delayed - 2014,cognitive
+67,cts_wliii,Word list III - recognition - 2014,cognitive
+68,age_at_visit,Age at cycle - fractional,demographic
+69,iadlsum,Instrumental activities of daily liviing,physical
+70,katzsum,Katz measure of disability,physical
+71,rosbscl,Rosow-Breslau scale,physical
+72,rosbsum,Rosow-Breslau scale,physical
+73,vision,Vision acuity,physical
+74,visionlog,Visual acuity,physical
+75,fev,forced expiratory volume,physical
+76,mep,maximal expiratory pressure,physical
+77,mip,maximal inspiratory pressure,physical
+78,pvc,pulmonary vital capacity,physical
+79,bun,Blood urea nitrogen,clinical
+80,ca,Calcium,clinical
+81,chlstrl,Cholesterol,clinical
+82,cl,Chloride,clinical
+83,co2,Carbon Dioxide,clinical
+84,crn,Creatinine,clinical
+85,fasting,Whether blood was collected on fasting participant,clinical
+86,glucose,Glucose,clinical
+87,hba1c,Hemoglobin A1c,clinical
+88,hdlchlstrl,HDL cholesterol,clinical
+89,hdlratio,HDL ratio,clinical
+90,k,Potassium,clinical
+91,ldlchlstrl,LDL cholesterol,clinical
+92,na,Sodium,clinical
+93,alcohol_g,Grams of alcohol per day,substance
+94,bmi,Body mass index,physical
+95,htm,Height(meters),physical
+96,phys5itemsum,"Summary of self reported physical activity
+measure (in hours) ROS/MAP",physical
+97,wtkg,Weight (kg),physical
+98,bp11,Blood pressure measurement- sitting - trial 1,physical
+99,bp2,Blood pressure measurement- sitting - trial 2,physical
+100,bp3,Hx of Meds for HTN,physical
+101,bp31,Blood pressure measurement- standing,physical
+102,hypertension_cum,Medical conditions - hypertension - cumulative,clinical
+103,dm_cum,Medical history - diabetes - cumulative,clinical
+104,thyroid_cum,Medical Conditions - thyroid disease - cumulative,clinical
+105,chf_cum,"Medical Conditions - congestive heart failure -
+cumulative",clinical
+106,claudication_cum,Medical conditions - claudication -cumulative,clinical
+107,heart_cum,Medical Conditions - heart - cumulative,clinical
+108,stroke_cum,Clinical Diagnoses - Stroke - cumulative,clinical
+109,vasc_3dis_sum,"Vascular disease burden (3 items w/o chf)
+ROS/MAP/MARS",clinical
+110,vasc_4dis_sum,"Vascular disease burden (4 items) - MAP/MARS
+only",clinical
+111,vasc_risks_sum,Vascular disease risk factors,clinical
+112,gait_speed,Gait Speed - MAP,physical
+113,gripavg,Extremity strength,physical
