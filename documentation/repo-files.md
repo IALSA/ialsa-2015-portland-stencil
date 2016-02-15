@@ -126,8 +126,25 @@
     * descriptive.Rmd                                     # R markdown for outputting knitr report
     * report.Rmd                                          # A sample of code of a Regression line and a scatter plot for the ZZZ project
 * scripts/                                                # description and github paths to the functions to be used and defined for data extraction and transformation
-    * dev/                                                #
-        * 1a_correct_model_names.R                        #
+    * dev/                                                # scripts for correcting the output files names and making the reports look presentable
+        * 1a_correct_model_names.R                        # this script corrects irregularities in the naming of the output files
+        * x_make_pretty.R                                 # make the data look presentable for reporting
+    * graphs/                                             # contains R code for outputting graphs
+        * kb_profiles_functions.R                         # R code to contruct graph depicting relationships between physical measures and congnitive measures and theircovariates. 
+        * main_theme.R                                    # main themes for graphs
+    * mplus/  
+        * prototype/                                      # folder contains files on prototype code for modeling cognitive measures; in different file extensions
+            * new_b1_male_a_grip_categories_18.dgm        # modeling cognitive measures in males
+            * new_b1_male_a_grip_categories_18.gh5        # modeling cognitive measures in males; gh5 file containing Mplus data in HDF5 format
+            * new_b1_male_a_grip_categories_18.inp        # modeling cognitive measures in males; input file extension
+            * new_b1_male_a_grip_categories_18.out        # modeling cognitive measures in males; output file extension
+            * prototype_b1_male_a_grip_categories_18.inp  # prototype code for modeling cognitve measures in males; input file extension 
+            * prototype_b1_RADC.inp                       # modeling cognitive measures; input file extension
+    * extraction_functions.R                              # extract the basic indicators about the model
+    * functions_to_generate_Mplus_scripts.R               # r code/functions to generate mplus scripts 
+    * generate_run_graph.R                                # generating scripts to process mplus data
+    * group_variables.R                                   # load the objects that will subset columns from the results tables
+    * look-at-data.R                                      # functions to look at data and export it back to mplus
 * utility/                                                # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                  # code for required packages for efficient repo operation
     * package-dependency-list.csv                         # elements necessary for packages fuctionality
