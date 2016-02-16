@@ -86,46 +86,12 @@
         * bisr_radc.md                                    # Verbal interpretation of graph studying bisr for radc study
         * bisr_satsa.md                                   # Verbal interpretation of graph studying bisr for satsa study
 * table_1_descriptive/                                    # describe sample characteristics of each study
-* reports/                                                # documenting dynamic reports of the project
-    * basic/                                              # basics on kitr format and structure for reporting counts, bivariate associations and correlations
-        * css/                                            # css specifics for dynamic reporting section                                            
-            * sidebar.css                                 # configuration specifics for the sidebar on reports
-        * 2_basic_study_report.R                          # code for basic knitr report structure
-        * 2a_make_pretty_small.R                          # code for improving asthetic qualities of knitr report structure
-        * counts.html                                     # html link to model counts for ialsa portland 2015
-        * counts.md                                       # stepwise guide to getting model counts for the bivariate relationships, with ellaboration on the nature their associations
-        * counts.Rmd                                      # R version of a markdown for counts.md
-        * essentials.md                                   # model essentials: correlations b/w random terms
-        * essentials.Rmd                                  # R Code for configuring specifics for Knitr report on correlation between random terms
-    * descriptives/                                           # 
-        * figure_raw/                                         # pdf and png format of graphs
-            * marginals-1.pdf                                 # pdf of a histogram of a frequency and a quarter mile in seconds
-        * marginals-1.png                                 # png of a histogram of a frequency and a quarter mile in seconds
-        * marginals-2.pdf                                 # pdf of displacement inches cubed
-        * marginals-2.png                                 # png of displacement inches cubed
-        * marginals-3.pdf                                 # pdf of carburator count by number of records
-        * marginals-3.png                                 # png of carburator count by number of records
-        * marginals-4.pdf                                 # pdf of forward gear count by number of records
-        * marginals-4.png                                 # png of forward gear count by number of records
-        * scatteroplot-1.pdf                              # pdf of forward gear count across horsepower and quarter mile in seconds
-        * scatteroplot-1.png                              # png of forward gear count across horsepower and quarter mile in seconds
-        * scatteroplot-2.pdf                              # pdf of carburator count across horsepower and quarter mile in seconds
-        * scatteroplot-2.png                              # png of carburator count across horsepower and quarter mile in seconds
-        * scatteroplot-3.pdf                              # pdf of cylinder count across horsepower and quarter mile in seconds
-        * scatteroplot-3.png                              # png of cylinder count across horsepower and quarter mile in seconds
-        * scatteroplot-4.pdf                              # pdf of factor(cylinder count) across gross horse power and quarter mile in seconds
-        * scatteroplot-4.png                              # png of factor(cylinder count) across gross horse power and quarter mile in seconds
-        * scatteroplot-5.pdf                              # pdf of forward gear count across miles per gallon and quarter mile in seconds
-        * scatteroplot-5.png                              # png of forward gear count across miles per gallon and quarter mile in seconds
-        * scatteroplot-6.pdf                              # pdf of carburator count across miles per gallon and quarter mile in seconds
-        * scatteroplot-6.png                              # png of carburator count across miles per gallon and quarter mile in seconds
-        * scatteroplot-7.pdf                              # pdf of factor cylinder count across miles per gallon and quarter mile in seconds
-        * scatteroplot-7.png                              # png of factor cylinder count across miles per gallon and quarter mile in seconds
-    * descriptives.md                                     # report settings for the analyses used in the ZZZ project (Marcus Mark, PI)
-    * descriptives.R                                      # basic R-code for obtaining graphs/plots on a knitr report
-    * descriptive.Rmd                                     # R markdown for outputting knitr report
-    * report.Rmd                                          # A sample of code of a Regression line and a scatter plot for the ZZZ project
-* scripts/                                                # description and github paths to the functions to be used and defined for data extraction and transformation
+* projects/ 											  # official dynamic reports, must maintain in good shape all the time
+* sandbox/                                                # dynamic reports in the making, experiment, not afraid to lose, or care to support
+    * basic/                                              # basic quantifications
+    * descriptives/                                       # experiementing with various quantificatio.
+
+	
     * dev/                                                # scripts for correcting the output files names and making the reports look presentable
         * 1a_correct_model_names.R                        # this script corrects irregularities in the naming of the output files
         * x_make_pretty.R                                 # make the data look presentable for reporting
