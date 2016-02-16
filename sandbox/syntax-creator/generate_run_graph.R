@@ -45,14 +45,14 @@ run_models_on <- FALSE # TRUE - run models, FALSE - only create script
 # from "./sandbox/syntax-creator/functions_to_generate_Mplus_scripts.R"
 make_script_waves(
   prototype = "sandbox/syntax-creator/prototype_map_wide.inp"
-  # ,place_in = "outputs/grip_numbercomp"
+  ,place_in = "sandbox/syntax-creator/outputs/grip_digitsymbols"
   ,processP_name = "grip" # measure name
   ,processP = "gripavg" # Mplus variable
   ,processC_name = 'numbercomp'# measure name
   ,processC = 'cts_nccrtd'# Mplus variable
   ,covariates = "a"
-  ,least_waves = "4"
-  ,most_waves = "18"
+  ,least_waves = "5"
+  ,most_waves = "5"
   ,all_waves = "21"
   ,run_models = FALSE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)

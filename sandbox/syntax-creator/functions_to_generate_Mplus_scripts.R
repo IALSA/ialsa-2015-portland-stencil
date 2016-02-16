@@ -14,8 +14,8 @@
 # covariates = "a"
 
 make_script_waves <- function(
-                              prototype = "sandbox/syntax-creator/prototype_map_wide.inp",
-                              place_in = "reports/grip_digitsymbols",
+                              prototype, # = "sandbox/syntax-creator/prototype_map_wide.inp",
+                              place_in, # = "reports/grip_digitsymbols",
                               processP_name = "grip", # goes into the name of the file
                               processP = "gripavg", # goes into the mplus script
                               processC_name = 'digitsymbols',
@@ -33,7 +33,7 @@ make_script_waves <- function(
   outFolder <- paste0(pathRoot,"/",place_in)
 
 
-
+# browser()
 
 
 
