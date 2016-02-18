@@ -5,6 +5,8 @@
         * derived/                                        # files produced from the code we write
         * raw/                                            # files that come from the researcher/client
         * contents.md                                     # description of data/unshared (list of unshared files)
+* documentation/                                          # supportive documents for the project and the repositorty
+    * repo-files.md                                       # markdown document for the file structure
 * IALSA-2015-portland-mirror/                             # Copied documents/files from IALSA-2015-Portland
 * libs/                                                   # global resources for reports and web
     * css/                                                # customize the appearance of HTML produced by RMarkdown
