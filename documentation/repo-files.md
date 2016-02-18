@@ -112,6 +112,10 @@
     * generate_run_graph.R                                # generating scripts to process mplus data
     * group_variables.R                                   # load the objects that will subset columns from the results tables
     * look-at-data.R                                      # functions to look at data and export it back to mplus
+* shiny/                                                  # Codes for dynamic web report
+    *basic/                                               # Basic R codes for shiny
+        *server.R                                         # R code for defining server logic for shiny report
+        *ui.R                                             # R code for options selection on shiny report
 * utility/                                                # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                  # code for required packages for efficient repo operation
     * package-dependency-list.csv                         # elements necessary for packages fuctionality
