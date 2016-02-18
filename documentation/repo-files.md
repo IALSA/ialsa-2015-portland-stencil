@@ -88,12 +88,11 @@
         * bisr_radc.md                                    # Verbal interpretation of graph studying bisr for radc study
         * bisr_satsa.md                                   # Verbal interpretation of graph studying bisr for satsa study
 * table_1_descriptive/                                    # describe sample characteristics of each study
-* projects/ 											  # official dynamic reports, must maintain in good shape all the time
+* projects/ 											                        # official dynamic reports, must maintain in good shape all the time
 * sandbox/                                                # dynamic reports in the making, experiment, not afraid to lose, or care to support
     * basic/                                              # basic quantifications
-    * descriptives/                                       # experiementing with various quantificatio.
-
-	
+    * descriptives/                                       # experiementing with various quantification.
+* scripts                                                 # scripts for defining functions and code
     * dev/                                                # scripts for correcting the output files names and making the reports look presentable
         * 1a_correct_model_names.R                        # this script corrects irregularities in the naming of the output files
         * x_make_pretty.R                                 # make the data look presentable for reporting
