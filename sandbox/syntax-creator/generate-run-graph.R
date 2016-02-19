@@ -12,12 +12,12 @@ pathFolder <- file.path(pathRoot,"sandbox/syntax-creator/outputs")
 
 
 
-#e.g pc_TAU_00 <- c("pc_TAU_00_est", "pc_TAU_00_se", "pc_TAU_00_wald","pc_TAU_00_pval")
-source("./sandbox/syntax-creator/group_variables.R") # selected_results
+#e.g pc_TAU_00 <- c("pc_TAU_00_est", "pc_TAU_00_se", "pc_TAU_00_wald", "pc_TAU_00_pval")
+source("./sandbox/syntax-creator/group-variables.R") # selected_results
 # load functions that generate scripts
-source("./sandbox/syntax-creator/functions_to_generate_Mplus_scripts.R")
+source("./sandbox/syntax-creator/functions-to-generate-Mplus-scripts.R")
 # load functions that process the output files and create a summary dataset
-source("./sandbox/syntax-creator/extraction_functions.R")
+source("./sandbox/syntax-creator/extraction-functions.R")
 
 
 

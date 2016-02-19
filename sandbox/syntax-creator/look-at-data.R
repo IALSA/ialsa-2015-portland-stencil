@@ -100,12 +100,12 @@ dlong <- d %>% tidyr::gather(fu_year,"year")
 # ---- export_data -------------------------------------
 # At this point we would like to export the data in .dat format
 # to be fed to Mplus for any subsequent modeling
-write.csv(d,"./sandbox/syntax-creator/data/unshared/long_dataset.csv", row.names=F)
-write.table(d,"./sandbox/syntax-creator/data/unshared/long_dataset.dat", row.names=F, col.names=F)
-write(names(d), "./sandbox/syntax-creator/data/unshared/long_dataset_varnames.txt", sep=" ")
+# write.csv(d,"./sandbox/syntax-creator/data/unshared/long_dataset.csv", row.names=F)
+# write.table(d,"./sandbox/syntax-creator/data/unshared/long_dataset.dat", row.names=F, col.names=F)
+# write(names(d), "./sandbox/syntax-creator/data/unshared/long_dataset_varnames.txt", sep=" ")
 
-write.table(d,"./sandbox/syntax-creator/outputs/grip_numbercomp/long_dataset.dat", row.names=F, col.names=F)
-write(names(d), "./sandbox/syntax-creator/outputs/grip_numbercomp/variable_names.txt", sep=" ")
+write.table(d,"./sandbox/syntax-creator/outputs/grip_numbercomp/long-dataset.dat", row.names=F, col.names=F)
+write(names(d), "./sandbox/syntax-creator/outputs/grip_numbercomp/variable-names.txt", sep=" ")
 
 
 str(ds$agreeableness)
