@@ -128,7 +128,7 @@ COVERAGE=.00;
 
 MODEL:
 !first-level equation
-	ip sp | p1-pXX AT time1-time%wave_max%;
+	ip sp | p1-p5 AT time%wave_min%-time%wave_max%;
 	ic sc | c1-cXX AT time1-timeXX;
 !variance of the first-level terms
 	ip (v_ip);
