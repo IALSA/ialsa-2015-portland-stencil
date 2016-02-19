@@ -15,15 +15,15 @@
 
 make_script_waves <- function(
                               prototype, # = "sandbox/syntax-creator/prototype_map_wide.inp",
-                              place_in, # = "reports/grip_digitsymbols",
+                              place_in, # = "sandbox/syntax-creator/outputs/grip_numbercomp",
                               processP_name = "grip", # goes into the name of the file
                               processP = "gripavg", # goes into the mplus script
                               processC_name = 'digitsymbols',
                               covariates = "a",
                               processC = 'cts_catflu',
-                              least_waves = "4",
-                              most_waves = "18",
-                              all_waves = "21",
+                              waves_min = "4",
+                              waves_max = "18",
+                              waves_all = "21",
                               run_models = FALSE){
 
   # get a the prototypical model script
@@ -31,7 +31,7 @@ make_script_waves <- function(
   pathFile <- paste0(pathRoot,"/",prototype)
   # point to the folder where new files should go to
   outFolder <- paste0(pathRoot,"/",place_in)
-
+  pathVarnames <- paste0(pathRoot,"/",place_in,"/variable_names.txt")
 
 # browser()
 
@@ -41,7 +41,7 @@ make_script_waves <- function(
    gender <- c("male",'female')
   for(sex in gender){
 
-    waves <- as.character(c(least_waves:most_waves))
+    waves <- as.character(c(waves_min:waves_max))
     for(wave in waves){
 
       # newFile <-  "./scripts/mplus/prototype/new_b1_male_a_grip_categories_18.inp"
@@ -49,15 +49,22 @@ make_script_waves <- function(
 
       proto_input <- scan(pathFile, what='character', sep='\n')
 
+# browser()
+
+      # names_are <- read.csv(pathVarnames, header = F, stringsAsFactors = F)
+      # names_are <- as.character(read.csv(pathVarnames,header = F, stringsAsFactors = F)[ ,1])
+      # names_are <- "test"
+      # proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
+
 
       line_found <- (grep("!define the variables used in the analysis", proto_input))
-      proto_input[line_found+1] <- gsub("timeXX", paste0("time",wave), proto_input[line_found+1])
-      proto_input[line_found+2] <- gsub("pXX",    paste0("p",wave), proto_input[line_found+2])
-      proto_input[line_found+3] <- gsub("cXX",    paste0("c",wave), proto_input[line_found+3])
+      proto_input[line_found+1] <- gsub("time%wave_max%", paste0("time",wave), proto_input[line_found+1])
+      proto_input[line_found+2] <- gsub("p%wave_max%",    paste0("p",wave), proto_input[line_found+2])
+      proto_input[line_found+3] <- gsub("c%wave_max%",    paste0("c",wave), proto_input[line_found+3])
 
 
       line_found <- (grep("!define the time points", proto_input))
-      proto_input[line_found+1] <- gsub("timeXX", paste0("time",wave), proto_input[line_found+1])
+      proto_input[line_found+1] <- gsub("time%wave_max%", paste0("time",wave),  proto_input[line_found+1])
 
 
       line_found <- (grep("!select a subset of observations", proto_input))
@@ -65,7 +72,7 @@ make_script_waves <- function(
             print_sex_value <- paste0("msex EQ 1")}else{
             print_sex_value <- paste0("msex EQ 0")
             }
-      proto_input[line_found+1] <- gsub("msex EQ XX", print_sex_value, proto_input[line_found+1])
+      proto_input[line_found+1] <- gsub("msex EQ %subgroup_sex%", print_sex_value, proto_input[line_found+1])
 
 
       line_found <- (grep("!assign variables to the process p", proto_input))
@@ -84,25 +91,30 @@ make_script_waves <- function(
 
 
       line_found <- (grep("!first-level equation", proto_input))
-      proto_input[line_found+1] <- gsub("pXX",    paste0("p",wave), proto_input[line_found+1])
-      proto_input[line_found+1] <- gsub("timeXX", paste0("time",wave), proto_input[line_found+1])
-      proto_input[line_found+2] <- gsub("cXX",    paste0("c",wave), proto_input[line_found+2])
-      proto_input[line_found+2] <- gsub("timeXX", paste0("time",wave), proto_input[line_found+2])
+      proto_input[line_found+1] <- gsub("p%wave_max%",    paste0("p",wave), proto_input[line_found+1])
+      proto_input[line_found+1] <- gsub("time%wave_max%", paste0("time",wave), proto_input[line_found+1])
+      proto_input[line_found+2] <- gsub("c%wave_max%",    paste0("c",wave), proto_input[line_found+2])
+      proto_input[line_found+2] <- gsub("time%wave_max%", paste0("time",wave), proto_input[line_found+2])
 
 
       line_found <- (grep("!define the second-level terms", proto_input))
 
 
       line_found <- (grep("!residual means", proto_input))
-      proto_input[line_found+1] <- gsub("pXX", paste0("p",wave), proto_input[line_found+1])
-      proto_input[line_found+2] <- gsub("cXX", paste0("c",wave), proto_input[line_found+2])
+      proto_input[line_found+1] <- gsub("p%wave_max%", paste0("p",wave), proto_input[line_found+1])
+      proto_input[line_found+2] <- gsub("c%wave_max%", paste0("c",wave), proto_input[line_found+2])
 
 
       line_found <- (grep("!Paired covariances constrained to be equal across t", proto_input))
-      proto_input[line_found+1] <- gsub("pXX", paste0("p",wave), proto_input[line_found+1])
-      proto_input[line_found+1] <- gsub("cXX", paste0("c",wave), proto_input[line_found+1])
+      proto_input[line_found+1] <- gsub("p%wave_max%", paste0("p",wave), proto_input[line_found+1])
+      proto_input[line_found+1] <- gsub("c%wave_max%", paste0("c",wave), proto_input[line_found+1])
+
+      proto_input <- gsub("%covariates%", covariates, proto_input)
 
       writeLines(proto_input,newFile)
+
+
+
     } #close wave loop
   } #close sex loop
   # run_models <- TRUE

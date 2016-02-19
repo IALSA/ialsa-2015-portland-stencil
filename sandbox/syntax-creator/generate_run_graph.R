@@ -22,9 +22,9 @@ source("./sandbox/syntax-creator/extraction_functions.R")
 
 
 # create a object with main_theme definition
-source("./scripts/graphs/main_theme.R")
+source("./scripts/graphs/main-theme.R")
 # load graphical function
-source("./scripts/graphs/kb_profiles_functions.R")
+source("./scripts/graphs/kb-profiles-functions.R")
 
 
 # point to  the folder with datasets containing model results
@@ -45,19 +45,19 @@ run_models_on <- FALSE # TRUE - run models, FALSE - only create script
 # from "./sandbox/syntax-creator/functions_to_generate_Mplus_scripts.R"
 make_script_waves(
   prototype = "sandbox/syntax-creator/prototype_map_wide.inp"
-  ,place_in = "sandbox/syntax-creator/outputs/grip_digitsymbols"
+  ,place_in = "sandbox/syntax-creator/outputs/grip_numbercomp"
   ,processP_name = "grip" # measure name
   ,processP = "gripavg" # Mplus variable
   ,processC_name = 'numbercomp'# measure name
   ,processC = 'cts_nccrtd'# Mplus variable
-  ,covariates = "a"
-  ,least_waves = "5"
-  ,most_waves = "5"
-  ,all_waves = "21"
+  ,covariates = "Bage"
+  ,waves_min = "5"
+  ,waves_max = "5"
+  ,waves_all = "21"
   ,run_models = FALSE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
 # from "./sandbox/syntax-creator/extraction_functions.R  script
-collect_model_results(folder = "sandbox/syntax-creator/outputs/fev-bostonnaming") # collect and save into the same folder
+collect_model_results(folder = "./sandbox/syntax-creator/outputs/grip_digitsymbols") # collect and save into the same folder
 # ds <- readRDS(paste0(pathFolder,".rds")) # load the data for outcome pair
 # from "./scripts/graphs/koval_brown_profiles.R"
 # kb_profiles(ds,  vertical="wave_count",  border=5) # produces the kb_profile graph
