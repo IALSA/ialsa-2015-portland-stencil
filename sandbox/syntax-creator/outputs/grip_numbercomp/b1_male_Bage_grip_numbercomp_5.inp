@@ -1,11 +1,11 @@
 TITLE:
 Your new title
 DATA:
-File = radcMAP_wide.dat;
+File = long_dataset.dat;
 VARIABLE:
 Names are
-	T0 T1 T2 T3 T4
-	T5 T6 T7 T8 T9 T10 T11 T12 T13 T14 T15 T16 T17 T18 T19 T20;
+ fu_year
+	;
 Missing are all (-9999);
 USEVAR are
 !define the variables used in the analysis
@@ -118,7 +118,7 @@ TYPE = RANDOM;
 COVERAGE=.00;
 MODEL:
 !first-level equation
-	ip sp | p1-p5 AT time1-time%wave_max%;
+	ip sp | p1-p5 AT time1-time5;
 	ic sc | c1-c5 AT time1-time5;
 !variance of the first-level terms
 	ip (v_ip);
@@ -133,7 +133,7 @@ MODEL:
 	sp WITH sc (c_spsc);
 	ic WITH sc (c_icsc);
 !second-level equation
-	ip sp ic sc ON %model_type%;
+	ip sp ic sc ON Bage;
 !residual means
 	p1-p5 (res_p);
 	c1-c5 (res_c);
