@@ -51,10 +51,8 @@ make_script_waves <- function(
 
 # browser()
 
-      # names_are <- read.csv(pathVarnames, header = F, stringsAsFactors = F)
-      # names_are <- as.character(read.csv(pathVarnames,header = F, stringsAsFactors = F)[ ,1])
-      # names_are <- "test"
-      # proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
+      names_are <- read.csv(pathVarnames,header = F, stringsAsFactors = F)[ ,1]
+      proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
 
 
       line_found <- (grep("!define the variables used in the analysis", proto_input))

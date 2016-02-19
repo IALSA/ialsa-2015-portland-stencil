@@ -104,6 +104,9 @@ write.csv(d,"./sandbox/syntax-creator/data/unshared/long_dataset.csv", row.names
 write.table(d,"./sandbox/syntax-creator/data/unshared/long_dataset.dat", row.names=F, col.names=F)
 write(names(d), "./sandbox/syntax-creator/data/unshared/long_dataset_varnames.txt", sep=" ")
 
+write.table(d,"./sandbox/syntax-creator/outputs/grip_numbercomp/long_dataset.dat", row.names=F, col.names=F)
+write(names(d), "./sandbox/syntax-creator/outputs/grip_numbercomp/variable_names.txt", sep=" ")
+
 
 str(ds$agreeableness)
 sum(ds$conscientiousness)

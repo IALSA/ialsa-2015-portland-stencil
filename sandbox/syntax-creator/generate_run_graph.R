@@ -57,7 +57,7 @@ make_script_waves(
   ,run_models = FALSE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
 # from "./sandbox/syntax-creator/extraction_functions.R  script
-collect_model_results(folder = "./sandbox/syntax-creator/outputs/grip_digitsymbols") # collect and save into the same folder
+# collect_model_results(folder = "./sandbox/syntax-creator/outputs/grip_digitsymbols") # collect and save into the same folder
 # ds <- readRDS(paste0(pathFolder,".rds")) # load the data for outcome pair
 # from "./scripts/graphs/koval_brown_profiles.R"
 # kb_profiles(ds,  vertical="wave_count",  border=5) # produces the kb_profile graph
