@@ -21,6 +21,9 @@ make_script_waves <- function(
                               processC_name = 'digitsymbols',
                               covariates = "a",
                               processC = 'cts_catflu',
+                              # gender,
+                              # wave_set_possible,  #Integer vector of the possible waves of the study, ie 1:16,
+                              # wave_set_modeled,   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
                               waves_min = "4",
                               waves_max = "18",
                               waves_all = "21",
@@ -39,19 +42,23 @@ make_script_waves <- function(
 
 
    gender <- c("male",'female')
-  for(sex in gender){
+  for(sex in gender){  #This loop will be replaced by parameter value (and the function called for each gender).
 
     waves <- as.character(c(waves_min:waves_max))
-    for(wave in waves){
+    for(wave in waves){  #This loop will be replaced by parameter value (and the function called for each wave *set*.).
 
       # newFile <-  "./scripts/mplus/prototype/new_b1_male_a_grip_categories_18.inp"
       newFile <- paste0(outFolder,"/","b1","_", sex ,"_",covariates,"_",processP_name,"_",processC_name,"_",wave,".inp")
 
       proto_input <- scan(pathFile, what='character', sep='\n')
 
+      #This makes it all one (big) element, if you need it in the future.
+      # proto_input <- paste(proto_input, collapse="\n")
+
 # browser()
 
       names_are <- read.csv(pathVarnames,header = F, stringsAsFactors = F)[ ,1]
+      names_are <- paste(names_are, collapse="\n") #Collapse all the variable names to one element (seperated by line breaks).
       proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
 
 
@@ -87,6 +94,9 @@ make_script_waves <- function(
 
       line_found <- (grep("! define the second-level terms", proto_input))
 
+
+      #After the `proto_input` is one big element, this should replace all the lines below it.
+      # proto_input <- gsub("%wave_max%",    wave_max, proto_input)
 
       line_found <- (grep("!first-level equation", proto_input))
       proto_input[line_found+1] <- gsub("p%wave_max%",    paste0("p",wave), proto_input[line_found+1])
