@@ -13,9 +13,13 @@ Missing are all (-9999);
 
 USEVAR are
 !define the variables used in the analysis
-	time1-time%waves_max%
-	p1-p%waves_max%
-	c1-c%waves_max%
+! estimated timepoints
+	%estimated_timepoints%
+! modeled timepoints of process A
+	%process_a_timepoints% 
+! modelled timepoints of process B
+	%process_a_timepoints% 
+! covariates used in the model
 	Bage;
 
 TSCORES are

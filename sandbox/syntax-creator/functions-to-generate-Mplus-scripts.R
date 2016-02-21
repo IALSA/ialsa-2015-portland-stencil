@@ -24,9 +24,8 @@ make_script_waves <- function(
                               subgroup_sex,
                               wave_set_possible,# = c(1,2,3,4,5,6,7),  #Integer vector of the possible waves of the study, ie 1:16,
                               wave_set_modeled,# = c(1,2,3,4,5),   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
-                              # waves_min = "4",
-                              # waves_max = "18",
-                              # waves_all = "21",
+                              waves_min = "5",
+                              waves_max = "5",
                               run_models = FALSE){
 
 
@@ -35,14 +34,17 @@ make_script_waves <- function(
   outFolder <- paste0(pathRoot,"/",place_in) # all generated scripts will go here
   # point to the file containing the names of the variables in wide_dataset.dat;
   pathVarnames <- paste0(pathRoot,"/",place_in,"/wide-variable-names.txt")
-
 # browser()
   proto_input <- scan(pathFile, what='character', sep='\n')
   #This makes it all one (big) element, if you need it in the future.
   # proto_input <- paste(proto_input, collapse="\n")
+  # declare global values
+  wave_modeled_max <- max(wave_set_modeled)
 
-  waves <- as.character(c(least_waves:most_waves))
+  waves <- as.character(c(waves_min:waves_max))
   for(wave in waves){
+
+
     # after modification .inp files will be saved as:
     newFile <- paste0(outFolder,"/", subgroup_sex ,"_", wave,".inp")
 
@@ -58,8 +60,18 @@ make_script_waves <- function(
     names_are <- paste(names_are, collapse="\n") #Collapse all the variable names to one element (seperated by line breaks).
     proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
     # Usevar are # what variables are used in estimation
-    usevar_are <-
-    # Tscores are # define the time points
+
+    estimated_timepoints <- paste0("time",1:wave_modeled_max)
+    estimated_timepoints <- paste(estimated_timepoints, collapse="\n")
+    proto_input <- gsub(pattern ="%estimated_timepoints%", replacement = estimated_timepoints, x = proto_input)
+
+#
+#     process_a_timepoints <- paste0("a", 1:wave_modeled_max)
+#     process_b_timepoints <- paste0("b", 1:wave_modeled_max)
+#     usevar_are <- rbind(estimated_timepoints, process_a_timepoints, process_b_timepoints)
+#     usevar_are <- paste(usevar_are, collapse="\n")
+#     proto_input <- gsub(pattern ="%estimated_timepoints%", replacement = usevar_are, x = proto_input)
+#     # Tscores are # define the time points
     # Useobservations are # select a subset of observation
     proto_input <- gsub("msex EQ %subgroup_sex%", paste0("msex EQ ",subgroup_sex), proto_input)
     # DEFINE:

@@ -54,6 +54,8 @@ make_script_waves(
   ,covariates = "Bage Educ Height"
   ,wave_set_possible = c(1,2,3,4,5,6,7)  #Integer vector of the possible waves of the study, ie 1:16,
   ,wave_set_modeled =  c(5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+  ,waves_min = 5
+  ,waves_max = 5
   ,run_models = FALSE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
 # from "./sandbox/syntax-creator/extraction_functions.R  script
