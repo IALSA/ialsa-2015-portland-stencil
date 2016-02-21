@@ -64,17 +64,19 @@ selected_items <- c(
   "id", # personal identifier
   "age_bl", #Age at baseline
   "htm", # Height(meters)
+  "wtkg", # Weight (kilograms)
   "msex", # Gender
   "race", # Participant's race
   "educ", # Years of education
 
-  "dementia", # Dementia diagnosis
+
 
   # time-invariant above
   "fu_year", # Follow-up year ---###---
   # time-variant below
 
   "age_at_visit", #Age at cycle - fractional
+  "dementia", # Dementia diagnosis
 
   "cts_bname", # Boston naming - 2014
   "cts_catflu", # Category fluency - 2014
@@ -96,9 +98,9 @@ table(d$fu_year, useNA = "always")
 
 d <- d[!is.na(d$fu_year),] # remove obs with NA for the follow up year
 
-dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + msex + race + educ + dementia ~ fu_year, value.var = c(
+dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + wtkg + msex + race + educ ~ fu_year, value.var = c(
   "age_at_visit", #Age at cycle - fractional
-
+  "dementia", # Dementia diagnosis
   "cts_bname", # Boston naming - 2014
   "cts_catflu", # Category fluency - 2014
   "cts_nccrtd", #  Number comparison - 2014

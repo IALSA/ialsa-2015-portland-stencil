@@ -1,8 +1,8 @@
 TITLE:
-Your new title
+Script produced from the prototype in ./sandbox/syntax-creator
 
 DATA:
-File = long_dataset.dat;
+File = wide_dataset.dat;
 
 VARIABLE:
 Names are
@@ -13,14 +13,14 @@ Missing are all (-9999);
 
 USEVAR are
 !define the variables used in the analysis
-	time1-time%wave_max%
-	p1-p%wave_max%
-	c1-c%wave_max%
+	time1-time%waves_max%
+	p1-p%waves_max%
+	c1-c%waves_max%
 	Bage;
 
 TSCORES are
 !define the time points
-	time1-time%wave_max%;
+	time1-time%waves_max%;
 
 USEOBSERVATIONS are
 !select a subset of observations
@@ -101,25 +101,10 @@ DEFINE:
 	time20=T19;
 	time21=T20;
 !define the second-level terms
-	Bage=age_bl-70;   !Age centered at 70 baseline
-		!Dage=age_death;
-		!Sex=msex;         !0=female
-	Educ=educ-7;     ! Centered at 7 years
-		!SEP=SESgrp; couldn't find
-		!Marstat;
-	Height=htm_00-1.60;
-		!Weight
-		!BMI
-		!SmokHist=smoking;
-		!Alcohol;
-		!CompExp;
-		!PhysAct;
-		!BP;
-		!DepSymp;
-		!Cardio;
-		!Diab;
-		!MorbInd;
-		!BageEduc=Bage*Educ;
+	Bage =   age_bl - 70;    ! Age centered at 70 baseline
+	Educ =     educ - 7;     ! Education centered at 7 years
+	Height = htm_00 - 1.60;  ! Height at 160 cm
+
 
 
 ANALYSIS:
@@ -128,8 +113,8 @@ COVERAGE=.00;
 
 MODEL:
 !first-level equation
-	ip sp | p1-p%wave_max% AT time1-time%wave_max%;
-	ic sc | c1-c%wave_max% AT time1-time%wave_max%;
+	ip sp | p1-p%waves_max% AT time1-time%waves_max%;
+	ic sc | c1-c%waves_max% AT time1-time%waves_max%;
 !variance of the first-level terms
 	ip (v_ip);
 	sp (v_sp);
@@ -145,10 +130,10 @@ MODEL:
 !second-level equation
 	ip sp ic sc ON %covariates%;
 !residual means
-	p1-p%wave_max% (res_p);
-	c1-c%wave_max% (res_c);
+	p1-p%waves_max% (res_p);
+	c1-c%waves_max% (res_c);
 !Paired covariances constrained to be equal across t
-	p1-p%wave_max% pwith c1-c%wave_max%(res_cov);
+	p1-p%waves_max% pwith c1-c%waves_max%(res_cov);
 
 MODEL CONSTRAINT:
 !assigns labels to new parameters;
