@@ -17,7 +17,8 @@ requireNamespace("testit")
 requireNamespace("reshape2") # data transformations
 
 # ---- declare-globals ---------------------------------------------------------
-path_input  <- "./data/unshared/raw/map/ds0.rds"
+# path_input  <- "./data/unshared/raw/map/ds0.rds"
+path_input  <- "../MAP/data-unshared/derived/ds0.rds"
 # figure_path <- 'manipulation/stitched-output/te/'
 
 # ---- load-data ---------------------------------------------------------------
@@ -42,16 +43,15 @@ names.labels <- function(ds){
   }
   return(nl)
 }
-# (nl <- names.labels(ds))
+# (nl <- names.labels(ds)) # usage example
 
 # ---- load_varnames ---------------------------------------------------------
 (nl <- names.labels(ds)) # nl for (n)ame and (l)ables
 
 write.csv(nl, file="./data/unshared/derived/nl_raw.csv")
-write.csv(ds, file="./data/unshared/derived/ds.csv")
-# augment the names with classifications. Edit the .csv into a new version
+# augment the names with classifications. Directly edit the .csv
 nl_augmentedPath <- "./data/unshared/derived/nl_augmented.csv"
-
+# imported edited/augmented .csv containing a classification of variables
 varnames <- read.csv(nl_augmentedPath, stringsAsFactors = F)
 varnames$X <- NULL
 varnames
@@ -59,7 +59,7 @@ varnames
 dplyr::arrange(varnames, type)
 
 # ----- select_subset ------------------------------------
-# select variables you will need for modeling
+# select variables you will need for modeling, be conservative
 selected_items <- c(
   "id", # personal identifier
   "age_bl", #Age at baseline
@@ -71,7 +71,7 @@ selected_items <- c(
   "dementia", # Dementia diagnosis
 
   # time-invariant above
-  "fu_year", # Follow-up year ------------------------------------------------
+  "fu_year", # Follow-up year ---###---
   # time-variant below
 
   "age_at_visit", #Age at cycle - fractional
@@ -86,27 +86,56 @@ selected_items <- c(
 )
 
 d <- as.data.frame(ds[ , selected_items])
-d <- d[ , c("id","fu_year","age_at_visit")]
+# d <- d[ , c("id","fu_year","age_at_visit")]
 
 
 # ---- long_to_wide -----------------------------------------
 # long to wide conversion might rely on the classification given to the variables with respect to time : variant or invariant
 # should this classification be manual or automatic?
-dlong <- reshape2::dcast(d, formula = id ~ fu_year, value.var="age_at_visit")
+table(d$fu_year, useNA = "always")
 
-d <- ds %>% dplyr::select_("fu_year","age_at_visit","cts_bname")
-dlong <- d %>% tidyr::gather(fu_year,"year")
+d <- d[!is.na(d$fu_year),] # remove obs with NA for the follow up year
+
+dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + msex + race + educ + dementia ~ fu_year, value.var = c(
+  "age_at_visit", #Age at cycle - fractional
+
+  "cts_bname", # Boston naming - 2014
+  "cts_catflu", # Category fluency - 2014
+  "cts_nccrtd", #  Number comparison - 2014
+
+  "fev", # forced expiratory volume
+  "gait_speed", # Gait Speed - MAP
+  "gripavg" # Extremity strength
+  ))
+dw
+
 
 # ---- export_data -------------------------------------
 # At this point we would like to export the data in .dat format
 # to be fed to Mplus for any subsequent modeling
-# write.csv(d,"./sandbox/syntax-creator/data/unshared/long_dataset.csv", row.names=F)
-# write.table(d,"./sandbox/syntax-creator/data/unshared/long_dataset.dat", row.names=F, col.names=F)
-# write(names(d), "./sandbox/syntax-creator/data/unshared/long_dataset_varnames.txt", sep=" ")
 
-write.table(d,"./sandbox/syntax-creator/outputs/grip_numbercomp/long-dataset.dat", row.names=F, col.names=F)
-write(names(d), "./sandbox/syntax-creator/outputs/grip_numbercomp/variable-names.txt", sep=" ")
+write.table(d,"./sandbox/syntax-creator/outputs/grip-numbercomp/long-dataset.dat", row.names=F, col.names=F)
+write(names(d), "./sandbox/syntax-creator/outputs/grip-numbercomp/long-variable-names.txt", sep=" ")
+
+write.table(dw,"./sandbox/syntax-creator/outputs/grip-numbercomp/wide-dataset.dat", row.names=F, col.names=F)
+write(names(dw), "./sandbox/syntax-creator/outputs/grip-numbercomp/wide-variable-names.txt", sep=" ")
 
 
-str(ds$agreeableness)
-sum(ds$conscientiousness)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
