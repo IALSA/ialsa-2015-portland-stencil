@@ -15,6 +15,7 @@ requireNamespace("ggplot2")
 requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
 requireNamespace("testit")
 requireNamespace("reshape2") # data transformations
+loadNamespace("data.table") # data transformations
 
 # ---- declare-globals ---------------------------------------------------------
 # path_input  <- "./data/unshared/raw/map/ds0.rds"
@@ -101,6 +102,9 @@ d <- d %>%
   dplyr::ungroup()
 
 
+set.seed(42)
+random_subset <- sample(unique(d$id), size = 500)
+d <- d[d$id %in% random_subset, ]
 
 # ---- long_to_wide -----------------------------------------
 # long to wide conversion might rely on the classification given to the variables with respect to time : variant or invariant
@@ -124,7 +128,7 @@ dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + wtkg + msex + 
 
 
   ))
-dw
+
 
 dw[is.na(dw)] <- -9999
 
@@ -141,7 +145,7 @@ write(names(dw), "./sandbox/syntax-creator/outputs/grip-numbercomp/wide-variable
 
 
 
-
+♣
 
 
 
