@@ -1,0 +1,1182 @@
+Mplus VERSION 7.3
+MUTHEN & MUTHEN
+02/22/2016   1:04 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  Script produced from the prototype in ./sandbox/syntax-creator
+  DATA:
+  File = wide-dataset.dat;
+  VARIABLE:
+  Names are
+   id age_bl htm wtkg msex race educ age_at_visit_0 age_at_visit_1 age_at_visit_2
+      age_at_visit_3 age_at_visit_4 age_at_visit_5 age_at_visit_6 age_at_visit_7
+      age_at_visit_8 age_at_visit_9 age_at_visit_10 age_at_visit_11
+      age_at_visit_12 age_at_visit_13 age_at_visit_14 age_at_visit_15
+      age_at_visit_16 time_since_bl_0 time_since_bl_1 time_since_bl_2
+      time_since_bl_3 time_since_bl_4 time_since_bl_5 time_since_bl_6
+      time_since_bl_7 time_since_bl_8 time_since_bl_9 time_since_bl_10
+      time_since_bl_11 time_since_bl_12 time_since_bl_13 time_since_bl_14
+      time_since_bl_15 time_since_bl_16 dementia_0 dementia_1 dementia_2
+      dementia_3 dementia_4 dementia_5 dementia_6 dementia_7 dementia_8 dementia_9
+      dementia_10 dementia_11 dementia_12 dementia_13 dementia_14 dementia_15
+      dementia_16 cts_bname_0 cts_bname_1 cts_bname_2 cts_bname_3 cts_bname_4
+      cts_bname_5 cts_bname_6 cts_bname_7 cts_bname_8 cts_bname_9 cts_bname_10
+      cts_bname_11 cts_bname_12 cts_bname_13 cts_bname_14 cts_bname_15
+      cts_bname_16 cts_catflu_0 cts_catflu_1 cts_catflu_2 cts_catflu_3
+      cts_catflu_4 cts_catflu_5 cts_catflu_6 cts_catflu_7 cts_catflu_8
+      cts_catflu_9 cts_catflu_10 cts_catflu_11 cts_catflu_12 cts_catflu_13
+      cts_catflu_14 cts_catflu_15 cts_catflu_16 cts_nccrtd_0 cts_nccrtd_1
+      cts_nccrtd_2 cts_nccrtd_3 cts_nccrtd_4 cts_nccrtd_5 cts_nccrtd_6
+      cts_nccrtd_7 cts_nccrtd_8 cts_nccrtd_9 cts_nccrtd_10 cts_nccrtd_11
+      cts_nccrtd_12 cts_nccrtd_13 cts_nccrtd_14 cts_nccrtd_15 cts_nccrtd_16
+      fev_0 fev_1 fev_2 fev_3 fev_4 fev_5 fev_6 fev_7 fev_8 fev_9 fev_10 fev_11
+      fev_12 fev_13 fev_14 fev_15 fev_16 gait_speed_0 gait_speed_1 gait_speed_2
+      gait_speed_3 gait_speed_4 gait_speed_5 gait_speed_6 gait_speed_7
+      gait_speed_8 gait_speed_9 gait_speed_10 gait_speed_11 gait_speed_12
+      gait_speed_13 gait_speed_14 gait_speed_15 gait_speed_16 gripavg_0 gripavg_1
+      gripavg_2 gripavg_3 gripavg_4 gripavg_5 gripavg_6 gripavg_7 gripavg_8
+      gripavg_9 gripavg_10 gripavg_11 gripavg_12 gripavg_13 gripavg_14 gripavg_15
+      gripavg_16
+  	;
+  Missing are all (-9999);
+  USEVAR are
+  	!define the variables used in the analysis
+  	!estimated timepoints
+  time1
+  time2
+  time3
+  time4
+  time5
+  time6
+  time7
+  time8
+  time9
+  time10
+  	!modelled timepoints of process A
+  a1
+  a2
+  a3
+  a4
+  a5
+  a6
+  a7
+  a8
+  a9
+  a10
+  	! modelled timepoints of process B
+  b1
+  b2
+  b3
+  b4
+  b5
+  b6
+  b7
+  b8
+  b9
+  b10
+  	! covariates used in the model
+  Bage
+  Educat
+  Height
+  ;
+  TSCORES are
+  	!estimated timepoints
+  time1
+  time2
+  time3
+  time4
+  time5
+  time6
+  time7
+  time8
+  time9
+  time10;
+  USEOBSERVATIONS are
+  	!select a subset of observations
+  msex EQ msex EQ 1 and
+  dementia_0 NE 1 and dementia_1 NE 1 and dementia_2 NE 1 and
+  dementia_3 NE 1 and dementia_4 NE 1 and dementia_5 NE 1 and
+  dementia_6 NE 1 and dementia_7 NE 1 and dementia_8 NE 1 and
+  dementia_9 NE 1 and dementia_10 NE 1 and dementia_11 NE 1 and
+  dementia_12 NE 1 and dementia_13 NE 1 and dementia_14 NE 1 and
+  dementia_15 NE 1 and dementia_16;
+  DEFINE:
+  	! assign variables to the process p
+  a1=gripavg_1;
+  a2=gripavg_2;
+  a3=gripavg_3;
+  a4=gripavg_4;
+  a5=gripavg_5;
+  a6=gripavg_6;
+  a7=gripavg_7;
+  a8=gripavg_8;
+  a9=gripavg_9;
+  a10=gripavg_10;
+  	!assign variables to the process c
+  b1=cts_nccrtd_1;
+  b2=cts_nccrtd_2;
+  b3=cts_nccrtd_3;
+  b4=cts_nccrtd_4;
+  b5=cts_nccrtd_5;
+  b6=cts_nccrtd_6;
+  b7=cts_nccrtd_7;
+  b8=cts_nccrtd_8;
+  b9=cts_nccrtd_9;
+  b10=cts_nccrtd_10;
+  	!assign variables to time points
+  time1=time_since_bl_1;
+  time2=time_since_bl_2;
+  time3=time_since_bl_3;
+  time4=time_since_bl_4;
+  time5=time_since_bl_5;
+  time6=time_since_bl_6;
+  time7=time_since_bl_7;
+  time8=time_since_bl_8;
+  time9=time_since_bl_9;
+  time10=time_since_bl_10;
+  	
+  	!define the second-level terms
+  Bage =   age_bl - 70;    ! Age centered at 70 baseline
+  Educat =     educ - 7;     ! Education centered at 7 years
+  Height = htm - 1.60;  ! Height at 160 cm
+  ANALYSIS:
+  TYPE = RANDOM;
+  COVERAGE=.00;
+  MODEL:
+  	!first-level equation
+  	! process A
+  ia sa | a1-a10 AT time1-time10;
+  	! process B
+  ib sb | b1-b10 AT time1-time10;
+  	!variance of the first-level terms
+  ia (v_ia);
+  sa (v_sa);
+  ib (v_ib);
+  sb (v_sb);
+  	!covariance among first-level terms
+  ia WITH sa (c_iasb);
+  ia WITH ib (c_iaib);
+  ia WITH sb (c_iasb);
+  sa WITH ib (c_saib);
+  sa WITH sb (c_sasb);
+  ib WITH sb (c_iasb);
+  	!second-level equation
+  ia sa ib sb ON Bage Educat Height;
+  	!residual means of process A
+  a1
+  a2
+  a3
+  a4
+  a5
+  a6
+  a7
+  a8
+  a9
+  a10 (res_a);
+  	!residual means of process A
+  b1
+  b2
+  b3
+  b4
+  b5
+  b6
+  b7
+  b8
+  b9
+  b10 (res_b);
+  	!Paired covariances constrained to be equal across t
+  a1
+  a2
+  a3
+  a4
+  a5
+  a6
+  a7
+  a8
+  a9
+  a10 pwith b1
+  b2
+  b3
+  b4
+  b5
+  b6
+  b7
+  b8
+  b9
+  b10(res_cov);
+  MODEL CONSTRAINT:
+  	!assigns labels to new parameters;
+  NEW r_iaib;
+  NEW r_sasb;
+  NEW r_res_ab;
+  	!
+  r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
+  r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
+  r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
+  OUTPUT: sampstat cinterval;
+  PLOT: Type is Plot1 Plot2 Plot3;
+
+
+
+*** WARNING
+  Data set contains cases with missing on x-variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on x-variables:  102
+*** WARNING
+  Data set contains cases with missing on all variables except
+  x-variables.  These cases were not included in the analysis.
+  Number of cases with missing on all variables except x-variables:  468
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+Script produced from the prototype in ./sandbox/syntax-creator
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        1733
+
+Number of dependent variables                                   20
+Number of independent variables                                  3
+Number of continuous latent variables                            4
+
+Observed dependent variables
+
+  Continuous
+   A1          A2          A3          A4          A5          A6
+   A7          A8          A9          A10         B1          B2
+   B3          B4          B5          B6          B7          B8
+   B9          B10
+
+Observed independent variables
+   BAGE        EDUCAT      HEIGHT
+
+Continuous latent variables
+   IA          SA          IB          SB
+
+Variables with special functions
+
+  Time scores
+   TIME1       TIME2       TIME3       TIME4       TIME5       TIME6
+   TIME7       TIME8       TIME9       TIME10
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Maximum number of iterations                                   100
+Convergence criterion                                    0.100D-05
+Maximum number of EM iterations                                500
+Convergence criteria for the EM algorithm
+  Loglikelihood change                                   0.100D-02
+  Relative loglikelihood change                          0.100D-05
+  Derivative                                             0.100D-03
+Minimum variance                                         0.100D-03
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+
+Input data file(s)
+  wide-dataset.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            87
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.000
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              A1            A2            A3            A4            A5
+              ________      ________      ________      ________      ________
+ A1             0.178
+ A2             0.003         0.136
+ A3             0.001         0.003         0.108
+ A4             0.001         0.000         0.002         0.069
+ A5             0.000         0.001         0.000         0.001         0.046
+ A6             0.000         0.000         0.000         0.000         0.001
+ A7             0.001         0.001         0.000         0.001         0.001
+ A8             0.000         0.000         0.000         0.000         0.001
+ A9             0.000         0.001         0.001         0.000         0.000
+ A10            0.000         0.000         0.000         0.001         0.000
+ B1             0.174         0.004         0.001         0.001         0.000
+ B2             0.004         0.133         0.003         0.001         0.001
+ B3             0.003         0.003         0.105         0.003         0.000
+ B4             0.002         0.000         0.003         0.066         0.001
+ B5             0.000         0.002         0.001         0.001         0.045
+ B6             0.001         0.000         0.000         0.001         0.001
+ B7             0.001         0.002         0.000         0.001         0.001
+ B8             0.000         0.000         0.000         0.000         0.001
+ B9             0.000         0.001         0.001         0.001         0.000
+ B10            0.000         0.000         0.000         0.001         0.000
+ BAGE           0.178         0.136         0.108         0.069         0.046
+ EDUCAT         0.178         0.136         0.108         0.069         0.046
+ HEIGHT         0.178         0.136         0.108         0.069         0.046
+
+
+           Covariance Coverage
+              A6            A7            A8            A9            A10
+              ________      ________      ________      ________      ________
+ A6             0.037
+ A7             0.001         0.044
+ A8             0.001         0.001         0.044
+ A9             0.000         0.001         0.001         0.033
+ A10            0.001         0.000         0.002         0.001         0.023
+ B1             0.001         0.001         0.000         0.000         0.000
+ B2             0.000         0.001         0.000         0.001         0.000
+ B3             0.000         0.001         0.001         0.001         0.000
+ B4             0.001         0.002         0.000         0.000         0.001
+ B5             0.002         0.001         0.001         0.000         0.000
+ B6             0.036         0.001         0.001         0.001         0.001
+ B7             0.001         0.044         0.002         0.001         0.000
+ B8             0.001         0.001         0.043         0.001         0.002
+ B9             0.000         0.001         0.001         0.033         0.001
+ B10            0.001         0.000         0.002         0.001         0.023
+ BAGE           0.037         0.044         0.044         0.033         0.023
+ EDUCAT         0.037         0.044         0.044         0.033         0.023
+ HEIGHT         0.037         0.044         0.044         0.033         0.023
+
+
+           Covariance Coverage
+              B1            B2            B3            B4            B5
+              ________      ________      ________      ________      ________
+ B1             0.220
+ B2             0.005         0.181
+ B3             0.003         0.004         0.151
+ B4             0.002         0.001         0.006         0.122
+ B5             0.000         0.003         0.001         0.001         0.091
+ B6             0.002         0.000         0.001         0.001         0.005
+ B7             0.001         0.002         0.001         0.002         0.001
+ B8             0.000         0.000         0.001         0.000         0.001
+ B9             0.000         0.001         0.001         0.001         0.000
+ B10            0.000         0.000         0.000         0.001         0.000
+ BAGE           0.220         0.181         0.151         0.122         0.091
+ EDUCAT         0.220         0.181         0.151         0.122         0.091
+ HEIGHT         0.220         0.181         0.151         0.122         0.091
+
+
+           Covariance Coverage
+              B6            B7            B8            B9            B10
+              ________      ________      ________      ________      ________
+ B6             0.079
+ B7             0.002         0.072
+ B8             0.001         0.002         0.055
+ B9             0.001         0.001         0.001         0.039
+ B10            0.001         0.000         0.002         0.001         0.025
+ BAGE           0.079         0.072         0.055         0.039         0.025
+ EDUCAT         0.079         0.072         0.055         0.039         0.025
+ HEIGHT         0.079         0.072         0.055         0.039         0.025
+
+
+           Covariance Coverage
+              BAGE          EDUCAT        HEIGHT
+              ________      ________      ________
+ BAGE           1.000
+ EDUCAT         1.000         1.000
+ HEIGHT         1.000         1.000         1.000
+
+
+SAMPLE STATISTICS
+
+     NO CONVERGENCE IN THE MISSING DATA ESTIMATION OF THE SAMPLE STATISTICS.
+
+
+UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     A1                   44.543       0.921       9.250    0.32%      30.000     37.750     42.250
+             309.000     315.086       1.383     130.250    0.32%      45.000     56.750
+     A2                   44.435       1.166      11.250    0.42%      28.500     37.000     40.750
+             236.000     337.234       2.007     127.500    0.42%      45.250     56.500
+     A3                   44.199       1.124      14.000    0.53%      30.000     35.750     39.750
+             188.000     355.234       1.571     125.000    0.53%      44.250     58.750
+     A4                   43.965       0.646      12.000    0.83%      27.500     36.250     40.125
+             120.000     324.377      -0.097     100.250    0.83%      45.500     62.000
+     A5                   46.362       0.414      15.750    1.25%      34.250     40.000     43.750
+              80.000     247.411      -0.482      86.750    1.25%      47.000     59.500
+     A6                   46.480       0.751      11.250    1.56%      28.250     39.500     44.125
+              64.000     341.876       0.990     112.250    1.56%      47.500     62.750
+     A7                   43.496       1.407      10.750    1.32%      29.250     35.500     39.375
+              76.000     336.228       3.413     121.750    1.32%      44.000     56.250
+     A8                   42.071       1.032      11.000    1.30%      25.000     36.750     41.750
+              77.000     301.568       1.498      99.250    1.30%      45.750     51.750
+     A9                   43.974       1.077      14.750    1.75%      28.750     38.750     40.750
+              57.000     342.705       1.241     101.500    1.75%      45.000     53.500
+     A10                  41.538       1.938      20.000    2.50%      28.250     36.250     39.750
+              40.000     262.355       5.932     110.000    2.50%      42.500     48.500
+     B1                   23.990      -0.186       0.000    0.52%      18.000     22.000     24.000
+             382.000      54.272       0.197      46.000    0.26%      26.000     30.000
+     B2                   24.404      -0.274       2.000    0.32%      19.000     22.000     25.000
+             314.000      52.763       0.120      42.000    0.64%      26.000     31.000
+     B3                   24.347       0.020       6.000    0.38%      18.000     23.000     24.000
+             262.000      53.853       0.035      44.000    0.38%      27.000     30.000
+     B4                   24.024      -0.237       0.000    0.95%      18.000     22.000     24.000
+             211.000      67.454       0.230      46.000    0.47%      26.000     32.000
+     B5                   24.503      -0.564       0.000    1.27%      18.000     23.000     25.000
+             157.000      59.282       0.503      42.000    0.64%      27.000     31.000
+     B6                   24.788      -0.279       0.000    0.73%      19.000     23.000     25.000
+             137.000      51.276       0.554      42.000    1.46%      27.000     30.000
+     B7                   24.371      -0.638       0.000    0.81%      19.000     24.000     25.000
+             124.000      60.427       0.522      43.000    0.81%      26.000     31.000
+     B8                   25.095       0.151       5.000    1.05%      20.000     23.000     25.000
+              95.000      43.665       0.866      45.000    1.05%      26.000     30.000
+     B9                   24.279      -0.707       0.000    1.47%      19.000     25.000     26.000
+              68.000      61.084       1.117      44.000    1.47%      26.000     29.000
+     B10                  23.818       0.057      10.000    4.55%      17.000     22.000     23.000
+              44.000      45.421      -0.634      38.000    2.27%      24.000     30.000
+     BAGE                  8.538      -0.522     -15.662    0.35%       3.029      7.604      9.209
+            1733.000      56.914       0.369      25.882    0.35%      10.778     14.255
+     EDUCAT                7.759       0.397      -5.000    0.06%       5.000      7.000      7.000
+            1733.000      11.311       1.538      21.000    0.81%       9.000     11.000
+     HEIGHT                0.023      -0.018      -0.381    0.12%      -0.051      0.000      0.000
+            1733.000       0.011       0.725       0.407    0.06%       0.026      0.102
+
+     THE MODEL ESTIMATION DID NOT TERMINATE NORMALLY DUE TO AN ILL-CONDITIONED
+     FISHER INFORMATION MATRIX.  CHANGE YOUR MODEL AND/OR STARTING VALUES.
+
+     THE MODEL ESTIMATION DID NOT TERMINATE NORMALLY DUE TO A NON-POSITIVE
+     DEFINITE FISHER INFORMATION MATRIX.  THIS MAY BE DUE TO THE STARTING VALUES
+     BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION.  THE CONDITION
+     NUMBER IS      -0.384D-19.
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES COULD NOT BE
+     COMPUTED.  THIS IS OFTEN DUE TO THE STARTING VALUES BUT MAY ALSO BE
+     AN INDICATION OF MODEL NONIDENTIFICATION.  CHANGE YOUR MODEL AND/OR
+     STARTING VALUES.  PROBLEM INVOLVING THE FOLLOWING PARAMETER:
+     Parameter 11, B1 WITH A10
+
+
+     THE MISSING DATA EM ALGORITHM USED TO COMPUTE SAMPLE STATISTICS HAS NOT
+     CONVERGED WITH RESPECT TO THE PARAMETER ESTIMATES.  THIS MAY BE DUE TO
+     SPARSE DATA LEADING TO A SINGULAR COVARIANCE MATRIX ESTIMATE.  INCREASE
+     THE NUMBER OF EM ITERATIONS.
+
+     THE H1 MODEL ESTIMATION DID NOT CONVERGE.  CHI-SQUARE TEST AND SAMPLE STATISTICS COULD NOT
+     BE COMPUTED.  INCREASE THE NUMBER OF H1ITERATIONS.
+
+
+
+
+
+
+MODEL RESULTS
+
+                    Estimate
+
+ IA         ON
+    BAGE              -0.306
+    EDUCAT            -0.141
+    HEIGHT            80.171
+
+ SA         ON
+    BAGE              -0.192
+    EDUCAT             0.512
+    HEIGHT            11.783
+
+ IB         ON
+    BAGE              -0.284
+    EDUCAT            -0.100
+    HEIGHT            11.775
+
+ SB         ON
+    BAGE               0.065
+    EDUCAT             0.308
+    HEIGHT            -0.337
+
+ IA       WITH
+    SA               -22.592
+    IB                38.669
+    SB               -22.592
+
+ SA       WITH
+    IB               -23.201
+    SB                10.489
+
+ IB       WITH
+    SB               -22.592
+
+ A10      WITH
+    B1                -0.001
+    B2                 0.000
+    B3                -0.001
+    B4                 2.123
+    B5                 0.000
+    B6                -0.508
+    B7                 0.000
+    B8                 0.712
+    B9                -1.686
+    B10               -0.410
+
+ Intercepts
+    A1                 0.000
+    A2                 0.000
+    A3                 0.000
+    A4                 0.000
+    A5                 0.000
+    A6                 0.000
+    A7                 0.000
+    A8                 0.000
+    A9                 0.000
+    A10                0.000
+    B1                 0.000
+    B2                 0.000
+    B3                 0.000
+    B4                 0.000
+    B5                 0.000
+    B6                 0.000
+    B7                 0.000
+    B8                 0.000
+    B9                 0.000
+    B10                0.000
+    IA                48.026
+    SA                -3.522
+    IB                28.492
+    SB                -4.184
+
+ Residual Variances
+    A1                12.742
+    A2                19.306
+    A3                58.036
+    A4                24.291
+    A5                 8.839
+    A6                19.734
+    A7                83.170
+    A8                38.926
+    A9                58.671
+    A10               16.193
+    B1                10.446
+    B2                 8.873
+    B3                 8.668
+    B4                17.113
+    B5                 9.600
+    B6                 2.687
+    B7                11.170
+    B8                 2.940
+    B9                12.047
+    B10               14.098
+    IA               191.632
+    SA                24.351
+    IB                74.161
+    SB                11.436
+
+New/Additional Parameters
+    R_IAIB             0.324
+    R_SASB             0.629
+    R_RES_AB          -0.027
+
+
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     ia sa | a1-a10 AT time1-time10;
+     ib sb | b1-b10 AT time1-time10;
+
+     ia ON bage*-0.30609;
+     ia ON educat*-0.14128;
+     ia ON height*80.17114;
+     sa ON bage*-0.19250;
+     sa ON educat*0.51154;
+     sa ON height*11.78284;
+     ib ON bage*-0.28390;
+     ib ON educat*-0.10015;
+     ib ON height*11.77508;
+     sb ON bage*0.06462;
+     sb ON educat*0.30849;
+     sb ON height*-0.33739;
+
+     a10 WITH b1*-0.00087;
+     a10 WITH b2*-0.00010;
+     a10 WITH b3*-0.00140;
+     a10 WITH b4*2.12339;
+     a10 WITH b5*0.00034;
+     a10 WITH b6*-0.50841;
+     a10 WITH b7*0.00046;
+     a10 WITH b8*0.71152;
+     a10 WITH b9*-1.68572;
+     a10 WITH b10*-0.41022 (res_cov);
+     ia WITH sa*-22.59249 (c_iasb);
+     ia WITH ib*38.66943 (c_iaib);
+     ia WITH sb*-22.59249 (c_iasb);
+     sa WITH ib*-23.20136 (c_saib);
+     sa WITH sb*10.48933 (c_sasb);
+     ib WITH sb*-22.59249 (c_iasb);
+
+     [ a1@0 ];
+     [ a2@0 ];
+     [ a3@0 ];
+     [ a4@0 ];
+     [ a5@0 ];
+     [ a6@0 ];
+     [ a7@0 ];
+     [ a8@0 ];
+     [ a9@0 ];
+     [ a10@0 ];
+     [ b1@0 ];
+     [ b2@0 ];
+     [ b3@0 ];
+     [ b4@0 ];
+     [ b5@0 ];
+     [ b6@0 ];
+     [ b7@0 ];
+     [ b8@0 ];
+     [ b9@0 ];
+     [ b10@0 ];
+     [ ia*48.02610 ];
+     [ sa*-3.52178 ];
+     [ ib*28.49166 ];
+     [ sb*-4.18437 ];
+
+     a1*12.74247;
+     a2*19.30557;
+     a3*58.03608;
+     a4*24.29059;
+     a5*8.83855;
+     a6*19.73402;
+     a7*83.16982;
+     a8*38.92620;
+     a9*58.67067;
+     a10*16.19263 (res_a);
+     b1*10.44648;
+     b2*8.87257;
+     b3*8.66829;
+     b4*17.11263;
+     b5*9.60000;
+     b6*2.68701;
+     b7*11.16981;
+     b8*2.93955;
+     b9*12.04685;
+     b10*14.09808 (res_b);
+     ia*191.63213 (v_ia);
+     sa*24.35069 (v_sa);
+     ib*74.16134 (v_ib);
+     sb*11.43587 (v_sb);
+
+     ! NEW statements in MODEL CONSTRAINT
+     NEW(r_iaib*0.32437);
+     NEW(r_sasb*0.62858);
+     NEW(r_res_ab*-0.02715);
+
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              A1            A2            A3            A4            A5
+              ________      ________      ________      ________      ________
+ 1                  0             0             0             0             0
+
+
+           NU
+              A6            A7            A8            A9            A10
+              ________      ________      ________      ________      ________
+ 1                  0             0             0             0             0
+
+
+           NU
+              B1            B2            B3            B4            B5
+              ________      ________      ________      ________      ________
+ 1                  0             0             0             0             0
+
+
+           NU
+              B6            B7            B8            B9            B10
+              ________      ________      ________      ________      ________
+ 1                  0             0             0             0             0
+
+
+           NU
+              BAGE          EDUCAT        HEIGHT
+              ________      ________      ________
+ 1                  0             0             0
+
+
+           LAMBDA
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ A1                 0             0             0             0             0
+ A2                 0             0             0             0             0
+ A3                 0             0             0             0             0
+ A4                 0             0             0             0             0
+ A5                 0             0             0             0             0
+ A6                 0             0             0             0             0
+ A7                 0             0             0             0             0
+ A8                 0             0             0             0             0
+ A9                 0             0             0             0             0
+ A10                0             0             0             0             0
+ B1                 0             0             0             0             0
+ B2                 0             0             0             0             0
+ B3                 0             0             0             0             0
+ B4                 0             0             0             0             0
+ B5                 0             0             0             0             0
+ B6                 0             0             0             0             0
+ B7                 0             0             0             0             0
+ B8                 0             0             0             0             0
+ B9                 0             0             0             0             0
+ B10                0             0             0             0             0
+ BAGE               0             0             0             0             0
+ EDUCAT             0             0             0             0             0
+ HEIGHT             0             0             0             0             0
+
+
+           LAMBDA
+              EDUCAT        HEIGHT
+              ________      ________
+ A1                 0             0
+ A2                 0             0
+ A3                 0             0
+ A4                 0             0
+ A5                 0             0
+ A6                 0             0
+ A7                 0             0
+ A8                 0             0
+ A9                 0             0
+ A10                0             0
+ B1                 0             0
+ B2                 0             0
+ B3                 0             0
+ B4                 0             0
+ B5                 0             0
+ B6                 0             0
+ B7                 0             0
+ B8                 0             0
+ B9                 0             0
+ B10                0             0
+ BAGE               0             0
+ EDUCAT             0             0
+ HEIGHT             0             0
+
+
+           THETA
+              A1            A2            A3            A4            A5
+              ________      ________      ________      ________      ________
+ A1                 1
+ A2                 0             2
+ A3                 0             0             3
+ A4                 0             0             0             4
+ A5                 0             0             0             0             5
+ A6                 0             0             0             0             0
+ A7                 0             0             0             0             0
+ A8                 0             0             0             0             0
+ A9                 0             0             0             0             0
+ A10                0             0             0             0             0
+ B1                 0             0             0             0             0
+ B2                 0             0             0             0             0
+ B3                 0             0             0             0             0
+ B4                 0             0             0             0             0
+ B5                 0             0             0             0             0
+ B6                 0             0             0             0             0
+ B7                 0             0             0             0             0
+ B8                 0             0             0             0             0
+ B9                 0             0             0             0             0
+ B10                0             0             0             0             0
+ BAGE               0             0             0             0             0
+ EDUCAT             0             0             0             0             0
+ HEIGHT             0             0             0             0             0
+
+
+           THETA
+              A6            A7            A8            A9            A10
+              ________      ________      ________      ________      ________
+ A6                 6
+ A7                 0             7
+ A8                 0             0             8
+ A9                 0             0             0             9
+ A10                0             0             0             0            10
+ B1                 0             0             0             0            11
+ B2                 0             0             0             0            13
+ B3                 0             0             0             0            15
+ B4                 0             0             0             0            17
+ B5                 0             0             0             0            19
+ B6                 0             0             0             0            21
+ B7                 0             0             0             0            23
+ B8                 0             0             0             0            25
+ B9                 0             0             0             0            27
+ B10                0             0             0             0            29
+ BAGE               0             0             0             0             0
+ EDUCAT             0             0             0             0             0
+ HEIGHT             0             0             0             0             0
+
+
+           THETA
+              B1            B2            B3            B4            B5
+              ________      ________      ________      ________      ________
+ B1                12
+ B2                 0            14
+ B3                 0             0            16
+ B4                 0             0             0            18
+ B5                 0             0             0             0            20
+ B6                 0             0             0             0             0
+ B7                 0             0             0             0             0
+ B8                 0             0             0             0             0
+ B9                 0             0             0             0             0
+ B10                0             0             0             0             0
+ BAGE               0             0             0             0             0
+ EDUCAT             0             0             0             0             0
+ HEIGHT             0             0             0             0             0
+
+
+           THETA
+              B6            B7            B8            B9            B10
+              ________      ________      ________      ________      ________
+ B6                22
+ B7                 0            24
+ B8                 0             0            26
+ B9                 0             0             0            28
+ B10                0             0             0             0            30
+ BAGE               0             0             0             0             0
+ EDUCAT             0             0             0             0             0
+ HEIGHT             0             0             0             0             0
+
+
+           THETA
+              BAGE          EDUCAT        HEIGHT
+              ________      ________      ________
+ BAGE               0
+ EDUCAT             0             0
+ HEIGHT             0             0             0
+
+
+           ALPHA
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ 1                 31            32            33            34             0
+
+
+           ALPHA
+              EDUCAT        HEIGHT
+              ________      ________
+ 1                  0             0
+
+
+           BETA
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ IA                 0             0             0             0            35
+ SA                 0             0             0             0            38
+ IB                 0             0             0             0            41
+ SB                 0             0             0             0            44
+ BAGE               0             0             0             0             0
+ EDUCAT             0             0             0             0             0
+ HEIGHT             0             0             0             0             0
+
+
+           BETA
+              EDUCAT        HEIGHT
+              ________      ________
+ IA                36            37
+ SA                39            40
+ IB                42            43
+ SB                45            46
+ BAGE               0             0
+ EDUCAT             0             0
+ HEIGHT             0             0
+
+
+           PSI
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ IA                47
+ SA                48            49
+ IB                50            51            52
+ SB                48            53            48            54
+ BAGE               0             0             0             0             0
+ EDUCAT             0             0             0             0             0
+ HEIGHT             0             0             0             0             0
+
+
+           PSI
+              EDUCAT        HEIGHT
+              ________      ________
+ EDUCAT             0
+ HEIGHT             0             0
+
+
+     PARAMETER SPECIFICATION FOR THE ADDITIONAL PARAMETERS
+
+
+           NEW/ADDITIONAL PARAMETERS
+              R_IAIB        R_SASB        R_RES_AB
+              ________      ________      ________
+ 1                 55            56            57
+
+
+     STARTING VALUES
+
+
+           NU
+              A1            A2            A3            A4            A5
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              A6            A7            A8            A9            A10
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              B1            B2            B3            B4            B5
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              B6            B7            B8            B9            B10
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              BAGE          EDUCAT        HEIGHT
+              ________      ________      ________
+ 1              0.000         0.000         0.000
+
+
+           LAMBDA
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ A1             0.000         0.000         0.000         0.000         0.000
+ A2             0.000         0.000         0.000         0.000         0.000
+ A3             0.000         0.000         0.000         0.000         0.000
+ A4             0.000         0.000         0.000         0.000         0.000
+ A5             0.000         0.000         0.000         0.000         0.000
+ A6             0.000         0.000         0.000         0.000         0.000
+ A7             0.000         0.000         0.000         0.000         0.000
+ A8             0.000         0.000         0.000         0.000         0.000
+ A9             0.000         0.000         0.000         0.000         0.000
+ A10            0.000         0.000         0.000         0.000         0.000
+ B1             0.000         0.000         0.000         0.000         0.000
+ B2             0.000         0.000         0.000         0.000         0.000
+ B3             0.000         0.000         0.000         0.000         0.000
+ B4             0.000         0.000         0.000         0.000         0.000
+ B5             0.000         0.000         0.000         0.000         0.000
+ B6             0.000         0.000         0.000         0.000         0.000
+ B7             0.000         0.000         0.000         0.000         0.000
+ B8             0.000         0.000         0.000         0.000         0.000
+ B9             0.000         0.000         0.000         0.000         0.000
+ B10            0.000         0.000         0.000         0.000         0.000
+ BAGE           0.000         0.000         0.000         0.000         1.000
+ EDUCAT         0.000         0.000         0.000         0.000         0.000
+ HEIGHT         0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              EDUCAT        HEIGHT
+              ________      ________
+ A1             0.000         0.000
+ A2             0.000         0.000
+ A3             0.000         0.000
+ A4             0.000         0.000
+ A5             0.000         0.000
+ A6             0.000         0.000
+ A7             0.000         0.000
+ A8             0.000         0.000
+ A9             0.000         0.000
+ A10            0.000         0.000
+ B1             0.000         0.000
+ B2             0.000         0.000
+ B3             0.000         0.000
+ B4             0.000         0.000
+ B5             0.000         0.000
+ B6             0.000         0.000
+ B7             0.000         0.000
+ B8             0.000         0.000
+ B9             0.000         0.000
+ B10            0.000         0.000
+ BAGE           0.000         0.000
+ EDUCAT         1.000         0.000
+ HEIGHT         0.000         1.000
+
+
+           THETA
+              A1            A2            A3            A4            A5
+              ________      ________      ________      ________      ________
+ A1           157.543
+ A2             0.000       168.617
+ A3             0.000         0.000       177.617
+ A4             0.000         0.000         0.000       162.189
+ A5             0.000         0.000         0.000         0.000       123.705
+ A6             0.000         0.000         0.000         0.000         0.000
+ A7             0.000         0.000         0.000         0.000         0.000
+ A8             0.000         0.000         0.000         0.000         0.000
+ A9             0.000         0.000         0.000         0.000         0.000
+ A10            0.000         0.000         0.000         0.000         0.000
+ B1             0.000         0.000         0.000         0.000         0.000
+ B2             0.000         0.000         0.000         0.000         0.000
+ B3             0.000         0.000         0.000         0.000         0.000
+ B4             0.000         0.000         0.000         0.000         0.000
+ B5             0.000         0.000         0.000         0.000         0.000
+ B6             0.000         0.000         0.000         0.000         0.000
+ B7             0.000         0.000         0.000         0.000         0.000
+ B8             0.000         0.000         0.000         0.000         0.000
+ B9             0.000         0.000         0.000         0.000         0.000
+ B10            0.000         0.000         0.000         0.000         0.000
+ BAGE           0.000         0.000         0.000         0.000         0.000
+ EDUCAT         0.000         0.000         0.000         0.000         0.000
+ HEIGHT         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              A6            A7            A8            A9            A10
+              ________      ________      ________      ________      ________
+ A6           170.938
+ A7             0.000       168.114
+ A8             0.000         0.000       150.784
+ A9             0.000         0.000         0.000       171.353
+ A10            0.000         0.000         0.000         0.000       131.177
+ B1             0.000         0.000         0.000         0.000         0.000
+ B2             0.000         0.000         0.000         0.000         0.000
+ B3             0.000         0.000         0.000         0.000         0.000
+ B4             0.000         0.000         0.000         0.000         0.000
+ B5             0.000         0.000         0.000         0.000         0.000
+ B6             0.000         0.000         0.000         0.000         0.000
+ B7             0.000         0.000         0.000         0.000         0.000
+ B8             0.000         0.000         0.000         0.000         0.000
+ B9             0.000         0.000         0.000         0.000         0.000
+ B10            0.000         0.000         0.000         0.000         0.000
+ BAGE           0.000         0.000         0.000         0.000         0.000
+ EDUCAT         0.000         0.000         0.000         0.000         0.000
+ HEIGHT         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              B1            B2            B3            B4            B5
+              ________      ________      ________      ________      ________
+ B1            27.136
+ B2             0.000        26.382
+ B3             0.000         0.000        26.926
+ B4             0.000         0.000         0.000        33.727
+ B5             0.000         0.000         0.000         0.000        29.641
+ B6             0.000         0.000         0.000         0.000         0.000
+ B7             0.000         0.000         0.000         0.000         0.000
+ B8             0.000         0.000         0.000         0.000         0.000
+ B9             0.000         0.000         0.000         0.000         0.000
+ B10            0.000         0.000         0.000         0.000         0.000
+ BAGE           0.000         0.000         0.000         0.000         0.000
+ EDUCAT         0.000         0.000         0.000         0.000         0.000
+ HEIGHT         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              B6            B7            B8            B9            B10
+              ________      ________      ________      ________      ________
+ B6            25.638
+ B7             0.000        30.213
+ B8             0.000         0.000        21.832
+ B9             0.000         0.000         0.000        30.542
+ B10            0.000         0.000         0.000         0.000        22.711
+ BAGE           0.000         0.000         0.000         0.000         0.000
+ EDUCAT         0.000         0.000         0.000         0.000         0.000
+ HEIGHT         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              BAGE          EDUCAT        HEIGHT
+              ________      ________      ________
+ BAGE           0.000
+ EDUCAT         0.000         0.000
+ HEIGHT         0.000         0.000         0.000
+
+
+           ALPHA
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ 1             31.949        -0.648        25.942         2.125         0.000
+
+
+           ALPHA
+              EDUCAT        HEIGHT
+              ________      ________
+ 1              0.000         0.000
+
+
+           BETA
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ IA             0.000         0.000         0.000         0.000         0.000
+ SA             0.000         0.000         0.000         0.000         0.000
+ IB             0.000         0.000         0.000         0.000         0.000
+ SB             0.000         0.000         0.000         0.000         0.000
+ BAGE           0.000         0.000         0.000         0.000         0.000
+ EDUCAT         0.000         0.000         0.000         0.000         0.000
+ HEIGHT         0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              EDUCAT        HEIGHT
+              ________      ________
+ IA             0.000         0.000
+ SA             0.000         0.000
+ IB             0.000         0.000
+ SB             0.000         0.000
+ BAGE           0.000         0.000
+ EDUCAT         0.000         0.000
+ HEIGHT         0.000         0.000
+
+
+           PSI
+              IA            SA            IB            SB            BAGE
+              ________      ________      ________      ________      ________
+ IA           798.944
+ SA             0.000       768.028
+ IB             0.000         0.000       327.457
+ SB             0.000         0.000         0.000       272.921
+ BAGE           0.000         0.000         0.000         0.000        28.457
+ EDUCAT         0.000         0.000         0.000         0.000         0.000
+ HEIGHT         0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              EDUCAT        HEIGHT
+              ________      ________
+ EDUCAT         5.655
+ HEIGHT         0.000         0.005
+
+
+     STARTING VALUES FOR THE ADDITIONAL PARAMETERS
+
+
+           NEW/ADDITIONAL PARAMETERS
+              R_IAIB        R_SASB        R_RES_AB
+              ________      ________      ________
+ 1              0.500         0.500         0.500
+
+
+     Beginning Time:  13:04:28
+        Ending Time:  13:15:20
+       Elapsed Time:  00:10:52
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2014 Muthen & Muthen

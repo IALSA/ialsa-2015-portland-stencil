@@ -61,9 +61,9 @@ COVERAGE=.00;
 MODEL:
 	!first-level equation
 	! process A
-ia sa | %process_a_timepoints% AT %estimated_timepoints%;
+ia sa | a1-a%waves_max% AT time1-time%waves_max%;
 	! process B
-ib sb | %process_b_timepoints% AT %estimated_timepoints%;
+ib sb | b1-b%waves_max% AT time1-time%waves_max%;
 	!variance of the first-level terms
 ia (v_ia);
 sa (v_sa);

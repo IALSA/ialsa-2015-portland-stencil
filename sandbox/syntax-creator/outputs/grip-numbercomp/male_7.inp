@@ -39,22 +39,22 @@ USEVAR are
 	!define the variables used in the analysis
 	!estimated timepoints
 time1
-time2
 time3
 time4
-time5
+time6
+time7
 	!modelled timepoints of process A
 a1
-a2
 a3
 a4
-a5 
+a6
+a7 
 	! modelled timepoints of process B
 b1
-b2
 b3
 b4
-b5 
+b6
+b7 
 	! covariates used in the model
 Bage
 Educat
@@ -63,10 +63,10 @@ Height
 TSCORES are
 	!estimated timepoints
 time1
-time2
 time3
 time4
-time5;
+time6
+time7;
 USEOBSERVATIONS are
 	!select a subset of observations
 msex EQ msex EQ 1 and
@@ -79,22 +79,22 @@ dementia_15 NE 1 and dementia_16;
 DEFINE:
 	! assign variables to the process p
 a1=gripavg_1;
-a2=gripavg_2;
 a3=gripavg_3;
 a4=gripavg_4;
-a5=gripavg_5;
+a6=gripavg_6;
+a7=gripavg_7;
 	!assign variables to the process c
 b1=cts_nccrtd_1;
-b2=cts_nccrtd_2;
 b3=cts_nccrtd_3;
 b4=cts_nccrtd_4;
-b5=cts_nccrtd_5;
+b6=cts_nccrtd_6;
+b7=cts_nccrtd_7;
 	!assign variables to time points
 time1=time_since_bl_1;
-time2=time_since_bl_2;
 time3=time_since_bl_3;
 time4=time_since_bl_4;
-time5=time_since_bl_5;
+time6=time_since_bl_6;
+time7=time_since_bl_7;
 	
 	!define the second-level terms
 Bage =   age_bl - 70;    ! Age centered at 70 baseline
@@ -106,9 +106,9 @@ COVERAGE=.00;
 MODEL:
 	!first-level equation
 	! process A
-ia sa | a1-a5 AT time1-time5;
+ia sa | a1-a7 AT time1-time7;
 	! process B
-ib sb | b1-b5 AT time1-time5;
+ib sb | b1-b7 AT time1-time7;
 	!variance of the first-level terms
 ia (v_ia);
 sa (v_sa);
@@ -125,26 +125,26 @@ ib WITH sb (c_iasb);
 ia sa ib sb ON Bage Educat Height;
 	!residual means of process A
 a1
-a2
 a3
 a4
-a5 (res_a);
+a6
+a7 (res_a);
 	!residual means of process A
 b1
-b2
 b3
 b4
-b5 (res_b);
+b6
+b7 (res_b);
 	!Paired covariances constrained to be equal across t
 a1
-a2
 a3
 a4
-a5 pwith b1
-b2
+a6
+a7 pwith b1
 b3
 b4
-b5(res_cov);
+b6
+b7(res_cov);
 MODEL CONSTRAINT:
 	!assigns labels to new parameters;
 NEW r_iaib;
