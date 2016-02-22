@@ -14,19 +14,20 @@
 # covariates = "a"
 
 make_script_waves <- function(
-                              prototype, # = "sandbox/syntax-creator/prototype_map_wide.inp",
-                              place_in, # = "sandbox/syntax-creator/outputs/grip_numbercomp",
-                              processP_name = "grip", # goes into the name of the file
-                              processP = "gripavg", # goes into the mplus script
-                              processC_name = 'digitsymbols',
-                              covariates = "a",
-                              processC = 'cts_catflu',
-                              subgroup_sex,
-                              wave_set_possible,# = c(1,2,3,4,5,6,7),  #Integer vector of the possible waves of the study, ie 1:16,
-                              wave_set_modeled,# = c(1,2,3,4,5),   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
-                              waves_min = "5",
-                              waves_max = "5",
-                              run_models = FALSE){
+                               prototype = "sandbox/syntax-creator/prototype-map-wide.inp"
+                              ,place_in = "sandbox/syntax-creator/outputs/grip-numbercomp"
+                              ,process_a_name = "grip" # measure name
+                              ,process_a_mplus = "gripavg" # Mplus variable
+                              ,process_b_name = 'numbercomp'# measure name
+                              ,process_b_mplus = 'cts_nccrtd'# Mplus variable
+                              ,subgroup_sex = "male" #
+                              ,covariates = "Bage Educ Height"
+                              ,wave_set_possible = c(1,2,3,4,5,6,7)  #Integer vector of the possible waves of the study, ie 1:16,
+                              ,wave_set_modeled =  c(1,2,3,4,5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+                              ,waves_min = 5
+                              ,waves_max = 5
+                              ,run_models = FALSE
+                              ){
 
 
 ## Define paths to files and folders
@@ -40,6 +41,7 @@ make_script_waves <- function(
   # proto_input <- paste(proto_input, collapse="\n")
   # declare global values
   wave_modeled_max <- max(wave_set_modeled)
+
 
   waves <- as.character(c(waves_min:waves_max))
   for(wave in waves){
@@ -61,22 +63,47 @@ make_script_waves <- function(
     proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
     # Usevar are # what variables are used in estimation
 
-    estimated_timepoints <- paste0("time",1:wave_modeled_max)
+    estimated_timepoints <- paste0("time",wave_set_modeled)
     estimated_timepoints <- paste(estimated_timepoints, collapse="\n")
     proto_input <- gsub(pattern ="%estimated_timepoints%", replacement = estimated_timepoints, x = proto_input)
 
-#
-#     process_a_timepoints <- paste0("a", 1:wave_modeled_max)
-#     process_b_timepoints <- paste0("b", 1:wave_modeled_max)
-#     usevar_are <- rbind(estimated_timepoints, process_a_timepoints, process_b_timepoints)
-#     usevar_are <- paste(usevar_are, collapse="\n")
-#     proto_input <- gsub(pattern ="%estimated_timepoints%", replacement = usevar_are, x = proto_input)
-#     # Tscores are # define the time points
+    process_a_timepoints <- paste0("a",wave_set_modeled)
+    process_a_timepoints <- paste(process_a_timepoints, collapse="\n")
+    proto_input <- gsub(pattern ="%process_a_timepoints%", replacement = process_a_timepoints, x = proto_input)
+
+    process_b_timepoints <- paste0("b",wave_set_modeled)
+    process_b_timepoints <- paste(process_b_timepoints, collapse="\n")
+    proto_input <- gsub(pattern ="%process_b_timepoints%", replacement = process_b_timepoints, x = proto_input)
+   # Tscores are # define the time points
+    proto_input <- gsub(pattern ="%process_b_timepoints%", replacement = process_b_timepoints, x = proto_input)
+
     # Useobservations are # select a subset of observation
-    proto_input <- gsub("msex EQ %subgroup_sex%", paste0("msex EQ ",subgroup_sex), proto_input)
+    if(subgroup_sex=="male"){
+      print_sex_value <- paste0("msex EQ 1")}else{
+        print_sex_value <- paste0("msex EQ 0")
+      }
+    proto_input <- gsub("msex EQ %subgroup_sex%", paste0("msex EQ ",print_sex_value), proto_input)
     # DEFINE:
+
+    (match_timepoints_process_a <- paste0("a",wave_set_modeled,"=",process_a_mplus,"_",wave_set_modeled,";"))
+    match_timepoints_process_a <- paste(match_timepoints_process_a, collapse="\n")
+    proto_input <- gsub(pattern ="%match_timepoints_process_a%", replacement = match_timepoints_process_a, x = proto_input)
+
+    (match_timepoints_process_b <- paste0("b",wave_set_modeled,"=",process_b_mplus,"_",wave_set_modeled,";"))
+    match_timepoints_process_b <- paste(match_timepoints_process_b, collapse="\n")
+    proto_input <- gsub(pattern ="%match_timepoints_process_b%", replacement = match_timepoints_process_b, x = proto_input)
+
+    (match_time_since_bl <- paste0("time",wave_set_modeled,"=", "time_since_bl","_",wave_set_modeled,";"))
+    match_time_since_bl <- paste(match_time_since_bl, collapse="\n")
+    proto_input <- gsub(pattern ="%match_timepoints%", replacement = match_time_since_bl, x = proto_input)
+
+
+
+
     # ANALYSIS:
     # MODEL:
+    proto_input <- gsub(pattern ="%match_timepoints%", replacement = match_time_since_bl, x = proto_input)
+
     # MODEL CONSTRAINT:
     # OUTPUT:
     # PLOT:

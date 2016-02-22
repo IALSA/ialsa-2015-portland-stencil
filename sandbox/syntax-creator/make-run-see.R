@@ -46,10 +46,10 @@ run_models_on <- FALSE # TRUE - run models, FALSE - only create script
 make_script_waves(
   prototype = "sandbox/syntax-creator/prototype-map-wide.inp"
   ,place_in = "sandbox/syntax-creator/outputs/grip-numbercomp"
-  ,processP_name = "grip" # measure name
-  ,processP = "gripavg" # Mplus variable
-  ,processC_name = 'numbercomp'# measure name
-  ,processC = 'cts_nccrtd'# Mplus variable
+  ,process_a_name = "grip" # measure name
+  ,process_a_mplus = "gripavg" # Mplus variable
+  ,process_a_name = 'numbercomp'# measure name
+  ,process_b_mplus = 'cts_nccrtd'# Mplus variable
   ,subgroup_sex = "male" #
   ,covariates = "Bage Educ Height"
   ,wave_set_possible = c(1,2,3,4,5,6,7)  #Integer vector of the possible waves of the study, ie 1:16,
@@ -58,6 +58,8 @@ make_script_waves(
   ,waves_max = 5
   ,run_models = FALSE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
+
+
 # from "./sandbox/syntax-creator/extraction_functions.R  script
 # collect_model_results(folder = "./sandbox/syntax-creator/outputs/grip_digitsymbols") # collect and save into the same folder
 # ds <- readRDS(paste0(pathFolder,".rds")) # load the data for outcome pair
