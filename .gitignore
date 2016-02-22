@@ -12,6 +12,7 @@
 /data-unshared/*
 /data/unshared/*
 /sandbox/syntax-creator/data/unshared/*
+/sandbox/syntax-creator/outputs/*/*.dat
 
 
 

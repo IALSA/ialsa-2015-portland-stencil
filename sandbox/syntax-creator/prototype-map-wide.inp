@@ -1,0 +1,99 @@
+TITLE:
+Script produced from the prototype in ./sandbox/syntax-creator
+
+DATA:
+File = wide-dataset.dat;
+
+VARIABLE:
+Names are
+ %names_are%
+	;
+
+Missing are all (-9999);
+
+USEVAR are
+	!define the variables used in the analysis
+	!estimated timepoints
+%estimated_timepoints%
+	!modelled timepoints of process A
+%process_a_timepoints% 
+	! modelled timepoints of process B
+%process_b_timepoints% 
+	! covariates used in the model
+Bage
+Educat
+Height 
+;
+
+TSCORES are
+	!estimated timepoints
+%estimated_timepoints%;
+
+USEOBSERVATIONS are
+	!select a subset of observations
+msex EQ %subgroup_sex% and
+dementia_0 NE 1 and dementia_1 NE 1 and dementia_2 NE 1 and
+dementia_3 NE 1 and dementia_4 NE 1 and dementia_5 NE 1 and
+dementia_6 NE 1 and dementia_7 NE 1 and dementia_8 NE 1 and
+dementia_9 NE 1 and dementia_10 NE 1 and dementia_11 NE 1 and
+dementia_12 NE 1 and dementia_13 NE 1 and dementia_14 NE 1 and
+dementia_15 NE 1 and dementia_16;
+
+DEFINE:
+	! assign variables to the process p
+%match_timepoints_process_a%
+	!assign variables to the process c
+%match_timepoints_process_b%
+	!assign variables to time points
+%match_timepoints%
+	
+	!define the second-level terms
+Bage =   age_bl - 70;    ! Age centered at 70 baseline
+Educat =     educ - 7;     ! Education centered at 7 years
+Height = htm - 1.60;  ! Height at 160 cm
+
+
+
+ANALYSIS:
+TYPE = RANDOM;
+COVERAGE=.00;
+
+MODEL:
+	!first-level equation
+	! process A
+ia sa | %process_a_timepoints% AT %estimated_timepoints%;
+	! process B
+ib sb | %process_b_timepoints% AT %estimated_timepoints%;
+	!variance of the first-level terms
+ia (v_ia);
+sa (v_sa);
+ib (v_ib);
+sb (v_sb);
+	!covariance among first-level terms
+ia WITH sa (c_iasb);
+ia WITH ib (c_iaib);
+ia WITH sb (c_iasb);
+sa WITH ib (c_saib);
+sa WITH sb (c_sasb);
+ib WITH sb (c_iasb);
+	!second-level equation
+ia sa ib sb ON %covariates%;
+	!residual means of process A
+%process_a_timepoints% (res_a);
+	!residual means of process A
+%process_b_timepoints% (res_b);
+	!Paired covariances constrained to be equal across t
+%process_a_timepoints% pwith %process_b_timepoints%(res_cov);
+
+MODEL CONSTRAINT:
+	!assigns labels to new parameters;
+NEW r_iaib;
+NEW r_sasb;
+NEW r_res_ab;
+	!
+r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
+r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
+r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
+
+OUTPUT: sampstat cinterval;
+PLOT: Type is Plot1 Plot2 Plot3;
