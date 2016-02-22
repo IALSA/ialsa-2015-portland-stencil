@@ -87,8 +87,19 @@ selected_items <- c(
   "gripavg" # Extremity strength
 )
 
+# ---- compute_time_difference -------------------------
 d <- as.data.frame(ds[ , selected_items])
-# d <- d[ , c("id","fu_year","age_at_visit")]
+# d <- d[1:10 , c("id","age_bl", "fu_year", "age_at_visit")]
+# d
+
+d <- d %>%
+  dplyr::group_by(id) %>%
+  dplyr::arrange(fu_year) %>%
+  dplyr::mutate(
+    time_since_bl = (age_at_visit - dplyr::lag(age_at_visit, 1))
+  ) %>%
+  dplyr::ungroup()
+
 
 
 # ---- long_to_wide -----------------------------------------
@@ -100,7 +111,9 @@ d <- d[!is.na(d$fu_year),] # remove obs with NA for the follow up year
 
 dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + wtkg + msex + race + educ ~ fu_year, value.var = c(
   "age_at_visit", #Age at cycle - fractional
+  "time_since_bl", # time elapsed since the baseline
   "dementia", # Dementia diagnosis
+
   "cts_bname", # Boston naming - 2014
   "cts_catflu", # Category fluency - 2014
   "cts_nccrtd", #  Number comparison - 2014
@@ -108,8 +121,12 @@ dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + wtkg + msex + 
   "fev", # forced expiratory volume
   "gait_speed", # Gait Speed - MAP
   "gripavg" # Extremity strength
+
+
   ))
 dw
+
+dw[is.na(dw)] <- -9999
 
 
 # ---- export_data -------------------------------------
