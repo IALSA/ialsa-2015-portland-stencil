@@ -10,6 +10,13 @@ library(ggplot2)
 pathRoot <- getwd()
 pathFolder <- file.path(pathRoot,"sandbox/syntax-creator/outputs")
 
+requireNamespace("ggplot2")
+requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
+requireNamespace("testit")
+requireNamespace("reshape2") # data transformations
+requireNamespace("data.table") # data transformations
+requireNamespace("MplusAutomation")
+requireNamespace("stringr")
 
 
 #e.g pc_TAU_00 <- c("pc_TAU_00_est", "pc_TAU_00_se", "pc_TAU_00_wald", "pc_TAU_00_pval")
@@ -52,10 +59,8 @@ make_script_waves(
   ,process_b_mplus = 'cts_nccrtd'# Mplus variable
   ,subgroup_sex = "male" #
   ,covariates = "Bage Educat Height"
-  ,wave_set_possible = c(1,2,3,4,5,6,7)  #Integer vector of the possible waves of the study, ie 1:16,
-  ,wave_set_modeled =  c(1,2,3,4,5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
-  ,waves_min = 5
-  ,waves_max = 5
+  ,wave_set_possible = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)  #Integer vector of the possible waves of the study, ie 1:16,
+  ,wave_set_modeled =  c(1,2,3,4,5,6,7,8,9,10)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
   ,run_models = TRUE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
 
