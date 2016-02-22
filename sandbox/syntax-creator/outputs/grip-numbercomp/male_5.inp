@@ -269,7 +269,7 @@ sa WITH ib (c_saib);
 sa WITH sb (c_sasb);
 ib WITH sb (c_iasb);
 	!second-level equation
-ia sa ib sb ON Bage Educ Height;
+ia sa ib sb ON Bage Educat Height;
 	!residual means of process A
 a1
 a2

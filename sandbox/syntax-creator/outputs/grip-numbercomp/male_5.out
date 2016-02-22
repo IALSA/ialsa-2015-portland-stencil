@@ -1,6 +1,6 @@
 Mplus VERSION 7.3
 MUTHEN & MUTHEN
-02/21/2016   7:52 PM
+02/22/2016  10:43 AM
 
 INPUT INSTRUCTIONS
 
@@ -275,7 +275,7 @@ INPUT INSTRUCTIONS
   sa WITH sb (c_sasb);
   ib WITH sb (c_iasb);
   	!second-level equation
-  ia sa ib sb ON Bage Educ Height;
+  ia sa ib sb ON Bage Educat Height;
   	!residual means of process A
   a1
   a2

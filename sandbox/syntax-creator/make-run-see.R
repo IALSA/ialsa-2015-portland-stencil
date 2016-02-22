@@ -51,7 +51,7 @@ make_script_waves(
   ,process_b_name = 'numbercomp'# measure name
   ,process_b_mplus = 'cts_nccrtd'# Mplus variable
   ,subgroup_sex = "male" #
-  ,covariates = "Bage Educ Height"
+  ,covariates = "Bage Educat Height"
   ,wave_set_possible = c(1,2,3,4,5,6,7)  #Integer vector of the possible waves of the study, ie 1:16,
   ,wave_set_modeled =  c(1,2,3,4,5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
   ,waves_min = 5
