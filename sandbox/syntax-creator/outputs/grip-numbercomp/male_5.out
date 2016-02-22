@@ -1,6 +1,6 @@
 Mplus VERSION 7.3
 MUTHEN & MUTHEN
-02/21/2016   7:39 PM
+02/21/2016   7:52 PM
 
 INPUT INSTRUCTIONS
 
@@ -243,9 +243,25 @@ INPUT INSTRUCTIONS
   MODEL:
   	!first-level equation
   	! process A
-  ia sa | a1  a2 a3 a4 a5 AT time1 time2  time3 time4 time5;
+  ia sa | a1
+  a2
+  a3
+  a4
+  a5 AT time1
+  time2
+  time3
+  time4
+  time5;
   	! process B
-  ib sb | b1 b2 b3 b4 b5 AT time1 time2 time3 time4 time5;
+  ib sb | b1
+  b2
+  b3
+  b4
+  b5 AT time1
+  time2
+  time3
+  time4
+  time5;
   	!variance of the first-level terms
   ia (v_ia);
   sa (v_sa);
@@ -259,7 +275,7 @@ INPUT INSTRUCTIONS
   sa WITH sb (c_sasb);
   ib WITH sb (c_iasb);
   	!second-level equation
-  ia sa ib sb ON Bage Educat Height;
+  ia sa ib sb ON Bage Educ Height;
   	!residual means of process A
   a1
   a2
@@ -294,20 +310,18 @@ INPUT INSTRUCTIONS
   OUTPUT: sampstat cinterval;
   PLOT: Type is Plot1 Plot2 Plot3;
 
+*** ERROR in MODEL command
+  The number of fixed time scores is not sufficient for model identification
+  in the following growth process:   IA SA
 
 
-*** WARNING
-  Data set contains cases with missing on x-variables.
-  These cases were not included in the analysis.
-  Number of cases with missing on x-variables:  351
-*** WARNING
-  Data set contains cases with missing on all variables except
-  x-variables.  These cases were not included in the analysis.
-  Number of cases with missing on all variables except x-variables:  3104
-   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
 
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
 
-
-
-Script produced from the prototype in ./sandbox/syntax-creator
-
+Copyright (c) 1998-2014 Muthen & Muthen

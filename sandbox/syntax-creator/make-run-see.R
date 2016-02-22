@@ -48,15 +48,15 @@ make_script_waves(
   ,place_in = "sandbox/syntax-creator/outputs/grip-numbercomp"
   ,process_a_name = "grip" # measure name
   ,process_a_mplus = "gripavg" # Mplus variable
-  ,process_a_name = 'numbercomp'# measure name
+  ,process_b_name = 'numbercomp'# measure name
   ,process_b_mplus = 'cts_nccrtd'# Mplus variable
   ,subgroup_sex = "male" #
   ,covariates = "Bage Educ Height"
   ,wave_set_possible = c(1,2,3,4,5,6,7)  #Integer vector of the possible waves of the study, ie 1:16,
-  ,wave_set_modeled =  c(5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+  ,wave_set_modeled =  c(1,2,3,4,5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
   ,waves_min = 5
   ,waves_max = 5
-  ,run_models = FALSE
+  ,run_models = TRUE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
 
 

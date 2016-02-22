@@ -237,9 +237,25 @@ COVERAGE=.00;
 MODEL:
 	!first-level equation
 	! process A
-ia sa | a1  a2 a3 a4 a5 AT time1 time2  time3 time4 time5;
+ia sa | a1
+a2
+a3
+a4
+a5 AT time1
+time2
+time3
+time4
+time5;
 	! process B
-ib sb | b1 b2 b3 b4 b5 AT time1 time2 time3 time4 time5;
+ib sb | b1
+b2
+b3
+b4
+b5 AT time1
+time2
+time3
+time4
+time5;
 	!variance of the first-level terms
 ia (v_ia);
 sa (v_sa);
@@ -253,7 +269,7 @@ sa WITH ib (c_saib);
 sa WITH sb (c_sasb);
 ib WITH sb (c_iasb);
 	!second-level equation
-ia sa ib sb ON Bage Educat Height;
+ia sa ib sb ON Bage Educ Height;
 	!residual means of process A
 a1
 a2
