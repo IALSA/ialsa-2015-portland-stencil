@@ -116,6 +116,61 @@
     *basic/                                               # Basic R codes for shiny
         *server.R                                         # R code for defining server logic for shiny report
         *ui.R                                             # R code for options selection on shiny report
+* studies/                                                #
+    * eas/                                                # Einstein Aging study
+        * descriptive/                                    # description of eas study
+            * eas-isr-reports.docx                        # word report on eas results
+            * grip.jpeg                                   # grip by age among males and females
+            * pek.jpeg                                    # maximum peak flow by age among males and females
+            * table1-eas-descriptives-ialsa-portland.docx # Descriptive characteristics of the Einstein Aging Study.
+            * velocity.jpeg                               # velocity by age among males and females
+        * input files/
+            * grip/
+                * b1_female_ae_muscle_fluency_grip_bostonnaming.inp
+                * 
+            * nophys-spec/
+            * pek/
+            * b1_male_ae_muscle_fluency_grip_fas.inp
+            * b1_female_ae_muscle_fluency_grip_category.inp
+            * b1_female_ae_muscle_fluency_grip_fas.inp
+            * b1_female_ae_muscle_fluid_grip_trailsb.inp
+            * b1_female_ae_muscle_global_grip_mmse.inp
+            * b1_female_ae_muscle_knowledge_grip_information.inp
+            * b1_female_ae_muscle_knowledge_grip_waisvocab.inp
+            * b1_female_ae_muscle_memory_grip_digitsymbol.inp
+            * b1_female_ae_muscle_memory_grip_logicalmemory.inp
+            * b1_female_ae_muscle_reasoning_grip_block.inp
+            * b1_female_ae_muscle_speed_grip_digitsymbol.inp
+            * b1_female_aeh_muscle_fluency_grip_bostonnaming.inp
+            * b1_female_aeh_muscle_fluency_grip_category.inp
+            * b1_female_aeh_muscle_fluency_grip_fas.inp
+            * b1_female_aeh_muscle_fluid_grip_trailsb.inp
+            * b1_female_aeh_muscle_global_grip_mmse.inp
+            * b1_female_aeh_muscle_knowledge_grip_information.inp
+            * b1_female_aeh_muscle_knowledge_grip_waisvocab.inp
+            * b1_female_aeh_muscle_memory_grip_digitsymbol.inp
+            * b1_female_aeh_muscle_memory_grip_logicalmemory.inp
+            * b1_female_aeh_muscle_reasoning_grip_block.inp
+            * b1_female_aeh_muscle_speed_grip_digitsymbol.inp
+            * b1_female_aehplus_muscle_fluency_grip_bostonnaming.inp
+            * b1_female_aehplus_muscle_fluency_grip_category.inp
+            * b1_female_aehplus_muscle_fluency_grip_fas.inp
+            * b1_female_aehplus_muscle_fluid_grip_trailsb.inp
+            * b1_female_aehplus_muscle_global_grip_mmse.inp
+            * b1_female_aehplus_muscle_knowledge_grip_information.inp
+            * b1_female_aehplus_muscle_knowledge_grip_waisvocab.inp
+            * b1_female_aehplus_muscle_memory_grip_digitsymbol.inp
+            * b1_female_aehplus_muscle_memory_grip_logicalmemory.inp
+            * b1_female_aehplus_muscle_reasoning_grip_block.inp
+            * 
+            
+        * physical/
+        * physical-cognitive/
+        * unshared/
+        * unsorted-outputs/
+        * measures.md
+        
+    
 * utility/                                                # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                  # code for required packages for efficient repo operation
     * package-dependency-list.csv                         # elements necessary for packages fuctionality
