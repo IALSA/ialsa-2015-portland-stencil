@@ -22,6 +22,9 @@ loadNamespace("data.table") # data transformations
 path_input  <- "../MAP/data-unshared/derived/ds0.rds"
 # figure_path <- 'manipulation/stitched-output/te/'
 
+# put test assert here to check the connection.
+
+
 # ---- load-data ---------------------------------------------------------------
 ds <- readRDS(path_input)
 str(ds)
@@ -53,11 +56,11 @@ write.csv(nl, file="./data/unshared/derived/nl_raw.csv")
 # augment the names with classifications. Directly edit the .csv
 nl_augmentedPath <- "./data/unshared/derived/nl_augmented.csv"
 # imported edited/augmented .csv containing a classification of variables
-varnames <- read.csv(nl_augmentedPath, stringsAsFactors = F)
-varnames$X <- NULL
-varnames
-
-dplyr::arrange(varnames, type)
+# varnames <- read.csv(nl_augmentedPath, stringsAsFactors = F)
+# varnames$X <- NULL
+# varnames
+#
+# dplyr::arrange(varnames, type)
 
 # ----- select_subset ------------------------------------
 # select variables you will need for modeling, be conservative
