@@ -40,9 +40,9 @@ cognitive,verbal reasoning ,reasoning,Verbal Reasoning Analogy,vra,vra
 cognitive,sensory perceptual examination,perception,The Auditory Comprehension Test (Halstead-Reitan Neuropsychological Battery (HRNB) Tactual Performance Test and Sensory Perceptual Examination),act,act
 cognitive,sensory perceptual examination,perception,Visual Perception Test (Halstead-Reitan Neuropsychological Battery (HRNB) Tactual Performance Test and Sensory Perceptual Examination),vpt,vpt
 demographic,demographic,demographic,age at base line,age_bl,age_bl
-demographic,demographic,demographic,age at death,age_death,age_dt
-demographic,demographic,demographic,indicator of death,indi_death,ind_dt
-demographic,demographic,demographic,years of education,yr_edu,yr_edu
-demographic,demographic,demographic,gender,gender,gender
-demographic,demographic,demographic,partcipant's race,race,race
-demographic,demographic,demographic,spanish/hispanic origin,spanish,sp_ish
+demographic,demographic,demographic,Age at death,age_death,age_dt
+demographic,demographic,demographic,Indicator of death,indi_death,ind_dt
+demographic,demographic,demographic,Years of education,yr_edu,yr_edu
+demographic,demographic,demographic,Gender,gender,gender
+demographic,demographic,demographic,Partcipant's race,race,race
+demographic,demographic,demographic,Spanish/hispanic origin,spanish,sp_ish
