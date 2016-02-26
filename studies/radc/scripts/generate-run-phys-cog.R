@@ -14,7 +14,7 @@ pathFolder <- file.path(pathRoot,"studies/radc/outputs/physical_cognitive")
 
 
 #e.g pc_TAU_00 <- c("pc_TAU_00_est", "pc_TAU_00_se", "pc_TAU_00_wald","pc_TAU_00_pval")
-source("./scripts/mplus/group_variables.R") # selected_results
+source("./scripts/mplus/group-variables.R") # selected_results
 # load functions that generate scripts
 source("./studies/radc/scripts/functions_to_generate_Mplus_scripts.R")
 # load functions that process the output files and create a summary dataset
