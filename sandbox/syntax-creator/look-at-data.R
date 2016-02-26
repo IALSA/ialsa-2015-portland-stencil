@@ -145,23 +145,3 @@ write(names(d), "./sandbox/syntax-creator/outputs/grip-numbercomp/long-variable-
 
 write.table(dw,"./sandbox/syntax-creator/outputs/grip-numbercomp/wide-dataset.dat", row.names=F, col.names=F)
 write(names(dw), "./sandbox/syntax-creator/outputs/grip-numbercomp/wide-variable-names.txt", sep=" ")
-
-
-
-♣
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
