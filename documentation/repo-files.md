@@ -110,7 +110,7 @@
     * extraction_functions.R                              # extract the basic indicators about the model
     * functions_to_generate_Mplus_scripts.R               # r code/functions to generate mplus scripts 
     * generate_run_graph.R                                # generating scripts to process mplus data
-    * group_variables.R                                   # load the objects that will subset columns from the results tables
+    * group-variables.R                                   # load the objects that will subset columns from the results tables
     * look-at-data.R                                      # functions to look at data and export it back to mplus
 * shiny/                                                  # Codes for dynamic web report
     *basic/                                               # Basic R codes for shiny

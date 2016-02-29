@@ -60,7 +60,7 @@ make_script_waves(
   ,subgroup_sex = "male" #
   ,covariates = "Bage Educat Height"
   ,wave_set_possible = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)  #Integer vector of the possible waves of the study, ie 1:16,
-  ,wave_set_modeled =  c(1,2,3,4,5,6,7,8,9,10)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+  ,wave_set_modeled =  c(1,2,3,4,5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
   ,run_models = FALSE
 ) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
 

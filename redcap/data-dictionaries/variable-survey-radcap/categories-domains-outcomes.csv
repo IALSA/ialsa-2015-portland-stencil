@@ -1,48 +1,48 @@
-category,domains,outcome-pretty,outcome,outcome-name-real-word,notes-to-self
-physical,pulmonary fuction tests,fev,fev,Forced Expiratory Volume,There was one variable that was just called pulmonary; highly non-specific
-physical,pulmonary fuction tests,pef,pef,Peak Expiratory Flow,"If you were a medical doctor, you would call all these physical tests; clinical"
-physical ,gait analysis (MAP; movement analysis profile),gait,gait_speed,Gait Analysis,Movement Analysis Profile (MAP) were developed in order to summarize the data of kinematics and facilitate understanding of the results of gait analysis. If there are multiple models used for gait analysis then they should be specified in variable name?
-physical ,mobility skill tests,tug,tug_fall,Timed Up & Go ,"I can put gait in mobility skill tests as well, if we want to make this simpler? Changing and maintaining body position and walking  "
-physical ,grip strength tests,grip,grip_strength,Hand Grip Strength Test,
-cognitive,reading tests,read_nart,read_nart,NART; National Adult Reading Test,
-cognitive,reading tests,read_wrat,read_wrat,WRAT; Wide Range Acheivement Test,
-cognitive,intelligence scales,wais_general,wais-general_knowledge,WAIS-IV-IQ test - Wechsler Adult Intelligent Scale,
-cognitive,intelligence scales,wais_voc,wais_voc,WAIS-IV-IQ test - Wechsler Adult Intelligent Scale,
-cognitive,language tests,language_bnt,language_bnt,Boston Naming Test,
-cognitive,verbal fluency tests (sementic memory),fluency_fas,fluency_fas,Verbal Fluency FAS,
-cognitive,memory tests (episodic),memory_ebmt_dr,memory_ebmt_dr,East Boston Memory Test (EBMT) Delayed Recall,
-cognitive,memory tests (episodic),memory_ebmt_ir,memory_ebmt_ir,East Boston Memory Test (EBMT) Immediate Recall,
-cognitive,memory tests (episodic),memory_wl_ir,memory_wl_ir,Word List Memory Task (Immediate Recall)-CERAD,
-cognitive,memory tests (episodic),memory_wl_dr,memory_wl_ir,Delayed Word List Memory Task-CERAD,
-cognitive,memory tests (episodic),memory_wl_drecog,memory_wl_drecog,Delayed Recognition Word Task- CERAD,
-cognitive,memory tests (visual learning and memory),memory_cft,memory_cft,Complex Figure Test/ Rey-Osterrieth Complex Figure - Immediate and delayed recall (Wechsler Memory Scale),"I only saw complex figure test, did not see immediate and delayed recall so I did not separate them out. "
-cognitive,memory tests (visual learning and memory),memory_logic_im,memory_logic_im,Logical Memory I and II-Contexualized Pros- Wechsler Memory Scale,
-cognitive,memory tests (visual learning and memory),memory_logic_de,memory_logic_de,Logical Memory I and II-Contexualized Pros- Wechsler Memory Scale,
-cognitive,memory tests (visual learning and memory),memory_logic_tot,memory_logic_tot,Logical Memory I and II-Contexualized Pros- Wechsler Memory Scale,
-cognitive,attention/concentration,Attention_digit_span_forward,digit_span_forward,Digit  Span Forward and Reversed,
-cognitive,attention/concentration,Attention_digit_span_reverse,digit_span_reverse,Digit  Span Forward and Reversed,
-cognitive,attention/concentration,Attention_digit_span_forward,digit_span_total ,Digit  Span Forward and Reversed,
-cognitive,verbal working memory test,memory_digit_order,digit_order,Digit Ordering Test,
-cognitive,executive function,executive_task_switch,task_switch,Wisconsin Card Sorting Test?,
-cognitive,visuospatial processing,visual_block_design,block_design,WAIS Block Design Subset,
-cognitive,visuospatial processing,visual_matrices,matrices,"The Matrices Test ( Colored Matrices Test, Advanced Progressive Matrices Test e.t.c.)",
-cognitive,visuospatial processing,visual_mental_rotation,mental_rotation,Mental Rotation Task-Visuo-Spatial Intelligence Test,
-cognitive,visuospatial processing,visual_pic_completion,pic_completion,Picture Completion Task,
-cognitive,processing speed tests,speed_dsst,dsst,Digit-Symbol Substitution Test (DSST),
-cognitive,processing speed tests,speed_figure_identification,figure_identification,Figure Identification Test,
-cognitive,processing speed tests,speed_comparison,speed_comparison,A processing speed comparison test; Cube Comparison Test? ,
-cognitive,processing speed tests,speed_perceptual,speed_perceptual,Perceptual Speed Test,
-cognitive,mental status examination (Executive Function),ms_mmse,mmse,Mini Mental Status Examination,
-cognitive,mental status examination (Executive Function),ms_clock,clock,The Clock Drawing Test,
-cognitive,mental status examination (Executive Function),ms_s7s,ms_s7s,The Serial Sevens Test,
-cognitive,mental status examination (Executive Function),ms_tics,tics,The Telephone Interview for Congitive Status,
-cognitive,verbal reasoning ,vr_analogy,analogy,Verbal Reasoning Analogy,
-cognitive,sensory perceptual examination,aud_comprehension,aud_comprehension,The Auditory Comprehension Test (Halstead-Reitan Neuropsychological Battery (HRNB) Tactual Performance Test and Sensory Perceptual Examination),
-cognitive,sensory perceptual examination,visual_percep,visual_percep,Visual Perception Test (Halstead-Reitan Neuropsychological Battery (HRNB) Tactual Performance Test and Sensory Perceptual Examination),
-demographic,age at base line,age_bl,age_bl,,
-demographic,age at death,age_death,age_death,,
-demographic,indicator of death,indi_death,indi_death,,
-demographic,years of education,yr_edu,yr_edu,,
-demographic,gender,gender,gender,,
-demographic,partcipant's race,race,race,,
-demographic,spanish/hispanic origin,spanish,spanish,,
+category,domain_pretty,domain,outcome_name_real_world,outcome,outcome_abbreviation
+physical,pulmonary fuction tests,pulmonary,Forced Expiratory Volume,fev,fev
+physical,pulmonary fuction tests,pulmonary,Peak Expiratory Flow,pef,pef
+physical ,gait analysis (MAP; movement analysis profile),gait,Gait Analysis,gait_speed,gait
+physical ,mobility skill tests,mobility,Timed Up & Go ,tug_fall,tug
+physical ,grip strength tests,grip,Hand Grip Strength Test,hand_grip,grip
+cognitive,reading tests,reading,NART; National Adult Reading Test,nart,nart
+cognitive,reading tests,reading,WRAT; Wide Range Acheivement Test,wrat,wrat
+cognitive,intelligence scales,intelligence,WAIS-IV-IQ test - General Knowledge,wais_gk,waisgk
+cognitive,intelligence scales,intelligence,WAIS-IV-IQ test - Vocabulary,wais_voc,waisvo
+cognitive,language tests,fluency,Boston Naming Test,bnt,bnt
+cognitive,verbal fluency tests (sementic memory),memory,Verbal Fluency FAS,fas,fas
+cognitive,memory tests (episodic),memory,East Boston Memory Test (EBMT) Delayed Recall,ebmt_dr,ebmtdr
+cognitive,memory tests (episodic),memory,East Boston Memory Test (EBMT) Immediate Recall,ebmt_ir,ebmtir
+cognitive,memory tests (episodic),memory,Word List Memory Task (Immediate Recall)-CERAD,wl_ir,wl_ir
+cognitive,memory tests (episodic),memory,Delayed Word List Memory Task-CERAD,wl_dr,wl_dr
+cognitive,memory tests (episodic),memory,Delayed Recognition Word Task- CERAD,wl_drecog,wl_dre
+cognitive,memory tests (visual learning and memory),memory,Complex Figure Test /Rey-Osterrieth Complex Figure - Immediate and delayed recall ,cft,cft
+cognitive,memory tests (visual learning and memory),memory,Logical Memory I and II-Contexualized Pros; WMS (Immediate),logic_im,log_im
+cognitive,memory tests (visual learning and memory),memory,Logical Memory I and II-Contexualized Pros; WMS (Delayed),logic_de,log_de
+cognitive,memory tests (visual learning and memory),memory,Logical Memory I and II-Contexualized Pros; WMS  (Total),logic_tot,log_to
+cognitive,attention/concentration,attention,Digit  Span Forward and Reversed,ds_forward,ds_frw
+cognitive,attention/concentration,attention,Digit  Span Forward and Reversed,ds_reverse,ds_rev
+cognitive,attention/concentration,attention,Digit  Span Forward and Reversed,ds_total ,ds_tot
+cognitive,verbal working memory test,work memory,Digit Ordering Test,dot,dot
+cognitive,executive function,visuaospatial,Wisconsin Card Sorting Test,task_switch,task_s
+cognitive,visuospatial processing,visuaospatial,WAIS Block Design Subset,block_design,blk_ds
+cognitive,visuospatial processing,visuaospatial,"The Matrices Test ( Colored Matrices Test, Advanced Progressive Matrices Test e.t.c.)",matrices,matric
+cognitive,visuospatial processing,visuaospatial,Mental Rotation Task (Visuo-Spatial Intelligence Test),mental_rotation,men_rt
+cognitive,visuospatial processing,visuaospatial,Picture Completion Task,pic_completion,pic_cp
+cognitive,processing speed tests,speed,Digit-Symbol Substitution Test (DSST),dsst,dsst
+cognitive,processing speed tests,speed,Figure Identification Test,fit,fit
+cognitive,processing speed tests,speed,A processing speed comparison test; Cube Comparison Test? ,psct,psct
+cognitive,processing speed tests,speed,Perceptual Speed Test,pst,pst
+cognitive,mental status examination (Executive Function),mental status,Mini Mental Status Examination,mmse,mmse
+cognitive,mental status examination (Executive Function),mental status,The Clock Drawing Test,cdt,cdt
+cognitive,mental status examination (Executive Function),mental status,The Serial Sevens Test,serial_7s,ser_7s
+cognitive,mental status examination (Executive Function),mental status,The Telephone Interview for Congitive Status,tics,tics
+cognitive,verbal reasoning ,reasoning,Verbal Reasoning Analogy,vra,vra
+cognitive,sensory perceptual examination,perception,The Auditory Comprehension Test (Halstead-Reitan Neuropsychological Battery (HRNB) Tactual Performance Test and Sensory Perceptual Examination),act,act
+cognitive,sensory perceptual examination,perception,Visual Perception Test (Halstead-Reitan Neuropsychological Battery (HRNB) Tactual Performance Test and Sensory Perceptual Examination),vpt,vpt
+demographic,demographic,demographic,age at base line,age_bl,age_bl
+demographic,demographic,demographic,Age at death,age_death,age_dt
+demographic,demographic,demographic,Indicator of death,indi_death,ind_dt
+demographic,demographic,demographic,Years of education,yr_edu,yr_edu
+demographic,demographic,demographic,Gender,gender,gender
+demographic,demographic,demographic,Partcipant's race,race,race
+demographic,demographic,demographic,Spanish/hispanic origin,spanish,sp_ish

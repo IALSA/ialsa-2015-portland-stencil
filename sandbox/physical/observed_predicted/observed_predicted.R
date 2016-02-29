@@ -12,7 +12,7 @@ library(grid)
 # @knitr load_sources ---------------------------------------
 source("https://raw.githubusercontent.com/andkov/psy532/master/scripts/graphs/main_theme.R")
 source("http://www.statmodel.com/mplus-R/mplus.R") # to work with mplus output
-source("./scripts/mplus/group_variables.R") # to define objects with names of variables/columns
+source("./scripts/mplus/group-variables.R") # to define objects with names of variables/columns
 source("./scripts/mplus/get_gh5.R") # to extract data from .gh5
 
 # @knitr declare_globals ---------------------------------------
