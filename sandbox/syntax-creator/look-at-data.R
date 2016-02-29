@@ -148,7 +148,6 @@ write(names(dw), "./sandbox/syntax-creator/outputs/grip-numbercomp/wide-variable
 
 
 
-♣
 
 
 
