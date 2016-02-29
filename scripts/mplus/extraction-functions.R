@@ -10,7 +10,7 @@
 # library(MplusAutomation)
 
 # establish home directory
-pathRoot <- getwd()
+# pathRoot <- getwd()
 # point to  the folder with datasets containing model results
 # folder <- "outputs/pairs"
 folder <- "outputs/pairs/grip_numbercomp"
@@ -26,11 +26,12 @@ collect_model_results <- function(folder){
   # folder <- "/outputs/pairs"/fev_mmse"
   # folder <- "/outputs/pairs/fev_categories"
   # folder <- pathFolder
-  get_folder <- file.path(pathRoot,folder)
-  out_list_all <- list.files(get_folder, full.names=T, recursive=T, pattern="out$")
-  out_list_all
+#   get_folder <- file.path(pathRoot,folder)
+#   out_list_all <- list.files(get_folder, full.names=T, recursive=T, pattern="out$")
+#   out_list_all
+  out_list_all <- model_list$path_out
 
-browser()
+# browser()
   ## @knitr setGlobals
   # groups columns in the rusults dataset by individual parameters
   #e.g pc_TAU_00 <- c("pc_TAU_00_est", "pc_TAU_00_se", "pc_TAU_00_wald","pc_TAU_00_pval")
