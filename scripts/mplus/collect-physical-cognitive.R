@@ -53,9 +53,9 @@ satsa <- list.files(file.path(pathStudies,"satsa/physical-cognitive"),full.names
 model_list <- list()
 model_list[["path_out"]] <- model_path_out
 model_list[["path_gh5"]] <- model_path_gh5
-
+testit::assert("Should have more than 10 elements", length(model_list$path_out) > 10L )
 study_name <- list()
-for(i in 1:length(model_list[["path_out"]])){
+for(i in seq_along(model_list$path_out)){
   # locate a common root for studies: "~GitHub/IALSA-2015-Portland"
   (a <- strsplit(model_path_out[i], split="/"))
   (selector <- a[[1]] %in% c("studies"))
