@@ -17,7 +17,7 @@ requireNamespace("tidyr", quietly=T) #Data manipulation.
 
 # @knitr load_sources ---------------------------------------
 source("https://raw.githubusercontent.com/andkov/psy532/master/scripts/graphs/main_theme.R")
-# source("./scripts/mplus/group_variables.R") # define objects with names of variables/columns
+# source("./scripts/mplus/group-variables.R") # define objects with names of variables/columns
 source("http://www.statmodel.com/mplus-R/mplus.R") # load custom functions
 
 # @knitr declare_globals ---------------------------------------

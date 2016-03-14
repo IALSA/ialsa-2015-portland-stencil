@@ -5,6 +5,8 @@
         * derived/                                        # files produced from the code we write
         * raw/                                            # files that come from the researcher/client
         * contents.md                                     # description of data/unshared (list of unshared files)
+* documentation/                                          # supportive documents for the project and the repositorty
+    * repo-files.md                                       # markdown document for the file structure
 * IALSA-2015-portland-mirror/                             # Copied documents/files from IALSA-2015-Portland
 * libs/                                                   # global resources for reports and web
     * css/                                                # customize the appearance of HTML produced by RMarkdown
@@ -86,46 +88,11 @@
         * bisr_radc.md                                    # Verbal interpretation of graph studying bisr for radc study
         * bisr_satsa.md                                   # Verbal interpretation of graph studying bisr for satsa study
 * table_1_descriptive/                                    # describe sample characteristics of each study
-* reports/                                                # documenting dynamic reports of the project
-    * basic/                                              # basics on kitr format and structure for reporting counts, bivariate associations and correlations
-        * css/                                            # css specifics for dynamic reporting section                                            
-            * sidebar.css                                 # configuration specifics for the sidebar on reports
-        * 2_basic_study_report.R                          # code for basic knitr report structure
-        * 2a_make_pretty_small.R                          # code for improving asthetic qualities of knitr report structure
-        * counts.html                                     # html link to model counts for ialsa portland 2015
-        * counts.md                                       # stepwise guide to getting model counts for the bivariate relationships, with ellaboration on the nature their associations
-        * counts.Rmd                                      # R version of a markdown for counts.md
-        * essentials.md                                   # model essentials: correlations b/w random terms
-        * essentials.Rmd                                  # R Code for configuring specifics for Knitr report on correlation between random terms
-    * descriptives/                                           # 
-        * figure_raw/                                         # pdf and png format of graphs
-            * marginals-1.pdf                                 # pdf of a histogram of a frequency and a quarter mile in seconds
-        * marginals-1.png                                 # png of a histogram of a frequency and a quarter mile in seconds
-        * marginals-2.pdf                                 # pdf of displacement inches cubed
-        * marginals-2.png                                 # png of displacement inches cubed
-        * marginals-3.pdf                                 # pdf of carburator count by number of records
-        * marginals-3.png                                 # png of carburator count by number of records
-        * marginals-4.pdf                                 # pdf of forward gear count by number of records
-        * marginals-4.png                                 # png of forward gear count by number of records
-        * scatteroplot-1.pdf                              # pdf of forward gear count across horsepower and quarter mile in seconds
-        * scatteroplot-1.png                              # png of forward gear count across horsepower and quarter mile in seconds
-        * scatteroplot-2.pdf                              # pdf of carburator count across horsepower and quarter mile in seconds
-        * scatteroplot-2.png                              # png of carburator count across horsepower and quarter mile in seconds
-        * scatteroplot-3.pdf                              # pdf of cylinder count across horsepower and quarter mile in seconds
-        * scatteroplot-3.png                              # png of cylinder count across horsepower and quarter mile in seconds
-        * scatteroplot-4.pdf                              # pdf of factor(cylinder count) across gross horse power and quarter mile in seconds
-        * scatteroplot-4.png                              # png of factor(cylinder count) across gross horse power and quarter mile in seconds
-        * scatteroplot-5.pdf                              # pdf of forward gear count across miles per gallon and quarter mile in seconds
-        * scatteroplot-5.png                              # png of forward gear count across miles per gallon and quarter mile in seconds
-        * scatteroplot-6.pdf                              # pdf of carburator count across miles per gallon and quarter mile in seconds
-        * scatteroplot-6.png                              # png of carburator count across miles per gallon and quarter mile in seconds
-        * scatteroplot-7.pdf                              # pdf of factor cylinder count across miles per gallon and quarter mile in seconds
-        * scatteroplot-7.png                              # png of factor cylinder count across miles per gallon and quarter mile in seconds
-    * descriptives.md                                     # report settings for the analyses used in the ZZZ project (Marcus Mark, PI)
-    * descriptives.R                                      # basic R-code for obtaining graphs/plots on a knitr report
-    * descriptive.Rmd                                     # R markdown for outputting knitr report
-    * report.Rmd                                          # A sample of code of a Regression line and a scatter plot for the ZZZ project
-* scripts/                                                # description and github paths to the functions to be used and defined for data extraction and transformation
+* projects/ 											                        # official dynamic reports, must maintain in good shape all the time
+* sandbox/                                                # dynamic reports in the making, experiment, not afraid to lose, or care to support
+    * basic/                                              # basic quantifications
+    * descriptives/                                       # experiementing with various quantification.
+* scripts                                                 # scripts for defining functions and code
     * dev/                                                # scripts for correcting the output files names and making the reports look presentable
         * 1a_correct_model_names.R                        # this script corrects irregularities in the naming of the output files
         * x_make_pretty.R                                 # make the data look presentable for reporting
@@ -143,8 +110,67 @@
     * extraction_functions.R                              # extract the basic indicators about the model
     * functions_to_generate_Mplus_scripts.R               # r code/functions to generate mplus scripts 
     * generate_run_graph.R                                # generating scripts to process mplus data
-    * group_variables.R                                   # load the objects that will subset columns from the results tables
+    * group-variables.R                                   # load the objects that will subset columns from the results tables
     * look-at-data.R                                      # functions to look at data and export it back to mplus
+* shiny/                                                  # Codes for dynamic web report
+    *basic/                                               # Basic R codes for shiny
+        *server.R                                         # R code for defining server logic for shiny report
+        *ui.R                                             # R code for options selection on shiny report
+* studies/                                                #
+    * eas/                                                # Einstein Aging study
+        * descriptive/                                    # description of eas study
+            * eas-isr-reports.docx                        # word report on eas results
+            * grip.jpeg                                   # grip by age among males and females
+            * pek.jpeg                                    # maximum peak flow by age among males and females
+            * table1-eas-descriptives-ialsa-portland.docx # Descriptive characteristics of the Einstein Aging Study.
+            * velocity.jpeg                               # velocity by age among males and females
+        * input files/
+            * grip/
+                * b1_female_ae_muscle_fluency_grip_bostonnaming.inp
+                * 
+            * nophys-spec/
+            * pek/
+            * b1_male_ae_muscle_fluency_grip_fas.inp
+            * b1_female_ae_muscle_fluency_grip_category.inp
+            * b1_female_ae_muscle_fluency_grip_fas.inp
+            * b1_female_ae_muscle_fluid_grip_trailsb.inp
+            * b1_female_ae_muscle_global_grip_mmse.inp
+            * b1_female_ae_muscle_knowledge_grip_information.inp
+            * b1_female_ae_muscle_knowledge_grip_waisvocab.inp
+            * b1_female_ae_muscle_memory_grip_digitsymbol.inp
+            * b1_female_ae_muscle_memory_grip_logicalmemory.inp
+            * b1_female_ae_muscle_reasoning_grip_block.inp
+            * b1_female_ae_muscle_speed_grip_digitsymbol.inp
+            * b1_female_aeh_muscle_fluency_grip_bostonnaming.inp
+            * b1_female_aeh_muscle_fluency_grip_category.inp
+            * b1_female_aeh_muscle_fluency_grip_fas.inp
+            * b1_female_aeh_muscle_fluid_grip_trailsb.inp
+            * b1_female_aeh_muscle_global_grip_mmse.inp
+            * b1_female_aeh_muscle_knowledge_grip_information.inp
+            * b1_female_aeh_muscle_knowledge_grip_waisvocab.inp
+            * b1_female_aeh_muscle_memory_grip_digitsymbol.inp
+            * b1_female_aeh_muscle_memory_grip_logicalmemory.inp
+            * b1_female_aeh_muscle_reasoning_grip_block.inp
+            * b1_female_aeh_muscle_speed_grip_digitsymbol.inp
+            * b1_female_aehplus_muscle_fluency_grip_bostonnaming.inp
+            * b1_female_aehplus_muscle_fluency_grip_category.inp
+            * b1_female_aehplus_muscle_fluency_grip_fas.inp
+            * b1_female_aehplus_muscle_fluid_grip_trailsb.inp
+            * b1_female_aehplus_muscle_global_grip_mmse.inp
+            * b1_female_aehplus_muscle_knowledge_grip_information.inp
+            * b1_female_aehplus_muscle_knowledge_grip_waisvocab.inp
+            * b1_female_aehplus_muscle_memory_grip_digitsymbol.inp
+            * b1_female_aehplus_muscle_memory_grip_logicalmemory.inp
+            * b1_female_aehplus_muscle_reasoning_grip_block.inp
+            * 
+            
+        * physical/
+        * physical-cognitive/
+        * unshared/
+        * unsorted-outputs/
+        * measures.md
+        
+    
 * utility/                                                # files indirectly contributing to data manipulation and analysis
     * install-packages.R                                  # code for required packages for efficient repo operation
     * package-dependency-list.csv                         # elements necessary for packages fuctionality

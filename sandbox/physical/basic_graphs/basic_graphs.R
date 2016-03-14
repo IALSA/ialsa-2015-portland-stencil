@@ -10,7 +10,7 @@ library(ggplot2) # for graphing
 
 # @knitr load_sources ---------------------------------------
 source("https://raw.githubusercontent.com/andkov/psy532/master/scripts/graphs/main_theme.R")
-source("./scripts/mplus/group_variables.R")
+source("./scripts/mplus/group-variables.R")
 
 # @knitr declare_globals ---------------------------------------
 stem <- c("study_name", "subgroup","model_type", "physical_measure", "cognitive_measure","subject_count", "wave_count","parameter_count")
