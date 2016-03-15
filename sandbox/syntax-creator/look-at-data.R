@@ -166,7 +166,7 @@ table(dw$age_centered_70, useNA = "always")
 # ---- export_data -------------------------------------
 # At this point we would like to export the data in .dat format
 # to be fed to Mplus for any subsequent modeling
-place_in <- "./sandbox/01-univariate-linear/numbercomp/"
+place_in <- "./sandbox/syntax-creator/outputs/grip-numbercomp/"
 
 write.table(d,paste0(place_in,"long-dataset.dat"), row.names=F, col.names=F)
 write(names(d), paste0(place_in,"long-variable-names.txt"), sep=" ")
