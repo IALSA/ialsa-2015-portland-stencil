@@ -50,20 +50,19 @@ run_models_on <- FALSE # TRUE - run models, FALSE - only create script
 ## @knitr dummy_1
 # Use the first example as the template for further pairs
 # function below is defined in "./sandbox/syntax-creator/functions-to-generate-Mplus-scripts.R"
-make_script_waves(
-  prototype = "sandbox/syntax-creator/prototype-map-wide.inp"
-  ,place_in = "sandbox/syntax-creator/outputs/grip-numbercomp"
-  ,process_a_name = "grip" # measure name
-  ,process_a_mplus = "gripavg" # Mplus variable
-  ,process_b_name = 'numbercomp'# measure name
-  ,process_b_mplus = 'cts_nccrtd'# Mplus variable
-  ,subgroup_sex = "male" #
-  ,covariates = "Bage Educat Height"
-  ,wave_set_possible = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)  #Integer vector of the possible waves of the study, ie 1:16,
-  ,wave_set_modeled =  c(1,2,3,4,5)   #Integer vector of waves considered by the model, ie c(1,2,3,5,8).
-  ,run_models = FALSE
-) # generate mplus scripts from a prototype, estimate (run_models=TRUE)
-
+mplus_generator_bivariate(
+  prototype = "./sandbox/syntax-creator/prototype-map-wide.inp" # point to the template
+  , place_in = "sandbox/syntax-creator/outputs/grip-numbercomp" # where to store all the .inp/.out scripts
+  , process_a_name = 'grip'# item name of process (A)
+  , process_a_mplus = 'gripavg'# Mplus variable of process (A)
+  , process_b_name = 'numbercomp'# item name of process (B)
+  , process_b_mplus = 'cts_nccrtd'# Mplus variable of process (B)
+  , subgroup_sex = "male" # subset data to members of this group
+  , subset_condition_1 = "dementia_ever NE 1" # subset data to member of this group
+  , covariate_set = c("age_c70","htm_c160", "edu_c7")  # list of covariates ("_c" stands for "centercd)
+  , wave_set_modeled =  c(1,2,3,4,5) # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+  , run_models = FALSE # If TRUE then Mplus runs estimation to produce .out, .gh5, and/or, other files
+) # execute to generate script
 
 # from "./sandbox/syntax-creator/extraction_functions.R  script
 # collect_model_results(folder = "./sandbox/syntax-creator/outputs/grip_digitsymbols") # collect and save into the same folder
@@ -74,14 +73,15 @@ make_script_waves(
 
 
 
-#### Grip - Boston Naming Task ####
+#### ----- development ----------------------
 
-# from "./sandbox/syntax-creator/extraction_functions.R  script
-collect_model_results(folder = "outputs/pairs/grip_bnt") # collect and save into the same folder
-ds <- readRDS(file.path(pathFolder,"grip_bnt.rds")) # load the data for outcome pair
-# from "./scripts/graphs/koval_brown_profiles.R"
-kb_profiles(ds,  vertical="wave_count",  border=5) # produces the kb_profile graph
-
+# Grip - Boston Naming Task #
+# # from "./sandbox/syntax-creator/extraction_functions.R  script
+# collect_model_results(folder = "outputs/pairs/grip_bnt") # collect and save into the same folder
+# ds <- readRDS(file.path(pathFolder,"grip_bnt.rds")) # load the data for outcome pair
+# # from "./scripts/graphs/koval_brown_profiles.R"
+# kb_profiles(ds,  vertical="wave_count",  border=5) # produces the kb_profile graph
+#
 
 
 

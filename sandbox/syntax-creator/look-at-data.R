@@ -69,8 +69,6 @@ selected_items <- c(
   "race", # Participant's race
   "educ", # Years of education
 
-
-
   # time-invariant above
   "fu_year", # Follow-up year ---###---
   # time-variant below
