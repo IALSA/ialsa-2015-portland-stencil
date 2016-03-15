@@ -400,23 +400,23 @@ collect_model_results <- function(folder){
 
 
 
-collect_all_results <- function(allFolder){
-  ## make scripts from the prototype and run it (run_models=TRUE)
-  # pathFolder <- allFolder # where outputs are
-  out_list_all <- list.files(pathFolder, full.names=T, recursive=T, pattern="out$")
-
-  directories <- gsub(pattern, "\\1", dto_paths, perl=T)
-
-  pair_names <- basename(directories)
-
-
-
-  for(i in allFolder){
-    collect_model_results(folder=allFolder)
-  }
-
-}
-
+# collect_all_results <- function(allFolder){
+#   ## make scripts from the prototype and run it (run_models=TRUE)
+#   # pathFolder <- allFolder # where outputs are
+#   out_list_all <- list.files(pathFolder, full.names=T, recursive=T, pattern="out$")
+#
+#   directories <- gsub(pattern, "\\1", dto_paths, perl=T)
+#
+#   pair_names <- basename(directories)
+#
+#
+#
+#   for(i in allFolder){
+#     collect_model_results(folder=allFolder)
+#   }
+#
+# }
+#
 
 
 # collect model results into a dataset stored in "./outputs/pairs/"
