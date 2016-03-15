@@ -1,6 +1,7 @@
 # Stencil Markdown
 * data/                                                   # documenting the data used in this project
     * shared/                                             # data shared and committed to the repo
+        * example-wide.csv                                # brief example of the wide format that all studies should bring to the workshop.
     * unshared/                                           # files stored locally but not shared or committed
         * derived/                                        # files produced from the code we write
         * raw/                                            # files that come from the researcher/client
