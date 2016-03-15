@@ -1,47 +1,18 @@
-# ## This script 
-# options(width=160)
-# rm(list=ls())
-# cat("\f")
-# 
-# ## @knitr load_packages
-# library(dplyr)
-# library(ggplot2)
-# library(tidyr)
-# library(MplusAutomation)
-
-# establish home directory
-pathRoot <- getwd() 
-# point to  the folder with datasets containing model results
-# folder <- "outputs/pairs"
-folder <- "outputs/pairs/grip_numbercomp"
-pathFolder <- file.path(pathRoot,folder)
-
-
-# ## @knitr load_raw_data
-# ds0 <- readRDS("./data/derived/unshared/ds0.rds") # raw MAP data
-# ds <- ds0
-# str(ds)
-
+# this script contains the definitions of the functions that extract the results of model estimation
+# folder = "./sandbox/01-univariate-linear/example"
 collect_model_results <- function(folder){
-  # folder <- "/outputs/pairs"/fev_mmse" 
-  # folder <- "/outputs/pairs/fev_categories" 
-  # folder <- pathFolder
-  get_folder <- file.path(pathRoot,folder)
-  out_list_all <- list.files(get_folder, full.names=T, recursive=T, pattern="out$")
-  out_list_all
-
-
-  ## @knitr setGlobals
-  # groups columns in the rusults dataset by individual parameters
-  #e.g pc_TAU_00 <- c("pc_TAU_00_est", "pc_TAU_00_se", "pc_TAU_00_wald","pc_TAU_00_pval")
+  # collect a vector with .out file paths
+  (out_list <- list.files(file.path(folder),full.names=T, recursive=T, pattern="out$"))
+  # the script `group-variables.R` creates objects with names of standard variables for easier handling
+  #e.g ab_TAU_00 <- c("ab_TAU_00_est", "ab_TAU_00_se", "ab_TAU_00_wald","ab_TAU_00_pval")
   source("./scripts/mplus/group-variables.R")
-  
-  ##### Summary ###############################################################
-  # a dataset with model summaries
+
+  # I. EXTRACTION
+  #
+  # I.A. Extract Model Summaries
+  # create a dataset with model summaries
   get_msum <- function(){
-    # pathStudy <- file.path(pathStudies, study) # folder with output files
-    # out_list <- list.files(pathStudy, full.names=T, recursive=T, pattern="out$")
-    ## Model descriptors we would like to have:
+    ## Declare the model descriptors we wish to record:
     msum_names <- c("Mplus.version",
                     "Title",
                     "AnalysisType",
@@ -50,16 +21,10 @@ collect_model_results <- function(folder){
                     "Parameters",
                     "LL","AIC","BIC","aBIC","AICC",
                     "Filename")
-  
     # Create data frame to populated from model output files
     msum <- data.frame(matrix(ncol=length(msum_names)))
-    names(msum) <- msum_names # columns is what we want
+    names(msum) <- msum_names # columns is what we want to extract from MplusAutomation::extractModelSummaries()
     msum
-  
-    # list paths to the models in a given study
-  #   study_selector <- out_list_all[["study"]] %in% study
-    out_list <- out_list_all
-  
     # cycle through all model output files in this study
     for(i in seq_along(out_list)){
       # get a single model summary
@@ -70,423 +35,386 @@ collect_model_results <- function(folder){
       (existing_descriptors <- names(ith_msum)[descriptor_exists])
       # populate existing fields
       msum[i, existing_descriptors] <- ith_msum[names(ith_msum) %in% msum_names]
-      msum$filePath[i] <- out_list[i]
-  
-      a <- strsplit(msum$filePath[i], split="/")
-      selector <- a[[1]] %in% c("studies")
-      element_number <- c(1:length(selector))[selector]
-      msum$study_name[i] <- a[[1]][element_number+1]
-    }
+      msum$filePath[i] <- out_list[i] # attach the file path directly from the observed list
+
+      #       # add the filename for identification
+      #       (a <- strsplit(msum$filePath[i], split="/")) # each subfolder into a char value
+      #       selector <- a[[1]] %in% c("studies") # find which one says "studies"
+      #       element_number <- c(1:length(selector))[selector] # get its number
+      #       msum$study_name[i] <- a[[1]][element_number+1] # move one step to the right
+
+      # add the file path to locate for debugging
+      # (a <- strsplit(msum$filePath[i], split="/studies/")) # common folder
+      #       msum$file_path[i] <- a # move one step to the right
+
+
+    } # close loop
     return(msum)
-  }
+  } # close function
   msum <- get_msum()
-  
-  ########## Parameters #######################################################
-  # a list of datasets containing estimated coefficients
+
+  # I.B. Extract Model Parameters
+  # create a list which elements are datasets containing estimated coefficients
   get_mpar <- function(){
-    out_list <- out_list_all
-    # Create list object to populated from model output files
-    mpar <- list()
-    # cycle through all model output files 
+    mpar <- list()  # Create list object to populated from model output files
+    # cycle through all model output files
     for(i in seq_along(out_list)){
-      # get a text output to work with
-      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)
-      message("Getting model ", i, ", ",out_file)
-      mplus_output <- scan(out_list[i], what='character', sep='\n')
+      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)  # grab an output file to work with
+      message("Getting model ", i, ", ",out_file) # view the file name
+      mplus_output <- scan(out_list[i], what='character', sep='\n') # each line of output as a char value
       # testing for specific errors
       no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output))
       variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output))
       # If there are no specific error, then go get the parameter solution
       if(no_observations){
-        mpar[i]  <- "No observations" 
+        mpar[i]  <- "No observations"
       }else{
-        
-          if(variance_zero){
-            mpar[i]  <- "Zero variance" 
-          }else{
-             mpar[i] <- MplusAutomation::extractModelParameters(target=out_list[i], recursive=T, dropDimensions=T)
-          }      
+
+        if(variance_zero){
+          mpar[i]  <- "Zero variance"
+        }else{
+          mpar[i] <- MplusAutomation::extractModelParameters(target=out_list[i], recursive=T, dropDimensions=T)
+        }
       }
     }
     return(mpar)
   }
   mpar <- get_mpar()
-  
-  
-  ############### Empty Results ###############################################
-  # create empty dataset "results"
-  results_to_populate <- function(study){
-    # populate a dataset with data from msum and mpar
-  #   pathStudy <- file.path(pathStudies, study) # folder with output files
-  #   out_list <- list.files(pathStudy, full.names=T, recursive=T, pattern="out$")
-    # mpar <- get_mpar(study)
-  
-    # list paths to the models in a given study
-    # study_selector <- out_list_all[["study"]] %in% study
-    out_list <- out_list_all#[["path"]][study_selector]
-  
-    # What model estimation results we should keep?
-   
-      
-    
-    # Create data frame to populated from model output files
-    results=data.frame(matrix(NA, ncol=length(selected_results), nrow=length(mpar)))
-    names(results) <-  selected_results
-    selected_results
-    return(results)
-  } # close results_to_populate
-  results <- results_to_populate()
-  
-  
-  ############### Basic Results ###############################################
+
+  # II.ASSEMBLY
+  # using (msum, mpar)  and custom parsing, populate the result mold (catalog-4)
+  #
+  # create empty dataset "results" that will be later populated with extracted values
+  # selected_results is declared in group-variables.R script
+  results <- data.frame(matrix(NA, ncol=length(selected_results), nrow=length(mpar))) # length(mpar) = number of output files
+  names(results) <-  selected_results
+
+  # II.A. Basic Results
   # extract the basic indicators about the model
-  # results <- data.frame()
-  # results=data.frame(matrix(NA, ncol=100, nrow=length(mpar)))
-  get_results_basic <- function(study){
-    out_list <- out_list_all
+  get_results_basic <- function(){
     selected_models <- seq_along(mpar)
     for(i in selected_models){
-    # for(i in 1:10){
-      # get a text output to work with
-      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)
-      message("Getting model ", i, ", ",out_file)
-      mplus_output <- scan(out_list[i], what='character', sep='\n')
-      model <- mpar[[i]]
+      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)# grab an output file to work with
+      message("Getting model ", i, ", ",out_file)# view the file name
+      mplus_output <- scan(out_list[i], what='character', sep='\n') # each line of output as a char value
+      model <- mpar[[i]] # load the extract of this model's estimates
       # testing for specific errors
       no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output))
       variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output))
       # If there are no specific error, then go get the parameter solution
       if(no_observations){
-        results[i, "Error"]  <- "No observations" 
+        results[i, "Error"]  <- "No observations"
       }else{
-        
-          if(variance_zero){
-            results[i,"Error"]  <- "Zero variance" 
-          }
-        else{
-#             
-#   
-      ## Populate with header info
-      results[i, 'software'] <- mplus_output[1]
-      results[i,"version"] <- "0.1" #msum[i,"Mplus.version"]
-      results[i, c('date', 'time')] <- strsplit(mplus_output[3], '  ')[[1]]
-      results[i,"data_file"] <- strsplit(mplus_output[grep("File", mplus_output, ignore.case=TRUE)], 'IS| is |=|;')[[1]][2]
-  
-      ## obtain location of 'studies' to then be able to select the following element, the study name.
-      selector <- which(strsplit(out_list[i], '/')[[1]]=='GitHub')
-      results[i,"study_name"] <- strsplit(out_list[i], '/')[[1]][selector+1]
-      results[i,c("model_number", 'subgroup',  'model_type')] <- strsplit(msum$Filename[i], '_')[[1]][1:3]
-      # results[i, c("physical_construct","cognitive_construct")] <- strsplit(msum$Filename[i], '_|.out')[[1]][4:5]
-      results[i, "physical_measure"] <- strsplit(msum$Filename[i], '_|.out')[[1]][4]
-      results[i, "cognitive_measure"] <- strsplit(msum$Filename[i], '_|.out')[[1]][5]
-  
-      ## #################### Basic info ######################
-      results[i, 'subject_count'] <- msum[i, 'Observations']
-      results[i, 'parameter_count'] <- msum[i, 'Parameters']
-      wc <- model[model$paramHeader=='Intercepts', 'param']
-      results[i, 'wave_count'] <- max(as.numeric(gsub("[^0-9]", '', wc)), na.rm=T)
-      results[i, 'output_file'] <- msum[i, 'Filename']
-  
-      results[i, c('LL')] <-  msum[i,c('LL')]
-      results[i, c('aic')] <-  msum[i,c('AIC')]
-      results[i, c('bic')] <-  msum[i,c('BIC')]
-      results[i, c('adj_bic')] <-  msum[i,c('aBIC')]
-      results[i, c('aaic')] <-  msum[i,c('AICC')]
-      ## Computed values
-      ## Check for model convergence
-      conv <-  length(grep("THE MODEL ESTIMATION TERMINATED NORMALLY", mplus_output))
-      has_converged <- (conv==1L)
-      results[i, 'converged'] <- conv
-      results[i, 'has_converged'] <- has_converged
-      results[i,"covar_covered"] <- length(grep("THE COVARIANCE COVERAGE FALLS BELOW THE SPECIFIED LIMIT", mplus_output))
-      
-      line_found <- grep("TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE", mplus_output)
-      results[i,"trust_all"] <- !length(line_found)==1L 
-      
-      line_found <- grep("PROBLEM INVOLVING THE FOLLOWING PARAMETER:", mplus_output)
-      # a <- paste(mplus_output, collapse ="\n")
-      # mplus_output[615:620]
-      snippet <- mplus_output[line_found+1]
-      # a <- gsub("(?m).+Parameter (\\d{2}), (R_RES_PC).*", "\\1 - \\2", snippet, perl=TRUE)
-      # gsub("(?m).+Parameter (\\d{2}), ([\\w_]+).*", "\\2", snippet, perl=TRUE)
-      # mplus_output[807:812]
-      # results[i,"trust_params"] <- as.character(" ")
-      # results[i,"mistrust"] <- gsub("(?m).+Parameter (\\d{2}), ([\\w_]+).*", "\\2", snippet, perl=TRUE)
-            if(length(snippet)>0){
-              results[i,"mistrust"] <- snippet
-            }
-     
-          }      
-      }
-    }
+        if(variance_zero){
+          results[i,"Error"]  <- "Zero variance"
+        } else {
+
+          ## Populate admin variables
+          results[i, 'software'] <- mplus_output[1]
+          results[i,"version"] <- "0.1"
+          results[i, c('date', 'time')] <- strsplit(mplus_output[3], '  ')[[1]]
+          results[i,"data_file"] <- strsplit(mplus_output[grep("File", mplus_output, ignore.case=TRUE)], 'IS| is |=|;')[[1]][2]
+          results[i, 'output_file'] <- msum[i, 'Filename']
+          # results[i, "file_path"] <- msum[i,"file_path"]
+
+          ## Populate model_id variables
+          # results[i,"study_name"] <- msum$study_name[i]
+          # results[i,c("model_number", 'subgroup',  'model_type')] <- strsplit(msum$Filename[i], '_')[[1]][1:3]
+
+          process_a_name = 'numbercomp'
+          subgroup_sex = "male"
+
+          results[i, "process_a"] <- process_a_name
+          results[i, "subgroup_sex"] <- subgroup_sex
+
+          ## Populate model_info variables
+          results[i, 'subject_count'] <- msum[i, 'Observations'] # verify this, maybe datapoints, not subjects
+          results[i, 'parameter_count'] <- msum[i, 'Parameters']
+
+          (subject <- model[model$paramHeader=='Intercepts', 'param'])
+          results[i, 'wave_count'] <- max(as.numeric(gsub("[^0-9]", '', subject)), na.rm=T) # MUST CHANGE. COUNTS THE HIGHEST NUMBER, BUT RATHER MUST COUNT THE COUNT OF WAVES
+          results[i, c('LL')] <-  msum[i,c('LL')]
+          results[i, c('aic')] <-  msum[i,c('AIC')]
+          results[i, c('bic')] <-  msum[i,c('BIC')]
+          results[i, c('adj_bic')] <-  msum[i,c('aBIC')]
+          results[i, c('aaic')] <-  msum[i,c('AICC')]
+          ## Computed values
+
+        } # close else
+      } # close else
+    } # close loop for selected models
     return(results)
   } # close get_results_basic
   results <- get_results_basic()
-  
-  # i <- 1
-  #################### Random Effects #########################################
-  get_results_random <- function(study){
-    out_list <- out_list_all
+  # results[i, p_GAMMA_00]
+
+  # II.B. Catching Errors
+  # records all relevant errors and warnings about model estimation produced by Mplus
+  get_results_errors <- function(){
     selected_models <- seq_along(mpar)
     for(i in selected_models){
-      # get a text output to work with
-      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)
-      message("Getting model ", i, ", ",out_file)
-      mplus_output <- scan(out_list[i], what='character', sep='\n')
-      model <- mpar[[i]]
+      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)# grab an output file to work with
+      message("Getting model ", i, ", ",out_file)# view the file name
+      mplus_output <- scan(out_list[i], what='character', sep='\n') # each line of output as a char value
       # testing for specific errors
       no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output))
       variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output))
       # If there are no specific error, then go get the parameter solution
       if(no_observations){
-        results[i, "Error"]  <- "No observations" 
-      }else{ 
-      
+        results[i, "Error"]  <- "No observations"
+      }else{
         if(variance_zero){
-          results[i,"Error"]  <- "Zero variance" 
-        }else{ 
-          has_converged <- results[i,"converged"]
-          if(has_converged) {
-  
-      ## covariante btw phys intercept and cog intercept - pc_TAU_00
+          results[i,"Error"]  <- "Zero variance"
+        }
+        else{
+
+          ## Check for model convergence
+          conv <-  length(grep("THE MODEL ESTIMATION TERMINATED NORMALLY", mplus_output))
+          has_converged <- (conv==1L)
+          results[i, 'converged'] <- conv
+          results[i, 'has_converged'] <- has_converged
+          results[i,"covar_covered"] <- length(grep("THE COVARIANCE COVERAGE FALLS BELOW THE SPECIFIED LIMIT", mplus_output))
+
+          line_found <- grep("TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE", mplus_output)
+          results[i,"trust_all"] <- !length(line_found)==1L
+
+          line_found <- grep("PROBLEM INVOLVING THE FOLLOWING PARAMETER:", mplus_output)
+          snippet <- mplus_output[line_found+1]
+          if(length(snippet)>0){
+            results[i,"mistrust"] <- snippet
+          }
+        } # close else
+      } # close else
+    } # close loop for selected_models
+    return(results)
+  } # close get_results_errors
+  results <- get_results_errors()
+
+  # III.A. Random Effects
+  # record the extracted values of the estimated random effects
+  get_results_random <- function(){
+    selected_models <- seq_along(mpar)
+    for(i in selected_models){
+      model <- mpar[[i]] # load the extract of this model's estimates
+
+      #       ## covariante btw intercept of process (A) and intercept of process (B) - ab_TAU_00
+      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      #       (test <- test[grep("^I|S", test$param),]) # param starting with I or S
+      #       (test <- test[grep("^I", test$paramHeader),]) # paramHeader starting with I
+      #       (test <- test[grep("^I", test$param),]) # pram starting with I
+      #       (test <- test[ ,c("est", "se","est_se", "pval")])
+      #       if(dim(test)[1]!=0){results[i, ab_TAU_00] <- test}
+      #
+      #       ## covariance btw slope of process (A) and slope of process (B) - ab_TAU_11
+      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      #       (test <- test[grep("^I|S", test$param),]) # param starting with I or S
+      #       (test <- test[grep("^S", test$paramHeader),]) # paramHeader starting with S
+      #       (test <- test[grep("^S", test$param),]) # pram starting with S
+      #       (test <- test[ ,c("est", "se","est_se", "pval")])
+      #       if(dim(test)[1]!=0) {results[i, ab_TAU_11] <- test}
+      # browse()
+      ## covariance btw intercept of process (A) and slope of process (A) - aa_TAU_01
       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      (test <- test[grep("^I|S", test$param),]) # param starting with I or S
-      (test <- test[grep("^I", test$paramHeader),]) # paramHeader starting with I
-      (test <- test[grep("^I", test$param),]) # pram starting with I
+      (test <- test[grep("^IA|^SA", test$param),]) # param starting NOT with I or S
+      (test <- test[grep("^IA|^SA", test$paramHeader),])
       (test <- test[ ,c("est", "se","est_se", "pval")])
-      if(dim(test)[1]!=0){results[i, pc_TAU_00] <- test}
-  
-      ## covariance btw phys slope and cog slope - pc_TAU_11
-      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      (test <- test[grep("^I|S", test$param),]) # param starting with I or S
-      (test <- test[grep("^S", test$paramHeader),]) # paramHeader starting with S
-      (test <- test[grep("^S", test$param),]) # pram starting with S
-      (test <- test[ ,c("est", "se","est_se", "pval")])
-      if(dim(test)[1]!=0) {results[i, pc_TAU_11] <- test}
-  
-      ## covariance btw physical intercept and physical slope - pp_TAU_01
-      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      (test <- test[grep("^IP|^SP", test$param),]) # param starting NOT with I or S
-      (test <- test[grep("^IP|^SP", test$paramHeader),])
-      (test <- test[ ,c("est", "se","est_se", "pval")])
-       if(dim(test)[1]!=0){results[i, pp_TAU_01] <- test}
-  
-  
-      ## covariance btw physical intercept and cognitive slope - pc_TAU_01
-      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      (test <- test[grep("^IP|^SC", test$param),]) # param starting NOT with I or S
-      (test <- test[grep("^IP|^SC", test$paramHeader),])
-      (test <- test[ ,c("est", "se","est_se", "pval")])
-       if(dim(test)[1]!=0){results[i, pc_TAU_01] <- test}
-  
-  
-  
-      ## covariance btw physical intercept and cognitive slope - pc_TAU_10
-      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      (test <- test[grep("^IC|^SP", test$param),]) # param starting NOT with I or S
-      (test <- test[grep("^IC|^SP", test$paramHeader),])
-      (test <- test[ ,c("est", "se","est_se", "pval")])
-       if(dim(test)[1]!=0){results[i, pc_TAU_10] <- test}
-  
-  
-      ## covariance btw cognitive slope and cognitive intercept - cc_TAU_10
-      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      (test <- test[grep("^IC|^SC", test$param),]) # param starting NOT with I or S
-      (test <- test[grep("^IC|^SC", test$paramHeader),])
-      (test <- test[ ,c("est", "se","est_se", "pval")])
-       if(dim(test)[1]!=0){results[i, cc_TAU_10] <- test}
-  
-      ## Variance of random Physical Intercept - pp_TAU_00
+      if(dim(test)[1]!=0){results[i, aa_TAU_01] <- test}
+
+      #       ## covariance btw intercept of process (A) and slope of process (B) - ab_TAU_01
+      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      #       (test <- test[grep("^IA|^SB", test$param),]) # param starting NOT with I or S
+      #       (test <- test[grep("^IA|^SB", test$paramHeader),])
+      #       (test <- test[ ,c("est", "se","est_se", "pval")])
+      #        if(dim(test)[1]!=0){results[i, ab_TAU_01] <- test}
+      #
+      #       ## covariance btw intercept of process (A) and slope of process (B) - ab_TAU_10
+      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      #       (test <- test[grep("^IB|^SA", test$param),]) # param starting NOT with I or S
+      #       (test <- test[grep("^IB|^SA", test$paramHeader),])
+      #       (test <- test[ ,c("est", "se","est_se", "pval")])
+      #        if(dim(test)[1]!=0){results[i, ab_TAU_10] <- test}
+
+      #       ## covariance btw slope of process (B) and intercept of process (B) - bb_TAU_10
+      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      #       (test <- test[grep("^IB|^SB", test$param),]) # param starting NOT with I or S
+      #       (test <- test[grep("^IB|^SB", test$paramHeader),])
+      #       (test <- test[ ,c("est", "se","est_se", "pval")])
+      #        if(dim(test)[1]!=0){results[i, bb_TAU_10] <- test}
+
+      ## Variance of random intercept of process (A) - aa_TAU_00
       (test <- model[grep("Residual.Variances", model$paramHeader),])
-      (test <- test[test$param=='IP', ])
+      (test <- test[test$param=='IA', ])
       (test <- test[ ,c("est", "se","est_se", "pval")])
-      if(dim(test)[1]!=0) {results[i, pp_TAU_00] <- test}
-  
-      ## Variance of random Physical Slope - pp_TAU_11
+      if(dim(test)[1]!=0) {results[i, aa_TAU_00] <- test}
+
+      ## Variance of random slope of process (A) - aa_TAU_11
       (test <- model[grep("Residual.Variances", model$paramHeader),])
-      (test <- test[test$param=='SP', ])
+      (test <- test[test$param=='SA', ])
       (test <- test[ ,c("est", "se","est_se", "pval")])
-      if(dim(test)[1]!=0) {results[i, pp_TAU_11] <- test}
-  
-      ## Variance of random Cognitive Intercept - cc_TAU_00
-      (test <- model[grep("Residual.Variances", model$paramHeader),])
-      (test <- test[test$param=='IC', ])
-      (test <- test[ ,c("est", "se","est_se", "pval")])
-      if(dim(test)[1]!=0) {results[i,cc_TAU_00] <- test}
-  
-      ## Variance of random Cognitive Slope - cc_TAU_11
-      (test <- model[grep("Residual.Variances", model$paramHeader),])
-      (test <- test[test$param=='SC', ])
-      (test <- test[ ,c("est", "se","est_se", "pval")])
-      if(dim(test)[1]!=0) {results[i, cc_TAU_11] <- test}
-  
-    }# close has_converged
-        }      
-      } 
+      if(dim(test)[1]!=0) {results[i, aa_TAU_11] <- test}
+
+      #       ## Variance of random intercept of process (B) - bb_TAU_00
+      #       (test <- model[grep("Residual.Variances", model$paramHeader),])
+      #       (test <- test[test$param=='IB', ])
+      #       (test <- test[ ,c("est", "se","est_se", "pval")])
+      #       if(dim(test)[1]!=0) {results[i,bb_TAU_00] <- test}
+      #
+      #       ## Variance of random slope of process (B) - bb_TAU_11
+      #       (test <- model[grep("Residual.Variances", model$paramHeader),])
+      #       (test <- test[test$param=='SB', ])
+      #       (test <- test[ ,c("est", "se","est_se", "pval")])
+      #       if(dim(test)[1]!=0) {results[i, bb_TAU_11] <- test}
+
     } # close for loop
     return(results)
   }# close get_results_random
   results <- get_results_random()
-  
-  ######################### Residuals #########################################
-  get_results_residual <- function(study){
-    out_list <- out_list_all
+
+  # III.B. Residuals
+  # record the extracted values of the estimated random effects
+  get_results_residual <- function(){
     selected_models <- seq_along(mpar)
     for(i in selected_models){
-      # get a text output to work with
-      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)
-      message("Getting model ", i, ", ",out_file)
-      mplus_output <- scan(out_list[i], what='character', sep='\n')
-      model <- mpar[[i]]
-      # testing for specific errors
-      no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output))
-      variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output))
-      # If there are no specific error, then go get the parameter solution
-      if(no_observations){
-        results[i, "Error"]  <- "No observations" 
-      }else{ 
-      
-        if(variance_zero){
-          results[i,"Error"]  <- "Zero variance" 
-        }else{ 
-          has_converged <- results[i,"converged"]
-          if(has_converged) {
-            
-        ## variance physical residual- p_SIGMA
-        (test <- model[grep("^P", model$param), ])
-        (test <- test[grep("^Residual.Variances", test$paramHeader), ])
-        (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
-          if(dim(test)[1]!=0) {results[i, p_SIGMA] <- test}
-  
-        ## variance of cognitive residual - c_SIGMA
-        (test <- model[grep("^C", model$param), ])
-        (test <- test[grep("^Residual.Variances", test$paramHeader), ])
-        (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
-          if(dim(test)[1]!=0) {results[i, c_SIGMA] <- test}
-  
-        ## covariance btw physical and cognitive residuals - pc_SIGMA
-        (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-        (test <- test[-grep("^I|S", test$param),]) # param starting NOT with I or S
-        (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
-        if(dim(test)[1]!=0){results[i, pc_SIGMA] <- test}
-  
-        
-  #       ## Correlations b/w SLOPE physical and SLOPE cognitive
-  #       results[i,R_SPSC] <- IalsaSynthesis::extract_named_wald("R_SPSC",mplus_output)
-  #       ## Correlations b/w INTERCEPT physical and INTERCEPT cognitive
-  #       results[i,R_IPIC] <- IalsaSynthesis::extract_named_wald("R_IPIC",mplus_output) 
-  #       ## Correlations b/w RESIDUAL physical and RESIDUAL cognitive
-  #       results[i,R_RES_PC] <- IalsaSynthesis::extract_named_wald("R_RES_PC",mplus_output) 
-  #             
-            
-          }# close has_converged
-        }      
-      } 
+      model <- mpar[[i]] # load the extract of this model's estimates
+
+      ## variance of residual of process (A)- a_SIGMA
+      (test <- model[grep("^A", model$param), ])
+      (test <- test[grep("^Residual.Variances", test$paramHeader), ])
+      (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
+      if(dim(test)[1]!=0) {results[i, a_SIGMA] <- test}
+
+      #       ## variance of residual of process (B) - b_SIGMA
+      #       (test <- model[grep("^B", model$param), ])
+      #       (test <- test[grep("^Residual.Variances", test$paramHeader), ])
+      #       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
+      #       if(dim(test)[1]!=0) {results[i, b_SIGMA] <- test}
+      #
+      #       ## covariance btw residuals of process (A) and process (B) - ab_SIGMA
+      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      #       (test <- test[-grep("^I|S", test$param),]) # param starting NOT with I or S
+      #       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
+      #       if(dim(test)[1]!=0){results[i, ab_SIGMA] <- test}
+
+      #       ## Correlations b/w SLOPE physical and SLOPE cognitive
+      #       results[i,R_SPSB] <- IalsaSynthesis::extract_named_wald("R_SPSB",mplus_output)
+      #       ## Correlations b/w INTERCEPT physical and INTERCEPT cognitive
+      #       results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB",mplus_output)
+      #       ## Correlations b/w RESIDUAL physical and RESIDUAL cognitive
+      #       results[i,R_RES_PC] <- IalsaSynthesis::extract_named_wald("R_RES_PC",mplus_output)
+
     } # close for loop
     return(results)
   }# close get_results_residual
   results <- get_results_residual()
-  
-  ######################### Fixed Effects ####################################
-  get_results_fixed <- function(study){
-    out_list <- out_list_all
+
+
+  # III.C. Fixed Effects
+  # record the extracted values of the estimated random effects
+  get_results_fixed <- function(){
     selected_models <- seq_along(mpar)
     for(i in selected_models){
-      # get a text output to work with
-      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)
-      message("Getting model ", i, ", ",out_file)
-      mplus_output <- scan(out_list[i], what='character', sep='\n')
-      model <- mpar[[i]]
-      # testing for specific errors
-      no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output))
-      variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output))
-      # If there are no specific error, then go get the parameter solution
-      if(no_observations){
-        results[i, "Error"]  <- "No observations" 
-      }else{ 
-      
-        if(variance_zero){
-          results[i,"Error"]  <- "Zero variance" 
-        }else{ 
-          has_converged <- results[i,"converged"]
-   
-        if(has_converged) {
-        
-        ## intercept    
-        int <- model[grep("Intercepts", model$paramHeader),]
-  
-        ## average initial status of physical - p_GAMMA_00
-        test <- int[int$param=='IP',c('est', 'se', "est_se", 'pval')]
-        if(dim(test)[1]!=0) {results[i, p_GAMMA_00] <- test}
-  
-        ## average rate of change of physical - p_GAMMA_10
-        test <- int[int$param=='SP',c('est', 'se', "est_se", 'pval')]
-        if(dim(test)[1]!=0) {results[i, p_GAMMA_10] <- test}
-  
-        ## average initial status of cognitive - c_GAMMA_00
-        test <- int[int$param=='IC',c('est', 'se', "est_se", 'pval')]
-        if(dim(test)[1]!=0) {results[i, c_GAMMA_00] <- test}
-  
-        ## average rate of change of cognitive - c_GAMMA_10
-        test <- int[int$param=='SC',c('est', 'se', "est_se", 'pval')]
-        if(dim(test)[1]!=0) {results[i, c_GAMMA_10] <- test}
-        
-        ## intercept of process 1 (P) regressed on Age at baseline
-        (test <- model[grep("IP.ON", model$paramHeader),])
-        (test <- test[test$param=="BAGE",])
-        (test <- test[c('est', 'se', "est_se", 'pval')])
-        if(dim(test)[1]!=0) {results[i, p_GAMMA_01] <- test}
-        
-        ## slope of process 1 (P) regressed on Age at baseline
-        (test <- model[grep("SP.ON", model$paramHeader),])
-        (test <- test[test$param=="BAGE",])
-        (test <- test[c('est', 'se', "est_se", 'pval')])
-        if(dim(test)[1]!=0) {results[i, p_GAMMA_11] <- test}
-        
-        ## intercept of process 2 (C) regressed on Age at baseline
-        (test <- model[grep("IC.ON", model$paramHeader),])
-        (test <- test[test$param=="BAGE",])
-        (test <- test[c('est', 'se', "est_se", 'pval')])
-        if(dim(test)[1]!=0) {results[i, c_GAMMA_01] <- test}
-        
-        ## slope of process 1 (P) regressed on Age at baseline
-        (test <- model[grep("SC.ON", model$paramHeader),])
-        (test <- test[test$param=="BAGE",])
-        (test <- test[c('est', 'se', "est_se", 'pval')])
-        if(dim(test)[1]!=0) {results[i, c_GAMMA_11] <- test}
-        
-  
-      }# close has_converged
-        }      
-      } 
+      model <- mpar[[i]] # load the extract of this model's estimates
+      ## intercept
+      (int <- model[grep("Intercepts", model$paramHeader),])
+
+      ## average initial status of process (A) - a_GAMMA_00
+      (test <- int[int$param=='IA',c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_00] <- test}
+
+      ## average rate of change of process (A) - a_GAMMA_10
+      (test <- int[int$param=='SA',c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_10] <- test}
+
+      #       ## average initial status of process (B) - b_GAMMA_00
+      #       test <- int[int$param=='IB',c('est', 'se', "est_se", 'pval')]
+      #       if(dim(test)[1]!=0) {results[i, b_GAMMA_00] <- test}
+
+      #       ## average rate of change of process (B) - b_GAMMA_10
+      #       test <- int[int$param=='SB',c('est', 'se', "est_se", 'pval')]
+      #       if(dim(test)[1]!=0) {results[i, b_GAMMA_10] <- test}
+
+      ## intercept of process (A) regressed on Age at baseline
+      (test <- model[grep("IA.ON", model$paramHeader),])
+      (test <- test[test$param=="AGE_C70",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_01] <- test}
+
+      ## slope of process (A) regressed on Age at baseline centered at 70 years
+      (test <- model[grep("SA.ON", model$paramHeader),])
+      (test <- test[test$param=="AGE_C70",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_11] <- test}
+
+
+      ## intercept of process (A) regressed on height at baseline centered at 160 cm
+      (test <- model[grep("IA.ON", model$paramHeader),])
+      (test <- test[test$param=="HTM_C160",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_01] <- test}
+
+      ## slope of process (A) regressed on Age at baseline
+      (test <- model[grep("SA.ON", model$paramHeader),])
+      (test <- test[test$param=="HTM_C160",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_11] <- test}
+
+
+      ## intercept of process (A) regressed on Education at baseline centered at 7 grades
+      (test <- model[grep("IA.ON", model$paramHeader),])
+      (test <- test[test$param=="EDU_C7",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_01] <- test}
+
+      ## slope of process (A) regressed on Age at baseline
+      (test <- model[grep("SA.ON", model$paramHeader),])
+      (test <- test[test$param=="EDU_C7",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_11] <- test}
+
+
+      #       ## intercept of process (B)  regressed on Age at baseline
+      #       (test <- model[grep("IB.ON", model$paramHeader),])
+      #       (test <- test[test$param=="AGE_C70",])
+      #       (test <- test[c('est', 'se', "est_se", 'pval')])
+      #       if(dim(test)[1]!=0) {results[i, b_GAMMA_01] <- test}
+      #
+      #       ## slope of process (B) regressed on Age at baseline
+      #       (test <- model[grep("SB.ON", model$paramHeader),])
+      #       (test <- test[test$param=="BAGE",])
+      #       (test <- test[c('est', 'se', "est_se", 'pval')])
+      #       if(dim(test)[1]!=0) {results[i, b_GAMMA_11] <- test}
+
+
     } # close for loop
     return(results)
   }# close get_results_fixed
   results <- get_results_fixed()
-  
-  
-  ######################## Export results dataset ############################
-  destination <- get_folder
-  write.csv(results, paste0(destination,".csv") , row.names=F)
-  saveRDS(results, paste0(destination,".rds") )  
+
+  # IV.A. Export results
+  (a <- (strsplit(folder, "/")[[1]]))
+  (a_max <- max(length(a)))
+  (b <- a[a_max])
+  write.csv(results, paste0(folder,"/",b,".csv") , row.names=F)
+  # saveRDS(results, paste0(destination,".rds") )
 }
 
 
+
 collect_all_results <- function(allFolder){
-## make scripts from the prototype and run it (run_models=TRUE)
-# pathFolder <- allFolder # where outputs are
-out_list_all <- list.files(pathFolder, full.names=T, recursive=T, pattern="out$")
+  ## make scripts from the prototype and run it (run_models=TRUE)
+  # pathFolder <- allFolder # where outputs are
+  out_list_all <- list.files(pathFolder, full.names=T, recursive=T, pattern="out$")
 
-directories <- gsub(pattern, "\\1", dto_paths, perl=T)
+  directories <- gsub(pattern, "\\1", dto_paths, perl=T)
 
-pair_names <- basename(directories)
+  pair_names <- basename(directories)
 
-  
-  
+
+
   for(i in allFolder){
     collect_model_results(folder=allFolder)
   }
-  
+
 }
 
 
