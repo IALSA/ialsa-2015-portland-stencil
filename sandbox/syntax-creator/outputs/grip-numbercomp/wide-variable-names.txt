@@ -1,10 +1,14 @@
 id
 age_bl
+age_c70
 htm
+htm_c160
 wtkg
 msex
 race
 educ
+edu_c7
+dementia_ever
 age_at_visit_0
 age_at_visit_1
 age_at_visit_2

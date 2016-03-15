@@ -15,3 +15,7 @@ fev
 gait_speed
 gripavg
 time_since_bl
+dementia_ever
+age_c70
+htm_c160
+edu_c7
