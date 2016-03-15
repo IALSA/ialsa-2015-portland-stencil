@@ -20,6 +20,7 @@ loadNamespace("data.table") # data transformations
 # ---- declare-globals ---------------------------------------------------------
 # path_input  <- "./data/unshared/raw/map/ds0.rds"
 path_input  <- "../MAP/data-unshared/derived/ds0.rds"
+# path_input  <- "./data-unshared/raw/map/ds0.rds"
 # figure_path <- 'manipulation/stitched-output/te/'
 
 # put test assert here to check the connection.
@@ -52,15 +53,10 @@ names.labels <- function(ds){
 # ---- load_varnames ---------------------------------------------------------
 (nl <- names.labels(ds)) # nl for (n)ame and (l)ables
 
-write.csv(nl, file="./data/unshared/derived/nl_raw.csv")
+write.csv(nl, file="./sandbox/01-univariate-linear/variables_labels.csv")
 # augment the names with classifications. Directly edit the .csv
-nl_augmentedPath <- "./data/unshared/derived/nl_augmented.csv"
-# imported edited/augmented .csv containing a classification of variables
-# varnames <- read.csv(nl_augmentedPath, stringsAsFactors = F)
-# varnames$X <- NULL
-# varnames
-#
-# dplyr::arrange(varnames, type)
+nl_augmentedPath <- "./sandbox/01-univariate-linear/nl_augmented.csv"
+
 
 # ----- select_subset ------------------------------------
 # select variables you will need for modeling, be conservative
@@ -104,19 +100,39 @@ d <- d %>%
   ) %>%
   dplyr::ungroup()
 
+# ---- compute_subsetting_conditions ---------------------
 
-set.seed(42)
-random_subset <- sample(unique(d$id), size = 500)
-d <- d[d$id %in% random_subset, ]
+d <- d %>%
+  dplyr::group_by(id) %>%
+  dplyr::mutate(dementia_ever = any(dementia==1)) %>%
+  dplyr::ungroup() #%>%
+#dplyr::filter(dementia_ever %in% c(FALSE, NA))
+
+d <- as.data.frame(d)
+table(d$dementia_ever, useNA="always")
+d$dementia_ever <- as.numeric(d$dementia_ever)
+d <- dplyr::tbl_df(d)
+
+# ---- center_covariates ---------------------------------
+d <- d %>%
+  dplyr::mutate(age_c70 = age_bl - 70)  %>%
+  dplyr::mutate(htm_c160 = htm - 1.6)  %>%
+  dplyr::mutate(edu_c7 = educ - 7)
+
+d %>% dplyr::glimpse()
+
+
+# ---- missing_values -----------------------------
+# remove observations with missing values on the time variable
+table(d$fu_year, useNA = "always")
+d <- d %>% dplyr::filter(!is.na(fu_year))
+table(d$fu_year, useNA = "always")
 
 # ---- long_to_wide -----------------------------------------
 # long to wide conversion might rely on the classification given to the variables with respect to time : variant or invariant
 # should this classification be manual or automatic?
-table(d$fu_year, useNA = "always")
 
-d <- d[!is.na(d$fu_year),] # remove obs with NA for the follow up year
-
-dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + wtkg + msex + race + educ ~ fu_year, value.var = c(
+dw <- data.table::dcast(data.table::setDT(d), id + age_bl + age_c70 + htm + htm_c160 + wtkg + msex + race + educ + edu_c7 + dementia_ever ~ fu_year, value.var = c(
   "age_at_visit", #Age at cycle - fractional
   "time_since_bl", # time elapsed since the baseline
   "dementia", # Dementia diagnosis
@@ -130,18 +146,30 @@ dw <- data.table::dcast(data.table::setDT(d), id + age_bl + htm + wtkg + msex + 
   "gripavg" # Extremity strength
 
 
-  ))
+))
 
+# recode missing values
+
+
+# set.seed(42)
+# random_subset <- sample(unique(dw$id), size = 500)
+# dw <- dw[d$id %in% random_subset, ]
 
 dw[is.na(dw)] <- -9999
+dw %>% dplyr::glimpse()
+table(dw$age_centered_70, useNA = "always")
 
+
+
+# dw %>% dplyr::glimpse()
 
 # ---- export_data -------------------------------------
 # At this point we would like to export the data in .dat format
 # to be fed to Mplus for any subsequent modeling
+place_in <- "./sandbox/01-univariate-linear/numbercomp/"
 
-write.table(d,"./sandbox/syntax-creator/outputs/grip-numbercomp/long-dataset.dat", row.names=F, col.names=F)
-write(names(d), "./sandbox/syntax-creator/outputs/grip-numbercomp/long-variable-names.txt", sep=" ")
+write.table(d,paste0(place_in,"long-dataset.dat"), row.names=F, col.names=F)
+write(names(d), paste0(place_in,"long-variable-names.txt"), sep=" ")
 
-write.table(dw,"./sandbox/syntax-creator/outputs/grip-numbercomp/wide-dataset.dat", row.names=F, col.names=F)
-write(names(dw), "./sandbox/syntax-creator/outputs/grip-numbercomp/wide-variable-names.txt", sep=" ")
+write.table(dw, paste0(place_in,"wide-dataset.dat"), row.names=F, col.names=F)
+write(names(dw), paste0(place_in,"wide-variable-names.txt"), sep=" ")
