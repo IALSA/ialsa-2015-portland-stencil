@@ -49,7 +49,7 @@ run_models_on <- FALSE # TRUE - run models, FALSE - only create script
 ############################################################ GRIP #####
 ## @knitr dummy_1
 # Use the first example as the template for further pairs
-# from "./sandbox/syntax-creator/functions_to_generate_Mplus_scripts.R"
+# function below is defined in "./sandbox/syntax-creator/functions-to-generate-Mplus-scripts.R"
 make_script_waves(
   prototype = "sandbox/syntax-creator/prototype-map-wide.inp"
   ,place_in = "sandbox/syntax-creator/outputs/grip-numbercomp"
