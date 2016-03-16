@@ -78,7 +78,7 @@ a2=gripavg_2;
 a3=gripavg_3;
 a4=gripavg_4;
 a5=gripavg_5;
-! assign variables to the process (B)
+	! assign variables to the process (B)
 b1=cts_nccrtd_1;
 b2=cts_nccrtd_2;
 b3=cts_nccrtd_3;

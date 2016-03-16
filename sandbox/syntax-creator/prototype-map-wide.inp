@@ -37,16 +37,17 @@ and
 DEFINE:
 	! assign variables to the process (A)
 %match_timepoints_process_a%
-! assign variables to the process (B)
+	! assign variables to the process (B)
 %match_timepoints_process_b%
 	!assign variables to time points
 %match_timepoints%
 	
 
-
 ANALYSIS:
 TYPE = RANDOM;
-COVERAGE=.00;
+COVERAGE=.00;  
+
+
 
 MODEL:
 	!first-level equation

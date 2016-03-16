@@ -21,7 +21,7 @@ collect_model_results <- function(folder){
                     "Observations",
                     "Parameters",
                     "LL","AIC","BIC","aBIC","AICC",
-                    "Filename")
+                    "Filename", "filePath")
     # Create data frame to populated from model output files
     msum <- data.frame(matrix(ncol=length(msum_names)))
     names(msum) <- msum_names # columns is what we want to extract from MplusAutomation::extractModelSummaries()
@@ -95,13 +95,13 @@ collect_model_results <- function(folder){
   get_results_basic <- function(){
     selected_models <- seq_along(mpar)
     for(i in selected_models){
-      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)# grab an output file to work with
+      (out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)) # grab an output file to work with
       message("Getting model ", i, ", ",out_file)# view the file name
       mplus_output <- scan(out_list[i], what='character', sep='\n') # each line of output as a char value
-      model <- mpar[[i]] # load the extract of this model's estimates
+      (model <- mpar[[i]])# load the extract of this model's estimates
       # testing for specific errors
-      no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output))
-      variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output))
+      (no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output)))
+      (variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output)))
       # If there are no specific error, then go get the parameter solution
       if(no_observations){
         results[i, "Error"]  <- "No observations"
@@ -116,29 +116,33 @@ collect_model_results <- function(folder){
           results[i, c('date', 'time')] <- strsplit(mplus_output[3], '  ')[[1]]
           results[i,"data_file"] <- strsplit(mplus_output[grep("File", mplus_output, ignore.case=TRUE)], 'IS| is |=|;')[[1]][2]
           results[i, 'output_file'] <- msum[i, 'Filename']
-          # results[i, "file_path"] <- msum[i,"file_path"]
+          results[i, "file_path"] <- msum[i,"filePath"]
 
           ## Populate model_id variables
           # results[i,"study_name"] <- msum$study_name[i]
           # results[i,c("model_number", 'subgroup',  'model_type')] <- strsplit(msum$Filename[i], '_')[[1]][1:3]
 
-          process_a_name = 'numbercomp'
+          process_a_name = 'grip'
+          process_b_name = 'numbercomp'
           subgroup_sex = "male"
+          model_type = "aeh" # = must be defined programmatically, by the scan of covariates
 
-          results[i, "process_a"] <- process_a_name
-          results[i, "subgroup_sex"] <- subgroup_sex
+          results[i, "process_a"] <- process_a_name # ARGUMENTS DEFINED IN mplus_generator_bivariate()
+          results[i, "process_b"] <- process_b_name # ARGUMENTS DEFINED IN mplus_generator_bivariate()
+          results[i, "subgroup_sex"] <- subgroup_sex # ARGUMENTS DEFINED IN mplus_generator_bivariate()
+          results[i, "model_type"] <- model_type
 
           ## Populate model_info variables
           results[i, 'subject_count'] <- msum[i, 'Observations'] # verify this, maybe datapoints, not subjects
           results[i, 'parameter_count'] <- msum[i, 'Parameters']
 
           (subject <- model[model$paramHeader=='Intercepts', 'param'])
-          results[i, 'wave_count'] <- max(as.numeric(gsub("[^0-9]", '', subject)), na.rm=T) # MUST CHANGE. COUNTS THE HIGHEST NUMBER, BUT RATHER MUST COUNT THE COUNT OF WAVES
-          results[i, c('LL')] <-  msum[i,c('LL')]
-          results[i, c('aic')] <-  msum[i,c('AIC')]
-          results[i, c('bic')] <-  msum[i,c('BIC')]
-          results[i, c('adj_bic')] <-  msum[i,c('aBIC')]
-          results[i, c('aaic')] <-  msum[i,c('AICC')]
+          (results[i, 'wave_count'] <- max(as.numeric(gsub("[^0-9]", '', subject)), na.rm=T)) # MUST CHANGE. COUNTS THE HIGHEST NUMBER, BUT RATHER MUST COUNT THE COUNT OF WAVES
+          (results[i, c('LL')] <-  msum[i,c('LL')])
+          (results[i, c('aic')] <-  msum[i,c('AIC')])
+          (results[i, c('bic')] <-  msum[i,c('BIC')])
+          (results[i, c('adj_bic')] <-  msum[i,c('aBIC')])
+          (results[i, c('aaic')] <-  msum[i,c('AICC')])
           ## Computed values
 
         } # close else
@@ -147,19 +151,19 @@ collect_model_results <- function(folder){
     return(results)
   } # close get_results_basic
   results <- get_results_basic()
-  # results[i, p_GAMMA_00]
+  # results[i, a_GAMMA_00]
 
   # II.B. Catching Errors
   # records all relevant errors and warnings about model estimation produced by Mplus
   get_results_errors <- function(){
     selected_models <- seq_along(mpar)
     for(i in selected_models){
-      out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)# grab an output file to work with
+      (out_file <-  tail(strsplit(out_list[i],"/")[[1]], n=1)) # grab an output file to work with
       message("Getting model ", i, ", ",out_file)# view the file name
       mplus_output <- scan(out_list[i], what='character', sep='\n') # each line of output as a char value
       # testing for specific errors
-      no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output))
-      variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output))
+      (no_observations <- length(grep("One or more variables in the data set have no non-missing values", mplus_output)))
+      (variance_zero <- length(grep("One or more variables have a variance of zero", mplus_output)))
       # If there are no specific error, then go get the parameter solution
       if(no_observations){
         results[i, "Error"]  <- "No observations"
@@ -298,13 +302,13 @@ collect_model_results <- function(folder){
       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
       if(dim(test)[1]!=0){results[i, ab_SIGMA] <- test}
 
-      ## Correlations b/w INTERCEPT of process (A)  and INTERCEPT of process (B)
-      results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB", mplus_output)
-      ## Correlations b/w SLOPE of process (A)  and SLOPE of process (B)
-      results[i,R_SPSB] <- IalsaSynthesis::extract_named_wald("R_SASB",mplus_output)
-
-      ## Correlations b/w RESIDUAL of process (A)  and RESIDUAL of process (B)
-      results[i,R_RES_AB] <- IalsaSynthesis::extract_named_wald("R_RES_AB",mplus_output)
+#       ## Correlations b/w INTERCEPT of process (A)  and INTERCEPT of process (B)
+#       results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB", mplus_output)
+#       ## Correlations b/w SLOPE of process (A)  and SLOPE of process (B)
+#       results[i,R_SPSB] <- IalsaSynthesis::extract_named_wald("R_SASB",mplus_output)
+#
+#       ## Correlations b/w RESIDUAL of process (A)  and RESIDUAL of process (B)
+#       results[i,R_RES_AB] <- IalsaSynthesis::extract_named_wald("R_RES_AB",mplus_output)
 
     } # close for loop
     return(results)
@@ -329,51 +333,50 @@ collect_model_results <- function(folder){
       (test <- int[int$param=='SA',c('est', 'se', "est_se", 'pval')])
       if(dim(test)[1]!=0) {results[i, a_GAMMA_10] <- test}
 
-      #       ## average initial status of process (B) - b_GAMMA_00
-      #       test <- int[int$param=='IB',c('est', 'se', "est_se", 'pval')]
-      #       if(dim(test)[1]!=0) {results[i, b_GAMMA_00] <- test}
+      ## average initial status of process (B) - b_GAMMA_00
+      (test <- int[int$param=='IB',c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, b_GAMMA_00] <- test}
 
-      #       ## average rate of change of process (B) - b_GAMMA_10
-      #       test <- int[int$param=='SB',c('est', 'se', "est_se", 'pval')]
-      #       if(dim(test)[1]!=0) {results[i, b_GAMMA_10] <- test}
+      ## average rate of change of process (B) - b_GAMMA_10
+      (test <- int[int$param=='SB',c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, b_GAMMA_10] <- test}
 
-      ## intercept of process (A) regressed on Age at baseline
+      ## intercept of process (A) regressed on (age at baseline) centered at 70 years - a_GAMMA_01
       (test <- model[grep("IA.ON", model$paramHeader),])
       (test <- test[test$param=="AGE_C70",])
       (test <- test[c('est', 'se', "est_se", 'pval')])
       if(dim(test)[1]!=0) {results[i, a_GAMMA_01] <- test}
 
-      ## slope of process (A) regressed on Age at baseline centered at 70 years
+      ## slope of process (A) regressed on (age at baseline) centered at 70 years - a_GAMMA_11
       (test <- model[grep("SA.ON", model$paramHeader),])
       (test <- test[test$param=="AGE_C70",])
       (test <- test[c('est', 'se', "est_se", 'pval')])
       if(dim(test)[1]!=0) {results[i, a_GAMMA_11] <- test}
 
-
-      ## intercept of process (A) regressed on height at baseline centered at 160 cm
-      (test <- model[grep("IA.ON", model$paramHeader),])
-      (test <- test[test$param=="HTM_C160",])
-      (test <- test[c('est', 'se', "est_se", 'pval')])
-      if(dim(test)[1]!=0) {results[i, a_GAMMA_01] <- test}
-
-      ## slope of process (A) regressed on Age at baseline
-      (test <- model[grep("SA.ON", model$paramHeader),])
-      (test <- test[test$param=="HTM_C160",])
-      (test <- test[c('est', 'se', "est_se", 'pval')])
-      if(dim(test)[1]!=0) {results[i, a_GAMMA_11] <- test}
-
-
-      ## intercept of process (A) regressed on Education at baseline centered at 7 grades
+      ## intercept of process (A) regressed on (education) centered at 7 grades - a_GAMMA_01
       (test <- model[grep("IA.ON", model$paramHeader),])
       (test <- test[test$param=="EDU_C7",])
       (test <- test[c('est', 'se', "est_se", 'pval')])
       if(dim(test)[1]!=0) {results[i, a_GAMMA_01] <- test}
 
-      ## slope of process (A) regressed on Age at baseline
+      ## slope of process (A) regressed on (education) centered at 7 graded
       (test <- model[grep("SA.ON", model$paramHeader),])
       (test <- test[test$param=="EDU_C7",])
       (test <- test[c('est', 'se', "est_se", 'pval')])
       if(dim(test)[1]!=0) {results[i, a_GAMMA_11] <- test}
+
+      ## intercept of process (A) regressed on (height)  centered at 160 cm - a_GAMMA_01
+      (test <- model[grep("IA.ON", model$paramHeader),])
+      (test <- test[test$param=="HTM_C160",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_01] <- test}
+
+      ## slope of process (A) regressed on (height) centered at 160 cm  - a_GAMMA_11
+      (test <- model[grep("SA.ON", model$paramHeader),])
+      (test <- test[test$param=="HTM_C160",])
+      (test <- test[c('est', 'se', "est_se", 'pval')])
+      if(dim(test)[1]!=0) {results[i, a_GAMMA_11] <- test}
+
 
 
       #       ## intercept of process (B)  regressed on Age at baseline
