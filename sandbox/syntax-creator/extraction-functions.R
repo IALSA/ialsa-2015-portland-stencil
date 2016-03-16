@@ -297,10 +297,11 @@ collect_model_results <- function(folder){
       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
       if(dim(test)[1]!=0){results[i, ab_SIGMA] <- test}
 
+      ## Correlations b/w INTERCEPT of process (A)  and INTERCEPT of process (B)
+      results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB", mplus_output)
       ## Correlations b/w SLOPE of process (A)  and SLOPE of process (B)
       results[i,R_SPSB] <- IalsaSynthesis::extract_named_wald("R_SASB",mplus_output)
-      ## Correlations b/w INTERCEPT of process (A)  and INTERCEPT of process (B)
-      results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB",mplus_output)
+
       ## Correlations b/w RESIDUAL of process (A)  and RESIDUAL of process (B)
       results[i,R_RES_AB] <- IalsaSynthesis::extract_named_wald("R_RES_AB",mplus_output)
 
