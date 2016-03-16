@@ -1,7 +1,7 @@
 # ## This script declares the functions that generate Mplus .inp file used in model fitting.
 
 # prototype = "sandbox/01-univariate-linear/prototype-map-wide.inp"
-# place_in = "sandbox/01-univariate-linear/example"
+# saved_location = "sandbox/01-univariate-linear/example"
 # process_a_name = 'numbercomp'# measure name
 # process_a_mplus = 'cts_nccrtd'# Mplus variable
 # subgroup_sex = "male"
@@ -12,7 +12,7 @@
 
 mplus_generator_bivariate <- function(
     prototype #= "./sandbox/syntax-creator/prototype-map-wide.inp" # point to the template
-  , place_in #= "sandbox/syntax-creator/example" # where to store all the .inp/.out scripts
+  , saved_location #= "sandbox/syntax-creator/example" # where to store all the .inp/.out scripts
   , process_a_name #= 'grip'# item name of process (A)
   , process_a_mplus #= 'gripavg'# Mplus variable of process (A)
   , process_b_name #= 'numbercomp'# item name of process (B)
@@ -29,7 +29,7 @@ mplus_generator_bivariate <- function(
   # proto_input <- paste(proto_input, collapse="\n")
 
     # declare global values
-  pathVarnames <- paste0(place_in,"/wide-variable-names.txt")
+  pathVarnames <- paste0(saved_location,"/wide-variable-names.txt")
   names_are <- read.csv(pathVarnames, header = F, stringsAsFactors = F)[ ,1]
   (a <- grepl("age_at_visit_", names_are))
   (b <- names_are[a])
@@ -40,7 +40,7 @@ mplus_generator_bivariate <- function(
 
 
   # after modification .inp files will be saved as:
-  newFile <- paste0(place_in,"/", subgroup_sex ,"_", wave_modeled_max,".inp")
+  newFile <- paste0(saved_location,"/", subgroup_sex ,"_", wave_modeled_max,".inp")
 
 
   # TITLE:
@@ -106,6 +106,8 @@ mplus_generator_bivariate <- function(
 
   if(run_models){
     # run all models in the folder
-    MplusAutomation::runModels(directory=place_in )#, Mplus_command = Mplus_install_path)
+    pathRoot <- getwd()
+    saved_laction_mplus <- paste0(pathRoot,"/",saved_location)
+    MplusAutomation::runModels(directory=saved_laction_mplus )#, Mplus_command = Mplus_install_path)
   }
 } # close function

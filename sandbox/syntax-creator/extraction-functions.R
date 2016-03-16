@@ -1,11 +1,11 @@
 # this script contains the definitions of the functions that extract the results of model estimation
-# folder = "./sandbox/01-univariate-linear/example"
+# folder = "./sandbox/syntax-creator/outputs/grip-numbercomp/"
 collect_model_results <- function(folder){
   # collect a vector with .out file paths
-  (out_list <- list.files(file.path(folder),full.names=T, recursive=T, pattern="out$"))
+  (out_list <- list.files(file.path(folder), full.names=T, recursive=F, pattern="out$"))
   # the script `group-variables.R` creates objects with names of standard variables for easier handling
   #e.g ab_TAU_00 <- c("ab_TAU_00_est", "ab_TAU_00_se", "ab_TAU_00_wald","ab_TAU_00_pval")
-  source("./scripts/mplus/group-variables.R")
+  # source("./scripts/mplus/group-variables.R")
 
   # I. EXTRACTION
   #
@@ -169,11 +169,11 @@ collect_model_results <- function(folder){
         else{
 
           ## Check for model convergence
-          conv <-  length(grep("THE MODEL ESTIMATION TERMINATED NORMALLY", mplus_output))
-          has_converged <- (conv==1L)
-          results[i, 'converged'] <- conv
-          results[i, 'has_converged'] <- has_converged
-          results[i,"covar_covered"] <- length(grep("THE COVARIANCE COVERAGE FALLS BELOW THE SPECIFIED LIMIT", mplus_output))
+          line_found <-  length(grep("THE MODEL ESTIMATION TERMINATED NORMALLY", mplus_output))
+          results[i, 'has_converged'] <- line_found
+
+          line_found <- length(grep("THE COVARIANCE COVERAGE FALLS BELOW THE SPECIFIED LIMIT", mplus_output))
+          results[i,"covar_covered"] <- line_found
 
           line_found <- grep("TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE", mplus_output)
           results[i,"trust_all"] <- !length(line_found)==1L
@@ -183,6 +183,8 @@ collect_model_results <- function(folder){
           if(length(snippet)>0){
             results[i,"mistrust"] <- snippet
           }
+
+
         } # close else
       } # close else
     } # close loop for selected_models

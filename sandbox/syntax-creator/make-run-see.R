@@ -19,7 +19,7 @@ requireNamespace("MplusAutomation")
 requireNamespace("stringr")
 
 
-#e.g pc_TAU_00 <- c("pc_TAU_00_est", "pc_TAU_00_se", "pc_TAU_00_wald", "pc_TAU_00_pval")
+#e.g ab_TAU_00 <- c("ab_TAU_00_est", "ab_TAU_00_se", "ab_TAU_00_wald", "ab_TAU_00_pval")
 source("./sandbox/syntax-creator/group-variables.R") # selected_results
 # load functions that generate scripts
 source("./sandbox/syntax-creator/functions-to-generate-Mplus-scripts.R")
@@ -49,11 +49,15 @@ run_models_on <- FALSE # TRUE - run models, FALSE - only create script
 ############################################################ GRIP #####
 ## @knitr dummy_1
 # Use the first example as the template for further pairs
+saved_location <- "./sandbox/syntax-creator/outputs/grip-numbercomp"
+source('./sandbox/syntax-creator/look-at-data.R') # create data for this outcome pair
 # function below is defined in "./sandbox/syntax-creator/functions-to-generate-Mplus-scripts.R"
 mplus_generator_bivariate(
   prototype = "./sandbox/syntax-creator/prototype-map-wide.inp" # point to the template
-  , place_in = "sandbox/syntax-creator/outputs/grip-numbercomp" # where to store all the .inp/.out scripts
+  # saved_location == place_in
+  , saved_location = saved_location # where to store all the .inp/.out scripts
   , process_a_name = 'grip'# item name of process (A)
+  # remove mplus name , no need if data are prepped by R,
   , process_a_mplus = 'gripavg'# Mplus variable of process (A)
   , process_b_name = 'numbercomp'# item name of process (B)
   , process_b_mplus = 'cts_nccrtd'# Mplus variable of process (B)
@@ -65,7 +69,7 @@ mplus_generator_bivariate(
 ) # execute to generate script
 
 # from "./sandbox/syntax-creator/extraction_functions.R  script
-collect_model_results(folder = "sandbox/syntax-creator/output/grip-numbercomp/") # collect and save into the same folder
+collect_model_results(folder = "./sandbox/syntax-creator/outputs/grip-numbercomp/") # collect and save into the same folder
 # ds <- readRDS(paste0(pathFolder,".rds")) # load the data for outcome pair
 # from "./scripts/graphs/koval_brown_profiles.R"
 # kb_profiles(ds,  vertical="wave_count",  border=5) # produces the kb_profile graph

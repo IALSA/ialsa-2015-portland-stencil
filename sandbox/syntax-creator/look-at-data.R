@@ -1,7 +1,7 @@
 # knitr::stitch_rmd(script="./manipulation/car-ellis.R", output="./manipulation/stitched-output/car-ellis.md")
 #These first few lines run only when the file is run in RStudio, !!NOT when an Rmd/Rnw file calls it!!
-rm(list=ls(all=TRUE))  #Clear the variables from previous runs.
-cat("\f") # cleans console
+# rm(list=ls(all=TRUE))  #Clear the variables from previous runs.
+# cat("\f") # cleans console
 
 # ---- load-sources ------------------------------------------------------------
 # Call `base::source()` on any repo file that defines functions needed below.  Ideally, no real operations are performed.
@@ -51,11 +51,11 @@ names.labels <- function(ds){
 # (nl <- names.labels(ds)) # usage example
 
 # ---- load_varnames ---------------------------------------------------------
-(nl <- names.labels(ds)) # nl for (n)ame and (l)ables
-
-write.csv(nl, file="./sandbox/01-univariate-linear/variables_labels.csv")
-# augment the names with classifications. Directly edit the .csv
-nl_augmentedPath <- "./sandbox/01-univariate-linear/nl_augmented.csv"
+# (nl <- names.labels(ds)) # nl for (n)ame and (l)ables
+#
+# write.csv(nl, file="./sandbox/01-univariate-linear/variables_labels.csv")
+# # augment the names with classifications. Directly edit the .csv
+# nl_augmentedPath <- "./sandbox/01-univariate-linear/nl_augmented.csv"
 
 
 # ----- select_subset ------------------------------------
@@ -164,10 +164,10 @@ table(dw$age_centered_70, useNA = "always")
 # ---- export_data -------------------------------------
 # At this point we would like to export the data in .dat format
 # to be fed to Mplus for any subsequent modeling
-place_in <- "./sandbox/syntax-creator/outputs/grip-numbercomp/"
+# saved_location <- "./sandbox/syntax-creator/outputs/grip-numbercomp/"
 
-write.table(d,paste0(place_in,"long-dataset.dat"), row.names=F, col.names=F)
-write(names(d), paste0(place_in,"long-variable-names.txt"), sep=" ")
+write.table(d,paste0(saved_location,"/long-dataset.dat"), row.names=F, col.names=F)
+write(names(d), paste0(saved_location,"/long-variable-names.txt"), sep=" ")
 
-write.table(dw, paste0(place_in,"wide-dataset.dat"), row.names=F, col.names=F)
-write(names(dw), paste0(place_in,"wide-variable-names.txt"), sep=" ")
+write.table(dw, paste0(saved_location,"/wide-dataset.dat"), row.names=F, col.names=F)
+write(names(dw), paste0(saved_location,"/wide-variable-names.txt"), sep=" ")
