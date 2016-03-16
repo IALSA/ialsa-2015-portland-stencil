@@ -50,10 +50,12 @@ run_models_on <- FALSE # TRUE - run models, FALSE - only create script
 ## @knitr dummy_1
 # Use the first example as the template for further pairs
 saved_location <- "./sandbox/syntax-creator/outputs/grip-numbercomp"
-source('./sandbox/syntax-creator/look-at-data.R') # create data for this outcome pair
+prototype <-  "./sandbox/syntax-creator/prototype-map-wide.inp"
+wave_set_modeled <-  c(1,2,3,4,5)
+# source('./sandbox/syntax-creator/look-at-data.R') # create data for this outcome pair
 # function below is defined in "./sandbox/syntax-creator/functions-to-generate-Mplus-scripts.R"
 mplus_generator_bivariate(
-  prototype = "./sandbox/syntax-creator/prototype-map-wide.inp" # point to the template
+  prototype = prototype # point to the template
   # saved_location == place_in
   , saved_location = saved_location # where to store all the .inp/.out scripts
   , process_a_name = 'grip'# item name of process (A)
@@ -64,7 +66,7 @@ mplus_generator_bivariate(
   , subgroup_sex = "male" # subset data to members of this group
   , subset_condition_1 = "dementia_ever NE 1" # subset data to member of this group
   , covariate_set = c("age_c70","htm_c160", "edu_c7")  # list of covariates ("_c" stands for "centercd)
-  , wave_set_modeled =  c(1,2,3,4,5) # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+  , wave_set_modeled =  wave_set_modeled # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
   , run_models = FALSE # If TRUE then Mplus runs estimation to produce .out, .gh5, and/or, other files
 ) # execute to generate script
 
