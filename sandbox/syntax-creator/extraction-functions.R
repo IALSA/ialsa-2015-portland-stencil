@@ -3,7 +3,8 @@
 collect_model_results <- function(folder){
   # collect a vector with .out file paths
   (out_list <- list.files(file.path(folder), full.names=T, recursive=F, pattern="out$"))
-  mplus_output <- scan(out_list[i], what='character', sep='\n') # each line of output as a char value
+  # mplus_output <- scan(out_list[i], what='character', sep='\t') # each line of output as a char value
+  mplus_output <- readr::read_file(out_list[1])
   # the script `group-variables.R` creates objects with names of standard variables for easier handling
   #e.g ab_TAU_00 <- c("ab_TAU_00_est", "ab_TAU_00_se", "ab_TAU_00_wald","ab_TAU_00_pval")
   # source("./scripts/mplus/group-variables.R")
@@ -282,6 +283,7 @@ collect_model_results <- function(folder){
   get_results_residual <- function(){
     selected_models <- seq_along(mpar)
     for(i in selected_models){
+      i <- 1
       model <- mpar[[i]] # load the extract of this model's estimates
 
       ## variance of residual of process (A)- a_SIGMA
@@ -302,13 +304,13 @@ collect_model_results <- function(folder){
       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
       if(dim(test)[1]!=0){results[i, ab_SIGMA] <- test}
 
-#       ## Correlations b/w INTERCEPT of process (A)  and INTERCEPT of process (B)
-#       results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB", mplus_output)
-#       ## Correlations b/w SLOPE of process (A)  and SLOPE of process (B)
-#       results[i,R_SPSB] <- IalsaSynthesis::extract_named_wald("R_SASB",mplus_output)
-#
-#       ## Correlations b/w RESIDUAL of process (A)  and RESIDUAL of process (B)
-#       results[i,R_RES_AB] <- IalsaSynthesis::extract_named_wald("R_RES_AB",mplus_output)
+      ## Correlations b/w INTERCEPT of process (A)  and INTERCEPT of process (B)
+      results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB", mplus_output)
+      ## Correlations b/w SLOPE of process (A)  and SLOPE of process (B)
+      results[i, R_SASB] <- IalsaSynthesis::extract_named_wald("R_SASB", mplus_output)
+
+      ## Correlations b/w RESIDUAL of process (A)  and RESIDUAL of process (B)
+      results[i,R_RES_AB] <- IalsaSynthesis::extract_named_wald("R_RES_AB",mplus_output)
 
     } # close for loop
     return(results)

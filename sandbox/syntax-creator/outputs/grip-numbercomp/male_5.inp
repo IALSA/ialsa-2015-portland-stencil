@@ -93,7 +93,7 @@ time5=time_since_bl_5;
 	
 ANALYSIS:
 TYPE = RANDOM;
-COVERAGE=.00;
+COVERAGE=.00;  
 MODEL:
 	!first-level equation
 	! assign process (A) to time points 
