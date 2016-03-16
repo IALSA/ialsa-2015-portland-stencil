@@ -3,6 +3,7 @@
 collect_model_results <- function(folder){
   # collect a vector with .out file paths
   (out_list <- list.files(file.path(folder), full.names=T, recursive=F, pattern="out$"))
+  mplus_output <- scan(out_list[i], what='character', sep='\n') # each line of output as a char value
   # the script `group-variables.R` creates objects with names of standard variables for easier handling
   #e.g ab_TAU_00 <- c("ab_TAU_00_est", "ab_TAU_00_se", "ab_TAU_00_wald","ab_TAU_00_pval")
   # source("./scripts/mplus/group-variables.R")

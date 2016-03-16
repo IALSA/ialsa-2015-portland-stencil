@@ -17,6 +17,7 @@ requireNamespace("reshape2") # data transformations
 requireNamespace("data.table") # data transformations
 requireNamespace("MplusAutomation")
 requireNamespace("stringr")
+requireNamespace("IalsaSynthesis")
 
 
 #e.g ab_TAU_00 <- c("ab_TAU_00_est", "ab_TAU_00_se", "ab_TAU_00_wald", "ab_TAU_00_pval")
