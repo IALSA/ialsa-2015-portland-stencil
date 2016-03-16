@@ -54,20 +54,20 @@ mplus_generator_bivariate <- function(
   proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
 
   # USEVAR are # what variables are used in estimation
-  estimated_timepoints <- paste0("time",wave_set_modeled)
-  estimated_timepoints <- paste(estimated_timepoints, collapse="\n")
+  (estimated_timepoints <- paste0("time",wave_set_modeled))
+  (estimated_timepoints <- paste(estimated_timepoints, collapse="\n"))
   proto_input <- gsub(pattern ="%estimated_timepoints%", replacement = estimated_timepoints, x = proto_input)
 
-  process_a_timepoints <- paste0("a",wave_set_modeled)
-  process_a_timepoints <- paste(process_a_timepoints, collapse="\n")
+  (process_a_timepoints <- paste0("a",wave_set_modeled))
+  (process_a_timepoints <- paste(process_a_timepoints, collapse="\n"))
   proto_input <- gsub(pattern ="%process_a_timepoints%", replacement = process_a_timepoints, x = proto_input)
 
-  process_b_timepoints <- paste0("b",wave_set_modeled)
-  process_b_timepoints <- paste(process_b_timepoints, collapse="\n")
+  (process_b_timepoints <- paste0("b",wave_set_modeled))
+  (process_b_timepoints <- paste(process_b_timepoints, collapse="\n"))
   proto_input <- gsub(pattern ="%process_b_timepoints%", replacement = process_b_timepoints, x = proto_input)
 
 
-  covariate_set <- paste(covariate_set, collapse="\n")
+  (covariate_set <- paste(covariate_set, collapse="\n"))
   proto_input <- gsub(pattern = "%covariate_set%", replacement = covariate_set, x = proto_input)
 
 
@@ -97,6 +97,39 @@ mplus_generator_bivariate <- function(
 
   # ANALYSIS:
   # MODEL:
+
+  # define process (A) in time points
+  (assing_a_to_timepoints <- paste0("ia sa | a",wave_set_modeled," AT ","time",wave_set_modeled," ;"))
+  (assing_a_to_timepoints <- paste(assing_a_to_timepoints, collapse="\n"))
+  proto_input <- gsub(pattern ="%assing_a_to_timepoints%", replacement = assing_a_to_timepoints, x = proto_input)
+
+  # define process (B) in time points
+  (assing_b_to_timepoints <- paste0("ib sb | b",wave_set_modeled," AT ","time",wave_set_modeled," ;"))
+  (assing_b_to_timepoints <- paste(assing_b_to_timepoints, collapse="\n"))
+  proto_input <- gsub(pattern ="%assing_b_to_timepoints%", replacement = assing_b_to_timepoints, x = proto_input)
+
+  # residual covariance of process (A)
+  (resid_covariance_a <- paste0("a",wave_set_modeled," (res_a);"))
+  (resid_covariance_a <- paste(resid_covariance_a, collapse="\n"))
+  proto_input <- gsub(pattern ="%resid_covariance_a%", replacement = resid_covariance_a, x = proto_input)
+
+  # residual covariance of process (B)
+  (resid_covariance_b <- paste0("b",wave_set_modeled," (res_b);"))
+  (resid_covariance_b <- paste(resid_covariance_b, collapse="\n"))
+  proto_input <- gsub(pattern ="%resid_covariance_b%", replacement = resid_covariance_b, x = proto_input)
+
+  # residual covariances of processes
+  (resid_covariances <- paste0("a",wave_set_modeled," pwith ", "b", wave_set_modeled," (res_cov);"))
+  (resid_covariances <- paste(resid_covariances, collapse="\n"))
+  proto_input <- gsub(pattern ="%resid_covariances%", replacement = resid_covariances, x = proto_input)
+
+
+
+
+
+
+
+
   proto_input <- gsub(pattern ="%waves_max%", replacement = wave_modeled_max, x = proto_input)
   # MODEL CONSTRAINT:
   # OUTPUT:

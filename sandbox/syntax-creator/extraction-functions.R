@@ -199,22 +199,22 @@ collect_model_results <- function(folder){
     for(i in selected_models){
       model <- mpar[[i]] # load the extract of this model's estimates
 
-      #       ## covariante btw intercept of process (A) and intercept of process (B) - ab_TAU_00
-      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      #       (test <- test[grep("^I|S", test$param),]) # param starting with I or S
-      #       (test <- test[grep("^I", test$paramHeader),]) # paramHeader starting with I
-      #       (test <- test[grep("^I", test$param),]) # pram starting with I
-      #       (test <- test[ ,c("est", "se","est_se", "pval")])
-      #       if(dim(test)[1]!=0){results[i, ab_TAU_00] <- test}
-      #
-      #       ## covariance btw slope of process (A) and slope of process (B) - ab_TAU_11
-      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      #       (test <- test[grep("^I|S", test$param),]) # param starting with I or S
-      #       (test <- test[grep("^S", test$paramHeader),]) # paramHeader starting with S
-      #       (test <- test[grep("^S", test$param),]) # pram starting with S
-      #       (test <- test[ ,c("est", "se","est_se", "pval")])
-      #       if(dim(test)[1]!=0) {results[i, ab_TAU_11] <- test}
-      # browse()
+      ## covariante btw intercept of process (A) and intercept of process (B) - ab_TAU_00
+      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      (test <- test[grep("^I|S", test$param),]) # param starting with I or S
+      (test <- test[grep("^I", test$paramHeader),]) # paramHeader starting with I
+      (test <- test[grep("^I", test$param),]) # pram starting with I
+      (test <- test[ ,c("est", "se","est_se", "pval")])
+      if(dim(test)[1]!=0){results[i, ab_TAU_00] <- test}
+
+      ## covariance btw slope of process (A) and slope of process (B) - ab_TAU_11
+      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      (test <- test[grep("^I|S", test$param),]) # param starting with I or S
+      (test <- test[grep("^S", test$paramHeader),]) # paramHeader starting with S
+      (test <- test[grep("^S", test$param),]) # pram starting with S
+      (test <- test[ ,c("est", "se","est_se", "pval")])
+      if(dim(test)[1]!=0) {results[i, ab_TAU_11] <- test}
+
       ## covariance btw intercept of process (A) and slope of process (A) - aa_TAU_01
       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
       (test <- test[grep("^IA|^SA", test$param),]) # param starting NOT with I or S
@@ -222,26 +222,26 @@ collect_model_results <- function(folder){
       (test <- test[ ,c("est", "se","est_se", "pval")])
       if(dim(test)[1]!=0){results[i, aa_TAU_01] <- test}
 
-      #       ## covariance btw intercept of process (A) and slope of process (B) - ab_TAU_01
-      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      #       (test <- test[grep("^IA|^SB", test$param),]) # param starting NOT with I or S
-      #       (test <- test[grep("^IA|^SB", test$paramHeader),])
-      #       (test <- test[ ,c("est", "se","est_se", "pval")])
-      #        if(dim(test)[1]!=0){results[i, ab_TAU_01] <- test}
-      #
-      #       ## covariance btw intercept of process (A) and slope of process (B) - ab_TAU_10
-      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      #       (test <- test[grep("^IB|^SA", test$param),]) # param starting NOT with I or S
-      #       (test <- test[grep("^IB|^SA", test$paramHeader),])
-      #       (test <- test[ ,c("est", "se","est_se", "pval")])
-      #        if(dim(test)[1]!=0){results[i, ab_TAU_10] <- test}
+      ## covariance btw intercept of process (A) and slope of process (B) - ab_TAU_01
+      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      (test <- test[grep("^IA|^SB", test$param),]) # param starting NOT with I or S
+      (test <- test[grep("^IA|^SB", test$paramHeader),])
+      (test <- test[ ,c("est", "se","est_se", "pval")])
+       if(dim(test)[1]!=0){results[i, ab_TAU_01] <- test}
 
-      #       ## covariance btw slope of process (B) and intercept of process (B) - bb_TAU_10
-      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      #       (test <- test[grep("^IB|^SB", test$param),]) # param starting NOT with I or S
-      #       (test <- test[grep("^IB|^SB", test$paramHeader),])
-      #       (test <- test[ ,c("est", "se","est_se", "pval")])
-      #        if(dim(test)[1]!=0){results[i, bb_TAU_10] <- test}
+      ## covariance btw intercept of process (A) and slope of process (B) - ab_TAU_10
+      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      (test <- test[grep("^IB|^SA", test$param),]) # param starting NOT with I or S
+      (test <- test[grep("^IB|^SA", test$paramHeader),])
+      (test <- test[ ,c("est", "se","est_se", "pval")])
+       if(dim(test)[1]!=0){results[i, ab_TAU_10] <- test}
+
+      ## covariance btw slope of process (B) and intercept of process (B) - bb_TAU_10
+      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      (test <- test[grep("^IB|^SB", test$param),]) # param starting NOT with I or S
+      (test <- test[grep("^IB|^SB", test$paramHeader),])
+      (test <- test[ ,c("est", "se","est_se", "pval")])
+       if(dim(test)[1]!=0){results[i, bb_TAU_10] <- test}
 
       ## Variance of random intercept of process (A) - aa_TAU_00
       (test <- model[grep("Residual.Variances", model$paramHeader),])
@@ -255,17 +255,17 @@ collect_model_results <- function(folder){
       (test <- test[ ,c("est", "se","est_se", "pval")])
       if(dim(test)[1]!=0) {results[i, aa_TAU_11] <- test}
 
-      #       ## Variance of random intercept of process (B) - bb_TAU_00
-      #       (test <- model[grep("Residual.Variances", model$paramHeader),])
-      #       (test <- test[test$param=='IB', ])
-      #       (test <- test[ ,c("est", "se","est_se", "pval")])
-      #       if(dim(test)[1]!=0) {results[i,bb_TAU_00] <- test}
-      #
-      #       ## Variance of random slope of process (B) - bb_TAU_11
-      #       (test <- model[grep("Residual.Variances", model$paramHeader),])
-      #       (test <- test[test$param=='SB', ])
-      #       (test <- test[ ,c("est", "se","est_se", "pval")])
-      #       if(dim(test)[1]!=0) {results[i, bb_TAU_11] <- test}
+      ## Variance of random intercept of process (B) - bb_TAU_00
+      (test <- model[grep("Residual.Variances", model$paramHeader),])
+      (test <- test[test$param=='IB', ])
+      (test <- test[ ,c("est", "se","est_se", "pval")])
+      if(dim(test)[1]!=0) {results[i,bb_TAU_00] <- test}
+
+      ## Variance of random slope of process (B) - bb_TAU_11
+      (test <- model[grep("Residual.Variances", model$paramHeader),])
+      (test <- test[test$param=='SB', ])
+      (test <- test[ ,c("est", "se","est_se", "pval")])
+      if(dim(test)[1]!=0) {results[i, bb_TAU_11] <- test}
 
     } # close for loop
     return(results)
@@ -285,24 +285,24 @@ collect_model_results <- function(folder){
       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
       if(dim(test)[1]!=0) {results[i, a_SIGMA] <- test}
 
-      #       ## variance of residual of process (B) - b_SIGMA
-      #       (test <- model[grep("^B", model$param), ])
-      #       (test <- test[grep("^Residual.Variances", test$paramHeader), ])
-      #       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
-      #       if(dim(test)[1]!=0) {results[i, b_SIGMA] <- test}
-      #
-      #       ## covariance btw residuals of process (A) and process (B) - ab_SIGMA
-      #       (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
-      #       (test <- test[-grep("^I|S", test$param),]) # param starting NOT with I or S
-      #       (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
-      #       if(dim(test)[1]!=0){results[i, ab_SIGMA] <- test}
+      ## variance of residual of process (B) - b_SIGMA
+      (test <- model[grep("^B", model$param), ])
+      (test <- test[grep("^Residual.Variances", test$paramHeader), ])
+      (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
+      if(dim(test)[1]!=0) {results[i, b_SIGMA] <- test}
 
-      #       ## Correlations b/w SLOPE physical and SLOPE cognitive
-      #       results[i,R_SPSB] <- IalsaSynthesis::extract_named_wald("R_SPSB",mplus_output)
-      #       ## Correlations b/w INTERCEPT physical and INTERCEPT cognitive
-      #       results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB",mplus_output)
-      #       ## Correlations b/w RESIDUAL physical and RESIDUAL cognitive
-      #       results[i,R_RES_PC] <- IalsaSynthesis::extract_named_wald("R_RES_PC",mplus_output)
+      ## covariance btw residuals of process (A) and process (B) - ab_SIGMA
+      (test <- model[grep(".WITH", model$paramHeader),]) # paramHeader containing .WITH
+      (test <- test[-grep("^I|S", test$param),]) # param starting NOT with I or S
+      (test <- test[ ,c("est", "se","est_se", "pval")][1,]) # only the first line, they should be same
+      if(dim(test)[1]!=0){results[i, ab_SIGMA] <- test}
+
+      ## Correlations b/w SLOPE of process (A)  and SLOPE of process (B)
+      results[i,R_SPSB] <- IalsaSynthesis::extract_named_wald("R_SASB",mplus_output)
+      ## Correlations b/w INTERCEPT of process (A)  and INTERCEPT of process (B)
+      results[i,R_IAIB] <- IalsaSynthesis::extract_named_wald("R_IAIB",mplus_output)
+      ## Correlations b/w RESIDUAL of process (A)  and RESIDUAL of process (B)
+      results[i,R_RES_AB] <- IalsaSynthesis::extract_named_wald("R_RES_AB",mplus_output)
 
     } # close for loop
     return(results)

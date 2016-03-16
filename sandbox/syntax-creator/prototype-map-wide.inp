@@ -15,16 +15,16 @@ USEVAR are
 	!define the variables used in the analysis
 	! covariates used in the model
 %covariate_set%	
-	!estimated timepoints
+	!estimated time points
 %estimated_timepoints%
-	!modelled timepoints of process (A)
+	!modelled time points of process (A)
 %process_a_timepoints% 
-	!modelled timepoints of process (B)
+	!modelled time points of process (B)
 %process_b_timepoints% 
 ;
 
 TSCORES are
-	!estimated timepoints
+	!estimated time points
 %estimated_timepoints%;
 
 USEOBSERVATIONS are
@@ -50,10 +50,10 @@ COVERAGE=.00;
 
 MODEL:
 	!first-level equation
-	! process (A)
-ia sa | a1 - a%waves_max% AT time1 - time%waves_max%;
-	! process (B)
-ib sb | b1 - b%waves_max% AT time1 - time%waves_max%;
+	! assign process (A) to time points 
+%assing_a_to_timepoints%
+	! assign process (B) to time points 
+%assing_b_to_timepoints%
 	!variance of the first-level terms
 ia (v_ia);
 sa (v_sa);
@@ -68,12 +68,13 @@ sa WITH sb (c_sasb);
 ib WITH sb (c_iasb);
 	!second-level equation
 ia sa ib sb ON %covariate_set%;
-	!residual means of process (A)
-%process_a_timepoints% (res_a);
-	!residual means of process (B)
-%process_b_timepoints% (res_b);
+	!residual covariance of process (A)
+%resid_covariance_a%	
+	!residual covariance of process (B)
+%resid_covariance_b%	
 	!Paired covariances constrained to be equal across t
-%process_a_timepoints% pwith %process_b_timepoints%(res_cov);
+%resid_covariances%	
+
 
 MODEL CONSTRAINT:
 	!assigns labels to new parameters;
