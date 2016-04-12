@@ -32,6 +32,17 @@ ds <- read.delim(filePath, header=TRUE, stringsAsFactors = FALSE)
 names(ds) <- variable_names
 # names(ds)[1:20]
 
+# Maheeha, please see how meta-data objects are used in
+# https://github.com/IALSA/ialsa-2016-groningen/blob/master/manipulation/0-ellis-island.R
+# https://github.com/IALSA/ialsa-2016-amsterdam/blob/master/manipulation/map/0-ellis-island-map.R
+
+# ---- collect-meta-data -----------------------------------------
+# prepare metadata to be added to the dto
+# we begin by extracting the names and (hopefuly their) labels of variables from each dataset
+# and combine them in a single rectanguar object, long/stacked with respect to study names
+save_csv <- names_labels(ds)
+write.csv(save_csv,"./data/meta/names-labels-live.csv",row.names = T)
+
 # ---- inspect-data -------------------------------------------------------------
 names(ds)
 table(ds$smoke)
