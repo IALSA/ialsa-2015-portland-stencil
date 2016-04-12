@@ -27,7 +27,8 @@ length(variable_names)
 # ---- load-data ---------------------------------------------------------------
 # load the product of 0-ellis-island.R,  a list object containing data and metadata
 # ds <- read.table(filePath, col.names = variable_names)
-ds <- read.table(filePath)
+ds <- read.delim(filePath, header=TRUE, stringsAsFactors = FALSE)
+
 names(ds) <- variable_names
 # names(ds)[1:20]
 
