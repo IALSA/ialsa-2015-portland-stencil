@@ -1,6 +1,6 @@
 "Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
 survey_id,preconference_survey,,text,"Survey ID",,,,,,,,,,,,,
-investigation,preconference_survey,,radio,"What is a common name for your investigation? ","1, EAS | 2, ELSA | 3, HRS | 4, ILSE | 5, LASA | 6, MAP | 7, NUAGE | 8, OCTO | 9, SATSA",,,,,,,,,,,,
+investigation,preconference_survey,"General Study Characteristics",radio,"What is a common name for your investigation? ","1, EAS | 2, ELSA | 3, HRS | 4, ILSE | 5, LASA | 6, MAP | 7, NUAGE | 8, OCTO | 9, SATSA",,,,,,,,,,,,
 institution,preconference_survey,,text,"What Institutions are associated with your 
 investigation? 
 
@@ -19,34 +19,25 @@ myself in Portland, and not specifically ask the
 waitress for closed-range, inorganic chicken at any
 restaurant (or harass the locals in any other way).","1, I consent","Is the chicken local?",,,,,,,,,,,
 wave_count,preconference_survey,,text,"How many distinct waves does your study include?",,,integer,1,20,,,y,,,,,
-study_phy_constructs,preconference_survey,,checkbox,"What physical constructs are collected in your study?","1, Pulmonary function (eg, PEF, FEV) | 2, Muscle strength (eg, Grip strength, Leg extension) | 3, Walking speed time | 4, Chair rise time | 5, Flamingo stand time | 6, Summary measures of physical functioning","Please check all that apply",,,,,,,,,,,
-study_pulmonary_construct,preconference_survey,,checkbox,"What variables do you collect associated with the 
-pulmonary construct?
+baseline,preconference_survey,"Baseline Variables & Demographics",checkbox,"What baseline predictors are collected?
 
-
-Key:
-PEF: peak expiratory flow
-FEV: forced expiratory volume
-Gait: A manner or style of walking
-Grip: Grasping or seizing
-","1, pef | 2, fev | 3, gait | 4, grip","Please check all that apply.",,,,,,,,,,,
-physical_name_pef,preconference_survey,,text,"What is the exact name in your dataset for your PEF 
-variable?
+--Maleeha convert these to text boxes.","1, Age (at baseline) and age-squared | 2, Age at death | 3, Sex | 4, Education | 5, Socioeconomic status / socioeconomic position | 6, Marital status | 7, Height | 8, Weight | 9, BMI (calculated)","Please check all that apply.",,,,,,,,,,,
+physical_name_pef,preconference_survey,"Variables of the Physical Constructs",text,"What is the exact name in your dataset for your [PEF] 
+variable?  (The [PEF] is one operationalization of the [pulmonary] construct.)
 ",,,,,,,,,,,,,
-physical_name_fev,preconference_survey,,text,"What is the exact name in your data-set for your FEV 
-variable?
-",,,,,,,,,,,,,
-physical_waves_fev,preconference_survey,,text,"At waves was the [PEF] variable collected? Enter each wave number, separated by a space.  
+physical_waves_pef,preconference_survey,,text,"At waves was the [PEF] variable collected? Enter each wave number, separated by a space.  
 
 For example, Waves 1, 3, 4, & 5 should be entered as ""1 3 4 5"" (without the quotes).  Feel free to copy & paste the response for the [PEF] into the blanks of the remaining items.",,,,,,,,,,,,,
-physical_name_gait,preconference_survey,,text,"What is the exact name in your data-set for your Gait
-variable?",,,,,,,,,,,,,
+physical_name_fev,preconference_survey,,text,"What is the exact name in your data-set for your FEV 
+variable?  (The [FEV] is one operationalization of the [pulmonary] construct.)",,,,,,,,,,,,,
+physical_waves_fev,preconference_survey,,text,"At waves was the [FEV] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+physical_name_gait,preconference_survey,,text,"What is the exact name in your data-set for your [gait]
+variable?  (The [gait] is one operationalization of the [walking] construct.)",,,,,,,,,,,,,
 physical_waves_gait,preconference_survey,,text,"At waves was the [gait] variable collected? Enter each wave number, separated by a space.",,,,,,,,,,,,,
-physical_name_grip,preconference_survey,,text,"What is the exact name in your data-set for your Grip
-variable?",,,,,,,,,,,,,
+physical_name_grip,preconference_survey,,text,"What is the exact name in your data-set for your [grip]
+variable?  (The [grip] is one operationalization of the [muscle strength] construct.)",,,,,,,,,,,,,
 physical_waves_grip,preconference_survey,,text,"At waves was the [grip] variable collected? Enter each wave number, separated by a space.",,,,,,,,,,,,,
 physical_construct_other,preconference_survey,,text,"Are there other physical constructs that you collect?",,"Please separate with semicolons.",,,,,,,,,,,
-study_cog_constructs,preconference_survey,,checkbox,"What cognitive constructs does your investigation collect? ","1, Attention (e.g, serial7, digit span forward)| 2, Episodic Memory (e.g, information, logical memory delayed, memory in reality, prose recall delayed, prose recall total) | 3, Fluency (e.g, categories, f-a-s phonemic words, fluency)| 4, Fluid Reasoning (e.g, analogies, block design, figure logic, IPSS spatial ability, matrices and rotations)| 5, Mental Status (e.g, mini mental status exam, tics) | 6, Perceptual Speed (e.g, figure identification, number comparison, perceptual speed, substitution) | 7, Semantic Memory (e.g, boston naming test, reading, synonyms, vocabulary, word list delayed, word list recognition)| 8, Short-term Memory (e.g, digit span total, figure memory, logical memory immediate, prose recall immediate, word list immediate) | 9, Verbal Comprehension (e.g, ideas) | 10, Visual Discrimination (e.g, line orientation, picture completion) | 11, Working Memory (e.g, digit ordering, digit span backward, switching)","Please check all that apply.",,,,,,,,,,,
 physical_name_attention,preconference_survey,,text,"What is the exact name in your data-set for your [attention]
 variable?",,,,,,,,,,,,,
 phy_name_episod_memory,preconference_survey,,text,"What is the exact name in your data-set for your [episodic memory] variable?
@@ -59,8 +50,7 @@ phy_name_percep_speed,preconference_survey,,text,"What is the exact name in your
 variable?",,,,,,,,,,,,,
 phy_name_seman_memory,preconference_survey,,text,"What is the exact name in your data-set for your [semantic memory]
 variable?",,,,,,,,,,,,,
-phy_name_short_memory,preconference_survey,,text,"What is the exact name in your data-set for your [short-term memory]
-variable?",,,,,,,,,,,,,
+phy_name_short_memory,preconference_survey,,text,"What is the exact name in your data-set for your [short-term memory] variable?",,,,,,,,,,,,,
 phy_name_verbal_comp,preconference_survey,,text,"What is the exact name in your data-set for your [verbal comprehension]
 variable?",,,,,,,,,,,,,
 phy_name_visual_discrim,preconference_survey,,text,"What is the exact name in your data-set for your [visual discrimination] variable?",,,,,,,,,,,,,
@@ -68,7 +58,11 @@ phy_name_working_memory,preconference_survey,,text,"What is the exact name in yo
 variable?",,,,,,,,,,,,,
 other_cog_construct,preconference_survey,,notes,"Are there other cognitive constructs (domains) that you 
 collect?",,"Please separate with semicolons.",,,,,,,,,,,
-baseline,preconference_survey,,checkbox,"What baseline predictors are collected?","1, Age (at baseline) and age-squared | 2, Age at death | 3, Sex | 4, Education | 5, Socioeconomic status / socioeconomic position | 6, Marital status | 7, Height | 8, Weight | 9, BMI (calculated)","Please check all that apply.",,,,,,,,,,,
-comments,preconference_survey,,text,"Comments
-",,,,,,,,,,,,,
-domain_cognitive,preconference_survey,,checkbox,"What cognitive constructs are collected in your study?","1, Analogies | 2, Auditory Comprehension | 3, Block Design | 4, Boston Naming Test | 5, Categories | 6, Digit Ordering | 7, Digit Span Forward | 8, Digit Span Backward | 9, Digit Span Total | 10, F-A-S Phonemic Words | 11, Figure Identification | 12, Figure Logic | 13, Figure Memory | 14, Fluency | 15, Information | 16, IPSS Spatial Ability | 17, Line Orientation | 18, Logical Memory Immediate | 19, Logical Memory Delayed | 20, Matrices | 21, Memory in Reality | 22, Mini Mental Status Exam | 23, Number Comparison | 24, Perceptual Speed | 25, Picture Completion | 26, Prose Recall Immediate | 27, Prose Recall Delayed | 28, Prose Recall Total | 29, Reading | 30, Rotation | 31, Serial7 | 32, Substitution | 33, Switching | 34, Synonyms | 35, Tics | 36, Vocabulary | 37, Word List Immediate | 38, Word List Delayed | 39, Word List Recognition",,,,,,,,,,,,
+domain_cognitive,preconference_survey,"Variables of the Cognitive Constructs",checkbox,"What cognitive constructs are collected in your study?
+
+--Maleha, convert every checkbox into two items: (a) variable name text box and (b) wave pattern textbox.","1, Analogies | 2, Auditory Comprehension | 3, Block Design | 4, Boston Naming Test | 5, Categories | 6, Digit Ordering | 7, Digit Span Forward | 8, Digit Span Backward | 9, Digit Span Total | 10, F-A-S Phonemic Words | 11, Figure Identification | 12, Figure Logic | 13, Figure Memory | 14, Fluency | 15, Information | 16, IPSS Spatial Ability | 17, Line Orientation | 18, Logical Memory Immediate | 19, Logical Memory Delayed | 20, Matrices | 21, Memory in Reality | 22, Mini Mental Status Exam | 23, Number Comparison | 24, Perceptual Speed | 25, Picture Completion | 26, Prose Recall Immediate | 27, Prose Recall Delayed | 28, Prose Recall Total | 29, Reading | 30, Rotation | 31, Serial7 | 32, Substitution | 33, Switching | 34, Synonyms | 35, Tics | 36, Vocabulary | 37, Word List Immediate | 38, Word List Delayed | 39, Word List Recognition",,,,,,,,,,,,
+closing,preconference_survey,,descriptive,"Thank you for you attention on such a detail-oriented survey.  The thoroughness of the items is necessary for the workshop to proceed efficiently.
+
+We hope that future surveys will pre-populate most items with the responses you provided today.
+
+If you have questions, talk to Andrey.",,,,,,,,,,,,,
