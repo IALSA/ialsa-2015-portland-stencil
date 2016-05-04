@@ -1,27 +1,74 @@
-Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
-survey_id,investigation_and_investigator,,text,Survey ID,,,,,,,,,,,,,
-study_name,investigation_and_investigator,Please fill out the information below.,dropdown,What is a common name for your investigation?,"1, OCTO | 2, ELSA | 3, RADC | 4, HRS",Please select a name from the drop down box.,,,,,,y,,,,,
-institution_names,investigation_and_investigator,,text,What Institutions are associated with your investigation? ,,Please separate with semicolons.,,,,,,y,,,,,
-email,investigation_and_investigator,,text,What email address(es) should be used to direct information about the Feb 2015 IALSA workshop in Portland?,,Please separate ,email,,,y,,y,,,,,
-comfort_r,investigation_and_investigator,,slider,How do you feel about R & RStudio?,Down with the proletariat | Huh? | I have a signed book by John Chambers,,number,,,,,,,,,,
-comfort_mplus,investigation_and_investigator,,slider,How do you feel about Mplus?,I have a tattoo of Bengt | Huh? | Down with the proletariat,,number,,,,,,,,,,
-consent,investigation_and_investigator,,checkbox,"By checking this box, I certify that will behave myself in Portland, and not specifically ask the waitress for  closed-range, inorganic chicken at any restaurant (or harass the locals in any other way).","1, I consent","<a href=""https://www.youtube.com/watch?v=ErRHJlE4PGI"" target=""_blank"">Is the chicken local?</a>",,,,,,,,,,,
-physical_constructs,variables,,checkbox,What physical constructs are collected?,"1, Pulmonary function (eg, PEF, FEV) | 2, Muscle strength (eg, Grip strength, Leg extension) | 3, Walking speed time | 4, Chair rise time | 5, Flamingo stand time | 6, Summary measures of physical functioning",Please check all that apply.,,,,,,y,,,,,
-physical_variables_pulmonary,variables,,checkbox,"What variables do you collect associated with the pulmonary construct?
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+survey_id,preconference_survey,,text,"Survey ID",,,,,,,,,,,,,
+investigation,preconference_survey,,radio,"What is a common name for your investigation? ","1, EAS | 2, ELSA | 3, HRS | 4, ILSE | 5, LASA | 6, MAP | 7, NUAGE | 8, OCTO | 9, SATSA",,,,,,,,,,,,
+institution,preconference_survey,,text,"What Institutions are associated with your 
+investigation? 
 
-Key: 
+",,"Please separate with semicolons",,,,,,,,,,,
+email_address,preconference_survey,,notes,"What email address(es) should be used to direct 
+information about the Feb 2015 IALSA workshop in 
+Portland?
+
+",,"Please separate",,,,,,,,,,,
+r_studio_feel,preconference_survey,,slider,"How do you feel about R & RStudio? 
+
+","Down with proletarait | Huh? | I have a signed book by John Chambers","Please place a mark on the scale above",,,,,,,,,,,
+mplus_feel,preconference_survey,,slider,"How do you feel about Mplus?","I have a tattoo of Bengt | Huh? | Down with the proletarait","Place a mark on the scale above",,,,,,,,,,,
+i_certify,preconference_survey,,radio,"By checking this box, I certify that i will behave 
+myself in Portland, and not specifically ask the
+waitress for closed-range, inorganic chicken at any
+restaurant (or harass the locals in any other way).","1, I consent","Is the chicken local?",,,,,,,,,,,
+wave_count,preconference_survey,,text,"How many distinct waves does your study include?",,,integer,1,20,,,y,,,,,
+study_phy_constructs,preconference_survey,,checkbox,"What physical constructs are collected in your study?","1, Pulmonary function (eg, PEF, FEV) | 2, Muscle strength (eg, Grip strength, Leg extension) | 3, Walking speed time | 4, Chair rise time | 5, Flamingo stand time | 6, Summary measures of physical functioning","Please check all that apply",,,,,,,,,,,
+study_pulmonary_construct,preconference_survey,,checkbox,"What variables do you collect associated with the 
+pulmonary construct?
+
+
+Key:
 PEF: peak expiratory flow
-FEV: forced expiratory volume","1, pef | 2, fev",Please check all that apply.,,,,,[physical_constructs(1)] = '1',,,,,,
-variable_name_pef,variables,,text,What is the exact name in your dataset for your PEF variable?,,,,,,,[physical_variables_pulmonary(1)] = '1',,,,,,
-variable_name_fev,variables,,text,What is the exact name in your dataset for your FEV variable?,,,,,,,[physical_variables_pulmonary(2)] = '1',,,,,,
-physical_constructs_other,variables,,text,Are there other physical constructs that you collect?,,Please separate with semicolons.,,,,,,,,,,,
-cognitive_constructs,variables,,checkbox,What cognitive constructs do your investigation collect?,"1, Knowledge | 2, Reasoning | 3, Speed | 4, Visuospatial ability | 5, Executive functioning | 6, Mental status",Please check all that apply.,,,,,,y,,,,,
-cognitive_constructrs_other,variables,,text,Are there other cognitive constructs that you collect?,,Please separate with semicolons.,,,,,,,,,,,
-predictors_baseline,variables,,checkbox,What baseline predictors are collected?,"1, Age (at baseline) and age-squared | 2, Age at death | 3, Sex | 4, Education | 5, Socioeconomic status / socioeconomic position | 6, Marital status | 7, Height | 8, Weight | 9, BMI (calculated)",Please check all that apply.,,,,,,y,,,,,
-complete_study,completion_data,This form is to be filled out by study personnel.,yesno,Has patient completed study?,,,,,,,,,,,,,
-withdraw_date,completion_data,,text,Put a date if patient withdrew study,,,date_ymd,,,,,,,,,,
-withdraw_reason,completion_data,,dropdown,Reason patient withdrew from study,"0, Non-compliance | 1, Did not wish to continue in study | 2, Could not tolerate the supplement | 3, Hospitalization | 4, Other",,,,,,,,,,,,
-date_visit_4,completion_data,,text,Date of last visit,,,date_ymd,,,,,,,,,,
-discharge_date_4,completion_data,,text,Date of hospital discharge,,,date_ymd,,,,,,,,,,
-discharge_summary_4,completion_data,,dropdown,Discharge summary in patients binder?,"0, No | 1, Yes",,,,,,,,,,,,
-study_comments,completion_data,,notes,Comments,,,,,,,,,,,,,
+FEV: forced expiratory volume
+Gait: A manner or style of walking
+Grip: Grasping or seizing
+","1, pef | 2, fev | 3, gait | 4, grip","Please check all that apply.",,,,,,,,,,,
+physical_name_pef,preconference_survey,,text,"What is the exact name in your dataset for your PEF 
+variable?
+",,,,,,,,,,,,,
+physical_name_fev,preconference_survey,,text,"What is the exact name in your data-set for your FEV 
+variable?
+",,,,,,,,,,,,,
+physical_waves_fev,preconference_survey,,text,"At waves was the [PEF] variable collected? Enter each wave number, separated by a space.  
+
+For example, Waves 1, 3, 4, & 5 should be entered as ""1 3 4 5"" (without the quotes).  Feel free to copy & paste the response for the [PEF] into the blanks of the remaining items.",,,,,,,,,,,,,
+physical_name_gait,preconference_survey,,text,"What is the exact name in your data-set for your Gait
+variable?",,,,,,,,,,,,,
+physical_waves_gait,preconference_survey,,text,"At waves was the [gait] variable collected? Enter each wave number, separated by a space.",,,,,,,,,,,,,
+physical_name_grip,preconference_survey,,text,"What is the exact name in your data-set for your Grip
+variable?",,,,,,,,,,,,,
+physical_waves_grip,preconference_survey,,text,"At waves was the [grip] variable collected? Enter each wave number, separated by a space.",,,,,,,,,,,,,
+physical_construct_other,preconference_survey,,text,"Are there other physical constructs that you collect?",,"Please separate with semicolons.",,,,,,,,,,,
+study_cog_constructs,preconference_survey,,checkbox,"What cognitive constructs does your investigation collect? ","1, Attention (e.g, serial7, digit span forward)| 2, Episodic Memory (e.g, information, logical memory delayed, memory in reality, prose recall delayed, prose recall total) | 3, Fluency (e.g, categories, f-a-s phonemic words, fluency)| 4, Fluid Reasoning (e.g, analogies, block design, figure logic, IPSS spatial ability, matrices and rotations)| 5, Mental Status (e.g, mini mental status exam, tics) | 6, Perceptual Speed (e.g, figure identification, number comparison, perceptual speed, substitution) | 7, Semantic Memory (e.g, boston naming test, reading, synonyms, vocabulary, word list delayed, word list recognition)| 8, Short-term Memory (e.g, digit span total, figure memory, logical memory immediate, prose recall immediate, word list immediate) | 9, Verbal Comprehension (e.g, ideas) | 10, Visual Discrimination (e.g, line orientation, picture completion) | 11, Working Memory (e.g, digit ordering, digit span backward, switching)","Please check all that apply.",,,,,,,,,,,
+physical_name_attention,preconference_survey,,text,"What is the exact name in your data-set for your [attention]
+variable?",,,,,,,,,,,,,
+phy_name_episod_memory,preconference_survey,,text,"What is the exact name in your data-set for your [episodic memory] variable?
+",,,,,,,,,,,,,
+phy_name_fluency,preconference_survey,,text,"What is the exact name in your data-set for your [fluency]
+variable?",,,,,,,,,,,,,
+phy_name_fluid_reason,preconference_survey,,text,"What is the exact name in your data-set for your [fluid reasoning] variable?",,,,,,,,,,,,,
+phy_name_mental_status,preconference_survey,,text,"What is the exact name in your data-set for your [mental status] variable?",,,,,,,,,,,,,
+phy_name_percep_speed,preconference_survey,,text,"What is the exact name in your data-set for your [perceptual speed]
+variable?",,,,,,,,,,,,,
+phy_name_seman_memory,preconference_survey,,text,"What is the exact name in your data-set for your [semantic memory]
+variable?",,,,,,,,,,,,,
+phy_name_short_memory,preconference_survey,,text,"What is the exact name in your data-set for your [short-term memory]
+variable?",,,,,,,,,,,,,
+phy_name_verbal_comp,preconference_survey,,text,"What is the exact name in your data-set for your [verbal comprehension]
+variable?",,,,,,,,,,,,,
+phy_name_visual_discrim,preconference_survey,,text,"What is the exact name in your data-set for your [visual discrimination] variable?",,,,,,,,,,,,,
+phy_name_working_memory,preconference_survey,,text,"What is the exact name in your data-set for your [working memory]
+variable?",,,,,,,,,,,,,
+other_cog_construct,preconference_survey,,notes,"Are there other cognitive constructs (domains) that you 
+collect?",,"Please separate with semicolons.",,,,,,,,,,,
+baseline,preconference_survey,,checkbox,"What baseline predictors are collected?","1, Age (at baseline) and age-squared | 2, Age at death | 3, Sex | 4, Education | 5, Socioeconomic status / socioeconomic position | 6, Marital status | 7, Height | 8, Weight | 9, BMI (calculated)","Please check all that apply.",,,,,,,,,,,
+comments,preconference_survey,,text,"Comments
+",,,,,,,,,,,,,
+domain_cognitive,preconference_survey,,checkbox,"What cognitive constructs are collected in your study?","1, Analogies | 2, Auditory Comprehension | 3, Block Design | 4, Boston Naming Test | 5, Categories | 6, Digit Ordering | 7, Digit Span Forward | 8, Digit Span Backward | 9, Digit Span Total | 10, F-A-S Phonemic Words | 11, Figure Identification | 12, Figure Logic | 13, Figure Memory | 14, Fluency | 15, Information | 16, IPSS Spatial Ability | 17, Line Orientation | 18, Logical Memory Immediate | 19, Logical Memory Delayed | 20, Matrices | 21, Memory in Reality | 22, Mini Mental Status Exam | 23, Number Comparison | 24, Perceptual Speed | 25, Picture Completion | 26, Prose Recall Immediate | 27, Prose Recall Delayed | 28, Prose Recall Total | 29, Reading | 30, Rotation | 31, Serial7 | 32, Substitution | 33, Switching | 34, Synonyms | 35, Tics | 36, Vocabulary | 37, Word List Immediate | 38, Word List Delayed | 39, Word List Recognition",,,,,,,,,,,,
