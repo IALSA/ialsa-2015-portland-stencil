@@ -1,28 +1,33 @@
-"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
-survey_id,preconference_survey,,text,"Survey ID",,,,,,,,,,,,,
-investigation,preconference_survey,"General Study Characteristics",radio,"What is a common name for your investigation? ","1, EAS | 2, ELSA | 3, HRS | 4, ILSE | 5, LASA | 6, MAP | 7, NUAGE | 8, OCTO | 9, SATSA",,,,,,,,,,,,
+Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
+survey_id,preconference_survey,,text,Survey ID,,,,,,,,,,,,,
+investigation,preconference_survey,General Study Characteristics,radio,What is a common name for your investigation? ,"1, EAS | 2, ELSA | 3, HRS | 4, ILSE | 5, LASA | 6, MAP | 7, NUAGE | 8, OCTO | 9, SATSA",,,,,,,,,,,,
 institution,preconference_survey,,text,"What Institutions are associated with your 
 investigation? 
 
-",,"Please separate with semicolons",,,,,,,,,,,
+",,Please separate with semicolons,,,,,,,,,,,
 email_address,preconference_survey,,notes,"What email address(es) should be used to direct 
 information about the Feb 2015 IALSA workshop in 
 Portland?
 
-",,"Please separate",,,,,,,,,,,
+",,Please separate,,,,,,,,,,,
 r_studio_feel,preconference_survey,,slider,"How do you feel about R & RStudio? 
 
-","Down with proletarait | Huh? | I have a signed book by John Chambers","Please place a mark on the scale above",,,,,,,,,,,
-mplus_feel,preconference_survey,,slider,"How do you feel about Mplus?","I have a tattoo of Bengt | Huh? | Down with the proletarait","Place a mark on the scale above",,,,,,,,,,,
+",Down with proletarait | Huh? | I have a signed book by John Chambers,Please place a mark on the scale above,,,,,,,,,,,
+mplus_feel,preconference_survey,,slider,How do you feel about Mplus?,I have a tattoo of Bengt | Huh? | Down with the proletarait,Place a mark on the scale above,,,,,,,,,,,
 i_certify,preconference_survey,,radio,"By checking this box, I certify that i will behave 
 myself in Portland, and not specifically ask the
 waitress for closed-range, inorganic chicken at any
-restaurant (or harass the locals in any other way).","1, I consent","Is the chicken local?",,,,,,,,,,,
-wave_count,preconference_survey,,text,"How many distinct waves does your study include?",,,integer,1,20,,,y,,,,,
-baseline,preconference_survey,"Baseline Variables & Demographics",checkbox,"What baseline predictors are collected?
+restaurant (or harass the locals in any other way).","1, I consent",Is the chicken local?,,,,,,,,,,,
+wave_count,preconference_survey,,text,How many distinct waves does your study include?,,,integer,1,20,,,y,,,,,
+baseline,preconference_survey,Baseline Variables & Demographics,checkbox,"What baseline predictors are collected?
 
---Maleeha convert these to text boxes.","1, Age (at baseline) and age-squared | 2, Age at death | 3, Sex | 4, Education | 5, Socioeconomic status / socioeconomic position | 6, Marital status | 7, Height | 8, Weight | 9, BMI (calculated)","Please check all that apply.",,,,,,,,,,,
-physical_name_pef,preconference_survey,"Variables of the Physical Constructs",text,"What is the exact name in your dataset for your [PEF] 
+--Maleeha convert these to text boxes.","1, Age (at baseline) and age-squared | 2, Age at death | 3, Sex | 4, Education | 5, Socioeconomic status / socioeconomic position | 6, Marital status | 7, Height | 8, Weight | 9, BMI (calculated)",Please check all that apply.,,,,,,,,,,,
+baseline_name_age,preconference_survey,Baseline Variables & Demographics,text,"What is the exact name in your dataset for your [age] 
+
+variable?  (The [age] is one operationalization of the [baseline] predictor.)
+",,,,,,,,,,,,,
+baseline_wave_age,preconference_survey,Baseline Variables & Demographics,text,"At waves was the [age] variable collected? Enter each wave number, separated by a space. ",,,,,,,,,,,,,
+physical_name_pef,preconference_survey,Variables of the Physical Constructs,text,"What is the exact name in your dataset for your [PEF] 
 variable?  (The [PEF] is one operationalization of the [pulmonary] construct.)
 ",,,,,,,,,,,,,
 physical_waves_pef,preconference_survey,,text,"At waves was the [PEF] variable collected? Enter each wave number, separated by a space.  
@@ -37,30 +42,106 @@ physical_waves_gait,preconference_survey,,text,"At waves was the [gait] variable
 physical_name_grip,preconference_survey,,text,"What is the exact name in your data-set for your [grip]
 variable?  (The [grip] is one operationalization of the [muscle strength] construct.)",,,,,,,,,,,,,
 physical_waves_grip,preconference_survey,,text,"At waves was the [grip] variable collected? Enter each wave number, separated by a space.",,,,,,,,,,,,,
-physical_construct_other,preconference_survey,,text,"Are there other physical constructs that you collect?",,"Please separate with semicolons.",,,,,,,,,,,
-physical_name_attention,preconference_survey,,text,"What is the exact name in your data-set for your [attention]
+physical_construct_other,preconference_survey,,text,Are there other physical constructs that you collect?,,Please separate with semicolons.,,,,,,,,,,,
+cog_name_attention,preconference_survey,,text,"What is the exact name in your data-set for your [attention]
 variable?",,,,,,,,,,,,,
-phy_name_episod_memory,preconference_survey,,text,"What is the exact name in your data-set for your [episodic memory] variable?
+cog_name_episod_memory,preconference_survey,,text,"What is the exact name in your data-set for your [episodic memory] variable?
 ",,,,,,,,,,,,,
-phy_name_fluency,preconference_survey,,text,"What is the exact name in your data-set for your [fluency]
+cog_name_fluency,preconference_survey,,text,"What is the exact name in your data-set for your [fluency]
 variable?",,,,,,,,,,,,,
-phy_name_fluid_reason,preconference_survey,,text,"What is the exact name in your data-set for your [fluid reasoning] variable?",,,,,,,,,,,,,
-phy_name_mental_status,preconference_survey,,text,"What is the exact name in your data-set for your [mental status] variable?",,,,,,,,,,,,,
-phy_name_percep_speed,preconference_survey,,text,"What is the exact name in your data-set for your [perceptual speed]
+cog_name_fluid_reason,preconference_survey,,text,What is the exact name in your data-set for your [fluid reasoning] variable?,,,,,,,,,,,,,
+cog_name_mental_status,preconference_survey,,text,What is the exact name in your data-set for your [mental status] variable?,,,,,,,,,,,,,
+cog_name_percep_speed,preconference_survey,,text,"What is the exact name in your data-set for your [perceptual speed] variable?",,,,,,,,,,,,,
+cog_name_seman_memory,preconference_survey,,text,"What is the exact name in your data-set for your [semantic memory]
 variable?",,,,,,,,,,,,,
-phy_name_seman_memory,preconference_survey,,text,"What is the exact name in your data-set for your [semantic memory]
+cog_name_short_memory,preconference_survey,,text,What is the exact name in your data-set for your [short-term memory] variable?,,,,,,,,,,,,,
+cog_name_verbal_comp,preconference_survey,,text,"What is the exact name in your data-set for your [verbal comprehension]
 variable?",,,,,,,,,,,,,
-phy_name_short_memory,preconference_survey,,text,"What is the exact name in your data-set for your [short-term memory] variable?",,,,,,,,,,,,,
-phy_name_verbal_comp,preconference_survey,,text,"What is the exact name in your data-set for your [verbal comprehension]
-variable?",,,,,,,,,,,,,
-phy_name_visual_discrim,preconference_survey,,text,"What is the exact name in your data-set for your [visual discrimination] variable?",,,,,,,,,,,,,
-phy_name_working_memory,preconference_survey,,text,"What is the exact name in your data-set for your [working memory]
+cog_name_visual_discrim,preconference_survey,,text,What is the exact name in your data-set for your [visual discrimination] variable?,,,,,,,,,,,,,
+cog_name_working_memory,preconference_survey,,text,"What is the exact name in your data-set for your [working memory]
 variable?",,,,,,,,,,,,,
 other_cog_construct,preconference_survey,,notes,"Are there other cognitive constructs (domains) that you 
-collect?",,"Please separate with semicolons.",,,,,,,,,,,
-domain_cognitive,preconference_survey,"Variables of the Cognitive Constructs",checkbox,"What cognitive constructs are collected in your study?
-
---Maleha, convert every checkbox into two items: (a) variable name text box and (b) wave pattern textbox.","1, Analogies | 2, Auditory Comprehension | 3, Block Design | 4, Boston Naming Test | 5, Categories | 6, Digit Ordering | 7, Digit Span Forward | 8, Digit Span Backward | 9, Digit Span Total | 10, F-A-S Phonemic Words | 11, Figure Identification | 12, Figure Logic | 13, Figure Memory | 14, Fluency | 15, Information | 16, IPSS Spatial Ability | 17, Line Orientation | 18, Logical Memory Immediate | 19, Logical Memory Delayed | 20, Matrices | 21, Memory in Reality | 22, Mini Mental Status Exam | 23, Number Comparison | 24, Perceptual Speed | 25, Picture Completion | 26, Prose Recall Immediate | 27, Prose Recall Delayed | 28, Prose Recall Total | 29, Reading | 30, Rotation | 31, Serial7 | 32, Substitution | 33, Switching | 34, Synonyms | 35, Tics | 36, Vocabulary | 37, Word List Immediate | 38, Word List Delayed | 39, Word List Recognition",,,,,,,,,,,,
+collect?",,Please separate with semicolons.,,,,,,,,,,,
+cog_name_analogies,preconference_survey,,text,"What is the exact name in your data-set for your [Analogies] variable?  (The [Analogies] is one operationalization of the [cognitive] construct.)",,,,,,,,,,,,,
+cog_waves_analogies,preconference_survey,,text,"At waves was the [Anologies] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_auditory,preconference_survey,,text,What is the exact name in your data-set for your [Auditory Comprehension] variable?  (The [FEV] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_auditory,preconference_survey,,text,"At waves was the [Auditory Comprehension] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_block,preconference_survey,,text,What is the exact name in your data-set for your [Block Design] variable? (The [Block Design] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_block,preconference_survey,,text,"At waves was the [Block Design] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_boston,preconference_survey,,text,What is the exact name in your data-set for your [Boston Naming Test] variable?  (The [Boston Naming Test] is one operationalization of the [congnitive] construct.),,,,,,,,,,,,,
+cog_waves_boston,preconference_survey,,text,"At waves was the [Boston Naming Test] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_categories,preconference_survey,,text,What is the exact name in your data-set for your [Categories] variable?  (The [Categories] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_categories,preconference_survey,,text,"At waves was the [Categories] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_digit,preconference_survey,,text,What is the exact name in your data-set for your [Digit Ordering] variable?  (The [Digit Ordering] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_digit,preconference_survey,,text,"At waves was the [Digit Ordering] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_digit_sf,preconference_survey,,text,"What is the exact name in your data-set for your [Digit Span Forward] variable?  (The [Digit Span Forward]
+ is one operationalization of the [cognitive] construct.)",,,,,,,,,,,,,
+cog_waves_digit_sf,preconference_survey,,text,"At waves was the [Digit Span Forward] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_digit_sb,preconference_survey,,text,What is the exact name in your data-set for your [Digit Span Backward] variable?  (The [Digit Span Backward] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_digit_sb,preconference_survey,,text,"At waves was the [Digit Span Backward] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_digit_st,preconference_survey,,text,What is the exact name in your data-set for your [Digit Span Total] variable?  (The [Digit Span Total] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_digit_st,preconference_survey,,text,"At waves was the [Digit Span Total] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_fas,preconference_survey,,text,What is the exact name in your data-set for your [F-A-S Phonemic Words] variable?  (The [F-A-S Phonemic Words] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_fas,preconference_survey,,text,"At waves was the [F-A-S Phonemic Words] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_figure,preconference_survey,,text,"What is the exact name in your data-set for your [Figure Identification]
+variable?  (The [Figure Identification] is one operationalization of the [cognitive] construct.)",,,,,,,,,,,,,
+cog_waves_figure,preconference_survey,,text,"At waves was the [Figure Identification] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_figure_logic,preconference_survey,,text,What is the exact name in your data-set for your [Figure Logic] variable?  (The [Figure Logic] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_figure_logic,preconference_survey,,text,"At waves was the [Figure Logic] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_figure_memory,preconference_survey,,text,What is the exact name in your data-set for your [Figure Memory] variable?  (The [Figure Memory] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_figure_memory,preconference_survey,,text,"At waves was the [Figure Memory] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_fluency,preconference_survey,,text,What is the exact name in your data-set for your [Fluency] variable?  (The [Fluency] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_fluency,preconference_survey,,text,"At waves was the [Fluency] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_information,preconference_survey,,text,What is the exact name in your data-set for your [Information] variable?  (The [Information] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_information,preconference_survey,,text,"At waves was the [Information] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_ipss,preconference_survey,,text,What is the exact name in your data-set for your [IPSS Spatial Ability] variable?  (The [IPSS Spatial Ability] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_ipss,preconference_survey,,text,"At waves was the [IPSS Spatial Ability] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_line,preconference_survey,,text,What is the exact name in your data-set for your [Line Orientation] variable?  (The [Line Orientation] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_line,preconference_survey,,text,"At waves was the [Line Orientation] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_logical_mi,preconference_survey,,text,What is the exact name in your data-set for your [Logical Memory Immediate] variable?  (The [Logical Memory Immediate] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_logical_mi,preconference_survey,,text,"At waves was the [Logical Memory Immediate] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_logical_md,preconference_survey,,text,What is the exact name in your data-set for your [Logical Memory Delayed] variable?  (The [Logical Memory Delayed] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_md,preconference_survey,,text,"At waves was the [Logical Memory Delayed] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_matrices,preconference_survey,,text,What is the exact name in your data-set for your [Matrices] variable?  (The [Matrices] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_matrices,preconference_survey,,text,"At waves was the [Matrices] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_memory_ir,preconference_survey,,text,What is the exact name in your data-set for your [Memory in Reality] variable?  (The [Memory in Reality] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_memory_ir,preconference_survey,,text,"At waves was the [Memory in Reality] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_mmse,preconference_survey,,text,What is the exact name in your data-set for your [Mini Mental Status Exam] variable?  (The [Mini Mental Status Exam] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_mmse,preconference_survey,,text,"At waves was the [Mini Mental Status Exam] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_number,preconference_survey,,text,What is the exact name in your data-set for your [Number Comparison] variable?  (The [Number Comparison] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_number,preconference_survey,,text,"At waves was the [Number Comparison] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_speed,preconference_survey,,text,What is the exact name in your data-set for your [Perceptual Speed] variable? (The [Perceptual Speed] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_speed,preconference_survey,,text,"At waves was the [Perceptual Speed] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_picture,preconference_survey,,text,What is the exact name in your data-set for your [Picture Completion] variable? (The [ Picture Completion] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cogl_waves_picture,preconference_survey,,text,"At waves was the [Picture Completion] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_pros_recall_imme,preconference_survey,,text,What is the exact name in your data-set for your [Pros Recall Immediate] variable? (The [Pros Recall Immediate]  is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_pros_recall_imme,preconference_survey,,text,"At waves was the [Pros Recall Immediate] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_pros_recall_delay,preconference_survey,,text,What is the exact name in your data-set for your [Pros Recall Delayed] variable? (The [Pros Recall Immediate] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_pros_recall_delay,preconference_survey,,text,"At waves was the [Pros Recall Immediate] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_pros_recall_total,preconference_survey,,text,What is the exact name in your data-set for your [Pros Recall Total] variable? (The [Pros Recall Total]  is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_pros_total,preconference_survey,,text,"At waves was the [Pros Recall Total] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_reading,preconference_survey,,text,What is the exact name in your data-set for your [Reading] variable? (The [Reading] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_reading,preconference_survey,,text,"At waves was the [Reading] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_rotation,preconference_survey,,text,What is the exact name in your data-set for your [Rotation] variable? (The [Rotation] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_rotation,preconference_survey,,text,"At waves was the [Rotation] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_serial7,preconference_survey,,text,What is the exact name in your data-set for your [Serial7] variable? (The [Serial7] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_serial7,preconference_survey,,text,"At waves was the [Serial7] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_substitution,preconference_survey,,text,What is the exact name in your data-set for your [Substitution] variable? (The [Substitution] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_substitution,preconference_survey,,text,"At waves was the [Substitution] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_switching,preconference_survey,,text,What is the exact name in your data-set for your [Switching] variable? (The [Switching] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_switching,preconference_survey,,text,"At waves was the [Switching] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_synonyms,preconference_survey,,text,What is the exact name in your data-set for your [Synonyms] variable? (The [Synonyms] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_synonyms,preconference_survey,,text,"At waves was the [Synonyms] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_tics,preconference_survey,,text,What is the exact name in your data-set for your [Tics] variable? (The [Tics] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_tics,preconference_survey,,text,"At waves was the [Tics] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_vocabulary,preconference_survey,,text,What is the exact name in your data-set for your [Vocabulary] variable? (The [Vocabulary] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_vocabulary,preconference_survey,,text,"At waves was the [Vocabulary] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_word_list_im,preconference_survey,,text,What is the exact name in your data-set for your [Word List Immediate] variable? (The [Word List Immediate] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_word_list_im,preconference_survey,,text,"At waves was the [Word List Immediate] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_word_list_delay,preconference_survey,,text,What is the exact name in your data-set for your [Word List Delayed] variable? (The [ Word List Delayed] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_waves_word_list_delay,preconference_survey,,text,"At waves was the [Word List Dealyed] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_word_list_recog,preconference_survey,,text,What is the exact name in your data-set for your [Word List Recognition] variable? (The [Word List Recognition] is one operationalization of the [cognitive] construct.),,,,,,,,,,,,,
+cog_wave_word_list_recog,preconference_survey,,text,"At waves was the [Word List Recognition] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
 closing,preconference_survey,,descriptive,"Thank you for you attention on such a detail-oriented survey.  The thoroughness of the items is necessary for the workshop to proceed efficiently.
 
 We hope that future surveys will pre-populate most items with the responses you provided today.
