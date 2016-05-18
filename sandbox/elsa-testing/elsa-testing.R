@@ -105,52 +105,52 @@ over_waves <- function(ds, measure_name, exclude_values="") {
 # ds %>% over_waves("years")
 
 # ---- print-temporal-patterns ----------------------------------
-ds %>% view_temporal_pattern("year_born", 2)
-ds %>% view_temporal_pattern("age_bl", 2)
-ds %>% view_temporal_pattern("years_since_bl", 2)
-
-
-# supposed to be time-invariant
-ds %>% over_waves("sex") # 1, 2, 3, 4, 5, 6
-ds %>% over_waves("year_born") # 1, 2, 3, 4, 5, 6
-ds %>% over_waves("edu") # 1, 2, 3, 4, 5, 6
-ds %>% over_waves("marital") # 1, 2, 3, 4, 5, 6
-
-
-ds %>% over_waves("diabetes") # 1, 2
-ds %>% over_waves("cardio") # 1, 2
-ds %>% over_waves("smoke") # 1, 2, 3, 4, 5, 6
-ds %>% over_waves("alcohol") # 1
-ds %>% over_waves("height_cm"); # 2, 4, 6
-ds %>% over_waves("weight_kg") # 2, 4, 6
-
-
-# supposed to be time-variant
-
-ds %>% over_waves("yborn") # 1, 2, 3, 4, 5, 6
-ds %>% view_temporal_pattern("years_since_bl", 5)
-
-ds %>% over_waves("word_recall_im") # 1, 2, 3, 4, 5, 6
-ds %>% over_waves("word_recall_de") # 1, 2, 3, 4, 5, 6
-ds %>% over_waves("animals") # 1, 2, 3, 4, 5
-
-ds %>% over_waves("fvc_1") # 2, 4
-ds %>% over_waves("fvc_2") # 2, 4
-ds %>% over_waves("fvc_3") # 2, 4
-
-ds %>% over_waves("fev_1") # 2, 4
-ds %>% over_waves("fev_2") # 2, 4
-ds %>% over_waves("fev_3") # 2, 4
-
-
-ds %>% over_waves("pef_1") # 2, 4
-ds %>% over_waves("pef_2") # 2, 4
-ds %>% over_waves("pef_3") # 2, 4
-
-ds %>% over_waves("gait") # 1, 2, 3, 4, 5, 6
-ds %>% over_waves("grip") # 2, 4, 6
-
-ds %>% over_waves("speed") # 3
+# ds %>% view_temporal_pattern("year_born", 2)
+# ds %>% view_temporal_pattern("age_bl", 2)
+# ds %>% view_temporal_pattern("years_since_bl", 2)
+#
+#
+# # supposed to be time-invariant
+# ds %>% over_waves("sex") # 1, 2, 3, 4, 5, 6
+# ds %>% over_waves("year_born") # 1, 2, 3, 4, 5, 6
+# ds %>% over_waves("edu") # 1, 2, 3, 4, 5, 6
+# ds %>% over_waves("marital") # 1, 2, 3, 4, 5, 6
+#
+#
+# ds %>% over_waves("diabetes") # 1, 2
+# ds %>% over_waves("cardio") # 1, 2
+# ds %>% over_waves("smoke") # 1, 2, 3, 4, 5, 6
+# ds %>% over_waves("alcohol") # 1
+# ds %>% over_waves("height_cm"); # 2, 4, 6
+# ds %>% over_waves("weight_kg") # 2, 4, 6
+#
+#
+# # supposed to be time-variant
+#
+# ds %>% over_waves("yborn") # 1, 2, 3, 4, 5, 6
+# ds %>% view_temporal_pattern("years_since_bl", 5)
+#
+# ds %>% over_waves("word_recall_im") # 1, 2, 3, 4, 5, 6
+# ds %>% over_waves("word_recall_de") # 1, 2, 3, 4, 5, 6
+# ds %>% over_waves("animals") # 1, 2, 3, 4, 5
+#
+# ds %>% over_waves("fvc_1") # 2, 4
+# ds %>% over_waves("fvc_2") # 2, 4
+# ds %>% over_waves("fvc_3") # 2, 4
+#
+# ds %>% over_waves("fev_1") # 2, 4
+# ds %>% over_waves("fev_2") # 2, 4
+# ds %>% over_waves("fev_3") # 2, 4
+#
+#
+# ds %>% over_waves("pef_1") # 2, 4
+# ds %>% over_waves("pef_2") # 2, 4
+# ds %>% over_waves("pef_3") # 2, 4
+#
+# ds %>% over_waves("gait") # 1, 2, 3, 4, 5, 6
+# ds %>% over_waves("grip") # 2, 4, 6
+#
+# ds %>% over_waves("speed") # 3
 
 
 
@@ -191,18 +191,19 @@ ds_long <- ds
 (ids <- 117781)
 d <- ds_long %>%
   dplyr::filter(id %in% ids ) %>%
-  dplyr::select_("id","wave","marital")
+  dplyr::select_("id","wave", "diabetes_bl")
 d
 
 
 names(ds)
 
-ds <- ds %>%
+ds2 <- ds %>%
   dplyr::select(id, wave,
-                sex, edu, marital,
+                sex, edu, marital, diabetes_bl,
                 fvc, fev, pef,
                 word_recall_im, word_recall_de, animals)
 
+head(ds2)
 
 # ---- tweak-data --------------------------------------------------------------
 ds %>% view_temporal_pattern("height_cm", 2)
