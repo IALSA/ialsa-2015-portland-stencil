@@ -46,6 +46,24 @@ colnames(ds) <- plyr::mapvalues(
   to     = dto$metaData$varname[!is.na(dto$metaData$retain)]
 )
 
+testit::assert("`diabetes` should be either 1, 0, or NA.", all(is.na(ds$diabetes) | (ds$diabetes %in% c(0, 1))))
+testit::assert("`sex` should be either 'MALE', 'FEMALE', or NA.", all(is.na(ds$sex) | (ds$sex %in% c("MALE", "FEMALE"))))
+
+# TODO, Maleeha please add asserts for:
+# * cardio
+# * smoke
+# * weight is numeric; it's missing or positive
+# * height is numeric; it's missing or positive
+
+
+ds <- ds %>%
+  dplyr::mutate(
+    diabetes      = as.logical(diabetes),
+    male          = as.logical(ifelse(!is.na(sex), sex=="MALE", NA_integer_))
+    #add cardio
+    #add smoke
+  )
+
 # ---- functions-to-examime-temporal-patterns -------------------
 
 view_temporal_pattern <- function(ds, measure, seed_value = 42){
@@ -149,33 +167,24 @@ ds$age_at_visit <- year_of_baseline - ds$year_born + ds$years_since_bl
 
 # bl_value <- as.character(ds[ds$id == id, "sex"][1])
 
-recode_baseline <- function(ds,measure)
-  for(i in unique(ds$id)){
-    # i = 117781; ids = i; measure = "sex"
-        d <- ds[ds$id == i, c("id","wave",measure)]
-    bl_value <- as.character(d[d$wave == 1 , measure])
-    measure_bl <- paste0(measure,"_bl")
-    ds[,measure_bl] <- "."
+ds <- ds %>%
+  dplyr::group_by(id) %>%
+  dplyr::mutate(
+    diabetes_bl   = dplyr::first(diabetes)
+  ) %>%
+  dplyr::ungroup() %>%
+  dplyr::select(
+    -diabetes
+  )
 
-    # d[d$id == i, bl_varname] <- bl_value
-    ds[ds$id == i, measure_bl] <- bl_value
-    # (ids <- sample(unique(ds$id),1))
-    # d <- ds %>%
-    #   dplyr::filter(id %in% ids ) %>%
-    #   dplyr::select_("id","wave",measure, measure_bl)
-    # print(d)
-    # return(ds)
-}
-ds <- as.data.frame(ds)
-
-ds <- recode_baseline(ds,"sex")
-ds <- recode_baseline(ds,"edu")
-ds <- recode_baseline(ds,"marital")
-ds <- recode_baseline(ds,"diabetes")
-ds <- recode_baseline(ds,"cardio")
-ds <- recode_baseline(ds,"smoke")
-ds <- recode_baseline(ds,"alcohol")
-ds <- recode_baseline(ds,"height_cm")
+#TODO: create baseline variables for these measures.  Follow the 'diabetes' template above.
+#* sex
+#* edu
+#* marital
+#* cardio
+#* smoke
+#* alcohol
+#* height_cm
 
 
 ds_long <- ds
