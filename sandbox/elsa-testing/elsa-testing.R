@@ -170,7 +170,7 @@ ds$age_at_visit <- year_of_baseline - ds$year_born + ds$years_since_bl
 ds <- ds %>%
   dplyr::group_by(id) %>%
   dplyr::mutate(
-    diabetes_bl   = dplyr::first(diabetes)
+    diabetes_bl   = dplyr::first(diabetes) # grabs the value for the first wave and forces it to all waves
   ) %>%
   dplyr::ungroup() %>%
   dplyr::select(
