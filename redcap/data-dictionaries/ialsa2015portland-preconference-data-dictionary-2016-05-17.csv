@@ -1,0 +1,227 @@
+Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
+survey_id,preconference_survey,,text,Survey ID,,,,,,,,,,,,,
+investigation,preconference_survey,Introductions,radio,Please indicate the longitudinal study that you will be driving during this Coordinated Analysis with Replication (CAR) workshop.,"1, EAS | 2, ELSA | 3, HRS | 4, ILSE | 5, LASA | 6, MAP | 7, NUAGE | 8, OCTO | 9, SATSA",,,,,,,,,,,,
+institution,preconference_survey,,text,"What Institutions are associated with your 
+investigation? 
+
+",,Please separate with semicolons,,,,,,,,,,,
+email_address,preconference_survey,,notes,"What email address(es) should be used to direct 
+information about the ialsa-2015-portland workshop in 
+Portland?
+
+",,Please separate,,,,,,,,,,,
+r_studio_feel,preconference_survey,,slider,"How do you feel about R & RStudio? 
+
+",Down with proletarait | Huh? | I have a signed book by John Chambers,Please place a mark on the scale above,,,,,,,,,,,
+mplus_feel,preconference_survey,,slider,How do you feel about Mplus?,I have a tattoo of Bengt | Huh? | Down with the proletarait,Place a mark on the scale above,,,,,,,,,,,
+i_certify,preconference_survey,,radio,"By checking this box, I certify that i will behave 
+myself in Portland, and not specifically ask the
+waitress for closed-range, inorganic chicken at any
+restaurant (or harass the locals in any other way).","1, I consent",Is the chicken local?,,,,,,,,,,,
+baseline,preconference_survey,"Temporal Design                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          For this particular wide data specification, please refer to the data specification document [./manipulation/data-specification.md]                                                                                                                                                                                                                                                                                                                                                     ",text,"How many waves does [your study] contain? (include the baseline, enter as an integer.",,"(e.g. ""3"",""7"", etc., without the quotes)",,,,,,,,,,,
+wave_sample_size,preconference_survey,,text,"What is the sample size at each wave? Enter as integers (starting with baseline) separated by spaces.
+",,"(e.g. ""659 560 424"", ""1120 1058 998 845 724 667 301"", etc.)",,,,,,,,,,,
+baseline_measure_calendar_year,preconference_survey,,text,Enter the [calendar year] of the baseline measure. ,,"(e.g. ""1978"", without the quotes)",,,,,,,,,,,
+name_variable_year_of_birth,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring the respondents' [year of birth]?",,,,,,,,,,,,,
+name_variable_year_of_death,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring the respondents' [age at death]?",,,,,,,,,,,,,
+name_variable_baseline_age,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring the [age] of respondents at baseline?",,,,,,,,,,,,,
+name_variable_age_at_wave,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [age at wave]? 
+Enter only the stem, without the wave indicator and the separator character.
+",,"For example, if your variable names are ""Age_at_visit_1"", ""Age_at_visit_3"", and ""Age_at_visit_6"" then enter ""Age_at_visit"" into the text box (without the quotes)",,,,,,,,,,,
+waves_at_for_all_ages,preconference_survey,,text,"Enter each wave for which [age at wave] is available in your dataset using numbers separated by spaces.
+",,"For example: ""1 2 3 4 5"", ""2 4 6"", ""1 3 7"", etc. (without the quotes).",,,,,,,,,,,
+name_variable_unique_identifier,preconference_survey,Demographics,text,"In your dataset, what is the exact name (case sensitive) of the variable of respondent's [Unique identifier]?",,,,,,,,,,,,,
+name_variable_twin_identifier,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable of respondent's [Twin identifier]? (if any)",,,,,,,,,,,,,
+name_variable_sex_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [Sex] at baseline?",,,,,,,,,,,,,
+name_variable_education_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [Education] at baseline?",,,,,,,,,,,,,
+name_variable_ses_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [Socio-economic Status] at baseline?",,,,,,,,,,,,,
+name_variable_marital_status_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [Marital status] at baseline?",,,,,,,,,,,,,
+physical_name_pef,preconference_survey,Physical Measures ,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [PEF], operationalizing the construct [pulmonary]? Enter only the stem, without the wave indicator and the separator character.
+
+                                                                                                                            ",,"For example, if your variable names are ""PEF_1"", ""PEF_3"", and ""PEF_6"" then enter ""PEF"" into the text box (without the quotes)                                                                                                         
+",,,,,,,,,,,
+physical_waves_pef,preconference_survey,,text,"Enter each wave for which [PEF] is available in your dataset using numbers separated by spaces.
+",,"For example: ""1 2 3 4 5"", ""2 4 6"", ""1 3 7"", etc. (without the quotes). 
+Feel free to copy paste this response into the blanks of the remaining items, if time points are the same.",,,,,,,,,,,
+physical_name_fev,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [FEV], operationalizing the construct [pulmonary]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+physical_waves_fev,preconference_survey,,text,"Enter each wave for which [FEV] is available in your dataset using numbers separated by spaces.
+",,"For example: ""1 2 3 4 5"", ""2 4 6"", ""1 3 7"", etc. (without the quotes).",,,,,,,,,,,
+physical_name_gait,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [gait], operationalizing the construct [walking]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+physical_waves_gait,preconference_survey,,text,"Enter each wave for which [gait] is available in your dataset using numbers separated by spaces.
+",,"For example: ""1 2 3 4 5"", ""2 4 6"", ""1 3 7"", etc. (without the quotes).",,,,,,,,,,,
+physical_name_grip,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [grip], operationalizing the construct [muscle strength]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+physical_waves_grip,preconference_survey,,text,"Enter each wave for which [grip] is available in your dataset using numbers separated by spaces.
+",,"For example: ""1 2 3 4 5"", ""2 4 6"", ""1 3 7"", etc. (without the quotes).",,,,,,,,,,,
+physical_construct_other,preconference_survey,,text,Do you have other measures of [physical] performance or ability? ,,"Please name them, separating by spaces. ",,,,,,,,,,,
+cog_name_analogies,preconference_survey,Cognitive Measures- Pg 1,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Analogies], operationalizing the construct [fluid reasoning]? Enter only the stem, without the wave indicator and the separator character.
+",,"For example, if your variable names are ""Analogies_1"", ""Analogies_3"", and ""Analogies_6"" then enter ""Analogies"" into the text box (without the quotes).",,,,,,,,,,,
+cog_waves_analogies,preconference_survey,,text,"Enter each wave for which [Analogies] is available in your dataset using numbers separated by spaces.
+",,"For example: ""1 2 3 4 5"", ""2 4 6"", ""1 3 7"", etc., without the quotes. 
+Feel free to copy paste this response into the blanks of the remaining items, if time points are the same.",,,,,,,,,,,
+cog_name_auditory,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Auditory Comprehension], operationalizing the construct [verbal comprehension]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_auditory,preconference_survey,,text,"Enter each wave for which [Auditory Comprehension] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_block,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Block Design], operationalizing the construct [fluid reasoning]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_block,preconference_survey,,text,"Enter each wave for which [Block Design] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_boston,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Boston Naming Test], operationalizing the construct [semantic memory]?
+Enter only the stem, without the wave indicator and the separator character.",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_boston,preconference_survey,,text,"Enter each wave for which [Boston Naming Test] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_categories,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Categories], operationalizing the construct [fluency]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_categories,preconference_survey,,text,"Enter each wave for which [Categories] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_digit,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Digit Ordering], operationalizing the construct [working memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_digit,preconference_survey,,text,"Enter each wave for which [Digit Ordering] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_digit_sf,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Digit Span Forward], operationalizing the construct [attention]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_digit_sf,preconference_survey,,text,"Enter each wave for which [Digit Span Forward] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_digit_sb,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Digit Span Backward], operationalizing the construct [working memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_digit_sb,preconference_survey,,text,"Enter each wave for which [Digit Span Backward] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_digit_st,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Digit Span Total], operationalizing the construct [short-term memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_digit_st,preconference_survey,,text,"Enter each wave for which [Digit Span Total] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_fas,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[F-A-S Phonemic Words], operationalizing the construct [fluency]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_fas,preconference_survey,,text,"Enter each wave for which [F-A-S Phenemic Words] is available in your dataset using numbers separated by spaces.
+ ",,,,,,,,,,,,,
+cog_name_figure,preconference_survey,Cognitive Measures- Pg 2,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Figure Identification], operationalizing the construct [perceptual speed]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_figure,preconference_survey,,text,"Enter each wave for which [Figure Identification] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_figure_logic,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Figure Logic], operationalizing the construct [fluid reasoning]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_figure_logic,preconference_survey,,text,"Enter each wave for which [Figure Logic] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_figure_memory,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Figure Memory], operationalizing the construct [short-term memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_figure_memory,preconference_survey,,text,"Enter each wave for which [Figure Memory] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_fluency,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Fluency], operationalizing the construct [fluency]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_fluency,preconference_survey,,text,"Enter each wave for which [Fluency] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_information,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Information], operationalizing the construct [episodic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_information,preconference_survey,,text,"Enter each wave for which [Information] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_ipss,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [IPSS Spatial Ability], operationalizing the construct [fluid reasoning]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_ipss,preconference_survey,,text,"Enter each wave for which [IPSS Spatial Ability] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_line,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Line Orientation], operationalizing the construct [visual discrimination]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_line,preconference_survey,,text,"At waves was the [Line Orientation] variable collected? Enter each wave number, separated by a space.  ",,,,,,,,,,,,,
+cog_name_logical_mi,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Logical Memory Immediate], operationalizing the construct [short-term memory]?
+",,"Enter only the stem, without the wave indicator and the separator character. ",,,,,,,,,,,
+cog_waves_logical_mi,preconference_survey,,text,"Enter each wave for which [Logical Memory Immediate] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_logical_md,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Logical Memory Delayed], operationalizing the construct [episodic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_md,preconference_survey,,text,"Enter each wave for which [Logical Memory Delayed] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_matrices,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Matrices], operationalizing the construct [fluid reasoning]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_matrices,preconference_survey,,text,"Enter each wave for which [Matrices] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_memory_ir,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Memory In Reality], operationalizing the construct [episodic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_memory_ir,preconference_survey,,text,"Enter each wave for which [Memory In Reality] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_mmse,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Mini Mental Status Exam], operationalizing the construct [mental status]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_mmse,preconference_survey,,text,"Enter each wave for which [Mini Mental Status Exam] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_number,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Number Comparison], operationalizing the construct [perceptual speed]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_number,preconference_survey,,text,"Enter each wave for which [Number Comaprison] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_speed,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Perceptual Speed], operationalizing the construct [perceptual speed]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_speed,preconference_survey,,text,"Enter each wave for which [Perceptual Speed] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_picture,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Picture Completion], operationalizing the construct [visual discrimination]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cogl_waves_picture,preconference_survey,,text,"Enter each wave for which [Picture Completion] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_pros_recall_imme,preconference_survey,Cognitive Measures- Pg 3,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Pros Recall Immediate], operationalizing the construct [short-term memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_pros_recall_imme,preconference_survey,,text,"Enter each wave for which [Pros Recall Immediate] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_pros_recall_delay,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Pros Recall Delayed], operationalizing the construct [episodic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_pros_recall_delay,preconference_survey,,text,"Enter each wave for which [Pros Recall Delayed] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_pros_recall_total,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Pros Recall Total], operationalizing the construct [episodic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_pros_total,preconference_survey,,text,"Enter each wave for which [Pros Recall Total] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_reading,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Reading], operationalizing the construct [semantic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_reading,preconference_survey,,text,"Enter each wave for which [Reading] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_rotation,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Rotation], operationalizing the construct [fluid reasoning]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_rotation,preconference_survey,,text,"Enter each wave for which [Rotation] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_serial7,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Serial7], operationalizing the construct [attention]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_serial7,preconference_survey,,text,"Enter each wave for which [Serial7] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_substitution,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Substitution], operationalizing the construct [perceptual speed]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_substitution,preconference_survey,,text,"Enter each wave for which [Substitution] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_switching,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Swtiching], operationalizing the construct [executive functioning]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_switching,preconference_survey,,text,"Enter each wave for which [Switching] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_synonyms,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Synonyms], operationalizing the construct [semantic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_synonyms,preconference_survey,,text,"Enter each wave for which [Synonyms] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_tics,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures [Tics], operationalizing the construct [mental status]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_tics,preconference_survey,,text,"Enter each wave for which [Tics] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_vocabulary,preconference_survey,Cognitive Measures- Pg 4,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Vocabulary], operationalizing the construct [semantic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_vocabulary,preconference_survey,,text,"Enter each wave for which [Vocabulary] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_word_list_im,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Word List Immediate], operationalizing the construct [short-term memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_word_list_im,preconference_survey,,text,"Enter each wave for which [Word List Immediate] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_word_list_delay,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Word List Delayed], operationalizing the construct [semantic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_waves_word_list_delay,preconference_survey,,text,"Enter each wave for which [Word List Delayed] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+cog_name_word_list_recog,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Word List Recognition], operationalizing the construct [semantic memory]?
+",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
+cog_wave_word_list_recog,preconference_survey,,text,"Enter each wave for which [Word Recognition] is available in your dataset using numbers separated by spaces.
+",,,,,,,,,,,,,
+name_variable_height_baseline,preconference_survey,Clinical Measures,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [Height in cm] at baseline?",,,,,,,,,,,,,
+name_variable_weight_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [Weight in kg] at baseline?",,,,,,,,,,,,,
+name_variable_bmi_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [calculated BMI] at baseline?",,,,,,,,,,,,,
+name_variable_dementia_diagnosis_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [dementia diagnosis] at baseline?",,,,,,,,,,,,,
+name_variable_smoking_history_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [smoking history] at baseline?",,,,,,,,,,,,,
+name_variable_cvd_history_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [cardiovascular history] at baseline?",,,,,,,,,,,,,
+name_variable_diabetes_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [diabetes diagnosis] at baseline?",,,,,,,,,,,,,
+name_variable_alcohol_use_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [alcohol use] at baseline?",,,,,,,,,,,,,
+closing,preconference_survey,,descriptive,"Thank you for you attention on such a detail-oriented survey. The thoroughness of the items is critical for the workshop to proceed efficiently.
+
+We hope that future surveys will pre-populate most items with the responses you provided today.
+
+If you have questions, talk to Andrey.",,,,,,,,,,,,,
