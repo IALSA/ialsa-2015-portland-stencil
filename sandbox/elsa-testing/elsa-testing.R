@@ -205,6 +205,32 @@ ds2 <- ds %>%
 
 head(ds2)
 
+#Long to wide
+ds %>%
+  dplyr::select(id, wave, animals, word_recall_de ) %>%  #
+  tidyr::spread_(key="wave", value=c("animals", "word_recall_de"))
+
+# variables_static <- c("id", "sex", "edu", "marital", "diabetes_bl")
+variables_static <- c("id", "diabetes_bl")
+variables_longitudinal <- c(
+  "smoke", "alcohol", "word_recall_im", "animals", "word_recall_de",
+  "year_born", "speed", "height_cm", "weight_kg", "fvc_1", "fev_1",
+  "pef_1", "fvc_2", "fev_2", "pef_2", "fvc_3", "fev_3", "pef_3",
+  "age_bl", "years_since_bl", "cardio", "gait", "grip", "male",
+  "fvc", "fev", "pef", "age_at_visit"
+)
+
+ds_wide <- ds %>%
+  # dplyr::select(id, wave, animals, word_recall_de ) %>%
+  # gather(variable, value, -(id:wave)) %>%
+  dplyr::select_(.dots=c(variables_static, "wave", variables_longitudinal)) %>%
+  tidyr::gather_(key="variable", value="value", variables_longitudinal) %>%
+  dplyr::mutate(wave = paste0("t", wave)) %>%
+  tidyr::unite(temp, variable, wave) %>%
+  tidyr::spread(temp, value)
+
+# readr::write_csv(ds_wide, path="zzzz")
+
 # ---- tweak-data --------------------------------------------------------------
 ds %>% view_temporal_pattern("height_cm", 2)
 ds %>% view_temporal_pattern("diabetes", 2)
