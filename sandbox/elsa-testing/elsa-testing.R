@@ -21,17 +21,32 @@ requireNamespace("testit")# For asserting conditions meet expected patterns.
 # requireNamespace("car") # For it's `recode()` function.
 
 # ---- declare-globals ---------------------------------------------------------
+filePath_por <- "./data/unshared/raw/clouston/ELSA_Portland.por"
 filePath <- "./data/unshared/raw/ELSA_Portland_New_nomiss_years_variablenames.dat"
 variable_names <- c("idauniq", "wave", "dimar", "hedia01", "hedia02", "hedia03", "hedia04", "hedia05", "hedia06", "hedia07", "hedia08", "hedia09", "hedia10", "heage", "hedib01", "hedib02", "hedib03", "hedib04", "hedib05", "hedib06", "hedib07", "hedib08", "hedib09", "hedib10", "hesmk", "heala", "heacta", "heactb", "heactc", "mmwlka", "mmwlkb", "cflisen", "cfani", "cfmem", "cfpascr", "cflisd", "cfmscr", "cfpbscr", "cfptscr", "cfwhz1", "cfwhz2", "cfwhz3", "cfwhz4", "psceda", "pscedb", "pscedc", "pscedd", "pscede", "pscedf", "pscedg", "pscedh", "edqual", "scfamm", "scsca", "scscc", "intdatm", "intdaty", "iintdtm", "iintdty", "indobyr", "indager", "aethnicr", "heagcr", "heagcry", "hedbwlu", "hedbwas", "hedbwar", "hedbwos", "hedbwca", "hedbwpd", "hedbwps", "hedbwad", "hedbwde", "herosmd", "hemobcs", "hehsm86", "hehsm96", "hedcc", "heaidcr", "iintdatm", "iintdaty", "chesmk", "cfmersp", "cfprmem", "cfspeed", "cfanig", "cfexind", "cfaccur", "cfrecal", "hedimbp", "hediman", "hedimmi", "hedimhf", "hedimhm", "hedimar", "hedimdi", "hedbts", "hedimst", "hedimch", "hediblu", "hedibas", "hedibar", "hedibos", "hedibca", "hedibpd", "hedibps", "hedibad", "hedibde", "cfmeind", "cfind", "hedizm51", "hedizm52", "hediagbp", "hediagan", "hediagmi", "hediaghf", "hediaghm", "hediagar", "hediagdh", "hediagdi", "hediagst", "hediaghc", "hebdialu", "hebdiaas", "hebdiaar", "hebdiaos", "hebdiaca", "hebdiapd", "hebdiaps", "hebdiaad", "hebdiade", "hepdiagl", "hepdiadi", "hepdiamd", "hepdiaca", "cvd7dibt", "sex", "sysval", "diaval", "pulval", "mapval", "mmgsd1", "mmgsn1", "mmgsd2", "mmgsn2", "mmgsd3", "mmgsn3", "chol", "trig", "fglu", "htval", "wtval", "bmival", "bmiobe", "fvc1", "fev1", "pf1", "fvc2", "fev2", "pf2", "fvc3", "fev3", "pf3", "htfvc", "htfev", "htpf", "mmssre", "mmssti", "mmssna", "mmstre", "mmstti", "mmftre2", "mmftti", "mmlore", "mmloti", "mmlsre", "mmlsti", "mmcrre", "mmrrre", "mmrrfti", "mmrrtti", "mmrroc", "vitd", "mmftre", "prfvc", "pcfvc", "prfev", "pcfev", "htpef", "prpef", "pcpef", "bagey", "years", "diab", "cardio", "walkspee")
 length(variable_names)
 # ---- load-data ---------------------------------------------------------------
 # load the product of 0-ellis-island.R,  a list object containing data and metadata
 # ds <- read.table(filePath, col.names = variable_names)
-ds <- read.delim(filePath, header=TRUE, stringsAsFactors = FALSE)
+# ds <- read.delim(filePath, header=TRUE, stringsAsFactors = FALSE)
 
-names(ds) <- variable_names
+
+requireNamespace("memisc")
+testit::assert("File does not exist", base::file.exists(filePath_por))
+data <- memisc::spss.portable.file(filePath_por)
+ds <- memisc::as.data.set(data)
+
+
+# ds <- read.table(filePath_por)
+# ds <- read.delim(filePath_por)
+# ds <- Hmisc::spss.get(filePath_por)
+
+
+
+# names(ds) <- variable_names
 # names(ds)[1:20]
 
+ds %>% histogram_continuous("years")
 # Maheeha, please see how meta-data objects are used in
 # https://github.com/IALSA/ialsa-2016-groningen/blob/master/manipulation/0-ellis-island.R
 # https://github.com/IALSA/ialsa-2016-amsterdam/blob/master/manipulation/map/0-ellis-island-map.R
