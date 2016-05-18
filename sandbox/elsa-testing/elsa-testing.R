@@ -35,32 +35,16 @@ dplyr::glimpse(dto[["metaData"]])
 # ---- inspect-data -------------------------------------------------------------
 
 meta <- dto$metaData
-
-meta %>%
-  dplyr::filter(retain == TRUE) %>%
-  dplyr::select(name, varname,label_short)
-
-
-keep_variables <- meta %>%
-  dplyr::filter(retain == TRUE) %>%
-  dplyr::select(name) %>%
-  dplyr::distinct()
-(keep_variables <- as.character(keep_variables$name))
-
-
-new_names <- meta %>%
-  dplyr::filter(retain == TRUE) %>%
-  dplyr::select(varname) %>%
-  dplyr::distinct()
-(new_names <- as.character(new_names$varname))
-
+colnames(dto$unitData)
 
 ds <- dto$unitData %>%
-  dplyr::select_(.dots = keep_variables)
-names(ds) <- new_names
+  dplyr::select_(.dots = dto$metaData$name[!is.na(dto$metaData$retain)])
 
-names(ds)
-# table(ds$smoke)
+colnames(ds) <- plyr::mapvalues(
+  x      = colnames(ds),
+  from   = dto$metaData$name[!is.na(dto$metaData$retain)],
+  to     = dto$metaData$varname[!is.na(dto$metaData$retain)]
+)
 
 # ---- functions-to-examime-temporal-patterns -------------------
 
@@ -77,7 +61,7 @@ view_temporal_pattern <- function(ds, measure, seed_value = 42){
 
 
 # examine the descriptives over waves
-over_waves <- function(ds, measure_name, exclude_values=""){
+over_waves <- function(ds, measure_name, exclude_values="") {
   testit::assert("No such measure in the dataset", measure_name %in% unique(names(ds)))
   # measure_name = "htval"; wave_name = "wave"; exclude_values = c(-99999, -1)
   cat("Measure : ", measure_name,"\n", sep="")
@@ -215,6 +199,7 @@ ds <- ds %>%
 ds %>% view_temporal_pattern("height_cm", 2)
 ds %>% view_temporal_pattern("diabetes", 2)
 ds %>% view_temporal_pattern("smoke", 7)
+
 # ---- basic-table --------------------------------------------------------------
 ds %>%
   dplyr::group_by(wave) %>%
