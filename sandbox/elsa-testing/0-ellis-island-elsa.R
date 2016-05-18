@@ -3,123 +3,59 @@
 rm(list=ls(all=TRUE))  #Clear the variables from previous runs.
 cat("\f") # clear console
 
-# ---- load-packages -----------------------------------------------------------
-# Attach these packages so their functions don't need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
-library(magrittr) # enables piping : %>%
-
-# ---- load-sources ------------------------------------------------------------
+# ---- load-sources ------------------------------------------------
 # Call `base::source()` on any repo file that defines functions needed below.  Ideally, no real operations are performed.
 source("./scripts/common-functions.R") # used in multiple reports
-source("./scripts/graph-presets.R") # fonts, colors, themes
-
+# source("./scripts/general-graphs.R")
+# source("./scripts/graph-presets.R") # fonts, colors, themes
+# ---- load-packages ----------------------------------------------
+# Attach these packages so their functions don't need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
+library(magrittr) #Pipes
 # Verify these packages are available on the machine, but their functions need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
-requireNamespace("ggplot2") # graphing
-# requireNamespace("readr") # data input
-requireNamespace("tidyr") # data manipulation
-requireNamespace("dplyr") # Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
-requireNamespace("testit")# For asserting conditions meet expected patterns.
-# requireNamespace("car") # For it's `recode()` function.
+requireNamespace("ggplot2")
+requireNamespace("tidyr")
+requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
+requireNamespace("testit") #For asserting conditions meet expected patterns.
+
 
 # ---- declare-globals ---------------------------------------------------------
-filePath <- "./data/unshared/raw/ELSA_Portland_New_nomiss_years_variablenames.dat"
-keep_vars <- c(
-  "id",
-  "wave",
-  "htval", # height
-  "sex", # sex
-  "sysval", "diaval", # blood pressure?
-  "mmgsd1", "mmgsd2", "mmgsd3", "mmgsn1","mmgsn2","mmgsn3", # grip
-  "hesmk", # (ever smoked (1 YES, 2 - NO)
-  ""
-  )
+data_path_input <- "./data/unshared/raw/ELSA_Portland_new.sav"
+
 # ---- load-data ---------------------------------------------------------------
-# load the product of 0-ellis-island.R,  a list object containing data and metadata
-# ds <- read.table(filePath, col.names = variable_names)
-ds <- read.delim(filePath, header=TRUE, stringsAsFactors = FALSE)
-# something is wrong with character reading, brute force
-ds$id <- ds[,1]
-ds[,1] <- NULL
-names(ds)
+ds <- Hmisc::spss.get(data_path_input, use.value.labels = TRUE)
+dto <- list("unitData" = ds)
 
-# dto <- list()
-# dto[["unitData"]] <- ds
 # ---- collect-meta-data -----------------------------------------
-# For example of using meta-data objects see :
-# https://github.com/IALSA/ialsa-2016-amsterdam/blob/master/manipulation/0-ellis-island.R
-# https://github.com/IALSA/ialsa-2016-amsterdam/blob/master/manipulation/map/0-ellis-island-map.R
-
 # prepare metadata to be added to the dto
 # we begin by extracting the names and (hopefuly their) labels of variables from each dataset
 # and combine them in a single rectanguar object, long/stacked with respect to study names
 save_csv <- names_labels(ds)
-write.csv(save_csv,"./data/meta/names-labels-live.csv",row.names = T)
+write.csv(save_csv,"./data/shared/meta/elsa/names-labels-live.csv",row.names = T)
 
-# ---- inspect-data -------------------------------------------------------------
-names(ds)
-# table(ds$smoke)
+# ----- import-meta-data-dead -----------------------------------------
+meta <- read.csv("./data/shared/meta/elsa/meta-data-elsa.csv", header = T, stringsAsFactors = F)
+meta["X"] <- NULL # remove native counter variable, not needed
+names(meta)
+dto[["metaData"]] <- meta
 
-library(lazyeval)
-# todo - develop into a function with NSE
-over_waves <- function(ds, measure_name, exclude_values=""){
-  # measure_name = "htval"; wave_name = "wave"; exclude_values = c(-99999, -1)
-  cat("Measure : ", measure_name,"\n", sep="")
-  d <- ds[!(ds[,measure_name] %in% exclude_values), ]
-  a <- interp(~ mean(var), var = as.name(measure_name))
-  b <- interp(~ sd(var),   var = as.name(measure_name))
-  c <- interp(~ n())
-  dots <- list(a,b,c)
-  t <- d %>%
-    dplyr::group_by_("wave") %>%
-    dplyr::summarize_(.dots = setNames(dots, c("mean","sd","count")))
-  return(as.data.frame(t))
-}
-# ds %>% measure_over_waves("htval", c(-99999, -1))
-#
-# ds %>%
-#   over_waves(
-#     measure_name="htval"
-#     ,exclude_values = c(-99999, -1)
-#   )
+names(dto)
+
+lapply(dto, names)
+# attach metadata object as the 4th element of the dto
+dto[["metaData"]] <- meta
 
 
-table(ds$hesmk)
-ds %>% over_waves("hesmk",c(-9,-8,-4, -3, -2, -1))
-
-ds %>% over_waves("sex")
-ds %>% over_waves("sysval", c(-99999))
-ds %>% over_waves("diaval", c(-99999))
+# ---- save-to-disk --------------------------------
+saveRDS(dto, "./data/unshared/raw/elsa/dto-elsa.rds")
 
 
-#### get temporal pattern of repsonse for a single subject for a particular variable
-set.seed(7)
-ds_long <- ds
-(ids <- sample(unique(ds_long$id),1))
-d <-ds_long %>%
-  dplyr::filter(id %in% ids ) %>%
-  dplyr::select_("id","wave", "dimar")
-d
+# ---- object-verification ------------------------------------------------
+# the production of the dto object is now complete
+# we verify its structure and content:
+dto <- readRDS("./data/unshared/raw/elsa/dto-elsa.rds")
+# each element this list is another list:
+names(dto)
+names(dto[["unitData"]])
+dplyr::glimpse(dto[["metaData"]])
 
 
-
-# ---- tweak-data --------------------------------------------------------------
-
-# ---- basic-table --------------------------------------------------------------
-
-# ---- basic-graph --------------------------------------------------------------
-
-
-# ---- wide-to-long-for-time -------------------------------
-(time_invariant <- c("idauniq", "gender")) #make sure values in csv are correct!
-(time_variant <- setdiff(names(ds), time_invariant))
-
-#  melt with respect to the index type
-ds_long <- data.table::melt(data =ds, id.vars = time_invariant,  measure.vars = time_variant)
-table(ds_long$variable)
-
-
-
-
-
-# ---- reproduce ---------------------------------------
-rmarkdown::render(input = "./sandbox/report-a.Rmd" ,
-                  output_format="html_document", clean=TRUE)
