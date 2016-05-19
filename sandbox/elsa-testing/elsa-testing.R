@@ -54,8 +54,8 @@ testit::assert("`diabetes` should be either 1, 0, or NA.", all(is.na(ds$diabetes
 testit::assert("`sex` should be either 'MALE', 'FEMALE', or NA.", all(is.na(ds$sex) | (ds$sex %in% c("MALE", "FEMALE"))))
 testit::assert("`cardio` should be either 1, 0 or NA", all(is.na(ds$cardio)|(ds$cardio %in% c(0,1))))
 testit::assert("`smoke` should be either 'YES', 'NO' or NA.", all(is.na(ds$smoke)|(ds$smoke %in% c("YES", "NO"))))
-testit::assert("`weight_kg'is numeric; it's missing or positive", weight_kg = as.numeric,  all(is.na(ds$weight_kg)| (ds$weight_kg >= 0)))
-testit::assert("`height_cm`is numeric; it's missing or positive", height_cm = as.numeric, all(is.na(ds$height_cm) |(ds$height_cm >= 0)))
+testit::assert("`weight_kg'is numeric; it's missing or positive", ds$weight_kg = as.numeric,  all(is.na(ds$weight_kg)| (ds$weight_kg >= 0)))
+testit::assert("`height_cm`is numeric; it's missing or positive", ds$height_cm = as.numeric, all(is.na(ds$height_cm) |(ds$height_cm >= 0)))
 
 
 # * height is numeric; it's missing or positive
