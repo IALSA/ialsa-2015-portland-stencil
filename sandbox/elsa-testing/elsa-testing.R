@@ -29,6 +29,7 @@ filePath <- "./data/unshared/raw/elsa/dto-esla.rds"
 dto <- readRDS("./data/unshared/raw/elsa/dto-elsa.rds")
 names(dto)
 names(dto[["unitData"]])
+#names(dto[["metaData"]])
 dplyr::glimpse(dto[["metaData"]])
 
 
@@ -36,9 +37,11 @@ dplyr::glimpse(dto[["metaData"]])
 
 meta <- dto$metaData
 colnames(dto$unitData)
+unitdata<-dto$unitData
 
 ds <- dto$unitData %>%
   dplyr::select_(.dots = dto$metaData$name[!is.na(dto$metaData$retain)])
+
 
 colnames(ds) <- plyr::mapvalues(
   x      = colnames(ds),
@@ -46,13 +49,15 @@ colnames(ds) <- plyr::mapvalues(
   to     = dto$metaData$varname[!is.na(dto$metaData$retain)]
 )
 
+
 testit::assert("`diabetes` should be either 1, 0, or NA.", all(is.na(ds$diabetes) | (ds$diabetes %in% c(0, 1))))
 testit::assert("`sex` should be either 'MALE', 'FEMALE', or NA.", all(is.na(ds$sex) | (ds$sex %in% c("MALE", "FEMALE"))))
+testit::assert("`cardio` should be either 1, 0 or NA", all(is.na(ds$cardio)|(ds$cardio %in% c(0,1))))
+testit::assert("`smoke` should be either 'YES', 'NO' or NA.", all(is.na(ds$smoke)|(ds$smoke %in% c("YES", "NO"))))
+testit::assert("`weight_kg'is numeric; it's missing or positive", weight_kg = as.numeric,  all(is.na(ds$weight_kg)| (ds$weight_kg >= 0)))
+testit::assert("`height_cm`is numeric; it's missing or positive", height_cm = as.numeric, all(is.na(ds$height_cm) |(ds$height_cm >= 0)))
 
-# TODO, Maleeha please add asserts for:
-# * cardio
-# * smoke
-# * weight is numeric; it's missing or positive
+
 # * height is numeric; it's missing or positive
 
 
