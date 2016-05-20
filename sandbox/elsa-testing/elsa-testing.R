@@ -39,33 +39,53 @@ meta <- dto$metaData
 colnames(dto$unitData)
 unitdata<-dto$unitData
 
-ds <- dto$unitData %>%
+ds0 <- dto$unitData %>%
   dplyr::select_(.dots = dto$metaData$name[!is.na(dto$metaData$retain)])
 
 
-colnames(ds) <- plyr::mapvalues(
-  x      = colnames(ds),
+colnames(ds0) <- plyr::mapvalues(
+  x      = colnames(ds0),
   from   = dto$metaData$name[!is.na(dto$metaData$retain)],
   to     = dto$metaData$varname[!is.na(dto$metaData$retain)]
 )
 
+testit::assert("`sex` should be either 'MALE', 'FEMALE', or NA.", all(is.na(ds0$sex) | (ds0$sex %in% c("MALE", "FEMALE"))))
+testit::assert("`height_cm`is numeric; it's missing or positive", all(is.numeric(ds0$height_cm) | is.na(ds0$height_cm) | (ds0$height_cm >= 0)))
+testit::assert("`weight_kg'is numeric; it's missing or positive", all(is.numeric(ds0$weight_kg) | is.na(ds0$weight_kg) | (ds0$weight_kg >= 0)))
 
-testit::assert("`diabetes` should be either 1, 0, or NA.", all(is.na(ds$diabetes) | (ds$diabetes %in% c(0, 1))))
-testit::assert("`sex` should be either 'MALE', 'FEMALE', or NA.", all(is.na(ds$sex) | (ds$sex %in% c("MALE", "FEMALE"))))
-testit::assert("`cardio` should be either 1, 0 or NA", all(is.na(ds$cardio)|(ds$cardio %in% c(0,1))))
-testit::assert("`smoke` should be either 'YES', 'NO' or NA.", all(is.na(ds$smoke)|(ds$smoke %in% c("YES", "NO"))))
-testit::assert("`weight_kg'is numeric; it's missing or positive", all(is.numeric(ds$weight_kg) | is.na(ds$weight_kg) | (ds$weight_kg >= 0)))
-testit::assert("`height_cm`is numeric; it's missing or positive", all(is.numeric(ds$height_cm) | is.na(ds$height_cm) | (ds$height_cm >= 0)))
+testit::assert("`diabetes` should be either 1, 0, or NA.", all(is.na(ds0$diabetes) | (ds0$diabetes %in% c(0, 1))))
+testit::assert("`smoke` should be either 'YES', 'NO' or NA.", all(is.na(ds0$smoke)|(ds0$smoke %in% c("YES", "NO"))))
+testit::assert("`cardio` should be either 1, 0 or NA", all(is.na(ds0$cardio)|(ds0$cardio %in% c(0,1))))
 
+ds0 %>%
+  dplyr::select(id,wave,age_0, years_since_0) %>%
+  dplyr::slice(1:10)
 
-ds <- ds %>%
+# assemple data for analysis
+
+ds <- ds0 %>%
   dplyr::mutate(
+    # design
+    year_0        = 2002,
+    year          = as.numeric(year_0 + years_since_0),
+    age_0         = as.numeric(age_0),
+    age           = as.numeric(age_0 + years_since_0),
+    # covariates
+    male          = as.logical(ifelse(!is.na(sex), sex=="MALE", NA_integer_)),
     diabetes      = as.logical(diabetes),
-    male          = as.logical(ifelse(!is.na(sex), sex=="MALE", NA_integer_))
-    #add cardio
-    #add smoke
-  )
-
+    cardio        = as.logical(ifelse(!is.na(cardio), cardio==1, NA_integer_)),
+    smoke         = as.logical(ifelse(!is.na(smoke), smoke==1, NA_integer_)),
+    # outcomes
+    fvc           = (max(fvc_1, fvc_2, fvc_3, na.rm = T)),
+    fev           = (max(fev_1, fev_2, fev_3, na.rm = T)),
+    pef           = (max(pef_1, pef_2, pef_3, na.rm = T)),
+    grip          = as.numeric(grip),
+    gait          = as.numeric(gait)
+  ) %>%
+  dplyr::select(id, wave, year_0, year, age_0, age, male,
+                fev, fvc, pef,
+                word_recall_im, word_recall_de, animals)
+head(ds)
 # ---- functions-to-examime-temporal-patterns -------------------
 
 view_temporal_pattern <- function(ds, measure, seed_value = 42){
@@ -77,7 +97,7 @@ view_temporal_pattern <- function(ds, measure, seed_value = 42){
     dplyr::select_("id","wave", measure)
   print(d)
 }
-# ds %>%  view_temporal_pattern("sex", 1)
+# ds %>%  view_temporal_pattern("male", 1)
 
 
 # examine the descriptives over waves
@@ -104,7 +124,7 @@ over_waves <- function(ds, measure_name, exclude_values="") {
   return(as.data.frame(t))
 
 }
-# ds %>% over_waves("years")
+ds %>% over_waves("year_0")
 
 # ---- print-temporal-patterns ----------------------------------
 # ds %>% view_temporal_pattern("year_born", 2)
@@ -157,11 +177,7 @@ over_waves <- function(ds, measure_name, exclude_values="") {
 
 
 # ---- make-new-variables -----------------------
-year_of_baseline <- 2002
 
-ds$fvc <- max(ds$fvc_1, ds$fvc_2, ds$fvc_3)
-ds$fev <- max(ds$fev_1, ds$fev_2, ds$fev_3)
-ds$pef <- max(ds$pef_1, ds$pef_2, ds$pef_3)
 
 ds$age_at_visit <- year_of_baseline - ds$year_born + ds$years_since_bl
 
