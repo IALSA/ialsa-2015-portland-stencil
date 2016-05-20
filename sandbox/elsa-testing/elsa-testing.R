@@ -49,7 +49,6 @@ colnames(ds) <- plyr::mapvalues(
   to     = dto$metaData$varname[!is.na(dto$metaData$retain)]
 )
 
-
 testit::assert("`diabetes` should be either 1, 0, or NA.", all(is.na(ds$diabetes) | (ds$diabetes %in% c(0, 1))))
 testit::assert("`sex` should be either 'MALE', 'FEMALE', or NA.", all(is.na(ds$sex) | (ds$sex %in% c("MALE", "FEMALE"))))
 testit::assert("`cardio` should be either 1, 0 or NA", all(is.na(ds$cardio)|(ds$cardio %in% c(0,1))))
@@ -58,7 +57,6 @@ testit::assert("`weight_kg'is numeric", is.numeric(ds$weight_kg))
 testit::assert("`weight_kg` is missing or positive", all(is.na(ds$weight_kg) | (ds$weight_kg >= 0)))
 testit::assert("`height_cm` is numneric", is.numeric(ds$height_cm))
 testit::assert("`height_cm` is missing or positive", all(is.na(ds$height_cm) | (ds$height_cm >= 0)))
-
 
 ds <- ds %>%
   dplyr::mutate(
