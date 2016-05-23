@@ -58,13 +58,36 @@ testit::assert("`weight_kg` is missing or positive", all(is.na(ds$weight_kg) | (
 testit::assert("`height_cm` is numneric", is.numeric(ds$height_cm))
 testit::assert("`height_cm` is missing or positive", all(is.na(ds$height_cm) | (ds$height_cm >= 0)))
 
-ds <- ds %>%
+
+# compute pulmonary variables (max of the three)
+for(i in 1:nrow(ds0)){
+  ds0[i,"fev"] <- max( ds0[i,"fev_1"], ds0[i, "fev_2"], ds0[i, "fev_3"])
+  ds0[i,"fvc"] <- max( ds0[i,"fvc_1"], ds0[i, "fvc_2"], ds0[i, "fvc_3"])
+  ds0[i,"pef"] <- max( ds0[i,"pef_1"], ds0[i, "pef_2"], ds0[i, "pef_3"])
+}
+
+# assemple data for analysis
+ds <- ds0 %>%
   dplyr::mutate(
     diabetes      = as.logical(diabetes),
-    male          = as.logical(ifelse(!is.na(sex), sex=="MALE", NA_integer_))
+    male          = as.logical(ifelse(!is.na(sex), sex=="MALE", NA_integer_)),
     #add cardio
     #add smoke
-  )
+    cardio        = as.logical(ifelse(!is.na(cardio), cardio==1, NA_integer_)),
+    smoke         = as.logical(ifelse(!is.na(smoke), smoke==1, NA_integer_)),
+    # outcomes
+    fvc           = as.numeric(fev),
+    fev           = as.numeric(fvc),
+    pef           = as.numeric(pef/100), # change the scale to make more comparable
+    grip          = as.numeric(grip),
+    gait          = as.numeric(gait)
+  ) %>%
+  dplyr::select(id, wave, male, year_bl, year, age_bl,
+                age, edu, height_cm, diabetes, cardio, smoke,
+                fev, fvc, pef,
+                word_recall_im, word_recall_de, animals)
+head(ds)
+
 
 # ---- functions-to-examime-temporal-patterns -------------------
 
@@ -168,6 +191,37 @@ ds$age_at_visit <- year_of_baseline - ds$year_born + ds$years_since_bl
 # ---- force-time-invariant-values -------------------
 
 # bl_value <- as.character(ds[ds$id == id, "sex"][1])
+
+# ---- force-to-static-height ---------------------------
+ds %>% view_temporal_pattern("height_cm", 2)
+ds %>% over_waves("height_cm"); # 2, 4, 6
+# check that values are the same across waves
+ds %>%
+  dplyr::group_by(id) %>%
+  dplyr::summarize(unique = length(unique(height_cm))) %>%
+  dplyr::arrange(desc(unique)) # unique > 1 indicates change over wave
+# grab the value for the first wave and forces it to all waves
+ds <- ds %>%
+  dplyr::group_by(id) %>%
+  # height is not available at wave 1, take value from wave 2
+  dplyr::mutate(
+    height_cm_bl   = median(height_cm, na.rm =T) # grabs the value for the first wave and forces it to all waves
+  ) %>%
+  dplyr::ungroup()
+# examine the difference
+# ds %>% over_waves("height_cm_bl")
+ds %>% view_temporal_pattern("height_cm_bl", 2)
+
+
+# ---- force-to-static-diabetes ---------------------------
+ds %>% view_temporal_pattern("diabetes", 2)
+ds %>% over_waves("diabetes") # 1, 2
+# check that values are the same across waves
+ds %>%
+  dplyr::group_by(id) %>%
+  dplyr::summarize(unique = length(unique(diabetes))) %>%
+  dplyr::arrange(desc(unique)) # unique > 1 indicates change over wave
+# grab the value for the first wave and forces it to all waves
 
 ds <- ds %>%
   dplyr::group_by(id) %>%
