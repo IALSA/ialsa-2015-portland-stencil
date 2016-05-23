@@ -240,7 +240,7 @@ ds <- ds %>%
   dplyr::ungroup()
 # examine the difference
 ds %>% over_waves("cardio_bl")
-
+ds %>% view_temporal_pattern("cardio_bl", 2)
 
 # ---- force-to-static-smoke ---------------------------
 ds %>% view_temporal_pattern("smoke", 2)
@@ -259,15 +259,15 @@ ds <- ds %>%
   dplyr::ungroup()
 # examine the difference
 ds %>% over_waves("smoke_bl")
-
+ds %>% view_temporal_pattern("smoke_bl", 2)
 
 # ---- prepare-for-mplus -------------------------------
 names(ds)
 ds2 <- ds %>%
   dplyr::mutate(
     id             = as.numeric(id),
-
     male_bl        = as.numeric(male_bl),
+    height_cm_bl   = as.numeric(height_cm_bl),
     diabetes_bl    = as.numeric(diabetes_bl),
     cardio_bl      = as.numeric(cardio_bl),
     smoke_bl       = as.numeric(smoke_bl),
@@ -281,7 +281,8 @@ ds2 <- ds %>%
                 male_bl, edu_bl, height_cm_bl, diabetes_bl, cardio_bl, smoke_bl,
                 fev, fvc, pef,
                 word_recall_im, word_recall_de, animals)
-str(ds2)
+
+
 
 
 
@@ -310,7 +311,13 @@ ds_wide <- ds2 %>%
   tidyr::spread(temp, value)
 
 
+# prepare data for use in MPlus
 
-readr::write_csv(ds_wide, path="./data/unshared/derived/esla-mplus-data.dat")
+# replace NA with a numerical code
+ds_wide[is.na(ds_wide)] <- -9999
+table(ds_wide$age_t2, useNA = "always")
+
+# save to disk
+write.table(ds_wide,"./data/unshared/derived/esla-mplus-data.dat", row.names=F, col.names=F)
 write(names(ds_wide), "./data/unshared/derived/esla-mplus-varnames.txt", sep=" ")
 
