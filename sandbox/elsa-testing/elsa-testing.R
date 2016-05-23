@@ -61,8 +61,15 @@ ds0 %>%
   dplyr::select(id,wave,age_bl, years_since_bl) %>%
   dplyr::slice(1:10)
 
-# assemple data for analysis
 
+# compute pulmonary variables (max of the three)
+for(i in 1:nrow(ds0)){
+  ds0[i,"fev"] <- max( ds0[i,"fev_1"], ds0[i, "fev_2"], ds0[i, "fev_3"])
+  ds0[i,"fvc"] <- max( ds0[i,"fvc_1"], ds0[i, "fvc_2"], ds0[i, "fvc_3"])
+  ds0[i,"pef"] <- max( ds0[i,"pef_1"], ds0[i, "pef_2"], ds0[i, "pef_3"])
+}
+
+# assemple data for analysis
 ds <- ds0 %>%
   dplyr::mutate(
     # design
@@ -76,9 +83,9 @@ ds <- ds0 %>%
     cardio        = as.logical(ifelse(!is.na(cardio), cardio==1, NA_integer_)),
     smoke         = as.logical(ifelse(!is.na(smoke), smoke==1, NA_integer_)),
     # outcomes
-    fvc           = as.numeric(max(fvc_1, fvc_2, fvc_3, na.rm = T)),
-    fev           = as.numeric(max(fev_1, fev_2, fev_3, na.rm = T)),
-    pef           = as.numeric(max(pef_1, pef_2, pef_3, na.rm = T)),
+    fvc           = as.numeric(fev),
+    fev           = as.numeric(fvc),
+    pef           = as.numeric(pef/100), # change the scale to make more comparable
     grip          = as.numeric(grip),
     gait          = as.numeric(gait)
   ) %>%
@@ -87,6 +94,8 @@ ds <- ds0 %>%
                 fev, fvc, pef,
                 word_recall_im, word_recall_de, animals)
 head(ds)
+
+
 # ---- functions-to-examime-temporal-patterns -------------------
 view_temporal_pattern <- function(ds, measure, seed_value = 42){
   set.seed(seed_value)
@@ -187,11 +196,13 @@ ds <- ds %>%
   dplyr::group_by(id) %>%
   # height is not available at wave 1, take value from wave 2
   dplyr::mutate(
-    height_cm_bl   = dplyr::first(height_cm) # grabs the value for the first wave and forces it to all waves
+    height_cm_bl   = median(height_cm, na.rm =T) # grabs the value for the first wave and forces it to all waves
   ) %>%
   dplyr::ungroup()
 # examine the difference
-ds %>% over_waves("height_cm_bl")
+# ds %>% over_waves("height_cm_bl")
+ds %>% view_temporal_pattern("height_cm_bl", 2)
+
 
 # ---- force-to-static-diabetes ---------------------------
 ds %>% view_temporal_pattern("diabetes", 2)
