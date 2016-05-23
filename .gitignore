@@ -47,8 +47,8 @@ ialsa-2015-portland-stencil.Rproj
 
 ##############
 # Exceptions
-!data/README.md
-!data/*/README.md
-!data/*/*/README.md
-!data/*/*/*/README.md
-!data/*/*/*/*/README.md
+!/data/README.md
+!/data/*/README.md
+!/data/*/*/README.md
+!/data/*/*/*/README.md
+!/data/*/*/*/*/README.md
