@@ -77,6 +77,7 @@ ds <- ds0 %>%
     year          = as.numeric(year_bl + years_since_bl),
     age_bl         = as.numeric(age_bl),
     age           = as.numeric(age_bl + years_since_bl),
+    year_born     = as.numeric(year_born),
     # covariates
     male          = as.logical(ifelse(!is.na(sex), sex=="MALE", NA_integer_)),
     diabetes      = as.logical(diabetes),
@@ -89,7 +90,7 @@ ds <- ds0 %>%
     grip          = as.numeric(grip),
     gait          = as.numeric(gait)
   ) %>%
-  dplyr::select(id, wave, male, year_bl, year, age_bl,
+  dplyr::select(id, wave, male, year_bl, year, age_bl, year_born,
                 age, edu, height_cm, diabetes, cardio, smoke,
                 fev, fvc, pef,
                 word_recall_im, word_recall_de, animals)
@@ -138,6 +139,7 @@ over_waves <- function(ds, measure_name, exclude_values="") {
 
 ds %>% view_temporal_pattern("year_bl", 2) # year at baseline
 ds %>% view_temporal_pattern("year", 2) # year of measurement
+ds %>% view_temporal_pattern("year_born", 2) # year at baseline
 
 ds %>% view_temporal_pattern("age_bl", 2) # age at baseline
 ds %>% view_temporal_pattern("age", 2) # age at measurement
@@ -277,7 +279,7 @@ ds2 <- ds %>%
     word_recall_de = as.numeric(word_recall_de),
     animals        = as.numeric(animals)
   ) %>%
-  dplyr::select(id, wave, year_bl, year, age_bl,  age,
+  dplyr::select(id, wave, year_bl, year, age_bl,  age, year_born,
                 male_bl, edu_bl, height_cm_bl, diabetes_bl, cardio_bl, smoke_bl,
                 fev, fvc, pef,
                 word_recall_im, word_recall_de, animals)
@@ -295,7 +297,7 @@ ds2 <- ds %>%
 # d
 
 
-variables_static <- c("id", "year_bl", "age_bl", "male_bl", "edu_bl",
+variables_static <- c("id", "year_bl", "age_bl","year_born", "male_bl", "edu_bl",
                       "height_cm_bl", "diabetes_bl", "cardio_bl", "smoke_bl")
 variables_longitudinal <- setdiff(colnames(ds2),variables_static)
 (variables_longitudinal <- variables_longitudinal[!variables_longitudinal=="wave"])
@@ -318,6 +320,6 @@ ds_wide[is.na(ds_wide)] <- -9999
 table(ds_wide$age_t2, useNA = "always")
 
 # save to disk
-write.table(ds_wide,"./data/unshared/derived/esla-mplus-data.dat", row.names=F, col.names=F)
-write(names(ds_wide), "./data/unshared/derived/esla-mplus-varnames.txt", sep=" ")
+write.table(ds_wide,"./data/unshared/derived/elsa/esla-mplus-data.dat", row.names=F, col.names=F)
+write(names(ds_wide), "./data/unshared/derived/elsa/esla-mplus-varnames.txt", sep=" ")
 
