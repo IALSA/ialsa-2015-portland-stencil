@@ -19,7 +19,7 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 
 
 # ---- declare-globals ---------------------------------------------------------
-data_path_input <- "./data/unshared/raw/ELSA_Portland_new.sav"
+data_path_input <- "./data/unshared/raw/elsa/ELSA_Portland_new.sav"
 
 # ---- load-data ---------------------------------------------------------------
 ds <- Hmisc::spss.get(data_path_input, use.value.labels = TRUE)
