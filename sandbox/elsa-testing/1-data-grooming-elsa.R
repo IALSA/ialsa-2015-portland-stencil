@@ -325,11 +325,12 @@ ds_wide <- ds_long %>%
 # prepare data for use in MPlus
 
 # replace NA with a numerical code
-ds_wide[is.na(ds_wide)] <- -9999
-table(ds_wide$age_t2, useNA = "always")
+ds_mplus <- ds_wide
+ds_mplus[is.na(ds_mplus)] <- -9999
+table(ds_mplus$age_t2, useNA = "always")
 ds_wide %>% dplyr::glimpse()
 
 # save to disk
-write.table(ds_wide,"./data/unshared/derived/elsa/esla-mplus-data.dat", row.names=F, col.names=F)
-write(names(ds_wide), "./data/unshared/derived/elsa/esla-mplus-varnames.txt", sep=" ")
+write.table(ds_mplus,"./data/unshared/derived/elsa/esla-mplus-data.dat", row.names=F, col.names=F)
+write(names(ds_mplus), "./data/unshared/derived/elsa/esla-mplus-varnames.txt", sep=" ")
 
