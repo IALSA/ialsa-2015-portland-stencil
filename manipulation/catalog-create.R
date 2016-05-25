@@ -26,6 +26,8 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 path_credential_pcs     <- "./data/unshared/security/user.credentials"
 # figure_path <- 'manipulation/stitched-output/te/'
 
+survey_ids_to_retain <- c(5L)
+
 # redcap_flag_complete <- 2L #A value of 2 indicates to the REDCap admin that the record is 'complete'
 #Factors from REDCap
 investigation_labels <- c("EAS", "ELSA", "HRS", "ILSE", "LASA", "MAP", "NUAGE", "OCTO", "SATSA")
@@ -169,10 +171,53 @@ ds_pcs <- ds_pcs %>%
     investigation                                            = factor(investigation, levels=investigation_levels, labels=investigation_labels)
   ) %>%
   dplyr::filter(
-    survey_id   == 21L
+    survey_id      %in%  survey_ids_to_retain
   )
 
 # ---- verify-values-pcs -----------------------------------------------------------
+
+
+# ---- expand-to-catalog ------------------------------------------------------
+
+colnames(ds_pcs)
+
+dput(grep("^physical_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
+dput(grep("^cog_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
+
+investigations <- c(
+  "elsa"
+)
+variables_physical  <- c(
+  "physical_name_pef", "physical_name_fev", "physical_name_gait", "physical_name_grip"
+)
+variables_cog  <- c(
+  "cog_name_analogies", "cog_name_auditory", "cog_name_block",
+  "cog_name_boston", "cog_name_categories", "cog_name_digit", "cog_name_digit_sf",
+  "cog_name_digit_sb", "cog_name_digit_st", "cog_name_fas", "cog_name_figure",
+  "cog_name_figure_logic", "cog_name_figure_memory", "cog_name_information",
+  "cog_name_ipss", "cog_name_line", "cog_name_logical_mi", "cog_name_logical_md",
+  "cog_name_matrices", "cog_name_memory_ir", "cog_name_mmse", "cog_name_number",
+  "cog_name_speed", "cog_name_picture", "cog_name_pros_recall_imme",
+  "cog_name_pros_recall_delay", "cog_name_pros_recall_total", "cog_name_reading",
+  "cog_name_rotation", "cog_name_serial7", "cog_name_substitution",
+  "cog_name_switching", "cog_name_synonyms", "cog_name_tics", "cog_name_vocabulary",
+  "cog_name_word_list_im", "cog_name_word_list_delay", "cog_name_word_list_recog"
+)
+model_types <- c("zero", "a", "ae", "aeh", "aehplus", "full")
+subgroups <- c("female", "male")
+
+ds_crossed <- tidyr::crossing(
+  investigation       = investigations,
+  process_a           = variables_physical,
+  process_b           = variables_cog,
+  model_type          = model_types,
+  subgroup            = subgroups
+) %>%
+dplyr::mutate(
+  model_type          = factor(model_type , levels=model_types ), #Setting the factor levels will help sorting.
+  subgroup            = factor(subgroup   , levels=subgroups   )
+) %>%
+dplyr::arrange(investigation, process_a, process_b, model_type, subgroup)
 
 
 # ---- convert-to-catalog ------------------------------------------------------
@@ -189,6 +234,9 @@ ds_catalog <- ds_pcs %>%
     process_a           = "gait",
     process_b           = "bnt"
   )
+
+
+
 
 
 
