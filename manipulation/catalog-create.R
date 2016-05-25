@@ -219,24 +219,21 @@ dplyr::mutate(
 dplyr::arrange(investigation, process_a, process_b, model_type, subgroup)
 
 ds_crossed2 <- ds_crossed %>%
-  dplyr::left_join(ds_pcs, by="investigation") #%>%
-  # dplyr::mutate(
-  #   process_a_name = paste0("physical_name_", process_a)
-  # )
-ds_crossed2$process_a_name <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_a])
-ds_crossed2$process_b_name <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_b])
+  dplyr::left_join(ds_pcs, by="investigation")
+ds_crossed2$process_a_stem <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_a])
+ds_crossed2$process_b_stem <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_b])
 
-table(ds_crossed2$process_a)
-table(ds_crossed2$process_a_name)
-table(ds_crossed2$process_a, ds_crossed2$process_a_name)
-table(ds_crossed2$process_b)
-table(ds_crossed2$process_b_name)
-table(ds_crossed2$process_b, ds_crossed2$process_b_name)
+# table(ds_crossed2$process_a)
+# table(ds_crossed2$process_a_stem)
+# table(ds_crossed2$process_a, ds_crossed2$process_a_stem)
+# table(ds_crossed2$process_b)
+# table(ds_crossed2$process_b_stem)
+# table(ds_crossed2$process_b, ds_crossed2$process_b_stem)
 
 ds_crossed3 <- ds_crossed2 %>%
   dplyr::mutate(
-    process_a_name    = ifelse(process_a_name=="NA", NA, process_a_name),
-    process_b_name    = ifelse(process_b_name=="NA", NA, process_b_name),
+    process_a_stem    = ifelse(process_a_stem=="NA", NA, process_a_stem),
+    process_b_stem    = ifelse(process_b_stem=="NA", NA, process_b_stem),
     process_a         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_a, perl=T) ,
     process_b         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_b, perl=T)
   ) %>%
@@ -247,22 +244,42 @@ ds_crossed3 <- ds_crossed2 %>%
     process_b,
     model_type,
     subgroup,
-    process_a_name,
-    process_b_name
+    process_a_stem,
+    process_b_stem
   ) %>%
-  dplyr::filter(!is.na(process_a_name) & !is.na(process_b_name))
-# ds_crossed2$process_a
+  dplyr::filter(!is.na(process_a_stem) & !is.na(process_b_stem))
 
 # ---- convert-to-catalog ------------------------------------------------------
+
+path_study_stem <- "./data/unshared/mplus/"
+
+determine_path_data <- function( investigation ) {
+  investigation <- tolower(investigation)
+  return( paste0(path_study_stem, investigation, "/", investigation, ".dat") )
+} # determine_path_data("elSa")
+
+determine_path_mplus <-  function( investigation, model_tag, extension) {
+  investigation <- tolower(investigation)
+  # record_id_padded    = sprintf("%07d", record_id)
+  return( paste0(path_study_stem, investigation, "/", model_tag, ".", extension) )
+} # determine_path_inp("elSa")
 
 ds_catalog <- ds_crossed3 %>%
   dplyr::rename_(
     "pcs_id"                  = "survey_id"
   ) %>%
   dplyr::mutate(
-    record_id           = seq_len(n())
+    record_id           = seq_len(n()),
+    model_tag           = tolower(paste(sprintf("%07d", record_id), "b1", investigation, process_a, process_b, subgroup, model_type, sep="-")),
+    path_data           = determine_path_data(investigation),
+    path_inp            = determine_path_mplus(investigation, model_tag, "inp"),
+    path_out            = determine_path_mplus(investigation, model_tag, "out"),
+    process_a_waves     = "tbd",
+    process_b_waves     = "tbd",
+    process_a_names     = "tbd",
+    process_b_names     = "tbd"
   )
-
+# ds_catalog$path_inp
 
 
 
@@ -289,8 +306,10 @@ ds_catalog <- ds_crossed3 %>%
 # ---- specify-columns-to-upload -----------------------------------------------
 # dput(colnames(ds_catalog))
 columns_to_write <-c(
-  "record_id", "pcs_id", "investigation", "process_a", "process_b", "model_type",
-  "subgroup", "process_a_name", "process_b_name"
+  "record_id", "pcs_id", "investigation", "process_a", "process_b",
+  "model_type", "subgroup",
+  "process_a_waves", "process_b_waves", "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
+  "model_tag", "path_data", "path_inp", "path_out"
 )
 ds_slim <- ds_catalog[, columns_to_write]
 
