@@ -166,7 +166,8 @@ ds_pcs <- ds_pcs %>%
     , "name_variable_cvd_history_baseline"                   = "`name_variable_cvd_history_baseline`"
     , "name_variable_diabetes_baseline"                      = "`name_variable_diabetes_baseline`"
     , "name_variable_alcohol_use_baseline"                   = "`name_variable_alcohol_use_baseline`"
-    , "preconference_survey_complete"                        = "`preconference_survey_complete`"
+    , "mplus_filter_1"                                       = "`mplus_filter_1`"
+    # , "preconference_survey_complete"                        = "`preconference_survey_complete`"
   ) %>%
   dplyr::mutate(
     investigation                                            = factor(investigation, levels=investigation_levels, labels=investigation_labels)
@@ -245,7 +246,8 @@ ds_crossed3 <- ds_crossed2 %>%
     model_type,
     subgroup,
     process_a_stem,
-    process_b_stem
+    process_b_stem,
+    mplus_filter_1
   ) %>%
   dplyr::filter(!is.na(process_a_stem) & !is.na(process_b_stem))
 
@@ -309,7 +311,8 @@ columns_to_write <-c(
   "record_id", "pcs_id", "investigation", "process_a", "process_b",
   "model_type", "subgroup",
   "process_a_waves", "process_b_waves", "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
-  "model_tag", "path_data", "path_inp", "path_out"
+  "model_tag", "path_data", "path_inp", "path_out",
+  "mplus_filter_1"
 )
 ds_slim <- ds_catalog[, columns_to_write]
 

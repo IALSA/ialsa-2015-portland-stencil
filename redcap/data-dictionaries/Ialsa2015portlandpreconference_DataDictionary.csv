@@ -244,7 +244,8 @@ name_variable_smoking_history_baseline,preconference_survey,,text,"In your datas
 name_variable_cvd_history_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [cardiovascular history] at baseline?",,,,,,,,,,,,,
 name_variable_diabetes_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [diabetes diagnosis] at baseline?",,,,,,,,,,,,,
 name_variable_alcohol_use_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [alcohol use] at baseline?",,,,,,,,,,,,,
-closing,preconference_survey,,descriptive,"Thank you for you attention on such a detail-oriented survey. The thoroughness of the items is critical for the workshop to proceed efficiently.
+mplus_filter_1,preconference_survey,"Custom Syntax",text,"Enter any Mplus filtering syntax you'd like to use to remove participants from the model.",,,,,,,,y,,,,,"example: `dementia_ever NE 1`"
+closing,preconference_survey,Closing,descriptive,"Thank you for you attention on such a detail-oriented survey. The thoroughness of the items is critical for the workshop to proceed efficiently.
 
 We hope that future surveys will pre-populate most items with the responses you provided today.
 

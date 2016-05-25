@@ -16,3 +16,8 @@ model_tag,part1,,text,model_tag,,,,,,,,y,,,,,
 path_data,part1,,text,path_data,,,,,,,,y,,,,,
 path_inp,part1,,text,"path to the Mplus inp file (for input/syntax)",,,,,,,,y,,,,,
 path_out,part1,,text,"Path to the Mplus out file (for output/results)",,,,,,,,y,,,,,
+mplus_filter_1,part1,,text,"Enter any Mplus filtering syntax you'd like to use to remove participants from the model.",,,,,,,,y,,,,,"example: `dementia_ever NE 1`"
+mplus_syntax,part2,,notes,"The contents of the eventual inp file",,,,,,,,,,,,,
+mplus_output,part3,,notes,"Contents of the *.out file",,,,,,,,,,,,,
+aic,part4,,text,aic,,,,,,,,,,,,,
+bic,part4,,text,bic,,,,,,,,,,,,,
