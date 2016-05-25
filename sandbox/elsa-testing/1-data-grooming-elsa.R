@@ -93,7 +93,7 @@ ds <- ds0 %>%
                 year_bl, year, year_born,
                 age_bl, age,
                 edu, height_cm, diabetes, cardio, smoke,
-                fev, fvc, pef,
+                fev, fvc, pef, gait, grip,
                 word_recall_im, word_recall_de, animals)
 head(ds)
 
@@ -267,6 +267,7 @@ ds %>% view_temporal_pattern("smoke_bl", 2)
 
 # ---- prepare-for-mplus -------------------------------
 names(ds)
+# establish the long format
 ds_long <- ds %>%
   dplyr::mutate(
     id             = as.numeric(id),
@@ -288,30 +289,16 @@ ds_long <- ds %>%
     year_born, year_bl, year, age_bl,  age,
     male_bl,
     edu_bl, height_cm_bl, diabetes_bl, cardio_bl, smoke_bl,
-    fev, fvc, pef,
+    fev, fvc, pef, grip, gait,
     word_recall_im, word_recall_de, animals
   )
 str(ds_long)
-
-
-
-
-
-# ---- force-time-invariant-values -------------------
-# ds_long <- ds2
-# (ids <- 117781)
-# d <- ds_long %>%
-#   dplyr::filter(id %in% ids ) %>%
-#   dplyr::select_("id","wave", "male")
-# d
-
-
+# define variable properties for long-to-wide conversion
 variables_static <- c("id", "year_bl", "age_bl","year_born", "male_bl", "edu_bl",
                       "height_cm_bl", "diabetes_bl", "cardio_bl", "smoke_bl")
-variables_longitudinal <- setdiff(colnames(ds2),variables_static)
-(variables_longitudinal <- variables_longitudinal[!variables_longitudinal=="wave"])
-
-
+variables_longitudinal <- setdiff(colnames(ds_long),variables_static)  # not static
+(variables_longitudinal <- variables_longitudinal[!variables_longitudinal=="wave"]) # all except wave
+# establish a wide format
 ds_wide <- ds_long %>%
   # dplyr::select(id, wave, animals, word_recall_de ) %>%
   # gather(variable, value, -(id:wave)) %>%
@@ -320,15 +307,11 @@ ds_wide <- ds_long %>%
   dplyr::mutate(wave = paste0("t", wave)) %>%
   tidyr::unite(temp, variable, wave) %>%
   tidyr::spread(temp, value)
-
-
-# prepare data for use in MPlus
-
-# replace NA with a numerical code
-ds_mplus <- ds_wide
-ds_mplus[is.na(ds_mplus)] <- -9999
-table(ds_mplus$age_t2, useNA = "always")
 ds_wide %>% dplyr::glimpse()
+# prepare data to be read by MPlus
+ds_mplus <- ds_wide
+ds_mplus[is.na(ds_mplus)] <- -9999 # replace NA with a numerical code
+ds_mplus %>% dplyr::glimpse()
 
 # save to disk
 write.table(ds_mplus,"./data/unshared/derived/elsa/esla-mplus-data.dat", row.names=F, col.names=F)
