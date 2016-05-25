@@ -72,29 +72,31 @@ for(i in 1:nrow(ds0)){
 # assemple data for analysis
 ds <- ds0 %>%
   dplyr::mutate(
-    # design
-    year_bl        = 2002, # year of the first wave
-    year          = as.numeric(year_bl + years_since_bl),
-    age_bl         = as.numeric(age_bl),
-    age           = as.numeric(age_bl + years_since_bl),
     year_born     = as.numeric(year_born),
-    # covariates
+    year_bl       = 2002,               # year at baseline
+    year          = as.numeric(year_bl + years_since_bl), # year at visit
+    age_bl        = as.numeric(age_bl), # year at baseline
+    age           = as.numeric(age_bl + years_since_bl), #   age at visit
+    # covariates at baseline
     male          = as.logical(ifelse(!is.na(sex), sex=="MALE", NA_integer_)),
     diabetes      = as.logical(diabetes),
     cardio        = as.logical(ifelse(!is.na(cardio), cardio==1, NA_integer_)),
     smoke         = as.logical(ifelse(!is.na(smoke), smoke==1, NA_integer_)),
-    # outcomes
+    # longitudinal outcomes
     fvc           = as.numeric(fev),
     fev           = as.numeric(fvc),
     pef           = as.numeric(pef/100), # change the scale to make more comparable
     grip          = as.numeric(grip),
     gait          = as.numeric(gait)
   ) %>%
-  dplyr::select(id, wave, male, year_bl, year, age_bl, year_born,
-                age, edu, height_cm, diabetes, cardio, smoke,
+  dplyr::select(id, wave, male,
+                year_bl, year, year_born,
+                age_bl, age,
+                edu, height_cm, diabetes, cardio, smoke,
                 fev, fvc, pef,
                 word_recall_im, word_recall_de, animals)
 head(ds)
+
 
 
 # ---- functions-to-examime-temporal-patterns -------------------
@@ -268,6 +270,8 @@ names(ds)
 ds2 <- ds %>%
   dplyr::mutate(
     id             = as.numeric(id),
+    wave           = as.numeric(wave),
+
     male_bl        = as.numeric(male_bl),
     height_cm_bl   = as.numeric(height_cm_bl),
     diabetes_bl    = as.numeric(diabetes_bl),
@@ -279,10 +283,15 @@ ds2 <- ds %>%
     word_recall_de = as.numeric(word_recall_de),
     animals        = as.numeric(animals)
   ) %>%
-  dplyr::select(id, wave, year_bl, year, age_bl,  age, year_born,
-                male_bl, edu_bl, height_cm_bl, diabetes_bl, cardio_bl, smoke_bl,
-                fev, fvc, pef,
-                word_recall_im, word_recall_de, animals)
+  dplyr::select(
+    id, wave,
+    year_born, year_bl, year, age_bl,  age,
+    male_bl,
+    edu_bl, height_cm_bl, diabetes_bl, cardio_bl, smoke_bl,
+    fev, fvc, pef,
+    word_recall_im, word_recall_de, animals
+  )
+str(ds2)
 
 
 
@@ -318,6 +327,7 @@ ds_wide <- ds2 %>%
 # replace NA with a numerical code
 ds_wide[is.na(ds_wide)] <- -9999
 table(ds_wide$age_t2, useNA = "always")
+ds_wide %>% dplyr::glimpse()
 
 # save to disk
 write.table(ds_wide,"./data/unshared/derived/elsa/esla-mplus-data.dat", row.names=F, col.names=F)
