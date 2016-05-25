@@ -267,7 +267,7 @@ ds %>% view_temporal_pattern("smoke_bl", 2)
 
 # ---- prepare-for-mplus -------------------------------
 names(ds)
-ds2 <- ds %>%
+ds_long <- ds %>%
   dplyr::mutate(
     id             = as.numeric(id),
     wave           = as.numeric(wave),
@@ -291,7 +291,7 @@ ds2 <- ds %>%
     fev, fvc, pef,
     word_recall_im, word_recall_de, animals
   )
-str(ds2)
+str(ds_long)
 
 
 
@@ -312,7 +312,7 @@ variables_longitudinal <- setdiff(colnames(ds2),variables_static)
 (variables_longitudinal <- variables_longitudinal[!variables_longitudinal=="wave"])
 
 
-ds_wide <- ds2 %>%
+ds_wide <- ds_long %>%
   # dplyr::select(id, wave, animals, word_recall_de ) %>%
   # gather(variable, value, -(id:wave)) %>%
   dplyr::select_(.dots=c(variables_static, "wave", variables_longitudinal)) %>%
