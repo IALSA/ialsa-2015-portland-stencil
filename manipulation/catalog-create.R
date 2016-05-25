@@ -30,8 +30,9 @@ survey_ids_to_retain <- c(5L)
 
 # redcap_flag_complete <- 2L #A value of 2 indicates to the REDCap admin that the record is 'complete'
 #Factors from REDCap
-investigation_labels <- c("EAS", "ELSA", "HRS", "ILSE", "LASA", "MAP", "NUAGE", "OCTO", "SATSA")
-investigation_levels <- seq_along(investigation_labels)
+investigations_to_run <- c("ELSA")
+investigation_labels  <- c("EAS", "ELSA", "HRS", "ILSE", "LASA", "MAP", "NUAGE", "OCTO", "SATSA")
+investigation_levels  <- seq_along(investigation_labels)
 
 # ---- load-data ---------------------------------------------------------------
 
@@ -181,12 +182,9 @@ ds_pcs <- ds_pcs %>%
 
 colnames(ds_pcs)
 
-dput(grep("^physical_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
-dput(grep("^cog_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
+# dput(grep("^physical_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
+# dput(grep("^cog_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
 
-investigations <- c(
-  "elsa"
-)
 variables_physical  <- c(
   "physical_name_pef", "physical_name_fev", "physical_name_gait", "physical_name_grip"
 )
@@ -207,32 +205,62 @@ model_types <- c("zero", "a", "ae", "aeh", "aehplus", "full")
 subgroups <- c("female", "male")
 
 ds_crossed <- tidyr::crossing(
-  investigation       = investigations,
+  investigation       = investigations_to_run,
   process_a           = variables_physical,
   process_b           = variables_cog,
   model_type          = model_types,
   subgroup            = subgroups
 ) %>%
 dplyr::mutate(
-  model_type          = factor(model_type , levels=model_types ), #Setting the factor levels will help sorting.
-  subgroup            = factor(subgroup   , levels=subgroups   )
+  investigation       = factor(investigation, levels=investigation_labels, labels=investigation_labels), #intentionally user 'labels' twice.
+  model_type          = factor(model_type   , levels=model_types ), #Setting the factor levels will help sorting.
+  subgroup            = factor(subgroup     , levels=subgroups   )
 ) %>%
 dplyr::arrange(investigation, process_a, process_b, model_type, subgroup)
 
+ds_crossed2 <- ds_crossed %>%
+  dplyr::left_join(ds_pcs, by="investigation") #%>%
+  # dplyr::mutate(
+  #   process_a_name = paste0("physical_name_", process_a)
+  # )
+ds_crossed2$process_a_name <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_a])
+ds_crossed2$process_b_name <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_b])
+
+table(ds_crossed2$process_a)
+table(ds_crossed2$process_a_name)
+table(ds_crossed2$process_a, ds_crossed2$process_a_name)
+table(ds_crossed2$process_b)
+table(ds_crossed2$process_b_name)
+table(ds_crossed2$process_b, ds_crossed2$process_b_name)
+
+ds_crossed3 <- ds_crossed2 %>%
+  dplyr::mutate(
+    process_a_name    = ifelse(process_a_name=="NA", NA, process_a_name),
+    process_b_name    = ifelse(process_b_name=="NA", NA, process_b_name),
+    process_a         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_a, perl=T) ,
+    process_b         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_b, perl=T)
+  ) %>%
+  dplyr::select(
+    survey_id,
+    investigation,
+    process_a,
+    process_b,
+    model_type,
+    subgroup,
+    process_a_name,
+    process_b_name
+  ) %>%
+  dplyr::filter(!is.na(process_a_name) & !is.na(process_b_name))
+# ds_crossed2$process_a
 
 # ---- convert-to-catalog ------------------------------------------------------
 
-ds_catalog <- ds_pcs %>%
-  dplyr::select_(
-    "pcs_id"                  = "survey_id",
-    "investigation"
+ds_catalog <- ds_crossed3 %>%
+  dplyr::rename_(
+    "pcs_id"                  = "survey_id"
   ) %>%
   dplyr::mutate(
-    record_id           = seq_len(n()),
-    model_type          = "aeh",
-    subgroup            = "female",
-    process_a           = "gait",
-    process_b           = "bnt"
+    record_id           = seq_len(n())
   )
 
 
@@ -260,9 +288,9 @@ ds_catalog <- ds_pcs %>%
 
 # ---- specify-columns-to-upload -----------------------------------------------
 # dput(colnames(ds_catalog))
-columns_to_write <- c(
-  "record_id", "pcs_id", "investigation", "model_type",
-  "subgroup", "process_a", "process_b"
+columns_to_write <-c(
+  "record_id", "pcs_id", "investigation", "process_a", "process_b", "model_type",
+  "subgroup", "process_a_name", "process_b_name"
 )
 ds_slim <- ds_catalog[, columns_to_write]
 
