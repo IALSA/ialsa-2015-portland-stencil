@@ -244,6 +244,8 @@ ds_crossed2$process_b_waves <-ifelse(ds_crossed2$process_b_waves=="NA", NA, ds_c
 
 waves_a <- sapply(strsplit(ds_crossed2$process_a_waves, split=" "), as.integer)
 waves_b <- sapply(strsplit(ds_crossed2$process_b_waves, split=" "), as.integer)
+# waves_a <- vapply(strsplit(ds_crossed2$process_a_waves, split=" "), as.integer, logical(1))
+# waves_b <- vapply(strsplit(ds_crossed2$process_b_waves, split=" "), as.integer, logical(1))
 
 ds_crossed2$waves_intersect <- mapply(
   function(x, y) { paste(intersect(x, y), collapse=" ") },
