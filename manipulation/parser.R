@@ -90,8 +90,7 @@ parse <- function( path_temp_out ){
 
   # II.A. Basic Results
   # extract the basic indicators about the model
-  get_results_basic <- function(){
-
+  get_results_basic <- function( ) {
     (out_file <-  tail(strsplit(path_temp_out,"/")[[1]], n=1)) # grab an output file to work with
     message("Getting model ", 1, ", ",out_file)# view the file name
     mplus_output <- scan(path_temp_out, what='character', sep='\n') # each line of output as a char value
@@ -160,30 +159,25 @@ parse <- function( path_temp_out ){
     # If there are no specific error, then go get the parameter solution
     if(no_observations){
       results[1, "Error"]  <- "No observations"
-    }else{
-      if(variance_zero){
+    } else if(variance_zero){
         results[1,"Error"]  <- "Zero variance"
+    } else{
+
+      ## Check for model convergence
+      line_found <-  length(grep("THE MODEL ESTIMATION TERMINATED NORMALLY", mplus_output))
+      results[1, 'has_converged'] <- line_found
+
+      line_found <- length(grep("THE COVARIANCE COVERAGE FALLS BELOW THE SPECIFIED LIMIT", mplus_output))
+      results[1,"covar_covered"] <- line_found
+
+      line_found <- grep("TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE", mplus_output)
+      results[1,"trust_all"] <- !length(line_found)==1L
+
+      line_found <- grep("PROBLEM INVOLVING THE FOLLOWING PARAMETER:", mplus_output)
+      snippet <- mplus_output[line_found+1]
+      if(length(snippet)>0){
+        results[1,"mistrust"] <- snippet
       }
-      else{
-
-        ## Check for model convergence
-        line_found <-  length(grep("THE MODEL ESTIMATION TERMINATED NORMALLY", mplus_output))
-        results[1, 'has_converged'] <- line_found
-
-        line_found <- length(grep("THE COVARIANCE COVERAGE FALLS BELOW THE SPECIFIED LIMIT", mplus_output))
-        results[1,"covar_covered"] <- line_found
-
-        line_found <- grep("TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE", mplus_output)
-        results[1,"trust_all"] <- !length(line_found)==1L
-
-        line_found <- grep("PROBLEM INVOLVING THE FOLLOWING PARAMETER:", mplus_output)
-        snippet <- mplus_output[line_found+1]
-        if(length(snippet)>0){
-          results[1,"mistrust"] <- snippet
-        }
-
-
-      } # close else
     } # close else
 
     return(results)
@@ -210,7 +204,7 @@ parse <- function( path_temp_out ){
     (test <- test[grep("^I|S", test$param),]) # param starting with I or S
     (test <- test[grep("^S", test$paramHeader),]) # paramHeader starting with S
     (test <- test[grep("^S", test$param),]) # pram starting with S
-    (test <- test[ ,c("est", "se","est_se", "pval")])
+    (test <- test[ ,fc("est", "se","est_se", "pval")])
     if(dim(test)[1]!=0) {results[1, ab_TAU_11] <- test}
 
     ## covariance btw intercept of process (A) and slope of process (A) - aa_TAU_01
