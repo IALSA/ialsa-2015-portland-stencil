@@ -238,6 +238,20 @@ ds_crossed2$process_b_stem  <- as.character(as.data.frame(ds_crossed2)[1, ds_cro
 ds_crossed2$process_a_waves <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_a_wave_name])
 ds_crossed2$process_b_waves <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_b_wave_name])
 
+ds_crossed2$process_a_waves <-ifelse(ds_crossed2$process_a_waves=="NA", NA, ds_crossed2$process_a_waves)
+ds_crossed2$process_b_waves <-ifelse(ds_crossed2$process_b_waves=="NA", NA, ds_crossed2$process_b_waves)
+
+waves_a <- sapply(strsplit(ds_crossed2$process_a_waves, split=" "), as.integer)
+waves_b <- sapply(strsplit(ds_crossed2$process_b_waves, split=" "), as.integer)
+
+ds_crossed2$waves_intersect <- mapply(
+  function(x, y) { paste(intersect(x, y), collapse=" ") },
+  x = waves_a,
+  y = waves_b
+)
+
+testit::assert("The `waves_intersect` should be a character vector.", class(ds_crossed2$waves_intersect)=="character")
+
 # table(ds_crossed2$process_a)
 # table(ds_crossed2$process_a_stem)
 # table(ds_crossed2$process_a, ds_crossed2$process_a_stem)
@@ -263,6 +277,7 @@ ds_crossed3 <- ds_crossed2 %>%
     process_b_stem,
     process_a_waves,
     process_b_waves,
+    waves_intersect,
     mplus_filter_1
   ) %>%
   dplyr::filter(!is.na(process_a_stem) & !is.na(process_b_stem))
@@ -273,7 +288,7 @@ path_study_stem <- "./data/unshared/mplus/"
 
 determine_path_data <- function( investigation ) {
   investigation <- tolower(investigation)
-  return( paste0(path_study_stem, investigation, "/", investigation, ".dat") )
+  return( paste0(path_study_stem, investigation, "/wide.dat") )
 } # determine_path_data("elSa")
 
 determine_path_mplus <-  function( investigation, model_tag, extension) {
@@ -292,8 +307,8 @@ ds_catalog <- ds_crossed3 %>%
     path_data           = determine_path_data(investigation),
     path_inp            = determine_path_mplus(investigation, model_tag, "inp"),
     path_out            = determine_path_mplus(investigation, model_tag, "out"),
-    process_a_names     = "tbd",
-    process_b_names     = "tbd"
+    process_a_names     = "-not used-",
+    process_b_names     = "-not used-"
   )
 # ds_catalog$path_inp
 
@@ -324,7 +339,8 @@ ds_catalog <- ds_crossed3 %>%
 columns_to_write <-c(
   "record_id", "pcs_id", "investigation", "process_a", "process_b",
   "model_type", "subgroup",
-  "process_a_waves", "process_b_waves", "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
+  "process_a_waves", "process_b_waves", "waves_intersect",
+  "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
   "model_tag", "path_data", "path_inp", "path_out",
   "mplus_filter_1"
 )
