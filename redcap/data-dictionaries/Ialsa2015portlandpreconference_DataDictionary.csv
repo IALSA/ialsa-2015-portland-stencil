@@ -145,7 +145,7 @@ cog_waves_logical_mi,preconference_survey,,text,"Enter each wave for which [Logi
 ",,,,,,,,,,,,,
 cog_name_logical_md,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Logical Memory Delayed], operationalizing the construct [episodic memory]?
 ",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
-cog_waves_md,preconference_survey,,text,"Enter each wave for which [Logical Memory Delayed] is available in your dataset using numbers separated by spaces.
+cog_waves_logical_md,preconference_survey,,text,"Enter each wave for which [Logical Memory Delayed] is available in your dataset using numbers separated by spaces.
 ",,,,,,,,,,,,,
 cog_name_matrices,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Matrices], operationalizing the construct [fluid reasoning]?
 ",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
@@ -169,7 +169,7 @@ cog_waves_speed,preconference_survey,,text,"Enter each wave for which [Perceptua
 ",,,,,,,,,,,,,
 cog_name_picture,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Picture Completion], operationalizing the construct [visual discrimination]?
 ",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
-cogl_waves_picture,preconference_survey,,text,"Enter each wave for which [Picture Completion] is available in your dataset using numbers separated by spaces.
+cog_waves_picture,preconference_survey,,text,"Enter each wave for which [Picture Completion] is available in your dataset using numbers separated by spaces.
 ",,,,,,,,,,,,,
 cog_name_pros_recall_imme,preconference_survey,"Cognitive Measures- Pg 3 of 4
 
@@ -184,7 +184,7 @@ cog_waves_pros_recall_delay,preconference_survey,,text,"Enter each wave for whic
 ",,,,,,,,,,,,,
 cog_name_pros_recall_total,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Pros Recall Total], operationalizing the construct [episodic memory]?
 ",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
-cog_waves_pros_total,preconference_survey,,text,"Enter each wave for which [Pros Recall Total] is available in your dataset using numbers separated by spaces.
+cog_waves_pros_recall_total,preconference_survey,,text,"Enter each wave for which [Pros Recall Total] is available in your dataset using numbers separated by spaces.
 ",,,,,,,,,,,,,
 cog_name_reading,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Reading], operationalizing the construct [semantic memory]?
 ",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
@@ -231,7 +231,7 @@ cog_waves_word_list_delay,preconference_survey,,text,"Enter each wave for which 
 ",,,,,,,,,,,,,
 cog_name_word_list_recog,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable that measures[Word List Recognition], operationalizing the construct [semantic memory]?
 ",,"Enter only the stem, without the wave indicator and the separator character.",,,,,,,,,,,
-cog_wave_word_list_recog,preconference_survey,,text,"Enter each wave for which [Word Recognition] is available in your dataset using numbers separated by spaces.
+cog_waves_word_list_recog,preconference_survey,,text,"Enter each wave for which [Word Recognition] is available in your dataset using numbers separated by spaces.
 ",,,,,,,,,,,,,
 name_variable_height_baseline,preconference_survey,"Clinical Measures
 

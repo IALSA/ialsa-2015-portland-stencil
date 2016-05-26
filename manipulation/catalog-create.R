@@ -117,7 +117,7 @@ ds_pcs <- ds_pcs %>%
     , "cog_name_logical_mi"                                  = "`cog_name_logical_mi`"
     , "cog_waves_logical_mi"                                 = "`cog_waves_logical_mi`"
     , "cog_name_logical_md"                                  = "`cog_name_logical_md`"
-    , "cog_waves_md"                                         = "`cog_waves_md`"
+    , "cog_waves_logical_md"                                 = "`cog_waves_logical_md`"
     , "cog_name_matrices"                                    = "`cog_name_matrices`"
     , "cog_waves_matrices"                                   = "`cog_waves_matrices`"
     , "cog_name_memory_ir"                                   = "`cog_name_memory_ir`"
@@ -129,13 +129,13 @@ ds_pcs <- ds_pcs %>%
     , "cog_name_speed"                                       = "`cog_name_speed`"
     , "cog_waves_speed"                                      = "`cog_waves_speed`"
     , "cog_name_picture"                                     = "`cog_name_picture`"
-    , "cogl_waves_picture"                                   = "`cogl_waves_picture`"
+    , "cog_waves_picture"                                    = "`cog_waves_picture`"
     , "cog_name_pros_recall_imme"                            = "`cog_name_pros_recall_imme`"
     , "cog_waves_pros_recall_imme"                           = "`cog_waves_pros_recall_imme`"
     , "cog_name_pros_recall_delay"                           = "`cog_name_pros_recall_delay`"
     , "cog_waves_pros_recall_delay"                          = "`cog_waves_pros_recall_delay`"
     , "cog_name_pros_recall_total"                           = "`cog_name_pros_recall_total`"
-    , "cog_waves_pros_total"                                 = "`cog_waves_pros_total`"
+    , "cog_waves_pros_recall_total"                          = "`cog_waves_pros_recall_total`"
     , "cog_name_reading"                                     = "`cog_name_reading`"
     , "cog_waves_reading"                                    = "`cog_waves_reading`"
     , "cog_name_rotation"                                    = "`cog_name_rotation`"
@@ -157,7 +157,7 @@ ds_pcs <- ds_pcs %>%
     , "cog_name_word_list_delay"                             = "`cog_name_word_list_delay`"
     , "cog_waves_word_list_delay"                            = "`cog_waves_word_list_delay`"
     , "cog_name_word_list_recog"                             = "`cog_name_word_list_recog`"
-    , "cog_wave_word_list_recog"                             = "`cog_wave_word_list_recog`"
+    , "cog_waves_word_list_recog"                            = "`cog_waves_word_list_recog`"
     , "name_variable_height_baseline"                        = "`name_variable_height_baseline`"
     , "name_variable_weight_baseline"                        = "`name_variable_weight_baseline`"
     , "name_variable_bmi_baseline"                           = "`name_variable_bmi_baseline`"
@@ -215,14 +215,42 @@ ds_crossed <- tidyr::crossing(
 dplyr::mutate(
   investigation       = factor(investigation, levels=investigation_labels, labels=investigation_labels), #intentionally user 'labels' twice.
   model_type          = factor(model_type   , levels=model_types ), #Setting the factor levels will help sorting.
-  subgroup            = factor(subgroup     , levels=subgroups   )
+  subgroup            = factor(subgroup     , levels=subgroups   ),
+  process_a_wave_name = gsub("^physical_name_(\\w+)$", "physical_waves_\\1", process_a),
+  process_b_wave_name = gsub("^cog_name_(\\w+)$", "cog_waves_\\1", process_b)
 ) %>%
 dplyr::arrange(investigation, process_a, process_b, model_type, subgroup)
 
 ds_crossed2 <- ds_crossed %>%
   dplyr::left_join(ds_pcs, by="investigation")
-ds_crossed2$process_a_stem <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_a])
-ds_crossed2$process_b_stem <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_b])
+
+testit::assert("All process_a variables should be found.", all(ds_crossed2$process_a %in% colnames(ds_crossed2)))
+testit::assert("All process_a variables should be found.", all(ds_crossed2$process_b %in% colnames(ds_crossed2)))
+testit::assert("All process_a wave variables should be found.", all(ds_crossed2$process_a_wave_name %in% colnames(ds_crossed2)))
+testit::assert("All process_b wave variables should be found.", all(ds_crossed2$process_b_wave_name %in% colnames(ds_crossed2)))
+
+# setdiff(ds_crossed2$process_a_wave_name, colnames(ds_crossed2))
+# setdiff(ds_crossed2$process_b_wave_name, colnames(ds_crossed2))
+
+
+ds_crossed2$process_a_stem  <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_a])
+ds_crossed2$process_b_stem  <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_b])
+ds_crossed2$process_a_waves <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_a_wave_name])
+ds_crossed2$process_b_waves <- as.character(as.data.frame(ds_crossed2)[1, ds_crossed2$process_b_wave_name])
+
+ds_crossed2$process_a_waves <-ifelse(ds_crossed2$process_a_waves=="NA", NA, ds_crossed2$process_a_waves)
+ds_crossed2$process_b_waves <-ifelse(ds_crossed2$process_b_waves=="NA", NA, ds_crossed2$process_b_waves)
+
+waves_a <- sapply(strsplit(ds_crossed2$process_a_waves, split=" "), as.integer)
+waves_b <- sapply(strsplit(ds_crossed2$process_b_waves, split=" "), as.integer)
+
+ds_crossed2$waves_intersect <- mapply(
+  function(x, y) { paste(intersect(x, y), collapse=" ") },
+  x = waves_a,
+  y = waves_b
+)
+
+testit::assert("The `waves_intersect` should be a character vector.", class(ds_crossed2$waves_intersect)=="character")
 
 # table(ds_crossed2$process_a)
 # table(ds_crossed2$process_a_stem)
@@ -247,6 +275,9 @@ ds_crossed3 <- ds_crossed2 %>%
     subgroup,
     process_a_stem,
     process_b_stem,
+    process_a_waves,
+    process_b_waves,
+    waves_intersect,
     mplus_filter_1
   ) %>%
   dplyr::filter(!is.na(process_a_stem) & !is.na(process_b_stem))
@@ -257,7 +288,7 @@ path_study_stem <- "./data/unshared/mplus/"
 
 determine_path_data <- function( investigation ) {
   investigation <- tolower(investigation)
-  return( paste0(path_study_stem, investigation, "/", investigation, ".dat") )
+  return( paste0(path_study_stem, investigation, "/wide.dat") )
 } # determine_path_data("elSa")
 
 determine_path_mplus <-  function( investigation, model_tag, extension) {
@@ -276,10 +307,8 @@ ds_catalog <- ds_crossed3 %>%
     path_data           = determine_path_data(investigation),
     path_inp            = determine_path_mplus(investigation, model_tag, "inp"),
     path_out            = determine_path_mplus(investigation, model_tag, "out"),
-    process_a_waves     = "tbd",
-    process_b_waves     = "tbd",
-    process_a_names     = "tbd",
-    process_b_names     = "tbd"
+    process_a_names     = "-not used-",
+    process_b_names     = "-not used-"
   )
 # ds_catalog$path_inp
 
@@ -310,7 +339,8 @@ ds_catalog <- ds_crossed3 %>%
 columns_to_write <-c(
   "record_id", "pcs_id", "investigation", "process_a", "process_b",
   "model_type", "subgroup",
-  "process_a_waves", "process_b_waves", "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
+  "process_a_waves", "process_b_waves", "waves_intersect",
+  "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
   "model_tag", "path_data", "path_inp", "path_out",
   "mplus_filter_1"
 )
