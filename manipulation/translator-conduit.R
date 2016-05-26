@@ -89,9 +89,9 @@ testit::assert("All model syntax should be at least 500 characters.", all(nchar(
 # ---- specify-columns-to-upload -----------------------------------------------
 # dput(colnames(ds_catalog))
 columns_to_write <-c(
-  "record_id", "mplus_syntax"
+  "record_id","path_out", "mplus_syntax"
 )
-ds_slim <- ds_catalog[, columns_to_write]
+ds_slim <- ds[, columns_to_write]
 
 rm(columns_to_write)
 
@@ -105,6 +105,7 @@ rm(columns_to_write)
 # setdiff(colnames(ds_pull), colnames(ds_slim)) #Columns missing from local dataset ds_slim (that are in REDCap)
 # setdiff(colnames(ds_slim), colnames(ds_pull)) #Columns missing from REDCap (that are in ds_slim)
 
+ds$mplus_syntax[1] # check
 
 result_write <- REDCapR::redcap_write(
   ds_to_write                = ds_slim,
