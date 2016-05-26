@@ -78,9 +78,9 @@ mplus_generator_bivariate <- function(
 
   # Useobservations are # select a subset of observation
   if(subgroup_sex=="male"){
-    print_sex_value <- paste0("male EQ 1")
+    print_sex_value <- paste0("male_bl EQ 1")
   } else {
-    print_sex_value <- paste0("male EQ 0")
+    print_sex_value <- paste0("male_bl EQ 0")
   }
   # subset
   proto_input <- gsub("%subgroup_condition%", print_sex_value, proto_input)
@@ -88,15 +88,15 @@ mplus_generator_bivariate <- function(
 
   # DEFINE:
 
-  (match_timepoints_process_a <- paste0("a",wave_set_model_vector,"=",process_a_mplus,"_",wave_set_model_vector,";"))
+  (match_timepoints_process_a <- paste0("a",wave_set_model_vector,"=",process_a_mplus,"_t",wave_set_model_vector,";"))
   match_timepoints_process_a <- paste(match_timepoints_process_a, collapse="\n")
   proto_input <- gsub(pattern ="%match_timepoints_process_a%", replacement = match_timepoints_process_a, x = proto_input)
 
-  (match_timepoints_process_b <- paste0("b",wave_set_model_vector,"=",process_b_mplus,"_",wave_set_model_vector,";"))
+  (match_timepoints_process_b <- paste0("b",wave_set_model_vector,"=",process_b_mplus,"_t",wave_set_model_vector,";"))
   match_timepoints_process_b <- paste(match_timepoints_process_b, collapse="\n")
   proto_input <- gsub(pattern ="%match_timepoints_process_b%", replacement = match_timepoints_process_b, x = proto_input)
 
-  (match_time_since_bl <- paste0("time",wave_set_model_vector,"=", "time_since_bl","_",wave_set_model_vector,";"))
+  (match_time_since_bl <- paste0("time",wave_set_model_vector,"=", "years_since_bl","_t",wave_set_model_vector,";"))
   match_time_since_bl <- paste(match_time_since_bl, collapse="\n")
   proto_input <- gsub(pattern ="%match_timepoints%", replacement = match_time_since_bl, x = proto_input)
 
