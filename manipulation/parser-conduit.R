@@ -179,10 +179,10 @@ ds_results <- ds_results_list %>%
     , "r_sasb_se"                  = "`R_SASB_se`"
     , "r_sasb_wald"                = "`R_SASB_wald`"
     , "r_sasb_pval"                = "`R_SASB_pval`"
-    , "r_res_ab_est"               = "`R_RES_AB_est`"
-    , "r_res_ab_se"                = "`R_RES_AB_se`"
-    , "r_res_ab_wald"              = "`R_RES_AB_wald`"
-    , "r_res_ab_pval"              = "`R_RES_AB_pval`"
+    , "r_res_est"                  = "`R_RES_AB_est`"
+    , "r_res_se"                   = "`R_RES_AB_se`"
+    , "r_res_wald"                 = "`R_RES_AB_wald`"
+    , "r_res_pval"                 = "`R_RES_AB_pval`"
     # , "a_gamma_01_est"             = "`a_GAMMA_01_est`"
     # , "a_gamma_01_se"              = "`a_GAMMA_01_se`"
     # , "a_gamma_01_wald"            = "`a_GAMMA_01_wald`"
@@ -297,7 +297,10 @@ ds_results <- ds_results_list %>%
 # dput(colnames(ds_results))
 columns_to_write <-c(
   "record_id", "parse_complete",
-  "has_converged", "trust_all", "mistrust", "covar_covered"
+  "has_converged", "trust_all", "mistrust", "covar_covered",
+  "r_iaib_est", "r_iaib_se", "r_iaib_wald", "r_iaib_pval",
+  "r_sasb_est", "r_sasb_se", "r_sasb_wald", "r_sasb_pval",
+  "r_res_est" , "r_res_se" , "r_res_wald" , "r_res_pval"
 )
 ds_slim <- ds_results[, columns_to_write]
 
