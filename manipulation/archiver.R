@@ -1,6 +1,3 @@
-# The function of this report is to print the input file to be used in estimation.
-
-
 # knitr::stitch_rmd(script="./manipulation/te-ellis.R", output="./manipulation/stitched-output/te-ellis.md")
 # For a brief description of this file see the presentation at
 #   - slides: https://rawgit.com/wibeasley/RAnalysisSkeleton/master/documentation/time-and-effort-synthesis.html#/
@@ -45,27 +42,17 @@ ds_catalog <- REDCapR::redcap_read(
   # Get all fields
   )$data
 
-
 rm(path_credential, credential_pcs, credential_catalog)
 
 # ---- tweak-data --------------------------------------------------------------
 # OuhscMunge::column_rename_headstart(ds_pcs) #Spit out columns to help write call ato `dplyr::rename()`.
 
-
-# ---- save-syntax-to-file -----------------------------------------------------------
-# for( i in seq_len(nrow(ds)) ) { #i <- 1
-for( i in 1:10) { #i <- 1
-  message("Creating syntax for ", ds$model_tag[i])
-  writeLines(ds$mplus_syntax[i], ds$path_inp[i])
-}
-
 # ---- verify-values -----------------------------------------------------------
-
 # testit::assert("All model syntax should be at least 500 characters.", all(nchar(ds$mplus_syntax) >= 500L))
-
 
 # ---- save-to-disk ------------------------------------------------------------
 timestamp <- strftime(Sys.time(), format="%Y-%m%-%d--%H-%M-%S")
 
-readr::write_csv(ds_pcs, path=paste0(path_out_archive_directory, "pcs-", timestamp, ".csv"))
-readr::write_csv(ds_pcs, path=paste0(path_out_archive_directory, "catalog-", timestamp, ".csv"))
+readr::write_csv(ds_pcs    , path=paste0(path_out_archive_directory, "pcs-"    , timestamp, ".csv"))
+readr::write_csv(ds_catalog, path=paste0(path_out_archive_directory, "catalog-", timestamp, ".csv"))
+rm(timestamp, path_out_archive_directory)
