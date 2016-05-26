@@ -2,7 +2,7 @@ TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 
 DATA:
-File = wide-dataset.dat;
+File = wide.dat;
 
 VARIABLE:
 Names are
