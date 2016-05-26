@@ -315,6 +315,6 @@ ds_mplus[is.na(ds_mplus)] <- -9999 # replace NA with a numerical code
 ds_mplus %>% dplyr::glimpse()
 
 # save to disk
-write.table(ds_mplus,"./data/unshared/mplus/elsa/wide-dataset.dat", row.names=F, col.names=F)
+write.table(ds_mplus,"./data/unshared/mplus/elsa/wide.dat", row.names=F, col.names=F)
 write(names(ds_mplus), "./data/unshared/mplus/elsa/wide-variable-names.txt", sep=" ")
 
