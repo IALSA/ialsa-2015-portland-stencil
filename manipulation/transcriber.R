@@ -32,7 +32,7 @@ path_prototype          <- "./manipulation/translator-support/prototype-wide.inp
 
 survey_ids_to_retain <- c(5L)
 
-desired_fields <- c("record_id","path_out", "mplus_syntax") #Get other stuff like path_syntax
+desired_fields <- c("record_id","path_inp", "mplus_syntax") #Get other stuff like path_syntax
 
 #Factors from REDCap
 # investigations_to_run <- c("ELSA")
@@ -68,10 +68,10 @@ ds <- ds_catalog %>%
 
 
 # ---- save-syntax-to-file -----------------------------------------------------------
-for( i in seq_len(nrow(ds)) ) { #i <- 1
-# for( i in 1:1) { #i <- 1
+# for( i in seq_len(nrow(ds)) ) { #i <- 1
+for( i in 1:5) { #i <- 1
   message("Creating syntax for ", ds$model_tag[i])
-  writeLines(ds$mplus_syntax[i], ds$path_out[i])
+  writeLines(ds$mplus_syntax[i], ds$path_inp[i])
   }
 
 # ---- verify-values -----------------------------------------------------------
