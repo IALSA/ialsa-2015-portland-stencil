@@ -30,8 +30,8 @@ TSCORES are
 USEOBSERVATIONS are
 	!select a subset of observations
 %subgroup_condition%
-and
-%subset_condition_1%
+!and
+!%subset_condition_1%
 ;
 
 DEFINE:
