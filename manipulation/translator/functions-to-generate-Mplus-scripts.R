@@ -11,17 +11,17 @@
 
 
 mplus_generator_bivariate <- function(
-    prototype #= "./sandbox/syntax-creator/prototype-map-wide.inp" # point to the template
-  , saved_location #= "sandbox/syntax-creator/example" # where to store all the .inp/.out scripts
-  , process_a_name #= 'grip'# item name of process (A)
-  , process_a_mplus #= 'gripavg'# Mplus variable of process (A)
-  , process_b_name #= 'numbercomp'# item name of process (B)
-  , process_b_mplus# = 'cts_nccrtd'# Mplus variable of process (B)
-  , subgroup_sex#= "male" # subset data to members of this group
-  , subset_condition_1 #= "dementia_ever NE 1" # subset data to member of this group
-  , covariate_set #= c("age_c70","htm_c160", "edu_c7")  # list of covariates ("_c" stands for "centercd)
-  , wave_set_modeled #=  c(1,2,3,4,5) # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
-  , run_models = FALSE # If TRUE then Mplus runs estimation to produce .out, .gh5, and/or, other files
+    prototype                  = "./sandbox/syntax-creator/prototype-map-wide.inp" # point to the template
+  , saved_location             = "sandbox/syntax-creator/example" # where to store all the .inp/.out scripts
+  # , process_a_name             = 'grip'# item name of process (A)
+  , process_a_mplus            = 'gripavg'# Mplus variable of process (A)
+  # , process_b_name             = 'numbercomp'# item name of process (B)
+  , process_b_mplus            = 'cts_nccrtd'# Mplus variable of process (B)
+  , subgroup_sex               = "male" # subset data to members of this group
+  , subset_condition_1         = "dementia_ever NE 1" # subset data to member of this group
+  , covariate_set              = c("age_c70","htm_c160", "edu_c7")  # list of covariates ("_c" stands for "centercd)
+  , wave_set_modeled           =  c(1,2,3,4,5) # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+  # , run_models = FALSE # If TRUE then Mplus runs estimation to produce .out, .gh5, and/or, other files
 ){
   # input the template to work with
   proto_input <- scan(prototype, what='character', sep='\n')
@@ -31,12 +31,12 @@ mplus_generator_bivariate <- function(
     # declare global values
   pathVarnames <- paste0(saved_location,"/wide-variable-names.txt")
   names_are <- read.csv(pathVarnames, header = F, stringsAsFactors = F)[ ,1]
-  (a <- grepl("age_at_visit_", names_are))
-  (b <- names_are[a])
-  (c <- gsub("age_at_visit_","",b))
-  (d <- as.numeric(c))
+  a <- grepl("age_at_visit_", names_are)
+  b <- names_are[a]
+  c <- gsub("age_at_visit_","",b)
+  d <- as.numeric(c)
   wave_set_possible <- d
-  (wave_modeled_max <- max(wave_set_modeled))
+  wave_modeled_max <- max(wave_set_modeled)
 
 
   # after modification .inp files will be saved as:
@@ -54,16 +54,16 @@ mplus_generator_bivariate <- function(
   proto_input <- gsub(pattern = "%names_are%", replacement = names_are, x = proto_input)
 
   # USEVAR are # what variables are used in estimation
-  (estimated_timepoints <- paste0("time",wave_set_modeled))
-  (estimated_timepoints <- paste(estimated_timepoints, collapse="\n"))
+  estimated_timepoints <- paste0("time",wave_set_modeled)
+  estimated_timepoints <- paste(estimated_timepoints, collapse="\n")
   proto_input <- gsub(pattern ="%estimated_timepoints%", replacement = estimated_timepoints, x = proto_input)
 
-  (process_a_timepoints <- paste0("a",wave_set_modeled))
-  (process_a_timepoints <- paste(process_a_timepoints, collapse="\n"))
+  process_a_timepoints <- paste0("a",wave_set_modeled)
+  process_a_timepoints <- paste(process_a_timepoints, collapse="\n")
   proto_input <- gsub(pattern ="%process_a_timepoints%", replacement = process_a_timepoints, x = proto_input)
 
-  (process_b_timepoints <- paste0("b",wave_set_modeled))
-  (process_b_timepoints <- paste(process_b_timepoints, collapse="\n"))
+  process_b_timepoints <- paste0("b",wave_set_modeled)
+  process_b_timepoints <- paste(process_b_timepoints, collapse="\n")
   proto_input <- gsub(pattern ="%process_b_timepoints%", replacement = process_b_timepoints, x = proto_input)
 
 
@@ -129,12 +129,16 @@ mplus_generator_bivariate <- function(
   # OUTPUT:
   # PLOT:
 
-  writeLines(proto_input,newFile)
+  input <- paste(proto_input, collapse="\n")
 
-  if(run_models){
-    # run all models in the folder
-    pathRoot <- getwd()
-    saved_laction_mplus <- paste0(pathRoot,"/",saved_location)
-    MplusAutomation::runModels(directory=saved_laction_mplus )#, Mplus_command = Mplus_install_path)
-  }
+  return( input )
+
+  # writeLines(proto_input,newFile)
+  #
+  # if(run_models){
+  #   # run all models in the folder
+  #   pathRoot <- getwd()
+  #   saved_laction_mplus <- paste0(pathRoot,"/",saved_location)
+  #   MplusAutomation::runModels(directory=saved_laction_mplus )#, Mplus_command = Mplus_install_path)
+  # }
 } # close function

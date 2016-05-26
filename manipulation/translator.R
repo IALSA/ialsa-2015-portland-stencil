@@ -9,8 +9,7 @@ library(tidyr)
 library(ggplot2)
 
 
-pathRoot <- getwd()
-pathFolder <- file.path(pathRoot,"sandbox/syntax-creator/outputs")
+pathFolder <- "./manipulation/translator/outputs"
 
 requireNamespace("ggplot2")
 requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
