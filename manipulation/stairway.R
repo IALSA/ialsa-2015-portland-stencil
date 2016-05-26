@@ -13,18 +13,15 @@ library(RODBC, quietly=TRUE)
 library(magrittr, quietly=TRUE)
 
 # Verify these packages are available on the machine, but their functions need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
-requireNamespace("MplusAutomation") #devtools::install_github(repo="michaelhallquist/MplusAutomation")
 requireNamespace("REDCapR") #devtools::install_github(repo="OuhscBbmc/REDCapR")
 
-requireNamespace("scales")
+requireNamespace("readr")
 requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
 requireNamespace("testit") #For asserting conditions meet expected patterns.
 
 # ---- declare-globals ---------------------------------------------------------
 path_credential_catalog <- "./data/unshared/security/phi-free.credentials"
-# path_prototype          <- "./manipulation/translator-support/prototype-wide.inp"
-
-desired_columns <- c("record_id", "model_tag", "path_inp", "mplus_syntax", "mplus_output") #"path_out",
+desired_columns <- c("record_id", "model_tag", "path_out", "mplus_output", "ascension_datetime")
 
 # ---- load-data ---------------------------------------------------------------
 
@@ -46,39 +43,71 @@ ds_catalog <- ds_catalog %>%
   dplyr::rename_(
   ) %>%
   dplyr::filter(
-    !is.na(mplus_syntax) & is.na(mplus_output)
+    !is.na(path_out) & is.na(mplus_output)
   ) %>%
   dplyr::mutate(
-    file_inp_exists     = file.exists(path_inp),
-    directory           = dirname(path_inp),
-    file_name_regex     = gsub("\\.", "\\\\\\\\.", basename(path_inp)) #Escape all dots, for the sake of the regex.
+    file_out_exists     = file.exists(path_out)
   )
 
-# ---- identify-missing-inputs -----------------------------------------------------------
-if( any(!ds_catalog$file_inp_exists) ) {
-  missing_files <- paste(ds_catalog$path_inp[!ds_catalog$file_inp_exists], collapse="\n")
+# ---- identify-missing-outputs -----------------------------------------------------------
+if( any(!ds_catalog$file_out_exists) ) {
+  missing_files <- paste(ds_catalog$path_out[!ds_catalog$file_out_exists], collapse="\n")
   cat(missing_files)
-  warning("The previous ", scales::comma(sum(!ds_catalog$file_inp_exists)), " input files are missing and will not be run.")
+  warning("The previous ", scales::comma(sum(!ds_catalog$file_out_exists)), " output files are missing and will not ascend.")
 }
 
-ds_crunch <- ds_catalog %>%
-  dplyr::filter(file_inp_exists)
+#The files to raise up into REDCap
+ds_confer <- ds_catalog %>%
+  dplyr::filter(file_out_exists)
 
-# ---- crunch ------------------------------------------------------------------
-for( i in seq_len(nrow(ds_crunch)) ) { #i <- 1
-  message("Crunching model ", ds_crunch$model_tag[i])
+# ---- read-output -----------------------------------------------------------
 
-  MplusAutomation::runModels(
-    directory     = ds_crunch$directory[i],
-    filefilter    = ds_crunch$file_name_regex[i]
-  )
+outputs <- rep(NA_character_, nrow(ds_confer))
+for( i in seq_len(nrow(ds_confer)) ) { #i <- 1
+  message("Confering model ", ds_confer$model_tag[i])
+
+  # output <-
+  # outputs[i] <- gsub("\\r\\n", "\\\n", readr::read_file(ds_confer$path_out[i]))
+  outputs[i] <- paste(readr::read_lines(ds_confer$path_out[i]), collapse="\n")
 }
+ds_confer$mplus_output  <- outputs
+
+ds_confer$ascension_datetime <- Sys.time()
+
+# readr::read_file(ds_confer$path_out[1])
+# readr::read_file(ds_confer$path_out[2])
+# paste(readr::read_lines(ds_confer$path_out[1]), collapse="\n")
+# # readr::read_file(ds_confer$path_out[3])
+#
+#
+# #The files to raise up into REDCap
+# ds_confer <- ds_catalog %>%
+#   dplyr::filter(file_out_exists) %>%
+#   dplyr::mutate(
+#     mplus_output = paste(readr::read_lines(path_out), collapse="\n")
+#     # mplus_output = readr::read_file(file.path(R.home(), "COPYING"))#read_file(path_out)
+#   )
+
 
 # ---- verify-values -----------------------------------------------------------
+testit::assert("All model output should be at least 500 characters.", all(nchar(ds_confer$mplus_output) >= 500L))
 
 
 # ---- specify-columns-to-upload -----------------------------------------------
-# nothing to upload
+# dput(colnames(ds_catalog))
+columns_to_write <-c(
+  "record_id","mplus_output", "ascension_datetime"
+)
+ds_slim <- ds_confer[, columns_to_write]
+
+rm(columns_to_write)
 
 # ---- upload-to-db ------------------------------------------------------------
-# nothing to upload
+
+result_write <- REDCapR::redcap_write(
+  ds_to_write                = ds_slim,
+  redcap_uri                 = credential_catalog$redcap_uri,
+  token                      = credential_catalog$token,
+  batch_size                 = 500 # Descrease if it helps debugging write errors
+)
+# result_write

@@ -21,5 +21,6 @@ path_out,part1,,text,"Path to the Mplus out file (for output/results)",,,,,,,,y,
 mplus_filter_1,part1,,text,"Enter any Mplus filtering syntax you'd like to use to remove participants from the model.",,,,,,,,y,,,,,"example: `dementia_ever NE 1`"
 mplus_syntax,part2,,notes,"The contents of the eventual inp file",,,,,,,,,,,,,
 mplus_output,part3,,notes,"Contents of the *.out file",,,,,,,,,,,,,
+ascension_datetime,part3,,text,"When the output was uploaded to REDCap.",,,datetime_seconds_ymd,,,,,,,,,,
 aic,part4,,text,aic,,,,,,,,,,,,,
 bic,part4,,text,bic,,,,,,,,,,,,,
