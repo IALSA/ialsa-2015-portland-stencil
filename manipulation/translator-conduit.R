@@ -89,7 +89,7 @@ testit::assert("All model syntax should be at least 500 characters.", all(nchar(
 # ---- specify-columns-to-upload -----------------------------------------------
 # dput(colnames(ds_catalog))
 columns_to_write <-c(
-  "record_id","path_out", "mplus_syntax"
+  "record_id","path_inp", "mplus_syntax"
 )
 ds_slim <- ds[, columns_to_write]
 
