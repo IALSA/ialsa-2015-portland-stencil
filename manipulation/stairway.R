@@ -44,7 +44,7 @@ ds_catalog <- ds_catalog %>%
   ) %>%
   dplyr::filter(
     !is.na(path_out)
-    # & (is.na(mplus_output) | nchar(mplus_output)==0L)
+    # & (is.na(mplus_output) | nchar(mplus_output)==0L) #For now, pull up everyone
   ) %>%
   dplyr::mutate(
     file_out_exists     = file.exists(path_out)

@@ -39,13 +39,13 @@ survey_ids_to_retain <- c(5L)
 credential_catalog <- REDCapR::retrieve_credential_local(path_credential, project_id=447) #For the catalog
 
 # Retrieve from the PCS (pre-conference survey)
-ds_catalog <- REDCapR::redcap_read(redcap_uri=credential_catalog$redcap_uri, token=credential_catalog$token)$data
+ds <- REDCapR::redcap_read(redcap_uri=credential_catalog$redcap_uri, token=credential_catalog$token)$data
 
 rm(path_credential)
 
 # ---- tweak-data --------------------------------------------------------------
 # OuhscMunge::column_rename_headstart(ds_pcs) #Spit out columns to help write call ato `dplyr::rename()`.
-ds <- ds_catalog %>%
+ds <- ds %>%
   dplyr::rename_(
   ) %>%
   dplyr::mutate(
@@ -61,15 +61,15 @@ ds <- ds_catalog %>%
 
 testit::assert("The syntax file should be found.", file.exists(path_prototype))
 
-syntaxes <- rep(NA_character_, nrow(ds_catalog))
-for( i in seq_len(nrow(ds_catalog)) ) { # i <- 1
-  message("Creating syntax for ", ds_catalog$model_tag[i])
+syntaxes <- rep(NA_character_, nrow(ds))
+for( i in seq_len(nrow(ds)) ) { # i <- 193
+  message("Creating syntax for ", ds$model_tag[i], " in row ", i, ".")
 
   syntax <- mplus_generator_bivariate(
     prototype                    = path_prototype                          # point to the template
     , saved_location             = dirname(ds$path_inp[i])                 # where to store all the .inp/.out scripts
-    , process_a_mplus             = ds$process_a_stem[i]                    # item name of process (A)
-    , process_b_mplus             = ds$process_b_stem[i]                    # item name of process (B)
+    , process_a_mplus            = ds$process_a_stem[i]                    # item name of process (A)
+    , process_b_mplus            = ds$process_b_stem[i]                    # item name of process (B)
     , subgroup_sex               = ds$subgroup[i]                          # subset data to members of this group
     , subset_condition_1         = ds$mplus_filter_1[i]                    # subset data to member of this group
     , covariate_set              = ds$covariate_set[i]       # list of covariates ("_c" stands for "centercd)
@@ -80,13 +80,15 @@ for( i in seq_len(nrow(ds_catalog)) ) { # i <- 1
 }
 ds$mplus_syntax  <- syntaxes
 
+as.data.frame(ds[193, ])
+
 # ---- verify-values -----------------------------------------------------------
 
 testit::assert("All model syntax should be at least 500 characters.", all(nchar(ds$mplus_syntax) >= 500L))
 
 
 # ---- specify-columns-to-upload -----------------------------------------------
-# dput(colnames(ds_catalog))
+# dput(colnames(ds))
 columns_to_write <-c(
   "record_id","path_inp", "mplus_syntax"
 )
