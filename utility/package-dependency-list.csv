@@ -26,7 +26,7 @@ readr,TRUE,TRUE,,Reads data files from disk.
 reshape2,FALSE,TRUE,,Data manipulation not covered in plyr.
 rmarkdown,TRUE,TRUE,rstudio,Needed for knitr and reports.
 stringi,FALSE,TRUE,,Consistent/convenient function signatures for manipulating text.
-stringr,FALSE,TRUE,,Consistent/convenient function signatures for manipulating text.
+stringr,TRUE,TRUE,,Consistent/convenient function signatures for manipulating text.
 testit,TRUE,TRUE,,Has the useful `assert()` function.
 testthat,TRUE,TRUE,hadley,Heavier testing framework that's good for package development.
 tidyr,TRUE,TRUE,,"Data manipulation; replaces much of reshape2; works w/ magrittr and dplyr well."

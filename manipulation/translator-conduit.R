@@ -27,72 +27,73 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 path_credential         <- "./data/unshared/security/phi-free.credentials"
 path_prototype          <- "./manipulation/translator-support/prototype-wide.inp"
 
-survey_ids_to_retain <- c(5L)
-
-#Factors from REDCap
-# investigations_to_run <- c("ELSA")
-# investigation_labels  <- c("EAS", "ELSA", "HRS", "ILSE", "LASA", "MAP", "NUAGE", "OCTO", "SATSA")
+survey_ids_to_retain <- c(5L, 25L:26L)
 
 # ---- load-data ---------------------------------------------------------------
 
 # Read the credentials
 credential_catalog <- REDCapR::retrieve_credential_local(path_credential, project_id=447) #For the catalog
 
-# Retrieve from the PCS (pre-conference survey)
-ds <- REDCapR::redcap_read(redcap_uri=credential_catalog$redcap_uri, token=credential_catalog$token)$data
+# Retrieve from the catalog (pre-conference survey)
+ds_catalog <- REDCapR::redcap_read(redcap_uri=credential_catalog$redcap_uri, token=credential_catalog$token)$data
 
 rm(path_credential)
 
 # ---- tweak-data --------------------------------------------------------------
 # OuhscMunge::column_rename_headstart(ds_pcs) #Spit out columns to help write call ato `dplyr::rename()`.
-ds <- ds %>%
+ds_translate <- ds_catalog %>%
   dplyr::rename_(
   ) %>%
   dplyr::mutate(
     # investigation                                            = factor(investigation, levels=investigation_levels, labels=investigation_labels)
   ) %>%
   dplyr::filter(
-    # survey_id      %in%  survey_ids_to_retain
+    pcs_id      %in%  survey_ids_to_retain
   )
 
-
+table(nchar(ds_translate$header_names), useNA = "always")
+table(!is.na(ds_translate$header_names),  (nchar(ds_translate$header_names)>0) )
 
 # ---- create-syntax -----------------------------------------------------------
 
-testit::assert("The syntax file should be found.", file.exists(path_prototype))
+testit::assert("The syntax template file should be found.", file.exists(path_prototype))
 
-syntaxes <- rep(NA_character_, nrow(ds))
-for( i in seq_len(nrow(ds)) ) { # i <- 193
-  message("Creating syntax for ", ds$model_tag[i], " in row ", i, ".")
+syntaxes <- rep(NA_character_, nrow(ds_translate))
+for( i in seq_len(nrow(ds_translate)) ) { # i <- 193
+  message("Creating syntax for ", ds_translate$model_tag[i], " in row ", i, ".")
+
+  # testit::assert("The `header_names` field should be nonmissing.",  all(!is.na(ds_translate$header_names)))
+  header_names_vector <- strsplit(ds_translate$header_names, split="\\s")
 
   syntax <- mplus_generator_bivariate(
     prototype                    = path_prototype                          # point to the template
-    , saved_location             = dirname(ds$path_inp[i])                 # where to store all the .inp/.out scripts
-    , process_a_mplus            = ds$process_a_stem[i]                    # item name of process (A)
-    , process_b_mplus            = ds$process_b_stem[i]                    # item name of process (B)
-    , subgroup_sex               = ds$subgroup[i]                          # subset data to members of this group
-    , subset_condition_1         = ds$mplus_filter_1[i]                    # subset data to member of this group
-    , covariate_set              = ds$covariate_set[i]       # list of covariates ("_c" stands for "centercd)
-    , wave_set_modeled           = ds$waves_intersect[i]                             # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+    , saved_location             = dirname(ds_translate$path_inp[i])                 # where to store all the .inp/.out scripts
+    , process_a_mplus            = ds_translate$process_a_stem[i]                    # item name of process (A)
+    , process_b_mplus            = ds_translate$process_b_stem[i]                    # item name of process (B)
+    , subgroup_sex               = ds_translate$subgroup[i]                          # subset data to members of this group
+    , subset_condition_1         = ds_translate$mplus_filter_1[i]                    # subset data to member of this group
+    , covariate_set              = ds_translate$covariate_set[i]       # list of covariates ("_c" stands for "centercd)
+    , wave_set_modeled           = ds_translate$waves_intersect[i]                             # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+    , header_names_vector        = header_names_vector[i]
   ) # execute to generate script
 
   syntaxes[i] <- syntax
 }
-ds$mplus_syntax  <- syntaxes
+ds_translate$mplus_syntax  <- syntaxes
 
-as.data.frame(ds[193, ])
+# as.data.frame(ds_translate[193, ])
 
 # ---- verify-values -----------------------------------------------------------
 
-testit::assert("All model syntax should be at least 500 characters.", all(nchar(ds$mplus_syntax) >= 500L))
+testit::assert("All model syntax should be at least 500 characters.", all(nchar(ds_translate$mplus_syntax) >= 500L))
 
 
 # ---- specify-columns-to-upload -----------------------------------------------
-# dput(colnames(ds))
+# dput(colnames(ds_translate))
 columns_to_write <-c(
   "record_id","path_inp", "mplus_syntax"
 )
-ds_slim <- ds[, columns_to_write]
+ds_slim <- ds_translate[, columns_to_write]
 
 rm(columns_to_write)
 
@@ -106,7 +107,7 @@ rm(columns_to_write)
 # setdiff(colnames(ds_pull), colnames(ds_slim)) #Columns missing from local dataset ds_slim (that are in REDCap)
 # setdiff(colnames(ds_slim), colnames(ds_pull)) #Columns missing from REDCap (that are in ds_slim)
 
-cat(ds$mplus_syntax[1]) # check
+cat(ds_translate$mplus_syntax[1]) # check
 
 result_write <- REDCapR::redcap_write(
   ds_to_write                = ds_slim,

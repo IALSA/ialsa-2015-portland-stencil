@@ -21,16 +21,23 @@ mplus_generator_bivariate <- function(
   , subset_condition_1         #= "dementia_ever NE 1" # subset data to member of this group
   , covariate_set              #= c("age_c70","htm_c160", "edu_c7")  # list of covariates ("_c" stands for "centercd)
   , wave_set_modeled           #=  c(1,2,3,4,5) # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+  , header_names_vector
   # , run_models = FALSE # If TRUE then Mplus runs estimation to produce .out, .gh5, and/or, other files
 ){
+
+  requireNamespace("stringr")
+
   # input the template to work with
   proto_input <- scan(prototype, what='character', sep='\n')
     #This makes it all one (big) element, if you need it in the future.
   # proto_input <- paste(proto_input, collapse="\n")
 
     # declare global values
-  pathVarnames <- paste0(saved_location,"/wide-variable-names.txt")
-  names_are <- read.csv(pathVarnames, header = F, stringsAsFactors = F)[ ,1] # always will be one column headerless
+  # pathVarnames <- paste0(saved_location,"/wide-variable-names.txt")
+  # names_are <- read.csv(pathVarnames, header = F, stringsAsFactors = F)[ ,1] # always will be one column headerless
+  names_are <- header_names_vector
+  # browser()
+
   a <- grepl("age_at_visit_", names_are)
   b <- names_are[a]
   c <- gsub("age_at_visit_","",b)

@@ -168,6 +168,7 @@ ds_pcs <- ds_pcs %>%
     , "name_variable_alcohol_use_baseline"                   = "`name_variable_alcohol_use_baseline`"
     , "covariates_beyond_plus"                               = "`covariates_beyond_plus`"
     , "mplus_filter_1"                                       = "`mplus_filter_1`"
+    , "header_names"                                         = "`header_names`"
     # , "preconference_survey_complete"                        = "`preconference_survey_complete`"
   ) %>%
   dplyr::mutate(
@@ -178,6 +179,8 @@ ds_pcs <- ds_pcs %>%
   )
 
 # ---- verify-values-pcs -----------------------------------------------------------
+
+# is.na(ds_pcs$header_names)
 
 
 # ---- expand-to-catalog ------------------------------------------------------
@@ -289,7 +292,8 @@ ds_crossed3 <- ds_crossed2 %>%
     process_b_waves,
     waves_intersect,
     covariate_set,
-    mplus_filter_1
+    mplus_filter_1,
+    header_names
   ) %>%
   dplyr::filter(!is.na(process_a_stem) & !is.na(process_b_stem))
 
@@ -330,6 +334,8 @@ ds_catalog <- ds_crossed3 %>%
 # ---- verify-values-catalog -----------------------------------------------------------
 # Sniff out problems
 #TODO: look at this more closely and think what could go wrong later.
+table(ds_catalog$covariate_set)
+
 
 # #Hard asserts where each cell must comply.
 # testit::assert("At this point, all `site_key` values should be zero.", all(ds$site_key==0L))
@@ -354,7 +360,7 @@ columns_to_write <-c(
   "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
   "covariate_set",
   "model_tag", "path_data", "path_inp", "path_out",
-  "mplus_filter_1"
+  "mplus_filter_1", "header_names"
 )
 ds_slim <- ds_catalog[, columns_to_write]
 
