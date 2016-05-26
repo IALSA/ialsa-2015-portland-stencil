@@ -285,7 +285,7 @@ ds_results <- ds_results_list %>%
     # parse_complete       = TRUE
   ) %>%
   dplyr::left_join(ds_catalog, by="record_id") %>%
-  dplyr::select_(.dots = c("record_id", setdiff(colnames(ds_results), "record_id")))
+  dplyr::select_(.dots = c("record_id", setdiff(colnames(.), "record_id")))
 
 
 
