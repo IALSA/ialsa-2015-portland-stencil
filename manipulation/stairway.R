@@ -71,9 +71,12 @@ for( i in seq_len(nrow(ds_confer)) ) { #i <- 1
   # outputs[i] <- gsub("\\r\\n", "\\\n", readr::read_file(ds_confer$path_out[i]))
   outputs[i] <- paste(readr::read_lines(ds_confer$path_out[i]), collapse="\n")
 }
-ds_confer$mplus_output  <- outputs
 
-ds_confer$ascension_datetime <- Sys.time()
+ds_confer <- ds_confer %>%
+  dplyr::mutate(
+    mplus_output                =  outputs,
+    ascension_datetime          =  Sys.time()
+  )
 
 # readr::read_file(ds_confer$path_out[1])
 # readr::read_file(ds_confer$path_out[2])
