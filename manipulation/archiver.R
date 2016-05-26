@@ -25,27 +25,33 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 # requireNamespace("car") #For it's `recode()` function.
 
 # ---- declare-globals ---------------------------------------------------------
-path_credential                 <- "./data/unshared/security/user.credentials"
+path_credential_admin           <- "./data/unshared/security/user.credentials"
+path_credential_low             <- "./data/unshared/security/phi-free.credentials"
 path_out_archive_directory      <- "./data/unshared/archive/"
 path_out_results                <- "./data/shared/model-results.csv"
 
 # ---- load-data ---------------------------------------------------------------
 
+is_admin <- file.exists(path_credential_admin)
+
 # Read the credentials
-credential_pcs     <- REDCapR::retrieve_credential_local(path_credential, project_id=262) #For the pre-conference survey
-credential_catalog <- REDCapR::retrieve_credential_local(path_credential, project_id=447) #For the catalog
+if( is_admin ) {
+  credential_pcs     <- REDCapR::retrieve_credential_local(path_credential_admin, project_id=262) #For the pre-conference survey
+  # Retrieve from the PCS (pre-conference survey)
+  ds_pcs <- REDCapR::redcap_read(redcap_uri=credential_pcs$redcap_uri, token=credential_pcs$token)$data
+  rm(path_credential_admin, credential_pcs)
+}
 
-# Retrieve from the PCS (pre-conference survey)
-ds_pcs <- REDCapR::redcap_read(redcap_uri=credential_pcs$redcap_uri, token=credential_pcs$token)$data
-
+credential_catalog <- REDCapR::retrieve_credential_local(path_credential_low  , project_id=447) #For the catalog
 # Retrieve from the catalog.
 ds_catalog <- REDCapR::redcap_read(
   redcap_uri    = credential_catalog$redcap_uri,
-  token         = credential_catalog$token
+  token         = credential_catalog$token,
   # Get all fields
+  batch_size    = 200
   )$data
 
-rm(path_credential, credential_pcs, credential_catalog)
+rm(path_credential_low, credential_catalog)
 
 # ---- tweak-data --------------------------------------------------------------
 # OuhscMunge::column_rename_headstart(ds_pcs) #Spit out columns to help write call ato `dplyr::rename()`.
@@ -55,8 +61,9 @@ rm(path_credential, credential_pcs, credential_catalog)
 
 # ---- save-to-disk ------------------------------------------------------------
 timestamp <- strftime(Sys.time(), format="%Y-%m%-%d--%H-%M-%S")
-
-readr::write_csv(ds_pcs    , path=paste0(path_out_archive_directory, "pcs-"    , timestamp, ".csv"))
-readr::write_csv(ds_catalog, path=paste0(path_out_archive_directory, "catalog-", timestamp, ".csv"))
+if( is_admin ) {
+  readr::write_csv(ds_pcs    , path=paste0(path_out_archive_directory, "pcs-"    , timestamp, ".csv"))
+  readr::write_csv(ds_catalog, path=paste0(path_out_archive_directory, "catalog-", timestamp, ".csv"))
+}
 readr::write_csv(ds_catalog, path=path_out_results) #This is the live version
 rm(timestamp, path_out_archive_directory, path_out_results)

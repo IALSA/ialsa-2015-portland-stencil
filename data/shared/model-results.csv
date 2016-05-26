@@ -561,7 +561,7 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2014 Muthen & Muthen",5/26/2016 14:39,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+Copyright (c) 1998-2014 Muthen & Muthen",2016-05-26 14:39:07,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,0.455,0.049,9.364,0,NA,NA,0.443,0.163,2.723,0.006,NA,NA,-0.075,0.047,-1.599,0.11,NA,NA,0
 2,5,ELSA,fev,categories,zero,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,,0000002-b1-elsa-fev-categories-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000002-b1-elsa-fev-categories-male-zero.inp,./data/unshared/mplus/elsa/0000002-b1-elsa-fev-categories-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -1251,7 +1251,7 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2014 Muthen & Muthen",5/26/2016 1:33,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+Copyright (c) 1998-2014 Muthen & Muthen",2016-05-26 01:33:10,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,0.207,0.041,5.06,0,NA,NA,-0.014,0.226,-0.064,0.949,NA,NA,-0.003,0.036,-0.083,0.934,NA,NA,0
 4,5,ELSA,fev,categories,a,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl,0000004-b1-elsa-fev-categories-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000004-b1-elsa-fev-categories-male-a.inp,./data/unshared/mplus/elsa/0000004-b1-elsa-fev-categories-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -1978,7 +1978,7 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2014 Muthen & Muthen",5/26/2016 14:39,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+Copyright (c) 1998-2014 Muthen & Muthen",2016-05-26 14:39:07,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,0.155,0.041,3.786,0,NA,NA,-0.024,0.237,-0.1,0.92,NA,NA,-0.004,0.035,-0.12,0.904,NA,NA,0
 6,5,ELSA,fev,categories,ae,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl,0000006-b1-elsa-fev-categories-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000006-b1-elsa-fev-categories-male-ae.inp,./data/unshared/mplus/elsa/0000006-b1-elsa-fev-categories-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -2606,7 +2606,7 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2014 Muthen & Muthen",5/26/2016 14:38,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+Copyright (c) 1998-2014 Muthen & Muthen",2016-05-26 14:38:36,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,0.127,0.051,2.501,0.012,NA,NA,0.124,0.301,0.411,0.681,NA,NA,0.015,0.038,0.385,0.7,NA,NA,0
 7,5,ELSA,fev,categories,aeh,female,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000007-b1-elsa-fev-categories-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000007-b1-elsa-fev-categories-female-aeh.inp,./data/unshared/mplus/elsa/0000007-b1-elsa-fev-categories-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -3257,7 +3257,7 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2014 Muthen & Muthen",5/26/2016 14:39,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+Copyright (c) 1998-2014 Muthen & Muthen",2016-05-26 14:39:07,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,0.124,0.046,2.684,0.007,NA,NA,0.002,0.223,0.008,0.993,NA,NA,-0.006,0.034,-0.174,0.862,NA,NA,0
 8,5,ELSA,fev,categories,aeh,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000008-b1-elsa-fev-categories-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000008-b1-elsa-fev-categories-male-aeh.inp,./data/unshared/mplus/elsa/0000008-b1-elsa-fev-categories-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -3607,7 +3607,7 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2014 Muthen & Muthen",5/26/2016 1:33,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+Copyright (c) 1998-2014 Muthen & Muthen",2016-05-26 01:33:10,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 10,5,ELSA,fev,categories,aehplus,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000010-b1-elsa-fev-categories-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000010-b1-elsa-fev-categories-male-aehplus.inp,./data/unshared/mplus/elsa/0000010-b1-elsa-fev-categories-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -5144,7 +5144,7 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2014 Muthen & Muthen",5/26/2016 0:12,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+Copyright (c) 1998-2014 Muthen & Muthen",2016-05-26 00:12:07,0,NA,NA,NA,NA,NA,NA,NA,NA,1,0,TRUE,NA,0.002,0.03,0.077,0.938,NA,NA,-0.281,0.042,-6.618,0,NA,NA,-0.086,0.095,-0.905,0.366,NA,NA,0
 20,5,ELSA,fev,fas,aeh,male,fev,,2 4,,,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000020-b1-elsa-fev-fas-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000020-b1-elsa-fev-fas-male-aeh.inp,./data/unshared/mplus/elsa/0000020-b1-elsa-fev-fas-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -14642,7 +14642,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 102,5,ELSA,grip,categories,ae,male,grip,animals,2 4 6,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl,0000102-b1-elsa-grip-categories-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000102-b1-elsa-grip-categories-male-ae.inp,./data/unshared/mplus/elsa/0000102-b1-elsa-grip-categories-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -14741,7 +14741,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 103,5,ELSA,grip,categories,aeh,female,grip,animals,2 4 6,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000103-b1-elsa-grip-categories-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000103-b1-elsa-grip-categories-female-aeh.inp,./data/unshared/mplus/elsa/0000103-b1-elsa-grip-categories-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -14840,7 +14840,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 104,5,ELSA,grip,categories,aeh,male,grip,animals,2 4 6,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000104-b1-elsa-grip-categories-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000104-b1-elsa-grip-categories-male-aeh.inp,./data/unshared/mplus/elsa/0000104-b1-elsa-grip-categories-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -14939,7 +14939,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 105,5,ELSA,grip,categories,aehplus,female,grip,animals,2 4 6,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000105-b1-elsa-grip-categories-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000105-b1-elsa-grip-categories-female-aehplus.inp,./data/unshared/mplus/elsa/0000105-b1-elsa-grip-categories-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15038,7 +15038,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 106,5,ELSA,grip,categories,aehplus,male,grip,animals,2 4 6,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000106-b1-elsa-grip-categories-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000106-b1-elsa-grip-categories-male-aehplus.inp,./data/unshared/mplus/elsa/0000106-b1-elsa-grip-categories-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15137,7 +15137,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 107,5,ELSA,grip,categories,full,female,grip,animals,2 4 6,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000107-b1-elsa-grip-categories-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000107-b1-elsa-grip-categories-female-full.inp,./data/unshared/mplus/elsa/0000107-b1-elsa-grip-categories-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15236,7 +15236,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 108,5,ELSA,grip,categories,full,male,grip,animals,2 4 6,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000108-b1-elsa-grip-categories-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000108-b1-elsa-grip-categories-male-full.inp,./data/unshared/mplus/elsa/0000108-b1-elsa-grip-categories-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15335,7 +15335,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 109,5,ELSA,grip,fas,zero,female,grip,,2 4 6,,,-not used-,-not used-,,0000109-b1-elsa-grip-fas-female-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000109-b1-elsa-grip-fas-female-zero.inp,./data/unshared/mplus/elsa/0000109-b1-elsa-grip-fas-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15422,7 +15422,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 110,5,ELSA,grip,fas,zero,male,grip,,2 4 6,,,-not used-,-not used-,,0000110-b1-elsa-grip-fas-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000110-b1-elsa-grip-fas-male-zero.inp,./data/unshared/mplus/elsa/0000110-b1-elsa-grip-fas-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15509,7 +15509,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 111,5,ELSA,grip,fas,a,female,grip,,2 4 6,,,-not used-,-not used-,age_bl,0000111-b1-elsa-grip-fas-female-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000111-b1-elsa-grip-fas-female-a.inp,./data/unshared/mplus/elsa/0000111-b1-elsa-grip-fas-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15596,7 +15596,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 112,5,ELSA,grip,fas,a,male,grip,,2 4 6,,,-not used-,-not used-,age_bl,0000112-b1-elsa-grip-fas-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000112-b1-elsa-grip-fas-male-a.inp,./data/unshared/mplus/elsa/0000112-b1-elsa-grip-fas-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15683,7 +15683,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 113,5,ELSA,grip,fas,ae,female,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl,0000113-b1-elsa-grip-fas-female-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000113-b1-elsa-grip-fas-female-ae.inp,./data/unshared/mplus/elsa/0000113-b1-elsa-grip-fas-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15770,7 +15770,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 114,5,ELSA,grip,fas,ae,male,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl,0000114-b1-elsa-grip-fas-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000114-b1-elsa-grip-fas-male-ae.inp,./data/unshared/mplus/elsa/0000114-b1-elsa-grip-fas-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15857,7 +15857,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 115,5,ELSA,grip,fas,aeh,female,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000115-b1-elsa-grip-fas-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000115-b1-elsa-grip-fas-female-aeh.inp,./data/unshared/mplus/elsa/0000115-b1-elsa-grip-fas-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -15944,7 +15944,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 116,5,ELSA,grip,fas,aeh,male,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000116-b1-elsa-grip-fas-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000116-b1-elsa-grip-fas-male-aeh.inp,./data/unshared/mplus/elsa/0000116-b1-elsa-grip-fas-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16031,7 +16031,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 117,5,ELSA,grip,fas,aehplus,female,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000117-b1-elsa-grip-fas-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000117-b1-elsa-grip-fas-female-aehplus.inp,./data/unshared/mplus/elsa/0000117-b1-elsa-grip-fas-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16118,7 +16118,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 118,5,ELSA,grip,fas,aehplus,male,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000118-b1-elsa-grip-fas-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000118-b1-elsa-grip-fas-male-aehplus.inp,./data/unshared/mplus/elsa/0000118-b1-elsa-grip-fas-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16205,7 +16205,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 119,5,ELSA,grip,fas,full,female,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000119-b1-elsa-grip-fas-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000119-b1-elsa-grip-fas-female-full.inp,./data/unshared/mplus/elsa/0000119-b1-elsa-grip-fas-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16292,7 +16292,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 120,5,ELSA,grip,fas,full,male,grip,,2 4 6,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000120-b1-elsa-grip-fas-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000120-b1-elsa-grip-fas-male-full.inp,./data/unshared/mplus/elsa/0000120-b1-elsa-grip-fas-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16379,7 +16379,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 121,5,ELSA,grip,word_list_delay,zero,female,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,,0000121-b1-elsa-grip-word_list_delay-female-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000121-b1-elsa-grip-word_list_delay-female-zero.inp,./data/unshared/mplus/elsa/0000121-b1-elsa-grip-word_list_delay-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16490,7 +16490,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 122,5,ELSA,grip,word_list_delay,zero,male,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,,0000122-b1-elsa-grip-word_list_delay-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000122-b1-elsa-grip-word_list_delay-male-zero.inp,./data/unshared/mplus/elsa/0000122-b1-elsa-grip-word_list_delay-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16601,7 +16601,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 123,5,ELSA,grip,word_list_delay,a,female,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl,0000123-b1-elsa-grip-word_list_delay-female-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000123-b1-elsa-grip-word_list_delay-female-a.inp,./data/unshared/mplus/elsa/0000123-b1-elsa-grip-word_list_delay-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16712,7 +16712,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 124,5,ELSA,grip,word_list_delay,a,male,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl,0000124-b1-elsa-grip-word_list_delay-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000124-b1-elsa-grip-word_list_delay-male-a.inp,./data/unshared/mplus/elsa/0000124-b1-elsa-grip-word_list_delay-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16823,7 +16823,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 125,5,ELSA,grip,word_list_delay,ae,female,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl,0000125-b1-elsa-grip-word_list_delay-female-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000125-b1-elsa-grip-word_list_delay-female-ae.inp,./data/unshared/mplus/elsa/0000125-b1-elsa-grip-word_list_delay-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -16934,7 +16934,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 126,5,ELSA,grip,word_list_delay,ae,male,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl,0000126-b1-elsa-grip-word_list_delay-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000126-b1-elsa-grip-word_list_delay-male-ae.inp,./data/unshared/mplus/elsa/0000126-b1-elsa-grip-word_list_delay-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17045,7 +17045,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 127,5,ELSA,grip,word_list_delay,aeh,female,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000127-b1-elsa-grip-word_list_delay-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000127-b1-elsa-grip-word_list_delay-female-aeh.inp,./data/unshared/mplus/elsa/0000127-b1-elsa-grip-word_list_delay-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17156,7 +17156,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 128,5,ELSA,grip,word_list_delay,aeh,male,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000128-b1-elsa-grip-word_list_delay-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000128-b1-elsa-grip-word_list_delay-male-aeh.inp,./data/unshared/mplus/elsa/0000128-b1-elsa-grip-word_list_delay-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17267,7 +17267,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 129,5,ELSA,grip,word_list_delay,aehplus,female,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000129-b1-elsa-grip-word_list_delay-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000129-b1-elsa-grip-word_list_delay-female-aehplus.inp,./data/unshared/mplus/elsa/0000129-b1-elsa-grip-word_list_delay-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17378,7 +17378,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 130,5,ELSA,grip,word_list_delay,aehplus,male,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000130-b1-elsa-grip-word_list_delay-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000130-b1-elsa-grip-word_list_delay-male-aehplus.inp,./data/unshared/mplus/elsa/0000130-b1-elsa-grip-word_list_delay-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17489,7 +17489,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 131,5,ELSA,grip,word_list_delay,full,female,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000131-b1-elsa-grip-word_list_delay-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000131-b1-elsa-grip-word_list_delay-female-full.inp,./data/unshared/mplus/elsa/0000131-b1-elsa-grip-word_list_delay-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17600,7 +17600,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 132,5,ELSA,grip,word_list_delay,full,male,grip,word_recall_de,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000132-b1-elsa-grip-word_list_delay-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000132-b1-elsa-grip-word_list_delay-male-full.inp,./data/unshared/mplus/elsa/0000132-b1-elsa-grip-word_list_delay-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17711,7 +17711,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 133,5,ELSA,grip,word_list_im,zero,female,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,,0000133-b1-elsa-grip-word_list_im-female-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000133-b1-elsa-grip-word_list_im-female-zero.inp,./data/unshared/mplus/elsa/0000133-b1-elsa-grip-word_list_im-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17822,7 +17822,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 134,5,ELSA,grip,word_list_im,zero,male,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,,0000134-b1-elsa-grip-word_list_im-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000134-b1-elsa-grip-word_list_im-male-zero.inp,./data/unshared/mplus/elsa/0000134-b1-elsa-grip-word_list_im-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -17933,7 +17933,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 135,5,ELSA,grip,word_list_im,a,female,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl,0000135-b1-elsa-grip-word_list_im-female-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000135-b1-elsa-grip-word_list_im-female-a.inp,./data/unshared/mplus/elsa/0000135-b1-elsa-grip-word_list_im-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18044,7 +18044,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 136,5,ELSA,grip,word_list_im,a,male,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl,0000136-b1-elsa-grip-word_list_im-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000136-b1-elsa-grip-word_list_im-male-a.inp,./data/unshared/mplus/elsa/0000136-b1-elsa-grip-word_list_im-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18155,7 +18155,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 137,5,ELSA,grip,word_list_im,ae,female,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl,0000137-b1-elsa-grip-word_list_im-female-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000137-b1-elsa-grip-word_list_im-female-ae.inp,./data/unshared/mplus/elsa/0000137-b1-elsa-grip-word_list_im-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18266,7 +18266,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 138,5,ELSA,grip,word_list_im,ae,male,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl,0000138-b1-elsa-grip-word_list_im-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000138-b1-elsa-grip-word_list_im-male-ae.inp,./data/unshared/mplus/elsa/0000138-b1-elsa-grip-word_list_im-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18377,7 +18377,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 139,5,ELSA,grip,word_list_im,aeh,female,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000139-b1-elsa-grip-word_list_im-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000139-b1-elsa-grip-word_list_im-female-aeh.inp,./data/unshared/mplus/elsa/0000139-b1-elsa-grip-word_list_im-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18488,7 +18488,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 140,5,ELSA,grip,word_list_im,aeh,male,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000140-b1-elsa-grip-word_list_im-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000140-b1-elsa-grip-word_list_im-male-aeh.inp,./data/unshared/mplus/elsa/0000140-b1-elsa-grip-word_list_im-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18599,7 +18599,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 141,5,ELSA,grip,word_list_im,aehplus,female,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000141-b1-elsa-grip-word_list_im-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000141-b1-elsa-grip-word_list_im-female-aehplus.inp,./data/unshared/mplus/elsa/0000141-b1-elsa-grip-word_list_im-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18710,7 +18710,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 142,5,ELSA,grip,word_list_im,aehplus,male,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000142-b1-elsa-grip-word_list_im-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000142-b1-elsa-grip-word_list_im-male-aehplus.inp,./data/unshared/mplus/elsa/0000142-b1-elsa-grip-word_list_im-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18821,7 +18821,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 143,5,ELSA,grip,word_list_im,full,female,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000143-b1-elsa-grip-word_list_im-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000143-b1-elsa-grip-word_list_im-female-full.inp,./data/unshared/mplus/elsa/0000143-b1-elsa-grip-word_list_im-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -18932,7 +18932,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 144,5,ELSA,grip,word_list_im,full,male,grip,word_recall_im,2 4 6,1 2 3 4 5 6,2 4 6,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000144-b1-elsa-grip-word_list_im-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000144-b1-elsa-grip-word_list_im-male-full.inp,./data/unshared/mplus/elsa/0000144-b1-elsa-grip-word_list_im-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19043,7 +19043,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 145,5,ELSA,pef,categories,zero,female,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,,0000145-b1-elsa-pef-categories-female-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000145-b1-elsa-pef-categories-female-zero.inp,./data/unshared/mplus/elsa/0000145-b1-elsa-pef-categories-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19142,7 +19142,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 146,5,ELSA,pef,categories,zero,male,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,,0000146-b1-elsa-pef-categories-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000146-b1-elsa-pef-categories-male-zero.inp,./data/unshared/mplus/elsa/0000146-b1-elsa-pef-categories-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19241,7 +19241,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 147,5,ELSA,pef,categories,a,female,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl,0000147-b1-elsa-pef-categories-female-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000147-b1-elsa-pef-categories-female-a.inp,./data/unshared/mplus/elsa/0000147-b1-elsa-pef-categories-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19340,7 +19340,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 148,5,ELSA,pef,categories,a,male,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl,0000148-b1-elsa-pef-categories-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000148-b1-elsa-pef-categories-male-a.inp,./data/unshared/mplus/elsa/0000148-b1-elsa-pef-categories-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19439,7 +19439,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 149,5,ELSA,pef,categories,ae,female,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl,0000149-b1-elsa-pef-categories-female-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000149-b1-elsa-pef-categories-female-ae.inp,./data/unshared/mplus/elsa/0000149-b1-elsa-pef-categories-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19538,7 +19538,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 150,5,ELSA,pef,categories,ae,male,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl,0000150-b1-elsa-pef-categories-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000150-b1-elsa-pef-categories-male-ae.inp,./data/unshared/mplus/elsa/0000150-b1-elsa-pef-categories-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19637,7 +19637,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 151,5,ELSA,pef,categories,aeh,female,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000151-b1-elsa-pef-categories-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000151-b1-elsa-pef-categories-female-aeh.inp,./data/unshared/mplus/elsa/0000151-b1-elsa-pef-categories-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19736,7 +19736,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 152,5,ELSA,pef,categories,aeh,male,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000152-b1-elsa-pef-categories-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000152-b1-elsa-pef-categories-male-aeh.inp,./data/unshared/mplus/elsa/0000152-b1-elsa-pef-categories-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19835,7 +19835,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 153,5,ELSA,pef,categories,aehplus,female,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000153-b1-elsa-pef-categories-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000153-b1-elsa-pef-categories-female-aehplus.inp,./data/unshared/mplus/elsa/0000153-b1-elsa-pef-categories-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -19934,7 +19934,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 154,5,ELSA,pef,categories,aehplus,male,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000154-b1-elsa-pef-categories-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000154-b1-elsa-pef-categories-male-aehplus.inp,./data/unshared/mplus/elsa/0000154-b1-elsa-pef-categories-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20033,7 +20033,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 155,5,ELSA,pef,categories,full,female,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000155-b1-elsa-pef-categories-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000155-b1-elsa-pef-categories-female-full.inp,./data/unshared/mplus/elsa/0000155-b1-elsa-pef-categories-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20132,7 +20132,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 156,5,ELSA,pef,categories,full,male,pef,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000156-b1-elsa-pef-categories-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000156-b1-elsa-pef-categories-male-full.inp,./data/unshared/mplus/elsa/0000156-b1-elsa-pef-categories-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20231,7 +20231,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 157,5,ELSA,pef,fas,zero,female,pef,,2 4,,,-not used-,-not used-,,0000157-b1-elsa-pef-fas-female-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000157-b1-elsa-pef-fas-female-zero.inp,./data/unshared/mplus/elsa/0000157-b1-elsa-pef-fas-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20318,7 +20318,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 158,5,ELSA,pef,fas,zero,male,pef,,2 4,,,-not used-,-not used-,,0000158-b1-elsa-pef-fas-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000158-b1-elsa-pef-fas-male-zero.inp,./data/unshared/mplus/elsa/0000158-b1-elsa-pef-fas-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20405,7 +20405,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 159,5,ELSA,pef,fas,a,female,pef,,2 4,,,-not used-,-not used-,age_bl,0000159-b1-elsa-pef-fas-female-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000159-b1-elsa-pef-fas-female-a.inp,./data/unshared/mplus/elsa/0000159-b1-elsa-pef-fas-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20492,7 +20492,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 160,5,ELSA,pef,fas,a,male,pef,,2 4,,,-not used-,-not used-,age_bl,0000160-b1-elsa-pef-fas-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000160-b1-elsa-pef-fas-male-a.inp,./data/unshared/mplus/elsa/0000160-b1-elsa-pef-fas-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20579,7 +20579,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 161,5,ELSA,pef,fas,ae,female,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl,0000161-b1-elsa-pef-fas-female-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000161-b1-elsa-pef-fas-female-ae.inp,./data/unshared/mplus/elsa/0000161-b1-elsa-pef-fas-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20666,7 +20666,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 162,5,ELSA,pef,fas,ae,male,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl,0000162-b1-elsa-pef-fas-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000162-b1-elsa-pef-fas-male-ae.inp,./data/unshared/mplus/elsa/0000162-b1-elsa-pef-fas-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20753,7 +20753,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 163,5,ELSA,pef,fas,aeh,female,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000163-b1-elsa-pef-fas-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000163-b1-elsa-pef-fas-female-aeh.inp,./data/unshared/mplus/elsa/0000163-b1-elsa-pef-fas-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20840,7 +20840,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 164,5,ELSA,pef,fas,aeh,male,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000164-b1-elsa-pef-fas-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000164-b1-elsa-pef-fas-male-aeh.inp,./data/unshared/mplus/elsa/0000164-b1-elsa-pef-fas-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -20927,7 +20927,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 165,5,ELSA,pef,fas,aehplus,female,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000165-b1-elsa-pef-fas-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000165-b1-elsa-pef-fas-female-aehplus.inp,./data/unshared/mplus/elsa/0000165-b1-elsa-pef-fas-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21014,7 +21014,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 166,5,ELSA,pef,fas,aehplus,male,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000166-b1-elsa-pef-fas-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000166-b1-elsa-pef-fas-male-aehplus.inp,./data/unshared/mplus/elsa/0000166-b1-elsa-pef-fas-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21101,7 +21101,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 167,5,ELSA,pef,fas,full,female,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000167-b1-elsa-pef-fas-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000167-b1-elsa-pef-fas-female-full.inp,./data/unshared/mplus/elsa/0000167-b1-elsa-pef-fas-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21188,7 +21188,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 168,5,ELSA,pef,fas,full,male,pef,,2 4,,,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000168-b1-elsa-pef-fas-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000168-b1-elsa-pef-fas-male-full.inp,./data/unshared/mplus/elsa/0000168-b1-elsa-pef-fas-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21275,7 +21275,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 169,5,ELSA,pef,word_list_delay,zero,female,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,,0000169-b1-elsa-pef-word_list_delay-female-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000169-b1-elsa-pef-word_list_delay-female-zero.inp,./data/unshared/mplus/elsa/0000169-b1-elsa-pef-word_list_delay-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21374,7 +21374,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 170,5,ELSA,pef,word_list_delay,zero,male,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,,0000170-b1-elsa-pef-word_list_delay-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000170-b1-elsa-pef-word_list_delay-male-zero.inp,./data/unshared/mplus/elsa/0000170-b1-elsa-pef-word_list_delay-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21473,7 +21473,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 171,5,ELSA,pef,word_list_delay,a,female,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl,0000171-b1-elsa-pef-word_list_delay-female-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000171-b1-elsa-pef-word_list_delay-female-a.inp,./data/unshared/mplus/elsa/0000171-b1-elsa-pef-word_list_delay-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21572,7 +21572,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 172,5,ELSA,pef,word_list_delay,a,male,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl,0000172-b1-elsa-pef-word_list_delay-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000172-b1-elsa-pef-word_list_delay-male-a.inp,./data/unshared/mplus/elsa/0000172-b1-elsa-pef-word_list_delay-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21671,7 +21671,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 173,5,ELSA,pef,word_list_delay,ae,female,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl,0000173-b1-elsa-pef-word_list_delay-female-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000173-b1-elsa-pef-word_list_delay-female-ae.inp,./data/unshared/mplus/elsa/0000173-b1-elsa-pef-word_list_delay-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21770,7 +21770,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 174,5,ELSA,pef,word_list_delay,ae,male,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl,0000174-b1-elsa-pef-word_list_delay-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000174-b1-elsa-pef-word_list_delay-male-ae.inp,./data/unshared/mplus/elsa/0000174-b1-elsa-pef-word_list_delay-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21869,7 +21869,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 175,5,ELSA,pef,word_list_delay,aeh,female,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000175-b1-elsa-pef-word_list_delay-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000175-b1-elsa-pef-word_list_delay-female-aeh.inp,./data/unshared/mplus/elsa/0000175-b1-elsa-pef-word_list_delay-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -21968,7 +21968,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 176,5,ELSA,pef,word_list_delay,aeh,male,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000176-b1-elsa-pef-word_list_delay-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000176-b1-elsa-pef-word_list_delay-male-aeh.inp,./data/unshared/mplus/elsa/0000176-b1-elsa-pef-word_list_delay-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22067,7 +22067,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 177,5,ELSA,pef,word_list_delay,aehplus,female,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000177-b1-elsa-pef-word_list_delay-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000177-b1-elsa-pef-word_list_delay-female-aehplus.inp,./data/unshared/mplus/elsa/0000177-b1-elsa-pef-word_list_delay-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22166,7 +22166,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 178,5,ELSA,pef,word_list_delay,aehplus,male,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000178-b1-elsa-pef-word_list_delay-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000178-b1-elsa-pef-word_list_delay-male-aehplus.inp,./data/unshared/mplus/elsa/0000178-b1-elsa-pef-word_list_delay-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22265,7 +22265,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 179,5,ELSA,pef,word_list_delay,full,female,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000179-b1-elsa-pef-word_list_delay-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000179-b1-elsa-pef-word_list_delay-female-full.inp,./data/unshared/mplus/elsa/0000179-b1-elsa-pef-word_list_delay-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22364,7 +22364,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 180,5,ELSA,pef,word_list_delay,full,male,pef,word_recall_de,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000180-b1-elsa-pef-word_list_delay-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000180-b1-elsa-pef-word_list_delay-male-full.inp,./data/unshared/mplus/elsa/0000180-b1-elsa-pef-word_list_delay-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22463,7 +22463,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 181,5,ELSA,pef,word_list_im,zero,female,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,,0000181-b1-elsa-pef-word_list_im-female-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000181-b1-elsa-pef-word_list_im-female-zero.inp,./data/unshared/mplus/elsa/0000181-b1-elsa-pef-word_list_im-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22562,7 +22562,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 182,5,ELSA,pef,word_list_im,zero,male,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,,0000182-b1-elsa-pef-word_list_im-male-zero,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000182-b1-elsa-pef-word_list_im-male-zero.inp,./data/unshared/mplus/elsa/0000182-b1-elsa-pef-word_list_im-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22661,7 +22661,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 183,5,ELSA,pef,word_list_im,a,female,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl,0000183-b1-elsa-pef-word_list_im-female-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000183-b1-elsa-pef-word_list_im-female-a.inp,./data/unshared/mplus/elsa/0000183-b1-elsa-pef-word_list_im-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22760,7 +22760,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 184,5,ELSA,pef,word_list_im,a,male,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl,0000184-b1-elsa-pef-word_list_im-male-a,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000184-b1-elsa-pef-word_list_im-male-a.inp,./data/unshared/mplus/elsa/0000184-b1-elsa-pef-word_list_im-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22859,7 +22859,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 185,5,ELSA,pef,word_list_im,ae,female,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl,0000185-b1-elsa-pef-word_list_im-female-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000185-b1-elsa-pef-word_list_im-female-ae.inp,./data/unshared/mplus/elsa/0000185-b1-elsa-pef-word_list_im-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -22958,7 +22958,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 186,5,ELSA,pef,word_list_im,ae,male,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl,0000186-b1-elsa-pef-word_list_im-male-ae,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000186-b1-elsa-pef-word_list_im-male-ae.inp,./data/unshared/mplus/elsa/0000186-b1-elsa-pef-word_list_im-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23057,7 +23057,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 187,5,ELSA,pef,word_list_im,aeh,female,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000187-b1-elsa-pef-word_list_im-female-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000187-b1-elsa-pef-word_list_im-female-aeh.inp,./data/unshared/mplus/elsa/0000187-b1-elsa-pef-word_list_im-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23156,7 +23156,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 188,5,ELSA,pef,word_list_im,aeh,male,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000188-b1-elsa-pef-word_list_im-male-aeh,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000188-b1-elsa-pef-word_list_im-male-aeh.inp,./data/unshared/mplus/elsa/0000188-b1-elsa-pef-word_list_im-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23255,7 +23255,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 189,5,ELSA,pef,word_list_im,aehplus,female,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000189-b1-elsa-pef-word_list_im-female-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000189-b1-elsa-pef-word_list_im-female-aehplus.inp,./data/unshared/mplus/elsa/0000189-b1-elsa-pef-word_list_im-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23354,7 +23354,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 190,5,ELSA,pef,word_list_im,aehplus,male,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000190-b1-elsa-pef-word_list_im-male-aehplus,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000190-b1-elsa-pef-word_list_im-male-aehplus.inp,./data/unshared/mplus/elsa/0000190-b1-elsa-pef-word_list_im-male-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23453,7 +23453,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 191,5,ELSA,pef,word_list_im,full,female,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000191-b1-elsa-pef-word_list_im-female-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000191-b1-elsa-pef-word_list_im-female-full.inp,./data/unshared/mplus/elsa/0000191-b1-elsa-pef-word_list_im-female-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23552,7 +23552,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 192,5,ELSA,pef,word_list_im,full,male,pef,word_recall_im,2 4,1 2 3 4 5 6,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl vertical_leap limbo_height,0000192-b1-elsa-pef-word_list_im-male-full,./data/unshared/mplus/elsa/wide.dat,./data/unshared/mplus/elsa/0000192-b1-elsa-pef-word_list_im-male-full.inp,./data/unshared/mplus/elsa/0000192-b1-elsa-pef-word_list_im-male-full.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23651,7 +23651,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 193,25,LASA,fev,categories,zero,female,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,,0000193-b1-lasa-fev-categories-female-zero,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000193-b1-lasa-fev-categories-female-zero.inp,./data/unshared/mplus/lasa/0000193-b1-lasa-fev-categories-female-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23753,7 +23753,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 194,25,LASA,fev,categories,zero,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,,0000194-b1-lasa-fev-categories-male-zero,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000194-b1-lasa-fev-categories-male-zero.inp,./data/unshared/mplus/lasa/0000194-b1-lasa-fev-categories-male-zero.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23855,7 +23855,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 195,25,LASA,fev,categories,a,female,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl,0000195-b1-lasa-fev-categories-female-a,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000195-b1-lasa-fev-categories-female-a.inp,./data/unshared/mplus/lasa/0000195-b1-lasa-fev-categories-female-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -23957,7 +23957,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 196,25,LASA,fev,categories,a,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl,0000196-b1-lasa-fev-categories-male-a,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000196-b1-lasa-fev-categories-male-a.inp,./data/unshared/mplus/lasa/0000196-b1-lasa-fev-categories-male-a.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -24059,7 +24059,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 197,25,LASA,fev,categories,ae,female,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl,0000197-b1-lasa-fev-categories-female-ae,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000197-b1-lasa-fev-categories-female-ae.inp,./data/unshared/mplus/lasa/0000197-b1-lasa-fev-categories-female-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -24161,7 +24161,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 198,25,LASA,fev,categories,ae,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl,0000198-b1-lasa-fev-categories-male-ae,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000198-b1-lasa-fev-categories-male-ae.inp,./data/unshared/mplus/lasa/0000198-b1-lasa-fev-categories-male-ae.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -24263,7 +24263,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 199,25,LASA,fev,categories,aeh,female,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000199-b1-lasa-fev-categories-female-aeh,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000199-b1-lasa-fev-categories-female-aeh.inp,./data/unshared/mplus/lasa/0000199-b1-lasa-fev-categories-female-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -24365,7 +24365,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 200,25,LASA,fev,categories,aeh,male,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl,0000200-b1-lasa-fev-categories-male-aeh,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000200-b1-lasa-fev-categories-male-aeh.inp,./data/unshared/mplus/lasa/0000200-b1-lasa-fev-categories-male-aeh.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
@@ -24467,7 +24467,7 @@ r_iaib = c_iaib/((v_ia**0.5)*(v_ib**0.5));
 r_sasb = c_sasb/((v_sa**0.5)*(v_sb**0.5));
 r_res_ab = res_cov/((res_a**0.5)*(res_b**0.5));
 OUTPUT: sampstat cinterval;
-PLOT: Type is Plot1 Plot2 Plot3;",0,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
+PLOT: Type is Plot1 Plot2 Plot3;",0,,,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0
 201,25,LASA,fev,categories,aehplus,female,fev,animals,2 4,1 2 3 4 5,2 4,-not used-,-not used-,age_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl,0000201-b1-lasa-fev-categories-female-aehplus,./data/unshared/mplus/lasa/wide.dat,./data/unshared/mplus/lasa/0000201-b1-lasa-fev-categories-female-aehplus.inp,./data/unshared/mplus/lasa/0000201-b1-lasa-fev-categories-female-aehplus.out,dementia_ever NE 1,id year_bl age_bl year_born male_bl edu_bl height_cm_bl diabetes_bl cardio_bl smoke_bl age_t1 age_t2 age_t3 age_t4 age_t5 age_t6 animals_t1 animals_t2 animals_t3 animals_t4 animals_t5 animals_t6 fev_t1 fev_t2 fev_t3 fev_t4 fev_t5 fev_t6 fvc_t1 fvc_t2 fvc_t3 fvc_t4 fvc_t5 fvc_t6 gait_t1 gait_t2 gait_t3 gait_t4 gait_t5 gait_t6 grip_t1 grip_t2 grip_t3 grip_t4 grip_t5 grip_t6 pef_t1 pef_t2 pef_t3 pef_t4 pef_t5 pef_t6 word_recall_de_t1 word_recall_de_t2 word_recall_de_t3 word_recall_de_t4 word_recall_de_t5 word_recall_de_t6 word_recall_im_t1 word_recall_im_t2 word_recall_im_t3 word_recall_im_t4 word_recall_im_t5 word_recall_im_t6 year_t1 year_t2 year_t3 year_t4 year_t5 year_t6 years_since_bl_t1 years_since_bl_t2 years_since_bl_t3 years_since_bl_t4 years_since_bl_t5 years_since_bl_t6,0,"TITLE:
 Script produced from the prototype in ./sandbox/syntax-creator/
 DATA:
