@@ -106,7 +106,7 @@ ds_pcs <- ds_pcs %>%
     , "cog_waves_figure_logic"                               = "`cog_waves_figure_logic`"
     , "cog_name_figure_memory"                               = "`cog_name_figure_memory`"
     , "cog_waves_figure_memory"                              = "`cog_waves_figure_memory`"
-    , "cog_fluency"                                          = "`cog_fluency`"
+    , "cog_name_cog_fluency"                                 = "`cog_name_fluency`"
     , "cog_waves_fluency"                                    = "`cog_waves_fluency`"
     , "cog_name_information"                                 = "`cog_name_information`"
     , "cog_waves_information"                                = "`cog_waves_information`"
@@ -166,6 +166,7 @@ ds_pcs <- ds_pcs %>%
     , "name_variable_cvd_history_baseline"                   = "`name_variable_cvd_history_baseline`"
     , "name_variable_diabetes_baseline"                      = "`name_variable_diabetes_baseline`"
     , "name_variable_alcohol_use_baseline"                   = "`name_variable_alcohol_use_baseline`"
+    , "covariates_beyond_plus"                               = "`covariates_beyond_plus`"
     , "mplus_filter_1"                                       = "`mplus_filter_1`"
     # , "preconference_survey_complete"                        = "`preconference_survey_complete`"
   ) %>%
@@ -181,7 +182,7 @@ ds_pcs <- ds_pcs %>%
 
 # ---- expand-to-catalog ------------------------------------------------------
 
-colnames(ds_pcs)
+# colnames(ds_pcs)
 
 # dput(grep("^physical_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
 # dput(grep("^cog_name_\\w+$", colnames(ds_pcs), perl=T, value=T))
@@ -263,8 +264,15 @@ ds_crossed3 <- ds_crossed2 %>%
   dplyr::mutate(
     process_a_stem    = ifelse(process_a_stem=="NA", NA, process_a_stem),
     process_b_stem    = ifelse(process_b_stem=="NA", NA, process_b_stem),
-    process_a         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_a, perl=T) ,
-    process_b         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_b, perl=T)
+    process_a         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_a, perl=T),
+    process_b         = gsub("^(physical|cog)_name_(\\w+)$", "\\2", process_b, perl=T),
+    covariate_set = paste(
+      ifelse(grepl("^(full|a)"      , model_type), name_variable_baseline_age            , ""),
+      ifelse(grepl("^(full|ae)"     , model_type), name_variable_education_baseline      , ""),
+      ifelse(grepl("^(full|aeh)"    , model_type), name_variable_height_baseline         , ""),
+      ifelse(grepl("^(full|aehplus)", model_type), paste(name_variable_diabetes_baseline, name_variable_cvd_history_baseline, name_variable_smoking_history_baseline), "")
+    ),
+    covariate_set = ifelse(grepl("^full$", model_type), paste(covariate_set, covariates_beyond_plus), covariate_set)
   ) %>%
   dplyr::select(
     survey_id,
@@ -278,6 +286,7 @@ ds_crossed3 <- ds_crossed2 %>%
     process_a_waves,
     process_b_waves,
     waves_intersect,
+    covariate_set,
     mplus_filter_1
   ) %>%
   dplyr::filter(!is.na(process_a_stem) & !is.na(process_b_stem))
@@ -341,6 +350,7 @@ columns_to_write <-c(
   "model_type", "subgroup",
   "process_a_waves", "process_b_waves", "waves_intersect",
   "process_a_stem", "process_b_stem", "process_a_names", "process_b_names",
+  "covariate_set",
   "model_tag", "path_data", "path_inp", "path_out",
   "mplus_filter_1"
 )
@@ -363,6 +373,6 @@ result_write <- REDCapR::redcap_write(
   ds_to_write                = ds_slim,
   redcap_uri                 = credential_catalog$redcap_uri,
   token                      = credential_catalog$token,
-  batch_size                 = 500 # Descrease if it helps debugging write errors
+  batch_size                 = 500 # Decrease if it helps debugging write errors
 )
 # result_write
