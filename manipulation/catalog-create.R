@@ -23,7 +23,7 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 # requireNamespace("car") #For it's `recode()` function.
 
 # ---- declare-globals ---------------------------------------------------------
-path_credential_pcs     <- "./data/unshared/security/user.credentials"
+path_credential     <- "./data/unshared/security/user.credentials"
 # figure_path <- 'manipulation/stitched-output/te/'
 
 survey_ids_to_retain <- c(5L)
@@ -37,14 +37,14 @@ investigation_levels  <- seq_along(investigation_labels)
 # ---- load-data ---------------------------------------------------------------
 
 # Read the credentials
-credential_pcs     <- REDCapR::retrieve_credential_local(path_credential_pcs, project_id=262) #For the pre-conference survey
-credential_catalog <- REDCapR::retrieve_credential_local(path_credential_pcs, project_id=447) #For the catalog
+credential_pcs     <- REDCapR::retrieve_credential_local(path_credential, project_id=262) #For the pre-conference survey
+credential_catalog <- REDCapR::retrieve_credential_local(path_credential, project_id=447) #For the catalog
 
 # Retrieve from the PCS (pre-conference survey)
 ds_pcs <- REDCapR::redcap_read(redcap_uri=credential_pcs$redcap_uri, token=credential_pcs$token)$data
 
 
-rm(path_credential_pcs, credential_pcs)
+rm(path_credential, credential_pcs)
 
 # ---- tweak-data --------------------------------------------------------------
 # OuhscMunge::column_rename_headstart(ds_pcs) #Spit out columns to help write call ato `dplyr::rename()`.

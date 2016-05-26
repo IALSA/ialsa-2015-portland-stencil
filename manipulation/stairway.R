@@ -20,13 +20,13 @@ requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflic
 requireNamespace("testit") #For asserting conditions meet expected patterns.
 
 # ---- declare-globals ---------------------------------------------------------
-path_credential_catalog <- "./data/unshared/security/phi-free.credentials"
+path_credential <- "./data/unshared/security/phi-free.credentials"
 desired_columns <- c("record_id", "model_tag", "path_out", "mplus_output", "ascension_datetime")
 
 # ---- load-data ---------------------------------------------------------------
 
 # Read the credentials
-credential_catalog <- REDCapR::retrieve_credential_local(path_credential_catalog, project_id=447) #For the catalog
+credential_catalog <- REDCapR::retrieve_credential_local(path_credential, project_id=447) #For the catalog
 
 # Retrieve from the catalog.
 ds_catalog <- REDCapR::redcap_read(
@@ -35,7 +35,7 @@ ds_catalog <- REDCapR::redcap_read(
   fields      = desired_columns
 )$data
 
-rm(path_credential_catalog, desired_columns)
+rm(path_credential, desired_columns)
 
 # ---- tweak-data --------------------------------------------------------------
 # OuhscMunge::column_rename_headstart(ds_pcs) #Spit out columns to help write call ato `dplyr::rename()`.
