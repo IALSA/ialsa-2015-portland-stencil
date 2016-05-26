@@ -73,8 +73,8 @@ for( i in seq_len(nrow(ds_catalog)) ) { #i <- 1
     , process_b_mplus             = ds$process_b_stem[i]                    # item name of process (B)
     , subgroup_sex               = ds$subgroup[i]                          # subset data to members of this group
     , subset_condition_1         = ds$mplus_filter_1[i]                    # subset data to member of this group
-    , covariate_set              = c("age_c70","htm_c160", "edu_c7")       # list of covariates ("_c" stands for "centercd)
-    , wave_set_modeled           = c(1, 4, 5)                              # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
+    , covariate_set              = ds$covariate_set[i]       # list of covariates ("_c" stands for "centercd)
+    , wave_set_modeled           = ds$waves_intersect[i]                             # Integer vector of waves considered by the model, ie c(1,2,3,5,8).
   ) # execute to generate script
 
   syntaxes[i] <- syntax
