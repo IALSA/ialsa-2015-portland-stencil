@@ -43,7 +43,7 @@ desired_fields <- c("record_id","path_inp", "mplus_syntax") #Get other stuff lik
 # Read the credentials
 credential_catalog <- REDCapR::retrieve_credential_local(path_credential_catalog, project_id=447) #For the catalog
 
-# Retrieve from the PCS (pre-conference survey)
+# Retrieve from the catalog.
 ds_catalog <- REDCapR::redcap_read(
   redcap_uri=credential_catalog$redcap_uri,
   token=credential_catalog$token,
