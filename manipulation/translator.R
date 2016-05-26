@@ -44,7 +44,7 @@ mplus_generator_bivariate <- function(
 
 
   # after modification .inp files will be saved as:
-  newFile <- paste0(saved_location,"/", subgroup_sex ,"_", wave_modeled_max,".inp")
+  # newFile <- paste0(saved_location,"/", subgroup_sex ,"_", wave_modeled_max,".inp")
 
 
   # TITLE:
@@ -78,12 +78,12 @@ mplus_generator_bivariate <- function(
 
   # Useobservations are # select a subset of observation
   if(subgroup_sex=="male"){
-    print_sex_value <- paste0("msex EQ 1")
+    print_sex_value <- paste0("male EQ 1")
   } else {
-    print_sex_value <- paste0("msex EQ 0")
+    print_sex_value <- paste0("male EQ 0")
   }
   # subset
-  proto_input <- gsub("msex EQ %subgroup_sex%", paste0("msex EQ ",print_sex_value), proto_input)
+  proto_input <- gsub("%subgroup_condition%", print_sex_value, proto_input)
   proto_input <- gsub("%subset_condition_1%", subset_condition_1, proto_input)
 
   # DEFINE:
