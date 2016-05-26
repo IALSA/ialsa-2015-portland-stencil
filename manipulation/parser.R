@@ -1,6 +1,6 @@
 # this script contains the definitions of the functions that extract the results of model estimation
 # folder = "./sandbox/syntax-creator/outputs/grip-numbercomp/"
-parse <- function( path_temp_out ){
+parse <- function( record_id, path_temp_out ){
 
   if( !file.exists(path_temp_out) ) stop("The temp output file does not exist: `", path_temp_out, "`.")
   # collect a vector with .out file paths
@@ -85,6 +85,7 @@ parse <- function( path_temp_out ){
   # selected_results is declared in group-variables.R script
   results <- data.frame(matrix(NA, ncol=length(selected_results), nrow=1L)) # length(mpar) = number of output files
   names(results) <-  selected_results
+  results$record_id  <- record_id
 
   # browser()
 
@@ -204,7 +205,7 @@ parse <- function( path_temp_out ){
     (test <- test[grep("^I|S", test$param),]) # param starting with I or S
     (test <- test[grep("^S", test$paramHeader),]) # paramHeader starting with S
     (test <- test[grep("^S", test$param),]) # pram starting with S
-    (test <- test[ ,fc("est", "se","est_se", "pval")])
+    (test <- test[ ,c("est", "se","est_se", "pval")])
     if(dim(test)[1]!=0) {results[1, ab_TAU_11] <- test}
 
     ## covariance btw intercept of process (A) and slope of process (A) - aa_TAU_01
