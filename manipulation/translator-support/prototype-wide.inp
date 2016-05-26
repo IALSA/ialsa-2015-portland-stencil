@@ -29,7 +29,7 @@ TSCORES are
 
 USEOBSERVATIONS are
 	!select a subset of observations
-msex EQ %subgroup_sex% 
+%subgroup_condition%
 and
 %subset_condition_1%
 ;
