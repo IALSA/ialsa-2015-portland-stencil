@@ -6,7 +6,7 @@ rm(list=ls(all=TRUE))  #Clear the variables from previous runs.
 
 # ---- load-sources ------------------------------------------------------------
 # Call `base::source()` on any repo file that defines functions needed below.  Ideally, no real operations are performed.
-source("./manipulation/translator/functions-to-generate-Mplus-scripts.R") #Loads `mplus_generator_bivariate()`
+source("./manipulation/translator.R") #Loads `mplus_generator_bivariate()`
 
 # ---- load-packages -----------------------------------------------------------
 # Attach these packages so their functions don't need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
@@ -25,7 +25,7 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 
 # ---- declare-globals ---------------------------------------------------------
 path_credential_pcs     <- "./data/unshared/security/phi-free.credentials"
-path_prototype          <- "./manipulation/translator/prototype-map-wide.inp"
+path_prototype          <- "./manipulation/translator-support/prototype-wide.inp"
 
 survey_ids_to_retain <- c(5L)
 

@@ -52,3 +52,6 @@ ialsa-2015-portland-stencil.Rproj
 !/data/*/*/README.md
 !/data/*/*/*/README.md
 !/data/*/*/*/*/README.md
+manipulation/translator-support/outputs/grip-numbercomp/long-dataset.dat
+*.dat
+*.gh5
