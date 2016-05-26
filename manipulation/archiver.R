@@ -1,3 +1,5 @@
+#Rename file to 'Prometheus'
+
 # knitr::stitch_rmd(script="./manipulation/te-ellis.R", output="./manipulation/stitched-output/te-ellis.md")
 # For a brief description of this file see the presentation at
 #   - slides: https://rawgit.com/wibeasley/RAnalysisSkeleton/master/documentation/time-and-effort-synthesis.html#/
@@ -25,6 +27,7 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 # ---- declare-globals ---------------------------------------------------------
 path_credential                 <- "./data/unshared/security/user.credentials"
 path_out_archive_directory      <- "./data/unshared/archive/"
+path_out_results                <- "./data/shared/model-results.csv"
 
 # ---- load-data ---------------------------------------------------------------
 
@@ -55,4 +58,5 @@ timestamp <- strftime(Sys.time(), format="%Y-%m%-%d--%H-%M-%S")
 
 readr::write_csv(ds_pcs    , path=paste0(path_out_archive_directory, "pcs-"    , timestamp, ".csv"))
 readr::write_csv(ds_catalog, path=paste0(path_out_archive_directory, "catalog-", timestamp, ".csv"))
-rm(timestamp, path_out_archive_directory)
+readr::write_csv(ds_catalog, path=path_out_results) #This is the live version
+rm(timestamp, path_out_archive_directory, path_out_results)
