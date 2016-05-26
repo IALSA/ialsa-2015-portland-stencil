@@ -63,7 +63,7 @@ ds <- ds_catalog %>%
 testit::assert("The syntax file should be found.", file.exists(path_prototype))
 
 syntaxes <- rep(NA_character_, nrow(ds_catalog))
-for( i in seq_len(nrow(ds_catalog)) ) { #i <- 1
+for( i in seq_len(nrow(ds_catalog)) ) { # i <- 1
   message("Creating syntax for ", ds_catalog$model_tag[i])
 
   syntax <- mplus_generator_bivariate(
@@ -105,7 +105,7 @@ rm(columns_to_write)
 # setdiff(colnames(ds_pull), colnames(ds_slim)) #Columns missing from local dataset ds_slim (that are in REDCap)
 # setdiff(colnames(ds_slim), colnames(ds_pull)) #Columns missing from REDCap (that are in ds_slim)
 
-ds$mplus_syntax[1] # check
+cat(ds$mplus_syntax[1]) # check
 
 result_write <- REDCapR::redcap_write(
   ds_to_write                = ds_slim,
