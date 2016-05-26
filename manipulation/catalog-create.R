@@ -26,11 +26,11 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 path_credential     <- "./data/unshared/security/user.credentials"
 # figure_path <- 'manipulation/stitched-output/te/'
 
-survey_ids_to_retain <- c(5L)
+survey_ids_to_retain <- c(5L, 25L:27L)
 
 # redcap_flag_complete <- 2L #A value of 2 indicates to the REDCap admin that the record is 'complete'
 #Factors from REDCap
-investigations_to_run <- c("ELSA")
+investigations_to_run <- c("ELSA", "OCTO", "LASA", "NUAGE")
 investigation_labels  <- c("EAS", "ELSA", "HRS", "ILSE", "LASA", "MAP", "NUAGE", "OCTO", "SATSA")
 investigation_levels  <- seq_along(investigation_labels)
 
