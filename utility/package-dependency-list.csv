@@ -8,23 +8,25 @@ dplyr,TRUE,TRUE,hadley,Next generation of plyr.
 evaluate,TRUE,TRUE,,A package that Hadley et al use a lot in their packages.  It helps when things are passed by reference.
 foreign,TRUE,FALSE,,Reads data in other formats.
 ggplot2,TRUE,TRUE,,Graphing.
-ggthemes,TRUE,TRUE,,"Extra themes, scales and geoms for ggplot."
-googleVis,TRUE,TRUE,,"JavaScript-based visualizations, like scrollable tables."
-ggmap,TRUE,TRUE,,"Maps & graphics, based on ggplot."
+ggthemes,FALSE,TRUE,,"Extra themes, scales and geoms for ggplot."
+googleVis,FALSE,TRUE,,"JavaScript-based visualizations, like scrollable tables."
+ggmap,FALSE,TRUE,,"Maps & graphics, based on ggplot."
 grid,TRUE,TRUE,,foundation underneath ggplot2.
 gridExtra,TRUE,TRUE,,Additional functions for manipulating `grid` objects.
 knitr,TRUE,TRUE,,For reporting.
-lme4,TRUE,FALSE,,Multilevel models.
+lme4,FALSE,FALSE,,Multilevel models.
 lubridate,TRUE,TRUE,,Consistent/convenient function signatures for manipulating dates.
-modeest,TRUE,TRUE,,Estimating the mode of unimodal distributions.
-plyr,TRUE,TRUE,,Important for most of our data manipulation.
+modeest,FALSE,TRUE,,Estimating the mode of unimodal distributions.
+OuhscMunge,FALSE,TRUE,OuhscBbmc,Wrangling helpers.
+plyr,FALSE,TRUE,,Important for most of our data manipulation.
 random,TRUE,TRUE,,Creates random numbers for salts.
 RColorBrewer,TRUE,TRUE,,Explicit control over the Color Brewer colors.  See http://colorbrewer2.org/.
+REDCapR,FALSE,TRUE,OuhscBbmc,Communicate with a REDCap Server.
 readr,TRUE,TRUE,,Reads data files from disk.
-reshape2,TRUE,TRUE,,Data manipulation not covered in plyr.
+reshape2,FALSE,TRUE,,Data manipulation not covered in plyr.
 rmarkdown,TRUE,TRUE,rstudio,Needed for knitr and reports.
-stringi,TRUE,TRUE,,Consistent/convenient function signatures for manipulating text.
-stringr,TRUE,TRUE,,Consistent/convenient function signatures for manipulating text.
+stringi,FALSE,TRUE,,Consistent/convenient function signatures for manipulating text.
+stringr,FALSE,TRUE,,Consistent/convenient function signatures for manipulating text.
 testit,TRUE,TRUE,,Has the useful `assert()` function.
 testthat,TRUE,TRUE,hadley,Heavier testing framework that's good for package development.
 tidyr,TRUE,TRUE,,"Data manipulation; replaces much of reshape2; works w/ magrittr and dplyr well."
