@@ -72,6 +72,7 @@ for(i in 1:nrow(ds0)){
 # assemple data for analysis
 ds <- ds0 %>%
   dplyr::mutate(
+    years_since_bl = as.numeric(years_since_bl),
     year_born     = as.numeric(year_born),
     year_bl       = 2002,               # year at baseline
     year          = as.numeric(year_bl + years_since_bl), # year at visit
@@ -90,7 +91,7 @@ ds <- ds0 %>%
     gait          = as.numeric(gait)
   ) %>%
   dplyr::select(id, wave, male,
-                year_bl, year, year_born,
+                year_bl, year, year_born, years_since_bl,
                 age_bl, age,
                 edu, height_cm, diabetes, cardio, smoke,
                 fev, fvc, pef, gait, grip,
@@ -138,7 +139,7 @@ over_waves <- function(ds, measure_name, exclude_values="") {
 }
 # ds %>% over_waves("year_bl")
 # ---- examine-temporal-patterns ----------------------------------
-
+ds %>% view_temporal_pattern("years_since_bl", 2) # year at baseline
 ds %>% view_temporal_pattern("year_bl", 2) # year at baseline
 ds %>% view_temporal_pattern("year", 2) # year of measurement
 ds %>% view_temporal_pattern("year_born", 2) # year at baseline
@@ -286,7 +287,7 @@ ds_long <- ds %>%
   ) %>%
   dplyr::select(
     id, wave,
-    year_born, year_bl, year, age_bl,  age,
+    year_born, years_since_bl, year_bl, year, age_bl,  age,
     male_bl,
     edu_bl, height_cm_bl, diabetes_bl, cardio_bl, smoke_bl,
     fev, fvc, pef, grip, gait,
