@@ -25,6 +25,8 @@ requireNamespace("testit") #For asserting conditions meet expected patterns.
 path_credential_catalog <- "./data/unshared/security/phi-free.credentials"
 desired_columns <- c("record_id", "model_tag", "mplus_output", "parse_complete")
 
+ids_to_exclude <- c(9)
+
 # ---- load-data ---------------------------------------------------------------
 
 # Read the credentials
@@ -47,6 +49,7 @@ ds_parse <- ds_catalog %>%
   dplyr::filter(
     ( !is.na(mplus_output) & nchar(mplus_output) >= 500)
     & (is.na(parse_complete) | !parse_complete)
+    & !(record_id %in% ids_to_exclude)
   ) %>%
   dplyr::mutate(
 
@@ -69,12 +72,16 @@ for( i in seq_len(nrow(ds_parse)) ) { # i <- 1
     unlink(path_temp_out) #Delete the temp file, regardless if the parse operation succeedes
   })
 }
-# ds_confer$mplus_output  <- outputs
 
-
+# ---- unify-dataset -----------------------------------------------------------
+ds_results <- ds_results_list %>%
+  dplyr::bind_rows() %>%
+  dplyr::mutate(
+    date    = as.Date(date, "%M/%d/%Y")
+  )
 
 # ---- verify-values -----------------------------------------------------------
-testit::assert("All model output should be at least 500 characters.", all(nchar(ds_confer$mplus_output) >= 500L))
+# testit::assert("All model output should be at least 500 characters.", all(nchar(ds_confer$mplus_output) >= 500L))
 
 
 # ---- specify-columns-to-upload -----------------------------------------------
