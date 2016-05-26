@@ -123,13 +123,7 @@ mplus_generator_bivariate <- function(
   (resid_covariances <- paste(resid_covariances, collapse="\n"))
   proto_input <- gsub(pattern ="%resid_covariances%", replacement = resid_covariances, x = proto_input)
 
-
-
-
-
-
-
-
+  # waves_max do not appear, suspected obsolete from when temporal pattern was defined by max
   proto_input <- gsub(pattern ="%waves_max%", replacement = wave_modeled_max, x = proto_input)
   # MODEL CONSTRAINT:
   # OUTPUT:
