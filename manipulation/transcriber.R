@@ -69,7 +69,7 @@ ds <- ds_catalog %>%
 
 # ---- save-syntax-to-file -----------------------------------------------------------
 # for( i in seq_len(nrow(ds)) ) { #i <- 1
-for( i in 1:5) { #i <- 1
+for( i in 1:10) { #i <- 1
   message("Creating syntax for ", ds$model_tag[i])
   writeLines(ds$mplus_syntax[i], ds$path_inp[i])
   }
