@@ -1,0 +1,71 @@
+# The function of this report is to print the input file to be used in estimation.
+
+
+# knitr::stitch_rmd(script="./manipulation/te-ellis.R", output="./manipulation/stitched-output/te-ellis.md")
+# For a brief description of this file see the presentation at
+#   - slides: https://rawgit.com/wibeasley/RAnalysisSkeleton/master/documentation/time-and-effort-synthesis.html#/
+#   - code: https://github.com/wibeasley/RAnalysisSkeleton/blob/master/documentation/time-and-effort-synthesis.Rpres
+rm(list=ls(all=TRUE))  #Clear the variables from previous runs.
+
+# ---- load-sources ------------------------------------------------------------
+# Call `base::source()` on any repo file that defines functions needed below.  Ideally, no real operations are performed.
+
+# ---- load-packages -----------------------------------------------------------
+# Attach these packages so their functions don't need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
+library(RODBC, quietly=TRUE)
+library(magrittr, quietly=TRUE)
+
+# Verify these packages are available on the machine, but their functions need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
+requireNamespace("REDCapR") #devtools::install_github(repo="OuhscBbmc/REDCapR")
+requireNamespace("OuhscMunge") #devtools::install_github(repo="OuhscBbmc/OuhscMunge")
+
+requireNamespace("readr")
+requireNamespace("tidyr")
+requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
+requireNamespace("testit") #For asserting conditions meet expected patterns.
+# requireNamespace("car") #For it's `recode()` function.
+
+# ---- declare-globals ---------------------------------------------------------
+path_credential                 <- "./data/unshared/security/user.credentials"
+path_out_archive_directory      <- "./data/unshared/archive/"
+
+# ---- load-data ---------------------------------------------------------------
+
+# Read the credentials
+credential_pcs     <- REDCapR::retrieve_credential_local(path_credential, project_id=262) #For the pre-conference survey
+credential_catalog <- REDCapR::retrieve_credential_local(path_credential, project_id=447) #For the catalog
+
+# Retrieve from the PCS (pre-conference survey)
+ds_pcs <- REDCapR::redcap_read(redcap_uri=credential_pcs$redcap_uri, token=credential_pcs$token)$data
+
+# Retrieve from the catalog.
+ds_catalog <- REDCapR::redcap_read(
+  redcap_uri    = credential_catalog$redcap_uri,
+  token         = credential_catalog$token
+  # Get all fields
+  )$data
+
+
+rm(path_credential, credential_pcs, credential_catalog)
+
+# ---- tweak-data --------------------------------------------------------------
+# OuhscMunge::column_rename_headstart(ds_pcs) #Spit out columns to help write call ato `dplyr::rename()`.
+
+
+# ---- save-syntax-to-file -----------------------------------------------------------
+# for( i in seq_len(nrow(ds)) ) { #i <- 1
+for( i in 1:10) { #i <- 1
+  message("Creating syntax for ", ds$model_tag[i])
+  writeLines(ds$mplus_syntax[i], ds$path_inp[i])
+}
+
+# ---- verify-values -----------------------------------------------------------
+
+# testit::assert("All model syntax should be at least 500 characters.", all(nchar(ds$mplus_syntax) >= 500L))
+
+
+# ---- save-to-disk ------------------------------------------------------------
+timestamp <- strftime(Sys.time(), format="%Y-%m%-%d--%H-%M-%S")
+
+readr::write_csv(ds_pcs, path=paste0(path_out_archive_directory, "pcs-", timestamp, ".csv"))
+readr::write_csv(ds_pcs, path=paste0(path_out_archive_directory, "catalog-", timestamp, ".csv"))
