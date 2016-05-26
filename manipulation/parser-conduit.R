@@ -72,9 +72,10 @@ for( i in seq_len(nrow(ds_parse)) ) { # i <- 1
     unlink(path_temp_out) #Delete the temp file, regardless if the parse operation succeedes
   })
 }
+table(nchar(ds_results_list)>0, useNA="always")
 
 # ---- unify-dataset -----------------------------------------------------------
-OuhscMunge::column_rename_headstart(ds_results) #Spit out columns to help write call ato `dplyr::rename()`.
+# OuhscMunge::column_rename_headstart(ds_results) #Spit out columns to help write call ato `dplyr::rename()`.
 
 ds_results <- ds_results_list %>%
   dplyr::bind_rows() %>%
@@ -283,7 +284,9 @@ ds_results <- ds_results_list %>%
     date                 = as.Date(date, "%M/%d/%Y")
     # parse_complete       = TRUE
   ) %>%
-  dplyr::left_join(ds_catalog, by="record_id")
+  dplyr::left_join(ds_catalog, by="record_id") %>%
+  dplyr::select_(.dots = c("record_id", setdiff(colnames(ds_results), "record_id")))
+
 
 
 # ---- verify-values -----------------------------------------------------------
