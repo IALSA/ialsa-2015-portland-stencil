@@ -43,7 +43,8 @@ ds_catalog <- ds_catalog %>%
   dplyr::rename_(
   ) %>%
   dplyr::filter(
-    !is.na(path_out) & is.na(mplus_output)
+    !is.na(path_out)
+    # & (is.na(mplus_output) | nchar(mplus_output)==0L)
   ) %>%
   dplyr::mutate(
     file_out_exists     = file.exists(path_out)
@@ -108,6 +109,6 @@ result_write <- REDCapR::redcap_write(
   ds_to_write                = ds_slim,
   redcap_uri                 = credential_catalog$redcap_uri,
   token                      = credential_catalog$token,
-  batch_size                 = 500 # Descrease if it helps debugging write errors
+  batch_size                 = 500 # Decrease if it helps debugging write errors
 )
 # result_write

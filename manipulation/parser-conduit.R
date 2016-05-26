@@ -6,6 +6,7 @@ rm(list=ls(all=TRUE))  #Clear the variables from previous runs.
 
 # ---- load-sources ------------------------------------------------------------
 # Call `base::source()` on any repo file that defines functions needed below.  Ideally, no real operations are performed.
+source("./manipulation/parser.R") # Defines the `parse()` function.
 
 # ---- load-packages -----------------------------------------------------------
 # Attach these packages so their functions don't need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
@@ -14,6 +15,7 @@ library(magrittr, quietly=TRUE)
 
 # Verify these packages are available on the machine, but their functions need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
 requireNamespace("REDCapR") #devtools::install_github(repo="OuhscBbmc/REDCapR")
+requireNamespace("IalsaSynthesis") # devtools::install_github(repo="IALSA/IalsaSynthesis")
 
 requireNamespace("readr")
 requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
@@ -43,37 +45,32 @@ ds_parse <- ds_catalog %>%
   dplyr::rename_(
   ) %>%
   dplyr::filter(
-    !is.na(mplus_output) & (is.na(parse_complete) | !parse_complete)
+    ( !is.na(mplus_output) & nchar(mplus_output) >= 500)
+    & (is.na(parse_complete) | !parse_complete)
   ) %>%
   dplyr::mutate(
 
   )
 
-# ---- read-output -----------------------------------------------------------
+# ---- parse-output -----------------------------------------------------------
 
-outputs <- rep(NA_character_, nrow(ds_confer))
-for( i in seq_len(nrow(ds_confer)) ) { #i <- 1
-  message("Confering model ", ds_confer$model_tag[i])
+# outputs <- rep(NA_character_, nrow(ds_confer))
+ds_results_list <- list()
+for( i in seq_len(nrow(ds_parse)) ) { # i <- 1
+  message("Parsing model ", ds_parse$model_tag[i])
+  tryCatch(expr={
+    path_temp_out <- paste0(tempfile(pattern="temp-out", tmpdir=tempdir()), ".out")
+    base::write(ds_parse$mplus_output[i], path_temp_out)
 
-  # outputs[i] <- paste(readr::read_lines(ds_confer$path_out[i]), collapse="\n")
+    ds_results_list[[i]] <- parse(path_temp_out)
+
+  },
+  finally={
+    unlink(path_temp_out) #Delete the temp file, regardless if the parse operation succeedes
+  })
 }
-ds_confer$mplus_output  <- outputs
+# ds_confer$mplus_output  <- outputs
 
-ds_confer$ascension_datetime <- Sys.time()
-
-# readr::read_file(ds_confer$path_out[1])
-# readr::read_file(ds_confer$path_out[2])
-# paste(readr::read_lines(ds_confer$path_out[1]), collapse="\n")
-# # readr::read_file(ds_confer$path_out[3])
-#
-#
-# #The files to raise up into REDCap
-# ds_confer <- ds_catalog %>%
-#   dplyr::filter(file_out_exists) %>%
-#   dplyr::mutate(
-#     mplus_output = paste(readr::read_lines(path_out), collapse="\n")
-#     # mplus_output = readr::read_file(file.path(R.home(), "COPYING"))#read_file(path_out)
-#   )
 
 
 # ---- verify-values -----------------------------------------------------------
