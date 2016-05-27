@@ -19,6 +19,9 @@ path_data,part1,,text,path_data,,,,,,,,y,,,,,
 path_inp,part1,,text,"path to the Mplus inp file (for input/syntax)",,,,,,,,y,,,,,
 path_out,part1,,text,"Path to the Mplus out file (for output/results)",,,,,,,,y,,,,,
 mplus_filter_1,part1,,text,"Enter any Mplus filtering syntax you'd like to use to remove participants from the model.",,,,,,,,y,,,,,"example: `dementia_ever NE 1`"
+header_names,part1,,text,"Enter the names of the variables from the wide data, as it appears after grooming.  The order and count of the variables must be exactly correct.
+
+The names can be separated by new lines, or by spaces.  We recommend copy &  pasting from the `wide-variable-names.txt` file created during the pre-conference grooming.",,,,,,,,,,,,,
 mplus_syntax,part2,,notes,"The contents of the eventual inp file",,,,,,,,,,,,,
 mplus_output,part3,,notes,"Contents of the *.out file",,,,,,,,,,,,,
 ascension_datetime,part3,,text,"When the output was uploaded to REDCap.",,,datetime_seconds_ymd,,,,,,,,,,

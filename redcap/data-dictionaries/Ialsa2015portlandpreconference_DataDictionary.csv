@@ -246,6 +246,9 @@ name_variable_diabetes_baseline,preconference_survey,,text,"In your dataset, wha
 name_variable_alcohol_use_baseline,preconference_survey,,text,"In your dataset, what is the exact name (case sensitive) of the variable measuring respondents' [alcohol use] at baseline?",,,,,,,,,,,,,
 covariates_beyond_plus,preconference_survey,"Custom Syntax",text,"Enter the variables (separated by spaces) that extend beyond the `aehplus` model.",,"example: `vertical_leap limbo_height`",,,,,,y,,,,,
 mplus_filter_1,preconference_survey,,text,"Enter any Mplus filtering syntax you'd like to use to remove participants from the model.",,"example: `dementia_ever NE 1`",,,,,,y,,,,,
+header_names,preconference_survey,,text,"Enter the names of the variables from the wide data, as it appears after grooming.  The order and count of the variables must be exactly correct.
+
+The names can be separated by new lines, or by spaces.  We recommend copy &  pasting from the `wide-variable-names.txt` file created during the pre-conference grooming.",,,,,,,,,,,,,
 closing,preconference_survey,Closing,descriptive,"Thank you for you attention on such a detail-oriented survey. The thoroughness of the items is critical for the workshop to proceed efficiently.
 
 We hope that future surveys will pre-populate most items with the responses you provided today.
