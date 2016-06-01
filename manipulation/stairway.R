@@ -44,7 +44,7 @@ ds_catalog <- ds_catalog %>%
   ) %>%
   dplyr::filter(
     !is.na(path_out)
-    # & (is.na(mplus_output) | nchar(mplus_output)==0L) #For now, pull up everyone
+    & (is.na(mplus_output) | nchar(mplus_output)==0L) #Comment out to upload everyone instead of just for the missing rows.
   ) %>%
   dplyr::mutate(
     file_out_exists     = file.exists(path_out)

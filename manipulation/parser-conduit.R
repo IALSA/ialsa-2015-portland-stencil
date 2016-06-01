@@ -65,7 +65,7 @@ for( i in seq_len(nrow(ds_parse)) ) { # i <- 1
     path_temp_out <- paste0(tempfile(pattern="temp-out", tmpdir=tempdir()), ".out")
     base::write(ds_parse$mplus_output[i], path_temp_out)
 
-    ds_results_list[[i]] <- parse(ds_parse$record_id[i],  path_temp_out)
+    ds_results_list[[i]] <- parse(ds_parse$record_id[i],  path_temp_out) #The workhorse of the whole file.
 
   },
   finally={
