@@ -36,10 +36,21 @@ is_admin <- file.exists(path_credential_admin)
 
 # Read the credentials
 if( is_admin ) {
+  message(
+    "Current user is recognized as admin.
+    Prometheus will save the catalog as a live file
+    and archive the catalog and PCS."
+  )
   credential_pcs     <- REDCapR::retrieve_credential_local(path_credential_admin, project_id=262) #For the pre-conference survey
   # Retrieve from the PCS (pre-conference survey)
   ds_pcs <- REDCapR::redcap_read(redcap_uri=credential_pcs$redcap_uri, token=credential_pcs$token)$data
   rm(path_credential_admin, credential_pcs)
+} else {
+  message(
+    "Current user is recognized as non-admin.
+    Prometheus will save the catalog as a live file,
+    but will not archive the catalog and PCS."
+  )
 }
 
 credential_catalog <- REDCapR::retrieve_credential_local(path_credential_low  , project_id=447) #For the catalog
